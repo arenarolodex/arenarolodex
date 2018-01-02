@@ -2,19 +2,6 @@ import itertools
 import sys
 from flask import Flask, request, render_template
 
-value = list(itertools.permutations(mylist))
-# sys.stdout = open("Test.txt", "w")
-# print (value)
-# print ("Test")
-
-
-filename  = open("Test.txt","w")
-sys.stdout = filename
-print (value)
-
-
-
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -34,3 +21,13 @@ def index_post():
 
     mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
     return mylist
+
+value = list(itertools.permutations(index_post()))
+# sys.stdout = open("Test.txt", "w")
+# print (value)
+# print ("Test")
+
+
+filename  = open("Test.txt","w")
+sys.stdout = filename
+print (value)
