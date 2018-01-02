@@ -10,7 +10,7 @@ const http = require('http').Server(app);
 const path = require('path');
 
 //Variables for server port (for heroku) and index.html
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const INDEX = path.join(__dirname, 'index.html');
 
 //Sends index.html
