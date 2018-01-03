@@ -23,7 +23,7 @@ def index_post():
     mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
     #global valued
     valued = list(itertools.permutations(mylist))
-    ret = '\n'.join(', '.join(elems) for elems in valued)
+    ret = '</br>'.join(', '.join(elems) for elems in valued)
     return ret
 
 
