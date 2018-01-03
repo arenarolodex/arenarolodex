@@ -11,20 +11,20 @@ def index():
 
 @app.route('/template', methods=['POST'])
 def index_post():
-    with app.test_request_context():
-        block1 = request.form['block1']
-        block2 = request.form['block2']
-        block3 = request.form['block3']
-        block4 = request.form['block4']
-        block5 = request.form['block5']
-        block6 = request.form['block6']
-        block7 = request.form['block7']
-        block8 = request.form['block8']
-
+    app.logger.debug('This block of code was reached. congrats')
+    block1 = request.form['block1']
+    block2 = request.form['block2']
+    block3 = request.form['block3']
+    block4 = request.form['block4']
+    block5 = request.form['block5']
+    block6 = request.form['block6']
+    block7 = request.form['block7']
+    block8 = request.form['block8']
     mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
-    #global valued 
+    #global valued
     valued = list(itertools.permutations(mylist))
-    return valued
+    ret = '</br>'.join(', '.join(elems) for elems in valued)
+    return ret
 
 
 # sys.stdout = open("Test.txt", "w")
@@ -40,4 +40,3 @@ print (index_post)
 
 # filename  = open("Test.txt","w")
 # sys.stdout = filename
-
