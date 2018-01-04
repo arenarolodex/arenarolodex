@@ -7,9 +7,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('my-form.html')
+    return render_template('index.html')
 
-@app.route('/template', methods=['POST'])
+@app.route('/template', methods=['GET', 'POST'])
 def index_post():
     app.logger.debug('This block of code was reached. congrats')
     block1 = request.form['block1']
@@ -21,7 +21,7 @@ def index_post():
     block7 = request.form['block7']
     block8 = request.form['block8']
     mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
-    #global valued
+    global valued
     valued = list(itertools.permutations(mylist))
     ret = '</br>'.join(', '.join(elems) for elems in valued)
     return ret

@@ -3,10 +3,30 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Page Title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+        <script src="main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            //Fallback to local JQuery if CDN isn't working
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape(
+                "%3Cscript src='resources/jquery-3.2.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <title>Lowell Arena Helper</title>
     </head>
     <body>
+        <select id="first-choice">
+            <option selected value="base">Please Select</option>
+            <option value="beverages">Beverages</option>
+            <option value="snacks">Snacks</option>
+        </select>
+        
+        
+        
         <form action="template" method="POST">
             <label>Choose a class from the list:
                 <input list="classes" name="block1"></label>
