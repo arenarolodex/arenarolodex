@@ -2,7 +2,7 @@ $("#first-choice").change(function() {
 
 	var $dropdown = $(this);
 
-	$.getJSON("jsondata/data.json", function(data) {
+	$.getJSON("options.json", function(data) {
 	
 		var key = $dropdown.val();
 		var vals = [];

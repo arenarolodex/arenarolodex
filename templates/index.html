@@ -15,6 +15,11 @@
                 "%3Cscript src='resources/jquery-3.2.1.min.js' type='text/javascript'%3E%3C/script%3E"));
             }
         </script>
+        <script type=text/javascript>
+            $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+        </script>
+
+
 
         <title>Lowell Arena Helper</title>
     </head>
@@ -24,7 +29,11 @@
             <option value="beverages">Beverages</option>
             <option value="snacks">Snacks</option>
         </select>
-        
+        <br>
+
+        <select id="second-choice">
+            <option>Please choose from above</option>
+        </select>
         
         
         <form action="template" method="POST">
@@ -52,7 +61,7 @@
             <label>Choose a class from the list:
                 <input list="classes" name="block8"></label>
                 <br>
-            <input type="submit">
+            <input type="submit" value="Enter">
         </form>
 
         <datalist id="classes">
