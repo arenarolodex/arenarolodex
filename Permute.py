@@ -1,9 +1,12 @@
 import itertools
 import sys
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, url_for, jsonify, json
+import csv
+
 
 app = Flask(__name__)
-#app.debug = True
+
+
 
 @app.route('/')
 def index():
@@ -20,11 +23,65 @@ def index_post():
     block6 = request.form['block6']
     block7 = request.form['block7']
     block8 = request.form['block8']
+
     mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
-    global valued
-    valued = list(itertools.permutations(mylist))
-    ret = '</br>'.join(', '.join(elems) for elems in valued)
-    return ret
+    
+    mylist1 = []
+
+    if mylist[0] != "":
+        mylist1.append(block1)
+
+    if mylist[1] != "":
+        mylist1.append(block2)
+
+    if mylist[2] != "":
+        mylist1.append(block3)
+
+    if mylist[3] != "":
+        mylist1.append(block4)
+
+    if mylist[4] != "":
+        mylist1.append(block5)
+
+    if mylist[5] != "":
+        mylist1.append(block6)
+
+    if mylist[6] != "":
+        mylist1.append(block7)
+
+    if mylist[7] != "":
+        mylist1.append(block8)
+
+
+    
+    # global valued
+    valued = list(itertools.permutations(mylist1))
+    # ret = '</br>'.join(', '.join(elems) for elems in valued)
+
+    # ret = '\n'.join(', '.join(elems) for elems in valued)
+    # return ret
+    # return jsonify(valued)
+
+    # for elems in valued
+    #     part = []
+    #     for 
+
+    with open ('file.csv', 'w', newline='') as f:
+        writing = csv.writer(f, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
+        writing.writerows(valued)
+        
+        # json.dump(ret, f)
+    return render_template('landing.html')
+
+
+# @app.route('/')
+# def tester():
+#     return url_for(index)
+
+
+
+
+
 
 
 # sys.stdout = open("Test.txt", "w")
@@ -32,10 +89,11 @@ def index_post():
 # print ("Test")
 
 if __name__ == "__main__":
+    app.debug = True
     app.run()
 
 print (index_post)
-
+# print (tester)
 
 
 # filename  = open("Test.txt","w")

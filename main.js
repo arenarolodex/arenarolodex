@@ -1,28 +1,32 @@
-$("#first-choice").change(function() {
+$(function() {
 
-	var $dropdown = $(this);
+	$("#first-choice").change(function() {
 
-	$.getJSON("options.json", function(data) {
+		var $dropdown = $(this);
 	
-		var key = $dropdown.val();
-		var vals = [];
-							
-		switch(key) {
-			case 'beverages':
-				vals = data.beverages.split(",");
-				break;
-			case 'snacks':
-				vals = data.snacks.split(",");
-				break;
-			case 'base':
-				vals = ['Please choose from above'];
-		}
+		$.getJSON("options.json", function(data) {
 		
-		var $secondChoice = $("#second-choice");
-		$secondChoice.empty();
-		$.each(vals, function(index, value) {
-			$secondChoice.append("<option>" + value + "</option>");
+			var key = $dropdown.val();
+			var vals = [];
+								
+			switch(key) {
+				case 'beverages':
+					vals = data.beverages.split(",");
+					break;
+				case 'snacks':
+					vals = data.snacks.split(",");
+					break;
+				case 'base':
+					vals = ['Please choose from above'];
+			}
+			
+			var $secondChoice = $("#second-choice");
+			$secondChoice.empty();
+			$.each(vals, function(index, value) {
+				$secondChoice.append("<option>" + value + "</option>");
+			});
+	
 		});
-
 	});
+
 });
