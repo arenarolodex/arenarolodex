@@ -1,0 +1,101 @@
+2018-01-06T07:13:30.373004+00:00 app[web.1]:     return self.load_wsgiapp()
+2018-01-06T07:13:30.373012+00:00 app[web.1]:                                                                ^
+2018-01-06T07:13:30.373008+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 352, in import_app
+2018-01-06T07:13:30.373009+00:00 app[web.1]:     __import__(module)
+2018-01-06T07:13:30.373015+00:00 app[web.1]: 
+2018-01-06T07:13:30.373016+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2018-01-06T07:13:30.373017+00:00 app[web.1]: 
+2018-01-06T07:13:30.373019+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+2018-01-06T07:13:30.373021+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 126, in init_process
+2018-01-06T07:13:30.373007+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2018-01-06T07:13:30.373010+00:00 app[web.1]:   File "/app/Permute.py", line 81
+2018-01-06T07:13:30.373013+00:00 app[web.1]: SyntaxError: invalid syntax
+2018-01-06T07:13:30.373022+00:00 app[web.1]:     self.load_wsgi()
+2018-01-06T07:13:30.373024+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 148, in load_wsgi
+2018-01-06T07:13:30.373025+00:00 app[web.1]:     self.reloader.add_extra_file(exc_val.filename)
+2018-01-06T07:13:30.373020+00:00 app[web.1]:     worker.init_process()
+2018-01-06T07:13:30.373026+00:00 app[web.1]: AttributeError: 'NoneType' object has no attribute 'add_extra_file'
+2018-01-06T07:13:30.409507+00:00 app[web.1]: [2018-01-06 07:13:30 +0000] [9] [INFO] Booting worker with pid: 9
+2018-01-06T07:13:30.416308+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-01-06T07:13:30.373018+00:00 app[web.1]: Traceback (most recent call last):
+2018-01-06T07:13:30.373152+00:00 app[web.1]: [2018-01-06 07:13:30 +0000] [8] [INFO] Worker exiting (pid: 8)
+2018-01-06T07:13:30.416307+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2018-01-06T07:13:30.416302+00:00 app[web.1]: [2018-01-06 07:13:30 +0000] [9] [ERROR] invalid syntax (Permute.py, line 81)
+2018-01-06T07:13:30.416305+00:00 app[web.1]: Traceback (most recent call last):
+2018-01-06T07:13:30.416306+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+2018-01-06T07:13:30.416310+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-01-06T07:13:30.416309+00:00 app[web.1]:     self.callable = self.load()
+2018-01-06T07:13:30.416311+00:00 app[web.1]:     return self.load_wsgiapp()
+2018-01-06T07:13:30.416312+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-01-06T07:13:30.416313+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 352, in import_app
+2018-01-06T07:13:30.416312+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2018-01-06T07:13:30.416314+00:00 app[web.1]:     __import__(module)
+2018-01-06T07:13:30.417370+00:00 app[web.1]: Traceback (most recent call last):
+2018-01-06T07:13:30.417374+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-01-06T07:13:30.417376+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-01-06T07:13:30.417377+00:00 app[web.1]:     return self.load_wsgiapp()
+2018-01-06T07:13:30.417379+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2018-01-06T07:13:30.416315+00:00 app[web.1]:   File "/app/Permute.py", line 81
+2018-01-06T07:13:30.416316+00:00 app[web.1]:     with open ('filelanding.csv', 'r', newline='') as f_in, with open('fileoutput.csv', 'w') as f_out, with open('announcer.csv', 'r') as ref:
+2018-01-06T07:13:30.416318+00:00 app[web.1]: SyntaxError: invalid syntax
+2018-01-06T07:13:30.416317+00:00 app[web.1]:                                                                ^
+2018-01-06T07:13:30.417368+00:00 app[web.1]: [2018-01-06 07:13:30 +0000] [9] [ERROR] Exception in worker process
+2018-01-06T07:13:30.417371+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+2018-01-06T07:13:30.417375+00:00 app[web.1]:     self.callable = self.load()
+2018-01-06T07:13:30.417378+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-01-06T07:13:30.417373+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2018-01-06T07:13:30.417380+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 352, in import_app
+2018-01-06T07:13:30.417381+00:00 app[web.1]:     __import__(module)
+2018-01-06T07:13:30.417384+00:00 app[web.1]:                                                                ^
+2018-01-06T07:13:30.417382+00:00 app[web.1]:   File "/app/Permute.py", line 81
+2018-01-06T07:13:30.417383+00:00 app[web.1]:     with open ('filelanding.csv', 'r', newline='') as f_in, with open('fileoutput.csv', 'w') as f_out, with open('announcer.csv', 'r') as ref:
+2018-01-06T07:13:30.417387+00:00 app[web.1]: 
+2018-01-06T07:13:30.417389+00:00 app[web.1]: 
+2018-01-06T07:13:30.417390+00:00 app[web.1]: Traceback (most recent call last):
+2018-01-06T07:13:30.417388+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2018-01-06T07:13:30.417398+00:00 app[web.1]:     worker.init_process()
+2018-01-06T07:13:30.417400+00:00 app[web.1]:     self.load_wsgi()
+2018-01-06T07:13:30.417401+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 148, in load_wsgi
+2018-01-06T07:13:30.417405+00:00 app[web.1]: AttributeError: 'NoneType' object has no attribute 'add_extra_file'
+2018-01-06T07:13:30.460572+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 202, in run
+2018-01-06T07:13:30.417385+00:00 app[web.1]: SyntaxError: invalid syntax
+2018-01-06T07:13:30.417391+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+2018-01-06T07:13:30.417399+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 126, in init_process
+2018-01-06T07:13:30.417404+00:00 app[web.1]:     self.reloader.add_extra_file(exc_val.filename)
+2018-01-06T07:13:30.417536+00:00 app[web.1]: [2018-01-06 07:13:30 +0000] [9] [INFO] Worker exiting (pid: 9)
+2018-01-06T07:13:30.460500+00:00 app[web.1]: Traceback (most recent call last):
+2018-01-06T07:13:30.461059+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 544, in manage_workers
+2018-01-06T07:13:30.461533+00:00 app[web.1]:     self.spawn_workers()
+2018-01-06T07:13:30.461055+00:00 app[web.1]:     self.manage_workers()
+2018-01-06T07:13:30.461965+00:00 app[web.1]:     time.sleep(0.1 * random.random())
+2018-01-06T07:13:30.461967+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 244, in handle_chld
+2018-01-06T07:13:30.462688+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2018-01-06T07:13:30.462253+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 524, in reap_workers
+2018-01-06T07:13:30.462691+00:00 app[web.1]: 
+2018-01-06T07:13:30.462624+00:00 app[web.1]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2018-01-06T07:13:30.462251+00:00 app[web.1]:     self.reap_workers()
+2018-01-06T07:13:30.461535+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 612, in spawn_workers
+2018-01-06T07:13:30.462695+00:00 app[web.1]: Traceback (most recent call last):
+2018-01-06T07:13:30.462692+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2018-01-06T07:13:30.462693+00:00 app[web.1]: 
+2018-01-06T07:13:30.462873+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+2018-01-06T07:13:30.463287+00:00 app[web.1]:     super(Application, self).run()
+2018-01-06T07:13:30.463575+00:00 app[web.1]:     Arbiter(self).run()
+2018-01-06T07:13:30.463054+00:00 app[web.1]:     WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+2018-01-06T07:13:30.462870+00:00 app[web.1]:     sys.exit(run())
+2018-01-06T07:13:30.463580+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 231, in run
+2018-01-06T07:13:30.464605+00:00 app[web.1]:     time.sleep(0.1)
+2018-01-06T07:13:30.463837+00:00 app[web.1]:     self.halt(reason=inst.reason, exit_status=inst.exit_status)
+2018-01-06T07:13:30.463840+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 344, in halt
+2018-01-06T07:13:30.464168+00:00 app[web.1]:     self.stop()
+2018-01-06T07:13:30.465091+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2018-01-06T07:13:30.464177+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 393, in stop
+2018-01-06T07:13:30.464855+00:00 app[web.1]:     self.reap_workers()
+2018-01-06T07:13:30.465086+00:00 app[web.1]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2018-01-06T07:13:30.464611+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 244, in handle_chld
+2018-01-06T07:13:30.462699+00:00 app[web.1]:   File "/app/.heroku/python/bin/gunicorn", line 11, in <module>
+2018-01-06T07:13:30.463289+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 72, in run
+2018-01-06T07:13:30.464857+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 524, in reap_workers
+2018-01-06T07:13:30.463056+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 203, in run
+2018-01-06T07:13:30.553685+00:00 heroku[web.1]: Process exited with status 1
+2018-01-06T07:13:30.572414+00:00 heroku[web.1]: State changed from starting to crashed
