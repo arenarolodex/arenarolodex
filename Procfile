@@ -1,1 +1,1 @@
-web: gunicorn Permute.py --log-file -
+web gunicorn manage:app
