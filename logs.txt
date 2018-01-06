@@ -1,4 +1,3 @@
-2018-01-06T05:51:01.414474+00:00 app[api]: Release v1 created by user supercoolsmartwhizardofawesome@gmail.com
 2018-01-06T05:51:01.414474+00:00 app[api]: Initial release by user supercoolsmartwhizardofawesome@gmail.com
 2018-01-06T05:51:01.538698+00:00 app[api]: Enable Logplex by user supercoolsmartwhizardofawesome@gmail.com
 2018-01-06T05:51:01.538698+00:00 app[api]: Release v2 created by user supercoolsmartwhizardofawesome@gmail.com
@@ -75,3 +74,28 @@
 2018-01-06T06:27:16.865024+00:00 heroku[web.1]: State changed from starting to crashed
 2018-01-06T06:27:16.845577+00:00 heroku[web.1]: Process exited with status 127
 2018-01-06T06:27:17.974042+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=arenarolodex.herokuapp.com request_id=eac9ef2d-8907-4a5b-9c4d-851e730abd23 fwd="198.27.173.78" dyno= connect= service= status=503 bytes= protocol=https
+2018-01-06T06:35:27.000000+00:00 app[api]: Build started by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:35:38.719785+00:00 app[api]: Deploy ef9a40b8 by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:35:38.719785+00:00 app[api]: Release v7 created by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:35:27.000000+00:00 app[api]: Build succeeded
+2018-01-06T06:35:39.620889+00:00 heroku[web.1]: State changed from crashed to starting
+2018-01-06T06:35:42.474781+00:00 heroku[web.1]: Starting process with command `gunicorn myapp:app --log-file=-`
+2018-01-06T06:35:44.846607+00:00 heroku[web.1]: Process exited with status 127
+2018-01-06T06:35:44.757919+00:00 app[web.1]: bash: gunicorn: command not found
+2018-01-06T06:35:44.871358+00:00 heroku[web.1]: State changed from starting to crashed
+2018-01-06T06:35:44.873506+00:00 heroku[web.1]: State changed from crashed to starting
+2018-01-06T06:35:47.925578+00:00 heroku[web.1]: Starting process with command `gunicorn myapp:app --log-file=-`
+2018-01-06T06:35:50.091214+00:00 app[web.1]: bash: gunicorn: command not found
+2018-01-06T06:35:50.226433+00:00 heroku[web.1]: State changed from starting to crashed
+2018-01-06T06:35:50.204801+00:00 heroku[web.1]: Process exited with status 127
+2018-01-06T06:41:13.500453+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=arenarolodex.herokuapp.com request_id=6f591c80-a005-481e-8072-856b1e0e31a7 fwd="198.27.173.78" dyno= connect= service= status=503 bytes= protocol=https
+2018-01-06T06:44:41.000000+00:00 app[api]: Build started by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:44:51.633376+00:00 app[api]: Deploy efb42271 by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:44:51.633376+00:00 app[api]: Release v8 created by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:44:52.335625+00:00 heroku[web.1]: State changed from crashed to starting
+2018-01-06T06:44:41.000000+00:00 app[api]: Build succeeded
+2018-01-06T06:44:55.070146+00:00 heroku[web.1]: Starting process with command `gunicorn myapp:app --log-file=-`
+2018-01-06T06:44:57.184745+00:00 heroku[web.1]: Process exited with status 127
+2018-01-06T06:44:57.110589+00:00 app[web.1]: bash: gunicorn: command not found
+2018-01-06T06:44:57.204154+00:00 heroku[web.1]: State changed from starting to crashed
+2018-01-06T06:45:49.284886+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=arenarolodex.herokuapp.com request_id=56d96d5e-92b4-4068-bbb2-2768426cad76 fwd="198.27.173.78" dyno= connect= service= status=503 bytes= protocol=https
