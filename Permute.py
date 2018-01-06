@@ -84,7 +84,7 @@ def index_post():
 
 
 def rowcleaner():
-    with open ('filelanding.csv', 'r', newline='') as f_in, open('fileoutput.csv', 'w') as f_out, open('announcer.csv', 'r') as ref:
+    with open ('filelanding.csv', 'r', newline='') as f_in, open('fileoutput.csv', 'w') as f_out:
         writer = csv.writer(f_out, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
         
         for row in csv.reader(f_in, delimiter=','):
@@ -92,7 +92,7 @@ def rowcleaner():
                 writer.writerow(row)
 
 
-
+# , open('announcer.csv', 'r') as ref
 # def setclassadder():
 
 
