@@ -1,1 +1,1 @@
-web gunicorn Permute:app
+web gunicorn manage:app
