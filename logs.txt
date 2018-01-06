@@ -1,0 +1,77 @@
+2018-01-06T05:51:01.414474+00:00 app[api]: Release v1 created by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T05:51:01.414474+00:00 app[api]: Initial release by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T05:51:01.538698+00:00 app[api]: Enable Logplex by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T05:51:01.538698+00:00 app[api]: Release v2 created by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:05:01.000000+00:00 app[api]: Build started by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:05:10.636456+00:00 app[api]: Deploy f8fc3e8b by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:05:10.636456+00:00 app[api]: Release v3 created by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:05:10.656045+00:00 app[api]: Scaled to web@1:Free by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:05:01.000000+00:00 app[api]: Build succeeded
+2018-01-06T06:05:13.373088+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-01-06T06:05:15.932816+00:00 app[web.1]: 
+2018-01-06T06:05:15.932835+00:00 app[web.1]: > arenarolodex@1.0.0 start /app
+2018-01-06T06:05:15.932836+00:00 app[web.1]: > node server.js
+2018-01-06T06:05:15.932837+00:00 app[web.1]: 
+2018-01-06T06:05:16.193697+00:00 app[web.1]: listening on *:29381 o3o
+2018-01-06T06:05:16.888764+00:00 heroku[web.1]: State changed from starting to up
+2018-01-06T06:05:32.066311+00:00 heroku[router]: at=info method=GET path="/" host=arenarolodex.herokuapp.com request_id=8bded6ab-8e48-4759-a876-3541780efab7 fwd="198.27.173.78" dyno=web.1 connect=1ms service=21ms status=200 bytes=2996 protocol=https
+2018-01-06T06:05:32.319775+00:00 heroku[router]: at=info method=GET path="/style.css" host=arenarolodex.herokuapp.com request_id=142331fe-dd19-4b19-a7a8-47341b4d24cb fwd="198.27.173.78" dyno=web.1 connect=1ms service=5ms status=200 bytes=649 protocol=https
+2018-01-06T06:05:32.477777+00:00 heroku[router]: at=info method=GET path="/main.js" host=arenarolodex.herokuapp.com request_id=7e4fd598-b3ed-4895-a212-896ea2f61953 fwd="198.27.173.78" dyno=web.1 connect=1ms service=4ms status=200 bytes=912 protocol=https
+2018-01-06T06:05:32.796086+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=arenarolodex.herokuapp.com request_id=26895b68-2eaa-4df0-846d-e2fd9cafab9d fwd="198.27.173.78" dyno=web.1 connect=1ms service=2ms status=404 bytes=394 protocol=https
+2018-01-06T06:05:32.707539+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=arenarolodex.herokuapp.com request_id=b6fc3fe2-1a21-43d9-8153-e9668ceb39e5 fwd="198.27.173.78" dyno=web.1 connect=1ms service=7ms status=404 bytes=394 protocol=https
+2018-01-06T06:05:43.279523+00:00 heroku[router]: at=info method=POST path="/template" host=arenarolodex.herokuapp.com request_id=a619164b-fd1b-4cb0-90d8-8cfbee5c1783 fwd="198.27.173.78" dyno=web.1 connect=1ms service=6ms status=404 bytes=392 protocol=https
+2018-01-06T06:05:45.003349+00:00 heroku[router]: at=info method=GET path="/robots.txt" host=arenarolodex.herokuapp.com request_id=dfe675c2-18af-4f2a-af75-e249f4346ac8 fwd="207.241.225.246" dyno=web.1 connect=1ms service=7ms status=404 bytes=393 protocol=http
+2018-01-06T06:15:26.000000+00:00 app[api]: Build started by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:15:35.863958+00:00 app[api]: Deploy f8fc3e8b by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:15:35.863958+00:00 app[api]: Release v4 created by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:15:36.360816+00:00 heroku[web.1]: Restarting
+2018-01-06T06:15:36.361398+00:00 heroku[web.1]: State changed from up to starting
+2018-01-06T06:15:26.000000+00:00 app[api]: Build succeeded
+2018-01-06T06:15:37.348541+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-01-06T06:15:37.450993+00:00 heroku[web.1]: Process exited with status 143
+2018-01-06T06:15:39.593304+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-01-06T06:15:41.965806+00:00 app[web.1]: 
+2018-01-06T06:15:41.965820+00:00 app[web.1]: > arenarolodex@1.0.0 start /app
+2018-01-06T06:15:41.965821+00:00 app[web.1]: > node server.js
+2018-01-06T06:15:41.965822+00:00 app[web.1]: 
+2018-01-06T06:15:42.458179+00:00 app[web.1]: listening on *:4020 o3o
+2018-01-06T06:15:43.281977+00:00 heroku[web.1]: State changed from starting to up
+2018-01-06T06:19:42.000000+00:00 app[api]: Build started by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:19:52.297264+00:00 app[api]: Deploy 5135907c by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:19:52.297264+00:00 app[api]: Release v5 created by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:19:42.000000+00:00 app[api]: Build succeeded
+2018-01-06T06:19:53.627282+00:00 heroku[web.1]: Restarting
+2018-01-06T06:19:53.635204+00:00 heroku[web.1]: State changed from up to starting
+2018-01-06T06:19:54.463038+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-01-06T06:19:54.548260+00:00 heroku[web.1]: Process exited with status 143
+2018-01-06T06:19:56.142296+00:00 heroku[web.1]: Starting process with command `gunicorn app:app`
+2018-01-06T06:19:57.668703+00:00 app[web.1]: bash: gunicorn: command not found
+2018-01-06T06:19:57.729529+00:00 heroku[web.1]: State changed from starting to crashed
+2018-01-06T06:19:57.731709+00:00 heroku[web.1]: State changed from crashed to starting
+2018-01-06T06:19:57.713350+00:00 heroku[web.1]: Process exited with status 127
+2018-01-06T06:20:01.383945+00:00 heroku[web.1]: Starting process with command `gunicorn app:app`
+2018-01-06T06:20:03.766659+00:00 app[web.1]: bash: gunicorn: command not found
+2018-01-06T06:20:03.832022+00:00 heroku[web.1]: Process exited with status 127
+2018-01-06T06:20:03.848176+00:00 heroku[web.1]: State changed from starting to crashed
+2018-01-06T06:20:04.339904+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=arenarolodex.herokuapp.com request_id=51d6ee4f-a79d-40e3-8e19-0f9434879d5e fwd="198.27.173.78" dyno= connect= service= status=503 bytes= protocol=https
+2018-01-06T06:20:04.410036+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="//" host=arenarolodex.herokuapp.com request_id=ccae74e8-84e7-400f-ab6b-6d99855233c3 fwd="198.27.173.78" dyno= connect= service= status=503 bytes= protocol=https
+2018-01-06T06:20:04.742362+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=arenarolodex.herokuapp.com request_id=b0046e26-2009-4821-b28c-8fa008717fe7 fwd="198.27.173.78" dyno= connect= service= status=503 bytes= protocol=https
+2018-01-06T06:20:11.522697+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=arenarolodex.herokuapp.com request_id=6574f50c-96fe-4a9a-84dc-7ddc9bc8d91f fwd="198.27.173.78" dyno= connect= service= status=503 bytes= protocol=https
+2018-01-06T06:20:13.959243+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=arenarolodex.herokuapp.com request_id=9909e891-c6e3-47ba-95fc-69dde5cf4c84 fwd="198.27.173.78" dyno= connect= service= status=503 bytes= protocol=https
+2018-01-06T06:21:14.695855+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=arenarolodex.herokuapp.com request_id=f6974d68-ddbf-416b-95d4-0bc9da1e0fe9 fwd="198.27.173.78" dyno= connect= service= status=503 bytes= protocol=https
+2018-01-06T06:23:37.000000+00:00 app[api]: Build started by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:23:47.311040+00:00 heroku[web.1]: State changed from crashed to starting
+2018-01-06T06:23:47.065644+00:00 app[api]: Release v6 created by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:23:47.065644+00:00 app[api]: Deploy ed0381e7 by user supercoolsmartwhizardofawesome@gmail.com
+2018-01-06T06:23:37.000000+00:00 app[api]: Build succeeded
+2018-01-06T06:23:49.393248+00:00 heroku[web.1]: Starting process with command `gunicorn app:app`
+2018-01-06T06:23:51.419902+00:00 heroku[web.1]: Process exited with status 127
+2018-01-06T06:23:51.368639+00:00 app[web.1]: bash: gunicorn: command not found
+2018-01-06T06:23:51.434741+00:00 heroku[web.1]: State changed from starting to crashed
+2018-01-06T06:23:54.015674+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=arenarolodex.herokuapp.com request_id=b35defc8-f80f-4c4b-9a8e-6f178a090c16 fwd="198.27.173.78" dyno= connect= service= status=503 bytes= protocol=https
+2018-01-06T06:27:09.968773+00:00 heroku[web.1]: State changed from crashed to starting
+2018-01-06T06:27:15.311657+00:00 heroku[web.1]: Starting process with command `gunicorn app:app`
+2018-01-06T06:27:16.799085+00:00 app[web.1]: bash: gunicorn: command not found
+2018-01-06T06:27:16.865024+00:00 heroku[web.1]: State changed from starting to crashed
+2018-01-06T06:27:16.845577+00:00 heroku[web.1]: Process exited with status 127
+2018-01-06T06:27:17.974042+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=arenarolodex.herokuapp.com request_id=eac9ef2d-8907-4a5b-9c4d-851e730abd23 fwd="198.27.173.78" dyno= connect= service= status=503 bytes= protocol=https
