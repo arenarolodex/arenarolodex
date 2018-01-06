@@ -3,6 +3,8 @@ import sys
 from flask import Flask, request, render_template, url_for, jsonify
 import csv
 import json
+import logging
+
 
 app = Flask(__name__)
 
@@ -107,6 +109,11 @@ def rowcleaner():
 if __name__ == "__main__":
     app.debug = True
     app.run()
+
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
+
 
 print (index_post)
 rowcleaner()
