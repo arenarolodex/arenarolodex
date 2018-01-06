@@ -1,8 +1,8 @@
 import itertools
 import sys
-from flask import Flask, request, render_template, url_for, jsonify, json
+from flask import Flask, request, render_template, url_for, jsonify
 import csv
-
+import json
 
 app = Flask(__name__)
 
@@ -66,12 +66,28 @@ def index_post():
     #     part = []
     #     for 
 
-    with open ('file.csv', 'w', newline='') as f:
-        writing = csv.writer(f, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
+    with open ('filelanding.csv', 'w', newline='') as f_in:
+        writing = csv.writer(f_in, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
         writing.writerows(valued)
-        
+
         # json.dump(ret, f)
     return render_template('landing.html')
+
+
+
+def rowcleaner():
+    with open ('filelanding.csv', 'r', newline='') as f_in, with open('fileoutput.csv', 'w') as f_out, with open('announcer.csv', 'r') as ref:
+        writer = csv.writer(f_out, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
+        
+        for row in csv.reader(f_in, delimiter=','):
+            if row[0] != "a":
+                writer.writerow(row)
+
+
+
+# def setclassadder():
+
+
 
 
 # @app.route('/')
@@ -93,6 +109,7 @@ if __name__ == "__main__":
     app.run()
 
 print (index_post)
+rowcleaner()
 # print (tester)
 
 
