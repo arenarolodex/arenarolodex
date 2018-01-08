@@ -4,7 +4,7 @@ import csv
 import json
 import logging
 import os
-from flask import Flask, request, render_template, url_for
+from flask import Flask, request, render_template, url_for, send_from_directory
 
 
 app = Flask(__name__)
@@ -15,7 +15,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/static/<path:path>')
+@app.route('/static/<path:path>', methods = ['GET', 'POST'])
 def send_static(path):
     return send_from_directory('static', path)
 

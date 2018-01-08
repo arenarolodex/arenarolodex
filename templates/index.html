@@ -5,22 +5,33 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="stylesheet" type="text/css" media="screen" href="static/style.css" />
-        <script src="static/main.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script>
+
+
+        <script type=text/javascript src="{{
+            url_for('static', filename='resources/jquery-3.2.1.min.js') }}"></script>
+
+        <!-- <script src="resources/jquery-3.2.1.min.js"></script> -->
+        <!-- <script>
             //Fallback to local JQuery if CDN isn't working
             if (typeof jQuery == 'undefined') {
                 document.write(unescape(
                 "%3Cscript src='resources/jquery-3.2.1.min.js' type='text/javascript'%3E%3C/script%3E"));
             }
-        </script>
+        </script> -->
+
+        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+        <!-- <script>window.jQuery || document.write('<script src="{{url_for('static', filename='resources/jquery-3.2.1.min.js') }}">\x3C/script>')</script> -->
+
         <script type=text/javascript>
             $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
         </script>
 
 
+        <link rel="stylesheet" type="text/css" media="screen" href="static/style.css" />
+        <script src="static/main.js"></script>
 
+
+            
         <title>Lowell Arena Helper</title>
     </head>
     <body>
