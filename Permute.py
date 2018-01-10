@@ -67,22 +67,23 @@ def index_post():
     #     mylist1.append(t)
 
 
-    if mylist[0] != "":
-        mylist1.append(block1)
-    if mylist[1] != "":
-        mylist1.append(block2)
-    if mylist[2] != "":
-        mylist1.append(block3)
-    if mylist[3] != "":
-        mylist1.append(block4)
-    if mylist[4] != "":
-        mylist1.append(block5)
-    if mylist[5] != "":
-        mylist1.append(block6)
-    if mylist[6] != "":
-        mylist1.append(block7)
-    if mylist[7] != "":
-        mylist1.append(block8)
+    # if mylist[0] != "":
+    #     mylist1.append(block1)
+    # if mylist[1] != "":
+    #     mylist1.append(block2)
+    # if mylist[2] != "":
+    #     mylist1.append(block3)
+    # if mylist[3] != "":
+    #     mylist1.append(block4)
+    # if mylist[4] != "":
+    #     mylist1.append(block5)
+    # if mylist[5] != "":
+    #     mylist1.append(block6)
+    # if mylist[6] != "":
+    #     mylist1.append(block7)
+    # if mylist[7] != "":
+    #     mylist1.append(block8)
+
 
     if all(v == "" for v in mylist):
         return render_template('landing.html')
@@ -97,13 +98,16 @@ def index_post():
         return render_template('landing.html')
 
 
-def rowcleaner():
     with open ('filelanding.csv', 'r', newline='') as f_in, open('fileoutput.csv', 'w') as f_out:
         writer = csv.writer(f_out, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
 
         for row in csv.reader(f_in, delimiter=','):
             if row[0] != "a":
                 writer.writerow(row)
+
+
+# def rowcleaner():
+
 
 
 
@@ -118,4 +122,4 @@ app.logger.setLevel(logging.ERROR)
 
 
 print (index_post)
-rowcleaner()
+# rowcleaner()

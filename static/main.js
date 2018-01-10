@@ -10,8 +10,8 @@ $(function() {
 			var vals = [];
 								
 			switch(key) {
-				case 'beverages':
-					vals = data.beverages.split(",");
+				case 'math':
+					vals = data.math.split(",");
 					break;
 				case 'snacks':
 					vals = data.snacks.split(",");
