@@ -4,20 +4,21 @@ import csv
 import json
 import logging
 import os
-from flask import Flask, request, render_template, url_for, send_from_directory
+from flask import Flask, request, render_template, url_for, send_from_directory, jsonify
 
 
 app = Flask(__name__)
-
 
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
+
 @app.route('/static/<path:path>', methods = ['GET', 'POST'])
 def send_static(path):
     return send_from_directory('static', path)
+
 
 # @app.route('/template', methods=['GET', 'POST'])
 # def block_retriever():
@@ -32,7 +33,14 @@ def send_static(path):
 #     block8 = request.form['block8']
 
 #     retrieved = block1 + ',' + block2 + ',' + block3 + ',' + block4 + ',' + block5 + ',' + block6 + ',' + block7 + ',' + block8
-#     return retrieved
+    
+#     with open ('announcer.csv', 'r') as g, open ('reference.json', 'w') as h, open ('announcer1.csv', 'w') as i:
+#         announce = csv.reader(g, delimiter = ',')
+#         write = csv.writer(i, delimiter = ',')
+
+#         for row in announce:
+#             if row[0] == block1:
+#                 write.writerow(row)
 
 
 
@@ -55,6 +63,26 @@ def index_post():
     for x in mylist:
         if x != "":
             mylist1.append(x)
+    # if all(t != "" for t in mylist):
+    #     mylist1.append(t)
+
+
+    if mylist[0] != "":
+        mylist1.append(block1)
+    if mylist[1] != "":
+        mylist1.append(block2)
+    if mylist[2] != "":
+        mylist1.append(block3)
+    if mylist[3] != "":
+        mylist1.append(block4)
+    if mylist[4] != "":
+        mylist1.append(block5)
+    if mylist[5] != "":
+        mylist1.append(block6)
+    if mylist[6] != "":
+        mylist1.append(block7)
+    if mylist[7] != "":
+        mylist1.append(block8)
 
     if all(v == "" for v in mylist):
         return render_template('landing.html')
@@ -67,17 +95,6 @@ def index_post():
             writing.writerows(valued)
             # json.dump(ret, f)
         return render_template('landing.html')
-    # ret = '</br>'.join(', '.join(elems) for elems in valued)
-    # ret = '\n'.join(', '.join(elems) for elems in valued)
-    # return ret
-    # return jsonify(valued)
-
-    # for elems in valued
-    #     part = []
-    #     for
-
-
-
 
 
 def rowcleaner():
@@ -89,25 +106,7 @@ def rowcleaner():
                 writer.writerow(row)
 
 
-# , open('announcer.csv', 'r') as ref
-# def setclassadder():
 
-
-
-
-# @app.route('/')
-# def tester():
-#     return url_for(index)
-
-
-
-
-
-
-
-# sys.stdout = open("Test.txt", "w")
-# print (value)
-# print ("Test")
 
 if __name__ == "__main__":
     app.debug = True
@@ -120,8 +119,3 @@ app.logger.setLevel(logging.ERROR)
 
 print (index_post)
 rowcleaner()
-# print (tester)
-
-
-# filename  = open("Test.txt","w")
-# sys.stdout = filename

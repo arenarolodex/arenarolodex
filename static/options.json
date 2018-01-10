@@ -1,4 +1,10 @@
 {
-    "beverages": "Coffee,Coke",
-    "snacks": "Chips,Cookies"
+    "math": "Coffee,Coke",
+    "science": "Chips,Cookies",
+    "english": "Cake, Pizza",
+    "history": "Stuff",
+    "vpa": "examples",
+    "language": "more",
+    "pe": "running",
+    "others": "bleh"
   }
