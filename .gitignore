@@ -2,3 +2,6 @@ __pycache__/*
 .vscode/*
 filelanding.csv
 fileoutput.csv
+announcer1.csv
+announcer2.csv
+reference.json
