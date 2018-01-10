@@ -40,6 +40,7 @@ def block_retriever():
         writ = csv.writer(j, delimiter = ',')
 
         for row in announce:
+            # might be writerow
             write.writerows(row[0], row[2], row[5], row[7])
 
         for row in write:
@@ -49,12 +50,33 @@ def block_retriever():
 
 @app.route('/results', methods = ['GET', 'POST'])
 def announce_json():
-    with open ('announcer2.csv', 'r') as j_in, open ('reference.json', 'w') as h:
-        fieldnames = ("Number","Class","Block","Teacher")
-        reading = csv.DictReader(j_in, fieldnames)
-        for row in reading:
-            json.dump(row,h)
-            h.write('\n')
+    with open ('announcer2.csv', 'r') as j_in, open ('holder.csv', 'w') as k, open ('reference.json', 'w') as h:
+        names = ["math", "english", "science", "history", "vpa", "language", "pe", "others"]
+        fieldnames = ("")
+        read = csv.reader(j_in, delimiter = ',')
+        # reading = csv.DictReader(j_in, fieldnames)
+        temp = csv.writer(k, delimiter = ',')
+
+        
+        for row in read:
+            d = 0
+            c = d+1
+            e = str(c)
+
+            if row[0] == e and d < 2:
+                fieldnames = (names[d])
+                # might be writerow
+                temp.writerows(row[1], row[2], row[3])
+                reading = csv.DictReader(k, fieldnames)
+                for r in reading:
+                    json.dump(r, h)
+                    h.write('\n')
+
+                    d += 1
+                    break #maybe continue
+
+            else:
+                break
 
 
 @app.route('/results', methods = ['GET', 'POST'])
