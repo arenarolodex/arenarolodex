@@ -20,63 +20,63 @@ def send_static(path):
     return send_from_directory('static', path)
 
 
-@app.route('/results', methods=['GET', 'POST'])
-def block_retriever():
-    app.logger.debug('This block of code was reached. congrats')
-    block1 = request.form['block1']
-    block2 = request.form['block2']
-    block3 = request.form['block3']
-    block4 = request.form['block4']
-    block5 = request.form['block5']
-    block6 = request.form['block6']
-    block7 = request.form['block7']
-    block8 = request.form['block8']
+# @app.route('/results', methods=['GET', 'POST'])
+# def block_retriever():
+#     app.logger.debug('This block of code was reached. congrats')
+#     block1 = request.form['block1']
+#     block2 = request.form['block2']
+#     block3 = request.form['block3']
+#     block4 = request.form['block4']
+#     block5 = request.form['block5']
+#     block6 = request.form['block6']
+#     block7 = request.form['block7']
+#     block8 = request.form['block8']
 
-    retrieved = block1 + ',' + block2 + ',' + block3 + ',' + block4 + ',' + block5 + ',' + block6 + ',' + block7 + ',' + block8
+#     retrieved = block1 + ',' + block2 + ',' + block3 + ',' + block4 + ',' + block5 + ',' + block6 + ',' + block7 + ',' + block8
     
-    with open ('announcer.csv', 'r') as g, open ('announcer1.csv', 'w') as i, open ('announcer2.csv', 'w') as j:
-        announce = csv.reader(g, delimiter = ',')
-        write = csv.writer(i, delimiter = ',')
-        writ = csv.writer(j, delimiter = ',')
+#     with open ('announcer.csv', 'r') as g, open ('announcer1.csv', 'w') as i, open ('announcer2.csv', 'w') as j:
+#         announce = csv.reader(g, delimiter = ',')
+#         write = csv.writer(i, delimiter = ',')
+#         writ = csv.writer(j, delimiter = ',')
 
-        for row in announce:
-            # might be writerow
-            write.writerows(row[0], row[2], row[5], row[7])
+#         for row in announce:
+#             # might be writerow
+#             write.writerows(row[0], row[2], row[5], row[7])
 
-        for row in write:
-            if row[1] == block1 or block2 or block3 or block4 or block5 or block6 or block7 or block8:
-                writ.writerow(row)
+#         for row in write:
+#             if row[1] == block1 or block2 or block3 or block4 or block5 or block6 or block7 or block8:
+#                 writ.writerow(row)
 
 
-@app.route('/results', methods = ['GET', 'POST'])
-def announce_json():
-    with open ('announcer2.csv', 'r') as j_in, open ('holder.csv', 'w') as k, open ('reference.json', 'w') as h:
-        names = ["math", "english", "science", "history", "vpa", "language", "pe", "others"]
-        fieldnames = ("")
-        read = csv.reader(j_in, delimiter = ',')
-        # reading = csv.DictReader(j_in, fieldnames)
-        temp = csv.writer(k, delimiter = ',')
+# @app.route('/results', methods = ['GET', 'POST'])
+# def announce_json():
+#     with open ('announcer2.csv', 'r') as j_in, open ('holder.csv', 'w') as k, open ('reference.json', 'w') as h:
+#         names = ["math", "english", "science", "history", "vpa", "language", "pe", "others"]
+#         fieldnames = ("")
+#         read = csv.reader(j_in, delimiter = ',')
+#         # reading = csv.DictReader(j_in, fieldnames)
+#         temp = csv.writer(k, delimiter = ',')
 
         
-        for row in read:
-            d = 0
-            c = d+1
-            e = str(c)
+#         for row in read:
+#             d = 0
+#             c = d+1
+#             e = str(c)
 
-            if row[0] == e and d < 2:
-                fieldnames = (names[d])
-                # might be writerow
-                temp.writerows(row[1], row[2], row[3])
-                reading = csv.DictReader(k, fieldnames)
-                for r in reading:
-                    json.dump(r, h)
-                    h.write('\n')
+#             if row[0] == e and d < 2:
+#                 fieldnames = (names[d])
+#                 # might be writerow
+#                 temp.writerows(row[1], row[2], row[3])
+#                 reading = csv.DictReader(k, fieldnames)
+#                 for r in reading:
+#                     json.dump(r, h)
+#                     h.write('\n')
 
-                    d += 1
-                    break #maybe continue
+#                     d += 1
+#                     break #maybe continue
 
-            else:
-                break
+#             else:
+#                 break
 
 
 @app.route('/results', methods = ['GET', 'POST'])
@@ -135,12 +135,12 @@ def index_post():
 
     index_post.has_been_called = True
     pass
+    rowcleaner()
 
 index_post.has_been_called = False
 
 
 
-@app.route('/results', methods = ['GET', 'POST'])
 def rowcleaner():
     with open ('filelanding.csv', 'r', newline='') as f_in, open('fileoutput.csv', 'wb') as f_out:
         writer = csv.writer(f_out, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
