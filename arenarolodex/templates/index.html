@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+
+
+        <script type=text/javascript src="{{
+            url_for('static', filename='resources/jquery-3.2.1.min.js') }}"></script>
+
+        <!-- <script src="resources/jquery-3.2.1.min.js"></script> -->
+        <!-- <script>
+            //Fallback to local JQuery if CDN isn't working
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape(
+                "%3Cscript src='resources/jquery-3.2.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+        </script> -->
+
+        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+        <!-- <script>window.jQuery || document.write('<script src="{{url_for('static', filename='resources/jquery-3.2.1.min.js') }}">\x3C/script>')</script> -->
+
+        <script type=text/javascript>
+            $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+        </script>
+
+
+        <link rel="stylesheet" type="text/css" media="screen" href="/static/style.css" />
+        <script src="/static/main.js"></script>
+
+
+            
+        <title>Lowell Arena Helper</title>
+    </head>
+    <body>
+        <form name="myForm" action="results" onsubmit="return validateForm()" method="POST">
+            <div>
+                <select id="one-choice">
+                    <option selected value="base">Please Select</option>
+                    <option value="math">Math/CS</option>
+                    <option value="english">English</option>
+                    <option value="science">Science</option>
+                    <option value="history">History/Social Studies</option>
+                    <option value="vpa">VPAs</option>
+                    <option value="language">World Language</option>
+                    <option value="pe">PE/Sports</option>
+                    <option value="others">Other</option>     
+                    <option value="snacks">Snacks</option>    
+                    </select>
+                <br>
+                <label>Choose a class from the list:
+                    <input list="first-choice" name="block1" autocomplete="" required></label>
+                <label>Guaranteed class?
+                    <input type="checkbox" name="check1"></label>
+                <label>Preferred teacher?
+                    <input list="first-teach" name="teach1" autocomplete=""></label>
+                <br>
+            </div>
+            <div>
+                <select id="two-choice">
+                        <option selected value="base">Please Select</option>
+                        <option value="math">Math/CS</option>
+                        <option value="english">English</option>
+                        <option value="science">Science</option>
+                        <option value="history">History/Social Studies</option>
+                        <option value="vpa">VPAs</option>
+                        <option value="language">World Language</option>
+                        <option value="pe">PE/Sports</option>
+                        <option value="others">Other</option>         
+                    </select>
+                <br>
+                <label>Choose a class from the list:
+                    <input list="second-choice" name="block2" autocomplete="" required></label>
+                <label>Guaranteed class?
+                    <input type="checkbox" name="check2"></label>
+                <label>Preferred teacher?
+                    <input list="second-teach" name="teach2" autocomplete=""></label>
+                <br>
+            </div>
+            <div>
+                <select id="three-choice">
+                    <option selected value="base">Please Select</option>
+                    <option value="math">Math/CS</option>
+                    <option value="english">English</option>
+                    <option value="science">Science</option>
+                    <option value="history">History/Social Studies</option>
+                    <option value="vpa">VPAs</option>
+                    <option value="language">World Language</option>
+                    <option value="pe">PE/Sports</option>
+                    <option value="others">Other</option>         
+                    </select>
+                <br>
+                <label>Choose a class from the list:
+                    <input list="third-choice" name="block3" autocomplete="" required></label>
+                <label>Guaranteed class?
+                    <input type="checkbox" name="check3"></label>
+                <label>Preferred teacher?
+                    <input list="third-teach" name="teach3" autocomplete=""></label>
+                <br>
+            </div>
+            <div>
+                <select id="four-choice">
+                        <option selected value="base">Please Select</option>
+                        <option value="math">Math/CS</option>
+                        <option value="english">English</option>
+                        <option value="science">Science</option>
+                        <option value="history">History/Social Studies</option>
+                        <option value="vpa">VPAs</option>
+                        <option value="language">World Language</option>
+                        <option value="pe">PE/Sports</option>
+                        <option value="others">Other</option>         
+                    </select>
+                <br>
+                <label>Choose a class from the list:
+                    <input list="fourth-choice" name="block4" autocomplete="" required></label>
+                <label>Guaranteed class?
+                    <input type="checkbox" name="check4"></label>
+                <label>Preferred teacher?
+                    <input list="fourth-teach" name="teach4" autocomplete=""></label>
+                <br>
+            </div>
+            <div>
+                <select id="five-choice">
+                        <option selected value="base">Please Select</option>
+                        <option value="math">Math/CS</option>
+                        <option value="english">English</option>
+                        <option value="science">Science</option>
+                        <option value="history">History/Social Studies</option>
+                        <option value="vpa">VPAs</option>
+                        <option value="language">World Language</option>
+                        <option value="pe">PE/Sports</option>
+                        <option value="others">Other</option>         
+                    </select>
+                <br>
+                <label>Choose a class from the list:
+                    <input list="fifth-choice" name="block5" autocomplete="" required></label>
+                <label>Guaranteed class?
+                    <input type="checkbox" name="check5"></label>
+                <label>Preferred teacher?
+                    <input list="fifth-teach" name="teach5" autocomplete=""></label>
+                <br>
+            </div>
+            <div>
+                <select id="six-choice">
+                        <option selected value="base">Please Select</option>
+                        <option value="math">Math/CS</option>
+                        <option value="english">English</option>
+                        <option value="science">Science</option>
+                        <option value="history">History/Social Studies</option>
+                        <option value="vpa">VPAs</option>
+                        <option value="language">World Language</option>
+                        <option value="pe">PE/Sports</option>
+                        <option value="others">Other</option>         
+                    </select>
+                <br>
+                <label>Choose a class from the list:
+                    <input list="sixth-choice" name="block6" autocomplete="" required></label>
+                <label>Guaranteed class?
+                    <input type="checkbox" name="check6"></label>
+                <label>Preferred teacher?
+                    <input list="sixth-teach" name="teach6" autocomplete=""></label>
+                <br>
+            </div>
+            <div>
+                <select id="seven-choice">
+                        <option selected value="base">Please Select</option>
+                        <option value="math">Math/CS</option>
+                        <option value="english">English</option>
+                        <option value="science">Science</option>
+                        <option value="history">History/Social Studies</option>
+                        <option value="vpa">VPAs</option>
+                        <option value="language">World Language</option>
+                        <option value="pe">PE/Sports</option>
+                        <option value="others">Other</option>         
+                    </select>
+                <br>
+                <label>Choose a class from the list:
+                    <input list="seventh-choice" name="block7" autocomplete="" required></label>
+                <label>Guaranteed class?
+                    <input type="checkbox" name="check7"></label>
+                <label>Preferred teacher?
+                    <input list="seventh-teach" name="teach7" autocomplete=""></label>
+                <br>
+            </div>
+            <div>
+                <select id="eight-choice">
+                        <option selected value="base">Please Select</option>
+                        <option value="math">Math/CS</option>
+                        <option value="english">English</option>
+                        <option value="science">Science</option>
+                        <option value="history">History/Social Studies</option>
+                        <option value="vpa">VPAs</option>
+                        <option value="language">World Language</option>
+                        <option value="pe">PE/Sports</option>
+                        <option value="others">Other</option>         
+                    </select>
+                <br>
+                <label>Choose a class from the list:
+                    <input list="eighth-choice" name="block8" autocomplete="" required></label>
+                <label>Guaranteed class?
+                    <input type="checkbox" name="check8"></label>
+                <label>Preferred teacher?
+                    <input list="eighth-teach" name="teach8" autocomplete=""></label>
+                <br>
+            </div>
+            <br>
+            <input type="submit" value="Enter">
+        </form>
+
+
+        <datalist id="first-choice"></datalist>
+        <datalist id="second-choice"></datalist>
+        <datalist id="third-choice"></datalist>
+        <datalist id="fourth-choice"></datalist>
+        <datalist id="fifth-choice"></datalist>
+        <datalist id="sixth-choice"></datalist>
+        <datalist id="seventh-choice"></datalist>
+        <datalist id="eighth-choice"></datalist>
+
+        <datalist id="first-teach"></datalist>
+        <datalist id="second-teach"></datalist>
+        <datalist id="third-teach"></datalist>
+        <datalist id="fourth-teach"></datalist>
+        <datalist id="fifth-teach"></datalist>
+        <datalist id="sixth-teach"></datalist>
+        <datalist id="seventh-teach"></datalist>
+        <datalist id="eighth-teach"></datalist>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+            <!-- <select id="second-choice">
+                <option>Please choose from above</option>
+            </select>
+            <br> -->
