@@ -1,1 +1,1 @@
-web gunicorn Permute:app
+web gunicorn __init__:app
