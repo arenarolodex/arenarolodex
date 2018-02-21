@@ -1,1 +1,1 @@
-web gunicorn --pythonpath /arenarolodex/ __init__:app
+web gunicorn --arenarolodex/ __init__:app
