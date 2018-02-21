@@ -1,3 +1,4 @@
+-e git+https://github.com/WhizardXD/arenarolodex.git@1f23ba855612cc49fe16dc24c5851b70dd627de6#egg=arenarolodex
 argh==0.26.2
 astroid==1.6.0
 certifi==2017.11.5
