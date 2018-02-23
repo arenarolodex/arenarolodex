@@ -1,1 +1,1 @@
-web gunicorn --chdir arenarolodex __init__:app
+web gunicorn arenarolodex:app
