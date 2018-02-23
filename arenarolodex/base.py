@@ -1,9 +1,9 @@
 from flask import Flask, request, render_template
 from arenarolodex import app
 
-@app.route('/')
+@app.route('/', methods = ['GET', 'POST'])
 def index():
-    return render_template('/templates/index.html')
+    return render_template('index.html')
 
 
 # @app.route('/index', methods=['GET', 'POST'])
