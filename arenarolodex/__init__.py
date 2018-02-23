@@ -13,6 +13,7 @@ import arenarolodex.static
 # import arenarolodex.prep
 import arenarolodex.base
 import arenarolodex.Permute
+import arenarolodex.ending
 
 
 

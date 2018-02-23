@@ -1,4 +1,4 @@
--e git+https://github.com/WhizardXD/arenarolodex.git@1f23ba855612cc49fe16dc24c5851b70dd627de6#egg=arenarolodex
+-e git+https://github.com/WhizardXD/arenarolodex.git@a2a316e2daa1b813835441a62ba5c429f21fcf72#egg=arenarolodex
 argh==0.26.2
 astroid==1.6.0
 certifi==2017.11.5
@@ -15,6 +15,8 @@ Jinja2==2.10
 lazy-object-proxy==1.3.1
 MarkupSafe==1.0
 mccabe==0.6.1
+numpy==1.14.1
+pandas==0.22.0
 pathtools==0.1.2
 pew==1.1.2
 pipenv==9.0.1
@@ -22,6 +24,8 @@ psutil==5.3.1
 pycodestyle==2.3.1
 pyflakes==1.6.0
 pylint==1.8.1
+python-dateutil==2.6.1
+pytz==2018.3
 PyYAML==3.12
 requests==2.18.4
 six==1.11.0

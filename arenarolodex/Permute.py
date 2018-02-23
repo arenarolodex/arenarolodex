@@ -4,6 +4,7 @@ import csv
 import json
 import logging
 import os
+import pandas as pd
 from flask import Flask, request, render_template, url_for, send_from_directory, jsonify
 from arenarolodex import app
 
@@ -63,21 +64,57 @@ def index_post():
         return render_template('landing.html')
     else:
          # global valued
-        valued = list(itertools.permutations(mylist1))
+        valued = list(itertools.permutations(mylist))
 
-        with open ('filelanding.csv', 'w', newline='') as f_out:
+        with open ('arenarolodex/filelanding.csv', 'w', newline='') as f_out:
             writing = csv.writer(f_out, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
+            writing.writerow(["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"])
             writing.writerows(valued)
 
 
-        with open ('filelanding.csv', 'r', newline='') as f_out_1, open ('fileoutput.csv', 'w', newline='') as f_out_2:
-            read = csv.reader(f_out_1, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
-            write = csv.writer(f_out_2, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
+
+        # with open ('filelanding.csv', 'r', newline='') as f_out_1, open ('fileoutput.csv', 'w', newline='') as f_out_2:
+        #     read = csv.reader(f_out_1, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
+        #     write = csv.writer(f_out_2, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
 
 
-            for row in read:
-                if block1 in row:
-                    write.writerow(row[:])
+
+        filename = 'filelanding.csv'
+        data = pd.read_csv(filename)
+        data.to_csv('fileoutput.csv')
+
+        data1 = pd.read_csv('fileoutput.csv')
+        # for x in data:
+        #     y = data.index(x)
+        #     if checklist[y] != None:
+        
+        # data.ix[~(data[data.index[[0]]] == mylist[y])]
+
+
+        if check1 != None and checklist[1:] == None:
+            s = data.ix[data['C1'] == block1]
+            s
+        # if check2 != None:
+        #     data.ix[~(data['C2'] == block2)]
+        # if check3 != None:
+        #     data.ix[~(data['C3'] == block3)]
+        # if check4 != None:
+        #     data.ix[~(data['C4'] == block4)]
+        # if check5 != None:
+        #     data.ix[~(data['C5'] == block5)]
+        # if check6 != None:
+        #     data.ix[~(data['C6'] == block6)]
+        # if check7 != None:
+        #     data.ix[~(data['C7'] == block7)]
+        # if check8 != None:
+        #     data.ix[~(data['C8'] == block8)]
+
+
+        data.to_csv('output.csv')
+
+            # for row in read:
+            #     if block1 in row:
+            #         write.writerow(row[:])
 
 
 
@@ -128,9 +165,9 @@ def index_post():
             #     if checklist[:1] != None and checklist[1:] == None:
             #         write.writerow((block1, row[0], row[1], row[2], row[3], row[4], row[5], row[6]))
             #     if checklist[:2] != None and checklist[2:] == None:
-            #         write.writerow((block1, block2, row[1], row[2], row[3], row[4], row[5], row[6]))
+            #         write.writerow((block1, block2, row[0], row[1], row[2], row[3], row[4], row[5]))
             #     if checklist[:3] != None and checklist[3:] == None:
-            #         write.writerow((block1, block2, block3, row[2], row[3], row[4], row[5], row[6]))
+            #         write.writerow((block1, block2, block3, row[0], row[1], row[2], row[3], row[4]))
             #     if checklist[:4] != None and checklist[4:] == None:
             #         write.writerow((block1, block2, block3, block4, row[3], row[4], row[5], row[6]))
             #     if checklist[:5] != None and checklist[5:] == None:
@@ -211,18 +248,18 @@ def index_post():
 
                 # if check2 != None:
                 #     write.writerow((row[0], block2, row[1], row[2], row[3], row[4], row[5], row[6]))
-            #     if check3 != None:
-            #         write.writerow((row[0], row[0], block3, row[2], row[3], row[4], row[5], row[6]))
-            #     if check4 != None:
-            #         write.writerow((row[0], row[0], row[1], block4, row[3], row[4], row[5], row[6]))
-            #     if check5 != None:
-            #         write.writerow((row[0], row[0], row[1], row[2], block5, row[4], row[5], row[6]))
-            #     if check6 != None:
-            #         write.writerow((row[0], row[0], row[1], row[2], row[3], block6, row[5], row[6]))
-            #     if check7 != None:
-            #         write.writerow((row[0], row[0], row[1], row[2], row[3], row[4], block7, row[6]))
-            #     if check8 != None:
-            #         write.writerow((row[0], row[0], row[1], row[2], row[3], row[4], row[5], block8))
+                # if check3 != None:
+                #     write.writerow((row[0], row[0], block3, row[2], row[3], row[4], row[5], row[6]))
+                # if check4 != None:
+                #     write.writerow((row[0], row[0], row[1], block4, row[3], row[4], row[5], row[6]))
+                # if check5 != None:
+                #     write.writerow((row[0], row[0], row[1], row[2], block5, row[4], row[5], row[6]))
+                # if check6 != None:
+                #     write.writerow((row[0], row[0], row[1], row[2], row[3], block6, row[5], row[6]))
+                # if check7 != None:
+                #     write.writerow((row[0], row[0], row[1], row[2], row[3], row[4], block7, row[6]))
+                # if check8 != None:
+                #     write.writerow((row[0], row[0], row[1], row[2], row[3], row[4], row[5], block8))
 
 
             # if (x != None for x in checklist):
@@ -278,16 +315,16 @@ def index_post():
 
 
 
-if __name__ == "__main__":
-    app.debug = True
-    app.run()
+# if __name__ == "__main__":
+#     app.debug = True
+#     app.run()
 
 
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
+# app.logger.addHandler(logging.StreamHandler(sys.stdout))
+# app.logger.setLevel(logging.ERROR)
 
 
-print (index_post)
+# print (index_post)
 # if index_post.has_been_called:
 #     s = "Testing"
 #     print (s)
