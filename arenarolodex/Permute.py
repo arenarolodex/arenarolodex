@@ -80,7 +80,7 @@ def index_post():
 
 
         filename = 'filelanding.csv'
-        data = pd.read_csv(filename)
+        data = pd.read_csv(filename, delimiter=',')
         data.to_csv('fileoutput.csv')
 
         data1 = pd.read_csv('fileoutput.csv')
@@ -92,7 +92,7 @@ def index_post():
 
 
         if check1 != None and checklist[1:] == None:
-            s = data.ix[data['C1'] == block1]
+            s = data.ix[data['C1'] != block1]
             s
         # if check2 != None:
         #     data.ix[~(data['C2'] == block2)]
