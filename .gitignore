@@ -1,6 +1,7 @@
-__pycache__/*
+arenarolodex/__pycache__/*
 .vscode/*
 filelanding.csv
 fileoutput.csv
 announcer1.csv
 arenarolodex/__pycache__/*
+*.egg-info/*
