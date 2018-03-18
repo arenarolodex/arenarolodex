@@ -35,6 +35,7 @@ def index_post():
     mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
     checklist = [check1, check2, check3, check4, check5, check6, check7, check8]
     mylist1 = []
+    headers = []
 
     # for x in checklist:
     #     if x != True:
@@ -44,20 +45,28 @@ def index_post():
 
     if mylist[0] != "" and check1 == None:
         mylist1.append(block1)
+        headers.append('C1')
     if mylist[1] != "" and check2 == None:
         mylist1.append(block2)
+        headers.append('C2')
     if mylist[2] != "" and check3 == None:
         mylist1.append(block3)
+        headers.append('C3')
     if mylist[3] != "" and check4 == None:
         mylist1.append(block4)
+        headers.append('C4')
     if mylist[4] != "" and check5 == None:
         mylist1.append(block5)
+        headers.append('C5')
     if mylist[5] != "" and check6 == None:
         mylist1.append(block6)
+        headers.append('C6')
     if mylist[6] != "" and check7 == None:
         mylist1.append(block7)
+        headers.append('C7')
     if mylist[7] != "" and check8 == None:
         mylist1.append(block8)
+        headers.append('C8')
 
 
     if all(v == "" for v in mylist):
@@ -65,11 +74,15 @@ def index_post():
     else:
          # global valued
         valued = list(itertools.permutations(mylist))
+        output = list(map(list, zip(*valued)))
 
-        with open ('arenarolodex/filelanding.csv', 'w', newline='') as f_out:
+        with open ('filelanding.csv', 'w', newline='') as f_out:
             writing = csv.writer(f_out, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
+            # writing.writerow(headers)
             writing.writerow(["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"])
-            writing.writerows(valued)
+
+
+            # writing.writerows(valued)
 
 
 
@@ -81,9 +94,30 @@ def index_post():
 
         filename = 'filelanding.csv'
         data = pd.read_csv(filename, delimiter=',')
+
+
+        if check1 != None:
+        data['C1'] = data[output[0]]
+
+        data['C2'] = data[output[1]]
+
+        data['C3'] = data[output[2]]
+
+        data['C4'] = data[output[3]]
+
+        data['C5'] = data[output[4]]
+
+        data['C6'] = data[output[5]]
+
+        data['C7'] = data[output[6]]
+
+        data['C8'] = data[output[7]]
+
+
+
         data.to_csv('fileoutput.csv')
 
-        data1 = pd.read_csv('fileoutput.csv')
+        # data1 = pd.read_csv('fileoutput.csv')
         # for x in data:
         #     y = data.index(x)
         #     if checklist[y] != None:
@@ -92,8 +126,7 @@ def index_post():
 
 
         if check1 != None and checklist[1:] == None:
-            s = data.ix[data['C1'] != block1]
-            s
+            data1.ix[~(data1.iloc[:0] < 5040)]
         # if check2 != None:
         #     data.ix[~(data['C2'] == block2)]
         # if check3 != None:
@@ -110,7 +143,7 @@ def index_post():
         #     data.ix[~(data['C8'] == block8)]
 
 
-        data.to_csv('output.csv')
+        data1.to_csv('output.csv')
 
             # for row in read:
             #     if block1 in row:
