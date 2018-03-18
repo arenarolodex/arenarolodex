@@ -13,7 +13,6 @@ from arenarolodex import app
 
 @app.route('/results', methods = ['GET', 'POST'])
 def index_post():
-    app.logger.debug('This block of code was reached. congrats')
     block1 = request.form['block1']
     block2 = request.form['block2']
     block3 = request.form['block3']
@@ -23,56 +22,29 @@ def index_post():
     block7 = request.form['block7']
     block8 = request.form['block8']
 
-    check1 = request.form.get('check1')
-    check2 = request.form.get('check2')
-    check3 = request.form.get('check3')
-    check4 = request.form.get('check4')
-    check5 = request.form.get('check5')
-    check6 = request.form.get('check6')
-    check7 = request.form.get('check7')
-    check8 = request.form.get('check8')
-
     mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
-    checklist = [check1, check2, check3, check4, check5, check6, check7, check8]
-    mylist1 = []
-    headers = []
-
-    # for x in checklist:
-    #     if x != True:
-    #         mylist1.append(x)
-    # if all(t != "" for t in mylist):
-    #     mylist1.append(t)
-
-    if mylist[0] != "" and check1 == None:
-        mylist1.append(block1)
-        headers.append('C1')
-    if mylist[1] != "" and check2 == None:
-        mylist1.append(block2)
-        headers.append('C2')
-    if mylist[2] != "" and check3 == None:
-        mylist1.append(block3)
-        headers.append('C3')
-    if mylist[3] != "" and check4 == None:
-        mylist1.append(block4)
-        headers.append('C4')
-    if mylist[4] != "" and check5 == None:
-        mylist1.append(block5)
-        headers.append('C5')
-    if mylist[5] != "" and check6 == None:
-        mylist1.append(block6)
-        headers.append('C6')
-    if mylist[6] != "" and check7 == None:
-        mylist1.append(block7)
-        headers.append('C7')
-    if mylist[7] != "" and check8 == None:
-        mylist1.append(block8)
-        headers.append('C8')
-
 
     if all(v == "" for v in mylist):
         return render_template('landing.html')
     else:
-         # global valued
+        # Make a 2d list of all course offerings for courses person asked for
+        courses = [[],[],[],[],[],[],[],[]]
+        announcer = csv.reader(open('announcer.csv', "rb"), delimiter=",")
+        for i in range(len(mylist)):
+            for row in announcer:
+                if row[2] == mylist[i]:
+                    courses[i].push(row);
+
+        # Check if the length of each list is 1; if so, guarantee that block
+        for course in courses:
+            if len(course) == 1:
+                for c in courses:
+                    # for each course, we're going to sort out the block
+                    c = ifilterfalse(lambda x: x[5] == course[0][5])
+
+        # Create big list of combinations of classes
+        
+
         valued = list(itertools.permutations(mylist))
         output = list(map(list, zip(*valued)))
 
@@ -97,21 +69,28 @@ def index_post():
 
 
         if check1 != None:
-        data['C1'] = data[output[0]]
+            data['C1'] = data[output[0]]
 
-        data['C2'] = data[output[1]]
+        if check2 != None:
+            data['C2'] = data[output[1]]
 
-        data['C3'] = data[output[2]]
+        if check3 != None:
+            data['C3'] = data[output[2]]
 
-        data['C4'] = data[output[3]]
+        if check4 != None:
+            data['C4'] = data[output[3]]
 
-        data['C5'] = data[output[4]]
+        if check5 != None:
+            data['C5'] = data[output[4]]
 
-        data['C6'] = data[output[5]]
+        if check6 != None:
+            data['C6'] = data[output[5]]
 
-        data['C7'] = data[output[6]]
+        if check7 != None:
+            data['C7'] = data[output[6]]
 
-        data['C8'] = data[output[7]]
+        if check8 != None:
+            data['C8'] = data[output[7]]
 
 
 
@@ -121,7 +100,7 @@ def index_post():
         # for x in data:
         #     y = data.index(x)
         #     if checklist[y] != None:
-        
+
         # data.ix[~(data[data.index[[0]]] == mylist[y])]
 
 
@@ -250,7 +229,7 @@ def index_post():
             #         write.writerow((row[0], row[1], row[2], block4, block5, block6, block7, row[6]))
             #     if checklist[3:8] != None and checklist[8:] == None:
             #         write.writerow((row[0], row[1], row[2], block4, block5, block6, block7, block8))
-                    
+
             #     if check5 != None:
             #         write.writerow((row[0], row[1], row[2], row[3], block5, row[4], row[5], row[6]))
             #     if check5 != None and check6 != None:
@@ -266,7 +245,7 @@ def index_post():
             #         write.writerow((row[0], row[1], row[2], row[3], row[4], block6, block7, row[6]))
             #     if check6 != None and check7 != None and check8 != None:
             #         write.writerow((row[0], row[1], row[2], row[3], row[4], block6, block7, block8))
-                    
+
             #     if check7 != None:
             #         write.writerow((row[0], row[1], row[2], row[3], row[4], row[5], block7, row[6]))
             #     if check7 != None and check8 != None:
