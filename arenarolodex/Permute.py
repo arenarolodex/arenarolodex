@@ -96,8 +96,9 @@ def index_post():
             writing.writerow(["b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8"])
             for schedule in combinations:
                 row = []
+                schedule = sorted(schedule, key=lambda x: x[5])
                 for course in schedule:
-                    row.append(course[2]+" "+course[5]+" "+course[7])
+                    row.append(course[2]+" "+course[7])
                 writing.writerow(row)
                 print(row)
             print(str(len(combinations))+" schedules were written to filelanding.csv")
