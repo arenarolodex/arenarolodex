@@ -8,8 +8,7 @@ import pandas as pd
 from flask import Flask, request, render_template, url_for, send_from_directory, jsonify
 from arenarolodex import app
 
-# app = Flask(__name__)
-
+logging.basicConfig(level=logging.DEBUG)
 
 @app.route('/results', methods = ['GET', 'POST'])
 def index_post():
@@ -23,22 +22,29 @@ def index_post():
     block8 = request.form['block8']
 
     mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
+
     # Filter out blanks
     mylist = list(itertools.filterfalse(lambda x: x == "", mylist))
+    print("User inputted "+str(len(mylist))+" courses")
 
     if len(mylist) == 0:
         return render_template('landing.html')
     else:
         # Make a 2d list of all course offerings for courses person asked for
-        courses = list(itertools.repeat([], len(mylist)))
+        courses = []
+        for x in range(len(mylist)):
+            courses.append([])
 
         # Open announcer, and for each course requested, pull out all courses
         # with the same name requested
-        announcer = csv.reader(open('arenarolodex/announcer.csv', "r"), delimiter=",")
-        for i in range(len(mylist)):
+        announcer = list(csv.reader(open('arenarolodex/announcer.csv', "r"), delimiter=","))
+        for i in range(len(courses)):
+            print("Looking for "+str(mylist[i])+"...")
             for row in announcer:
                 if row[2] == mylist[i]:
                     courses[i].append(row);
+                    # print(row)
+            print("Found "+str(len(courses[i]))+" matches")
 
         # Check if the length of each list is 1; if so, guarantee that block
         for course in courses:
@@ -53,14 +59,15 @@ def index_post():
         # Make a new list of how many options of each course there is
         course_indexes = []
         for course in courses:
-            course_indexes.append(int(len(course)-1))
+            course_indexes.append(int(len(course)))
 
         combinations = []
 
         # Recursive function that will go through every possibility and append it
         # if it works
-        def schedule_maker(indexes, schedule = []):
+        def schedule_maker(indexes, sched_input = []):
             for i in range(indexes-1):
+                schedule = list(sched_input)
                 block_intersect = False
                 # Loop and look for block conflict
                 for course in schedule:
@@ -71,28 +78,32 @@ def index_post():
                     # If the block is the same, go to the next course
                     continue
                 schedule.append(courses[len(schedule)][i])
-                if len(schedule) == len(courses):
+
+                if len(schedule) < len(courses):
+                    # Recursive call
+                    schedule_maker(course_indexes[len(schedule)], schedule)
+                else:
                     # If the schedule is complete, add it to combinations
                     combinations.append(schedule)
-                    break
-                else:
-                    # If not, keep repeating
-                    schedule_maker(course_indexes[len(schedule)], schedule)
+                    return
 
         # Make combinations
         schedule_maker(course_indexes[0])
 
-        output = list(map(list, zip(*valued)))
-
+        # Write all combinations to csv and return
         with open ('filelanding.csv', 'w', newline='') as f_out:
-            writing = csv.writer(f_out, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
-            # writing.writerow(headers)
-            writing.writerow(["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"])
+            writing = csv.writer(f_out, delimiter=',', quotechar='\"', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
+            writing.writerow(["b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8"])
+            for schedule in combinations:
+                row = []
+                for course in schedule:
+                    row.append(course[2]+" "+course[5]+" "+course[7])
+                writing.writerow(row)
+                print(row)
+            print(str(len(combinations))+" schedules were written to filelanding.csv")
 
         filename = 'filelanding.csv'
         data = pd.read_csv(filename, delimiter=',')
 
         data.to_csv('fileoutput.csv')
-
-        data1.to_csv('output.csv')
         return render_template('landing.html')
