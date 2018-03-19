@@ -6,3 +6,4 @@ announcer1.csv
 arenarolodex/__pycache__/*
 *.egg-info/*
 src/
+courselist.json
