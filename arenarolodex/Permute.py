@@ -10,22 +10,6 @@ from arenarolodex import app
 
 logging.basicConfig(level=logging.DEBUG)
 
-course_list = []
-announcer = list(csv.reader(open('arenarolodex/announcer.csv', "r"), delimiter=","))
-for row in announcer:
-    if row[0] == "Department Number":
-        continue
-    if int(row[0]) > len(course_list):
-        course_list.append([])
-    try:
-        course_list[int(row[0])-1].index(row[2])
-        continue
-    except ValueError:
-        course_list[int(row[0])-1].append(row[2])
-
-with open ('courselist.json', 'w', newline='') as f_out:
-    json.dump(course_list, f_out)
-
 @app.route('/results', methods = ['GET', 'POST'])
 def index_post():
     block1 = request.form['block1']

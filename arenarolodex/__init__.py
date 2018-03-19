@@ -9,12 +9,12 @@ from flask import Flask, request, render_template, url_for, send_from_directory,
 app = Flask(__name__)
 
 import arenarolodex.static
+import arenarolodex.optionsgen
 # import arenarolodex.start
 # import arenarolodex.prep
 import arenarolodex.base
 import arenarolodex.Permute
 import arenarolodex.ending
-
 
 
 if __name__ == "__main__":
