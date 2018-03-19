@@ -51,7 +51,7 @@ def index_post():
             if len(course) == 1:
                 for c in courses:
                     # For each course, we're going to sort out the block
-                    c = list(itertools.filterfalse(lambda x: x[5] == course[0][5]), course)
+                    c = list(itertools.filterfalse(lambda x: x[5] == course[0][5], course))
             if len(course) == 0:
                 # If there are no course options, remove the course
                 courses.remove(course)
@@ -95,10 +95,10 @@ def index_post():
             writing = csv.writer(f_out, delimiter=',', quotechar='\"', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
             writing.writerow(["b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8"])
             for schedule in combinations:
-                row = []
+                row = ["","","","","","","",""]
                 schedule = sorted(schedule, key=lambda x: x[5])
                 for course in schedule:
-                    row.append(course[2]+" "+course[7])
+                    row[int(course[5])-1] = "Block "+course[5]+": "+course[2]+" "+course[7]
                 writing.writerow(row)
                 print(row)
             print(str(len(combinations))+" schedules were written to filelanding.csv")
