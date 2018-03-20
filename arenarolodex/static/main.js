@@ -1,10 +1,13 @@
-$(function() {
-	var choices = ["#one-choice", "#two-choice", "#three-choice",
-								"#four-choice", "#five-choice", "#six-choice",
-							  "#seven-choice", "#eight-choice"];
+var choices = ["#one-choice", "#two-choice", "#three-choice", "#four-choice",
+							"#five-choice", "#six-choice", "#seven-choice", "#eight-choice"];
+var datalists = ["#first-choice", "#second-choice","#third-choice", "#fourth-choice",
+								"#fifth-choice", "#sixth-choice", "#seventh-choice", "#eighth-choice"];
 
-	for (var i = 0; i<8; i++){
-		$(choices[i]).change(function() {
+$(function() {
+
+	var i;
+	for (i = 0; i<8; i++){
+		$(choices[i]).on("change", { value: i }, function(event) {
 
 			var $dropdown = $(this);
 
@@ -45,14 +48,16 @@ $(function() {
 						vals = ['Please choose from above'];
 				}
 
-				$(choices[i]).empty();
+				$(datalists[event.data.value]).empty();
+				console.log("Emptied "+datalists[event.data.value]+" from "+choices[event.data.value]);
+				console.log(event.data.value);
 				$.each(vals, function(index, value) {
-					$(choices[i]).append("<option value=\"" + value + "\"></option>");
+					$(datalists[event.data.value]).append("<option value=\"" + value + "\"></option>");
 				});
-
 			});
 		});
 	}
+
 
 	console.log("testing 123");
 });
