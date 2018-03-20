@@ -16,8 +16,8 @@ def course_generator():
     }
     course_dic = {
         "1":"math",
-        "2":"english",
-        "3":"science",
+        "2":"science",
+        "3":"english",
         "4":"history",
         "5":"vpa",
         "6":"language",
