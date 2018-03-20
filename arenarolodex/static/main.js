@@ -8,7 +8,7 @@ $(function() {
 
 			var $dropdown = $(this);
 
-			$.getJSON("/static/options.json", function(data) {
+			$.getJSON("/options.json", function(data) {
 
 				var key = $dropdown.val();
 				var vals = [];
