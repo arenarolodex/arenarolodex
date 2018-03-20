@@ -15,31 +15,31 @@ $(function() {
 
 				switch(key) {
 					case 'math':
-						vals = data.math.split(",");
+						vals = data.math;
 						break;
 					case 'english':
-						vals = data.english.split(",");
+						vals = data.english;
 						break;
 					case 'science':
-						vals = data.science.split(",");
+						vals = data.science;
 						break;
 					case 'history':
-						vals = data.history.split(",");
+						vals = data.history;
 						break;
 					case 'vpa':
-						vals = data.vpa.split(",");
+						vals = data.vpa;
 						break;
 					case 'language':
-						vals = data.language.split(",");
+						vals = data.language;
 						break;
 					case 'pe':
-						vals = data.pe.split(",");
+						vals = data.pe;
 						break;
 					case 'others':
-						vals = data.others.split(",");
+						vals = data.others;
 						break;
 					case 'snacks':
-						vals = data.snacks.split(",");
+						vals = data.snacks;
 						break;
 					case 'base':
 						vals = ['Please choose from above'];
