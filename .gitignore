@@ -7,3 +7,4 @@ arenarolodex/__pycache__/*
 *.egg-info/*
 src/
 courselist.json
+options.json
