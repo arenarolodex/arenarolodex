@@ -5,6 +5,6 @@ from arenarolodex import app
 def send_landing():
     return send_file('../fileoutput.csv')
 
-@app.route('/courselist.json', methods = ['GET', 'POST'])
+@app.route('/options.json', methods = ['GET', 'POST'])
 def send_courses():
-    return send_file('../courselist.json')
+    return send_file('../options.json')
