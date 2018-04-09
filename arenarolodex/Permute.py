@@ -93,20 +93,6 @@ def index_post():
                 else:
                     # If the schedule is complete, add it to combinations
                     combinations.append(schedule)
-            # if len(courses[len(sched_input)]) == 1:
-            #     print("Only one course possible for "+courses[len(sched_input)][0][2])
-            #     schedule = list(sched_input)
-            #
-            #     # If there is only one course, then we'll add it
-            #     schedule.append(courses[len(schedule)][0])
-            #
-            #     if len(schedule) < len(courses):
-            #         # Recursive call
-            #         schedule_maker(course_indexes[len(schedule)], schedule)
-            #     else:
-            #         # If the schedule is complete, add it to combinations
-            #         combinations.append(schedule)
-            #         return
 
         # Make combinations
         schedule_maker(course_indexes[0])
