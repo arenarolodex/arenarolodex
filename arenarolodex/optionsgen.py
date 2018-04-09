@@ -24,8 +24,8 @@ def course_generator():
         "7":"pe",
         "8":"others"
     }
-    announcer = list(csv.reader(open('arenarolodex/announcer.csv', "r"), delimiter=","))
-    for row in announcer:
+    announce = list(csv.reader(open('arenarolodex/announcer.csv', "r"), delimiter=","))
+    for row in announce:
         if row[0] == "Department Number":
             continue
         else:

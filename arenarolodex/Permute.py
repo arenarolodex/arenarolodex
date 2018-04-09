@@ -25,7 +25,7 @@ def index_post():
 
     # Filter out blanks
     mylist = list(itertools.filterfalse(lambda x: x == "", mylist))
-    print("User inputted "+str(len(mylist))+" courses")
+    print("User inputted " + str(len(mylist)) + " courses")
 
     if len(mylist) == 0:
         return render_template('landing.html')
@@ -39,12 +39,12 @@ def index_post():
         # with the same name requested
         announcer = list(csv.reader(open('arenarolodex/announcer.csv', "r"), delimiter=","))
         for i in range(len(courses)):
-            print("Looking for "+str(mylist[i])+"...")
+            print("Looking for " + str(mylist[i]) + "...")
             for row in announcer:
                 if row[2] == mylist[i]:
-                    courses[i].append(row);
+                    courses[i].append(row)
                     # print(row)
-            print("Found "+str(len(courses[i]))+" matches")
+            print("Found " + str(len(courses[i])) + " matches")
 
         # Check if the length of each list is 1; if so, guarantee that block
         for course in courses:
@@ -98,10 +98,10 @@ def index_post():
                 row = ["","","","","","","",""]
                 schedule = sorted(schedule, key=lambda x: x[5])
                 for course in schedule:
-                    row[int(course[5])-1] = "Block "+course[5]+": "+course[2]+" "+course[7]
+                    row[int(course[5])-1] = "Block " + course[5] + ": " + course[2] + " " + course[7]
                 writing.writerow(row)
                 print(row)
-            print(str(len(combinations))+" schedules were written to filelanding.csv")
+            print(str(len(combinations)) + " schedules were written to filelanding.csv")
 
         filename = 'filelanding.csv'
         data = pd.read_csv(filename, delimiter=',')

@@ -49,7 +49,7 @@ $(function() {
 				}
 
 				$(datalists[event.data.value]).empty();
-				console.log("Emptied "+datalists[event.data.value]+" from "+choices[event.data.value]);
+				console.log("Emptied " + datalists[event.data.value] + " from " + choices[event.data.value]);
 				console.log(event.data.value);
 				$.each(vals, function(index, value) {
 					$(datalists[event.data.value]).append("<option value=\"" + value + "\"></option>");
