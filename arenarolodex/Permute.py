@@ -51,7 +51,8 @@ def index_post():
             if len(course) == 1:
                 for c in courses:
                     # For each course, we're going to sort out the block
-                    c = list(itertools.filterfalse(lambda x: x[5] == course[0][5], course))
+                    c = list(itertools.filterfalse(lambda x: x[5] == course[0][5] and x != course[0], course))
+                print("Course "+course[0][2]+" was cleaned of intersections");
             if len(course) == 0:
                 # If there are no course options, remove the course
                 courses.remove(course)
@@ -66,8 +67,14 @@ def index_post():
         # Recursive function that will go through every possibility and append it
         # if it works
         def schedule_maker(indexes, sched_input = []):
-            for i in range(indexes-1):
+            print("Called with schedule "+str(sched_input))
+            print("Will try "+str(indexes)+" times, meaning ")
+            for i in range(indexes):
+                print("\t"+str(i))
+            for i in range(indexes):
                 schedule = list(sched_input)
+
+                print("Looking at "+courses[len(schedule)][0][2]+", "+str(i))
                 block_intersect = False
                 # Loop and look for block conflict
                 for course in schedule:
@@ -76,6 +83,7 @@ def index_post():
                         break
                 if block_intersect:
                     # If the block is the same, go to the next course
+                    print("Intersection found, skipping "+str(schedule)+"...")
                     continue
                 schedule.append(courses[len(schedule)][i])
 
@@ -85,7 +93,20 @@ def index_post():
                 else:
                     # If the schedule is complete, add it to combinations
                     combinations.append(schedule)
-                    return
+            # if len(courses[len(sched_input)]) == 1:
+            #     print("Only one course possible for "+courses[len(sched_input)][0][2])
+            #     schedule = list(sched_input)
+            #
+            #     # If there is only one course, then we'll add it
+            #     schedule.append(courses[len(schedule)][0])
+            #
+            #     if len(schedule) < len(courses):
+            #         # Recursive call
+            #         schedule_maker(course_indexes[len(schedule)], schedule)
+            #     else:
+            #         # If the schedule is complete, add it to combinations
+            #         combinations.append(schedule)
+            #         return
 
         # Make combinations
         schedule_maker(course_indexes[0])
@@ -100,7 +121,6 @@ def index_post():
                 for course in schedule:
                     row[int(course[5])-1] = "Block "+course[5]+": "+course[2]+" "+course[7]
                 writing.writerow(row)
-                print(row)
             print(str(len(combinations))+" schedules were written to filelanding.csv")
 
         filename = 'filelanding.csv'
