@@ -3,6 +3,9 @@ var choices = ["#one-choice", "#two-choice", "#three-choice", "#four-choice",
 var datalists = ["#first-choice", "#second-choice","#third-choice", "#fourth-choice",
 								"#fifth-choice", "#sixth-choice", "#seventh-choice", "#eighth-choice"];
 
+var blocks = ["#block1", "#block2", "#block3", "#block4", "#block5", "#block6", "#block7", "#block8"]
+
+
 $(function() {
 
 	var i;
@@ -53,6 +56,13 @@ $(function() {
 				console.log(event.data.value);
 				$.each(vals, function(index, value) {
 					$(datalists[event.data.value]).append("<option value=\"" + value + "\"></option>");
+				});
+
+
+				$(blocks[event.data.value]).empty();
+				console.log(event.data.value);
+				$.each(vals, function(index, value) {
+					$(blocks[event.data.value]).attr("pattern", value);
 				});
 			});
 		});
