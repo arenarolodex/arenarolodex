@@ -37,7 +37,10 @@ def index_post():
 
         # Open announcer, and for each course requested, pull out all courses
         # with the same name requested
-        announcer = list(csv.reader(open('arenarolodex/announcer.csv', "r"), delimiter=","))
+        announcer = []
+        with open ('arenarolodex/announcer.csv', "r") as f_in:
+            reading = csv.reader(f_in, delimiter=',', quotechar='\"', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
+            announcer = list(reading)
         for i in range(len(courses)):
             print("Looking for " + str(mylist[i]) + "...")
             for row in announcer:
