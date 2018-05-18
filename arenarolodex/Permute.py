@@ -52,7 +52,7 @@ def index_post():
                 for c in courses:
                     # For each course, we're going to sort out the block
                     c = list(itertools.filterfalse(lambda x: x[5] == course[0][5] and x != course[0], course))
-                print("Course "+course[0][2]+" was cleaned of intersections");
+                print("Course " + course[0][2] + " was cleaned of intersections");
             if len(course) == 0:
                 # If there are no course options, remove the course
                 courses.remove(course)
@@ -67,14 +67,14 @@ def index_post():
         # Recursive function that will go through every possibility and append it
         # if it works
         def schedule_maker(indexes, sched_input = []):
-            print("Called with schedule "+str(sched_input))
-            print("Will try "+str(indexes)+" times, meaning ")
+            print("Called with schedule " + str(sched_input))
+            print("Will try " + str(indexes) + " times, meaning ")
             for i in range(indexes):
-                print("\t"+str(i))
+                print("\t" + str(i))
             for i in range(indexes):
                 schedule = list(sched_input)
 
-                print("Looking at "+courses[len(schedule)][0][2]+", "+str(i))
+                print("Looking at " + courses[len(schedule)][0][2] + ", " + str(i))
                 block_intersect = False
                 # Loop and look for block conflict
                 for course in schedule:
@@ -83,7 +83,7 @@ def index_post():
                         break
                 if block_intersect:
                     # If the block is the same, go to the next course
-                    print("Intersection found, skipping "+str(schedule)+"...")
+                    print("Intersection found, skipping " + str(schedule) + "...")
                     continue
                 schedule.append(courses[len(schedule)][i])
 
@@ -107,7 +107,7 @@ def index_post():
                 for course in schedule:
                     row[int(course[5])-1] = "Block " + course[5] + ": " + course[2] + " " + course[7]
                 writing.writerow(row)
-            print(str(len(combinations))+" schedules were written to filelanding.csv")
+            print(str(len(combinations)) + " schedules were written to filelanding.csv")
 
         filename = 'filelanding.csv'
         data = pd.read_csv(filename, delimiter=',')
