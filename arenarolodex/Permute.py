@@ -21,10 +21,16 @@ def index_post():
     block7 = request.form['block7']
     block8 = request.form['block8']
 
+    teachers = [request.form['teach1'],request.form['teach2'],
+        request.form['teach3'],request.form['teach4'],
+        request.form['teach5'],request.form['teach6'],
+        request.form['teach7'],request.form['teach8']]
+
     mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
 
     # Filter out blanks
     mylist = list(itertools.filterfalse(lambda x: x == "", mylist))
+    teachers = list(itertools.filterfalse(lambda x: x == "", teachers))
     print("User inputted " + str(len(mylist)) + " courses")
 
     if len(mylist) == 0:
@@ -99,6 +105,17 @@ def index_post():
 
         # Make combinations
         schedule_maker(course_indexes[0])
+
+        # Sort by number of preferred teachers
+        def count_teachers(schedule):
+            count = 0
+            for course in schedule:
+                for teacher in teachers:
+                    if course[7] == teacher:
+                        count+=1
+            return count
+
+        sorted(combinations, key=count_teachers, reverse=True)
 
         # Write all combinations to csv and return
         with open ('filelanding.csv', 'w', newline='') as f_out:

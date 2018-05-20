@@ -33,11 +33,23 @@ def course_generator():
         if row[0] == "Department Number":
             continue
         else:
-            try:
-                course_list.get(course_dic.get(row[0])).index(row[2])
+            found = False
+            dept = course_list.get(course_dic.get(row[0]))
+            for obj in dept:
+                # Search department for the course, see if it exists
+                if obj["name"] == row[2]:
+                    found = True
+                    found_teach = False
+                    for teach in obj["teachers"]:
+                        if teach["name"] == row[7]:
+                            found_teach = True
+                            teach["blocks"].append(row[5])
+                    if found_teach == False:
+                        obj["teachers"].append({"name":row[7], "blocks":[row[5]]})
+            if found:
                 continue
-            except ValueError:
-                course_list.get(course_dic.get(row[0])).append(row[2])
+            else:
+                course_list.get(course_dic.get(row[0])).append({"name":row[2],"teachers":[{"name":row[7], "blocks":[row[5]]}]})
 
     with open('options.json', 'w', newline='') as f_out:
         json.dump(course_list, f_out)
