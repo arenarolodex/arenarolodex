@@ -26,12 +26,30 @@ def index_post():
         request.form['teach5'],request.form['teach6'],
         request.form['teach7'],request.form['teach8']]
 
+    blocks = [request.form['pref1'],request.form['pref2'],
+        request.form['pref3'],request.form['pref4'],
+        request.form['pref5'],request.form['pref6'],
+        request.form['pref7'],request.form['pref8']]
+
     mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
+
+    # This holds the preferred teachers and blocks for each class
+    courseguide = [];
+    for c in range(len(mylist)):
+        if mylist[c] =="":
+            continue
+        else:
+            courseguide.append({"class":mylist[c], "teacher":teachers[c], "block":blocks[c]})
 
     # Filter out blanks
     mylist = list(itertools.filterfalse(lambda x: x == "", mylist))
     teachers = list(itertools.filterfalse(lambda x: x == "", teachers))
+    blocks = list(itertools.filterfalse(lambda x: x == "", blocks))
     print("User inputted " + str(len(mylist)) + " courses")
+    for c in mylist:
+        print(c)
+    print("User inputted " + str(len(teachers)) + " preferred teachers")
+    print("User inputted " + str(len(blocks)) + " preferred blocks")
 
     if len(mylist) == 0:
         return render_template('landing.html')
@@ -76,14 +94,9 @@ def index_post():
         # Recursive function that will go through every possibility and append it
         # if it works
         def schedule_maker(indexes, sched_input = []):
-            print("Called with schedule " + str(sched_input))
-            print("Will try " + str(indexes) + " times, meaning ")
-            for i in range(indexes):
-                print("\t" + str(i))
             for i in range(indexes):
                 schedule = list(sched_input)
 
-                print("Looking at " + courses[len(schedule)][0][2] + ", " + str(i))
                 block_intersect = False
                 # Loop and look for block conflict
                 for course in schedule:
@@ -92,7 +105,6 @@ def index_post():
                         break
                 if block_intersect:
                     # If the block is the same, go to the next course
-                    print("Intersection found, skipping " + str(schedule) + "...")
                     continue
                 schedule.append(courses[len(schedule)][i])
 
@@ -110,22 +122,34 @@ def index_post():
         def count_teachers(schedule):
             count = 0
             for course in schedule:
-                for teacher in teachers:
-                    if course[7] == teacher:
-                        count+=1
+                print("Now checking "+course[2]+" for block "+course[5])
+                for c in courseguide:
+                    if course[2] == c["class"]:
+                        if c["teacher"] == course[7]:
+                            print("teacher match for "+course[2])
+                            count+=1
+                        if c["block"] == course[5]:
+                            print("block match for "+course[2])
+                            count+=1
+            schedule.append(count)
             return count
 
-        sorted(combinations, key=count_teachers, reverse=True)
+        combinations = sorted(combinations, key=count_teachers, reverse=True)
 
         # Write all combinations to csv and return
         with open ('filelanding.csv', 'w', newline='') as f_out:
             writing = csv.writer(f_out, delimiter=',', quotechar='\"', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
-            writing.writerow(["b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8"])
+            writing.writerow(["b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8", "Pref Score"])
             for schedule in combinations:
-                row = ["","","","","","","",""]
+                row = ["","","","","","","","",""]
+
+                score = schedule[len(schedule)-1]
+                del schedule[len(schedule)-1]
+
                 schedule = sorted(schedule, key=lambda x: x[5])
                 for course in schedule:
                     row[int(course[5])-1] = "Block " + course[5] + ": " + course[2] + " " + course[7]
+                row[8] = score
                 writing.writerow(row)
             print(str(len(combinations)) + " schedules were written to filelanding.csv")
 
