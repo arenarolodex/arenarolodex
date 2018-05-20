@@ -21,34 +21,38 @@ $(function() {
 
 				var key = $dropdown.val();
 				var vals = [];
+				var courses = {};
+				Object.keys(data).forEach(function(dept){
+					courses[dept] = [];
+					for (var course of data[dept]){
+						courses[dept].push(course.name);
+					}
+				});
 
 				switch(key) {
 					case 'math':
-						vals = data.math;
+						vals = courses.math;
 						break;
 					case 'english':
-						vals = data.english;
+						vals = courses.english;
 						break;
 					case 'science':
-						vals = data.science;
+						vals = courses.science;
 						break;
 					case 'history':
-						vals = data.history;
+						vals = courses.history;
 						break;
 					case 'vpa':
-						vals = data.vpa;
+						vals = courses.vpa;
 						break;
 					case 'language':
-						vals = data.language;
+						vals = courses.language;
 						break;
 					case 'pe':
-						vals = data.pe;
+						vals = courses.pe;
 						break;
 					case 'others':
-						vals = data.others;
-						break;
-					case 'snacks':
-						vals = data.snacks;
+						vals = courses.others;
 						break;
 					case 'base':
 						vals = ['Please choose from above'];
