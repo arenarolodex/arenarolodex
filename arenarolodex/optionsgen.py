@@ -24,7 +24,11 @@ def course_generator():
         "7":"pe",
         "8":"others"
     }
-    announce = list(csv.reader(open('arenarolodex/announcer.csv', "r"), delimiter=","))
+
+    announce=[]
+    with open('arenarolodex/announcer.csv', "r") as g_in:
+        temp = csv.reader(g_in, delimiter=',')
+        announce = list(temp)
     for row in announce:
         if row[0] == "Department Number":
             continue
@@ -35,7 +39,7 @@ def course_generator():
             except ValueError:
                 course_list.get(course_dic.get(row[0])).append(row[2])
 
-    with open ('options.json', 'w', newline='') as f_out:
+    with open('options.json', 'w', newline='') as f_out:
         json.dump(course_list, f_out)
 
 course_generator()
