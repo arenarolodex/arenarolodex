@@ -121,8 +121,12 @@ def index_post():
         # Sort by number of preferred teachers
         def count_teachers(schedule):
             count = 0
+            block = True
             for course in schedule:
                 print("Now checking "+course[2]+" for block "+course[5])
+                # If this coincides with the preferred off block, lower priority
+                if course[5] == request.form['off-block']:
+                    block = False
                 for c in courseguide:
                     if course[2] == c["class"]:
                         if c["teacher"] == course[7]:
@@ -131,6 +135,8 @@ def index_post():
                         if c["block"] == course[5]:
                             print("block match for "+course[2])
                             count+=1
+            if block and request.form['off-block-points'] != 'base':
+                count+=int(request.form['off-block-points'])
             schedule.append(count)
             return count
 
