@@ -17,7 +17,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 @app.route('/results', methods = ['GET', 'POST'])
 def index_post():
-    q.enqueue(update_options2)
+    update_options2()
 
     mylist, teachers, blocks = [], [], []
     for i in range(1,9):
