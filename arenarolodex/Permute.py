@@ -8,34 +8,22 @@ import pandas as pd
 from flask import Flask, request, render_template, url_for, send_from_directory, jsonify
 from arenarolodex import app
 
+from rq import Queue
+from lhsrequest import conn, update_options2
+
+q = Queue(connection=conn)
+
 logging.basicConfig(level=logging.DEBUG)
 
 @app.route('/results', methods = ['GET', 'POST'])
 def index_post():
+    q.enqueue(update_options2)
+
     mylist, teachers, blocks = [], [], []
     for i in range(1,9):
         mylist.append(request.form['block'+str(i)])
         teachers.append(request.form['teach'+str(i)])
         blocks.append(request.form['pref'+str(i)])
-    # block1 = request.form['block1']
-    # block2 = request.form['block2']
-    # block3 = request.form['block3']
-    # block4 = request.form['block4']
-    # block5 = request.form['block5']
-    # block6 = request.form['block6']
-    # block7 = request.form['block7']
-    # block8 = request.form['block8']
-    #
-    # teachers = [request.form['teach1'],request.form['teach2'],
-    #     request.form['teach3'],request.form['teach4'],
-    #     request.form['teach5'],request.form['teach6'],
-    #     request.form['teach7'],request.form['teach8']]
-    #
-    # blocks = [request.form['pref1'],request.form['pref2'],
-    #     request.form['pref3'],request.form['pref4'],
-    #     request.form['pref5'],request.form['pref6'],
-    #     request.form['pref7'],request.form['pref8']]
-    # mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
 
     # This holds the preferred teachers and blocks for each class
     courseguide = [];
@@ -66,13 +54,13 @@ def index_post():
         # Open announcer, and for each course requested, pull out all courses
         # with the same name requested
         announcer = []
-        with open ('arenarolodex/announcer.csv', "r") as f_in:
+        with open ('options2.csv', "r") as f_in:
             reading = csv.reader(f_in, delimiter=',', quotechar='\"', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
             announcer = list(reading)
         for i in range(len(courses)):
             print("Looking for " + str(mylist[i]) + "...")
             for row in announcer:
-                if row[2] == mylist[i]:
+                if row[1] == mylist[i]:
                     courses[i].append(row)
                     # print(row)
             print("Found " + str(len(courses[i])) + " matches")
@@ -82,8 +70,8 @@ def index_post():
             if len(course) == 1:
                 for c in courses:
                     # For each course, we're going to sort out the block
-                    c = list(itertools.filterfalse(lambda x: x[5] == course[0][5] and x != course[0], course))
-                print("Course " + course[0][2] + " was cleaned of intersections");
+                    c = list(itertools.filterfalse(lambda x: x[3] == course[0][3] and x != course[0], course))
+                print("Course " + course[0][1] + " was cleaned of intersections");
             if len(course) == 0:
                 # If there are no course options, remove the course
                 courses.remove(course)
@@ -104,9 +92,12 @@ def index_post():
                 block_intersect = False
                 # Loop and look for block conflict
                 for course in schedule:
-                    if course[5] == courses[len(schedule)][i][5]:
+                    if course[3] == courses[len(schedule)][i][3]:
                         block_intersect = True
                         break
+                    # If there are no seats left, don't include
+                    if course[5] == "0":
+                        block_intersect = True
                 if block_intersect:
                     # If the block is the same, go to the next course
                     continue
@@ -127,17 +118,17 @@ def index_post():
             count = 0
             block = True
             for course in schedule:
-                print("Now checking "+course[2]+" for block "+course[5])
+                print("Now checking "+course[1]+" for block "+course[3])
                 # If this coincides with the preferred off block, lower priority
-                if course[5] == request.form['off-block']:
+                if course[3] == request.form['off-block']:
                     block = False
                 for c in courseguide:
                     if course[2] == c["class"]:
-                        if c["teacher"] == course[7]:
-                            print("teacher match for "+course[2])
+                        if c["teacher"] == course[2]:
+                            print("teacher match for "+course[1])
                             count+=1
-                        if c["block"] == course[5]:
-                            print("block match for "+course[2])
+                        if c["block"] == course[3]:
+                            print("block match for "+course[1])
                             count+=1
             if block and request.form['off-block-points'] != 'base':
                 count+=int(request.form['off-block-points'])
@@ -158,7 +149,8 @@ def index_post():
 
                 schedule = sorted(schedule, key=lambda x: x[5])
                 for course in schedule:
-                    row[int(course[5])-1] = "Block " + course[5] + ": " + course[2] + " " + course[7]
+                    row[int(course[3])-1] = "Block " + course[3] + ": " + course[1] +\
+                                            " " + course[2] + ", " + course[5] + " seats left"
                 row[8] = score
                 writing.writerow(row)
             print(str(len(combinations)) + " schedules were written to filelanding.csv")

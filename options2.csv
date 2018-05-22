@@ -1,0 +1,677 @@
+Department,Course,Teacher,Block,Code,Seats
+1,CCSS Algebra 1A*,"""C""",1,B,3
+1,CCSS Algebra 2A,"""D""",1,B,6
+1,CCSS Algebra 1A*,"""E""",1,B,3
+1,AP Statistics A,Ambrose,1,B,28
+1,CCSS Algebra 2A,Arnold,1,B,0
+1,CCSS Algebra 1A*,Fortin,1,B,3
+1,AP Calculus BC A,Hoffman,1,B,22
+1,CCSS Algebra 2A,Karepetyan,1,B,25
+1,Pre-Calculus A,Liu,1,B,18
+1,CCSS Geometry A,Nghe,1,B,17
+1,AP Computer Science A A,Simon,1,B,16
+1,CCSS Geometry A,Statmore,1,B,0
+1,AP Calculus AB A,Warshaw,1,B,0
+1,CCSS Algebra 1A*,"""A""",2,C,3
+1,CCSS Algebra 2A,"""B""",2,C,33
+1,CCSS Algebra 2A,"""C""",2,C,30
+1,CCSS Algebra 1A*,"""D""",2,C,3
+1,CCSS Algebra 2A,"""E""",2,C,32
+1,CCSS Geometry A,Arnold,2,C,0
+1,AP Principles of Computer Science*,Cernuto,2,C,13
+1,Pre-Calculus A,Chu,2,C,0
+1,Pre-Calculus A Honors,Li,2,C,11
+1,CCSS Geometry A,Liu,2,C,30
+1,CCSS Algebra 1B,Nghe,2,C,16
+1,CCSS Geometry A,Rosales,2,C,35
+1,CCSS Algebra 1A*,Statmore,2,C,3
+1,AP Principles of Computer Science*,Sullivan,2,C,35
+1,CCSS Algebra 2A,Tran,2,C,20
+1,CCSS Algebra 1A*,"""C""",3,B,3
+1,AP Statistics A,Ambrose,3,B,27
+1,CCSS Algebra 2A,Arnold,3,B,-1
+1,CCSS Algebra 2B,Bookwalter,3,B,9
+1,AP Principles of Computer Science*,Cernuto,3,B,12
+1,CCSS Algebra 1A*,Fortin,3,B,3
+1,Pre-Calculus A Honors,Gribler,3,B,31
+1,AP Calculus BC A,Hoffman,3,B,11
+1,CCSS Geometry A,Karapetyan,3,B,34
+1,CCSS Algebra 2 + Precalculus A,Li,3,B,19
+1,Pre-Calculus A,Liu,3,B,19
+1,Pre-Calculus A,Rosales,3,B,33
+1,AP Computer Science A A,Simon,3,B,27
+1,CCSS Algebra 2A,Sinn,3,B,3
+1,AP Calculus AB A,Warshaw,3,B,0
+1,Computer Programming ,"""A""",4,A,29
+1,CCSS Algebra 2A,"""C""",4,C,28
+1,CCSS Algebra 1A*,"""D""",4,C,3
+1,CCSS Algebra 2A,"""E""",4,C,32
+1,AP Statistics A,Bookwalter,4,C,10
+1,AP Calculus AB A,Gribler,4,C,33
+1,AP Calculus BC A,Hoffman,4,C,25
+1,Pre-Calculus A,Karapetyan,4,C,33
+1,CCSS Algebra 2A,Li,4,C,0
+1,CCSS Algebra 1A*,Nghe,4,C,3
+1,CCSS Geometry A,Rosales,4,C,36
+1,CCSS Geometry A,Sinn,4,C,0
+1,AP Principles of Computer Science*,Sullivan,4,C,31
+1,CCSS Algebra 1A*,"""B""",5,B,3
+1,CCSS Algebra 2A,"""D""",5,B,30
+1,CCSS Algebra 1A*,"""E""",5,B,3
+1,AP Statistics A,Ambrose,5,B,28
+1,CCSS Algebra 2B,Arnold,5,B,23
+1,AP Principles of Computer Science*,Cernuto,5,B,21
+1,CCSS Geometry B,Chu,5,B,15
+1,CCSS Geometry A,Fortin,5,B,0
+1,Pre-Calculus A,Liu,5,B,23
+1,Pre-Calculus A,Rosales,5,B,35
+1,CCSS Algebra 2A,Sinn,5,B,7
+1,CCSS Geometry A,Statmore,5,B,0
+1,AP Calculus AB A,Sullivan,5,B,35
+1,CCSS Algebra 1A*,Tran,5,B,3
+1,Computer Programming ,"""A""",6,A,24
+1,CCSS Algebra 2A,"""B""",6,C,30
+1,CCSS Algebra 2A,"""C""",6,C,32
+1,CCSS Geometry A,Arnold,6,C,29
+1,AP Statistics A,Bookwalter,6,C,23
+1,AP Principles of Computer Science*,Cernuto,6,C,19
+1,Pre-Calculus A,Chu,6,C,0
+1,AP Calculus AB A,Gribler,6,C,35
+1,Pre-Calculus A,Karapetyan,6,C,29
+1,Pre-Calculus A Honors,Li,6,C,6
+1,CCSS Geometry A,Liu,6,C,35
+1,CCSS Algebra 1A*,Nghe,6,C,3
+1,AP Computer Science A A,Simon,6,C,23
+1,CCSS Algebra 1A*,Statmore,6,C,3
+1,CCSS Algebra 2A,Tran,6,C,20
+1,CCSS Algebra 2A,"""A""",7,B,29
+1,CCSS Algebra 1A*,"""B""",7,B,3
+1,CCSS Algebra 2A,"""D""",7,B,31
+1,CCSS Algebra 1A*,"""E""",7,B,3
+1,AP Statistics A,Ambrose,7,B,22
+1,CCSS Geometry B,Chu,7,B,16
+1,Pre-Calculus A Honors,Gribler,7,B,30
+1,CCSS Algebra 2A,Karapetyan,7,B,22
+1,CCSS Geometry A,Nghe,7,B,21
+1,Pre-Calculus A,Rosales,7,B,34
+1,AP Computer Science A A,Simon,7,B,31
+1,Pre-Calculus A,Sinn,7,B,26
+1,CCSS Geometry A,Statmore,7,B,0
+1,AP Calculus AB A,Sullivan,7,B,36
+1,CCSS Algebra 1A*,Tran,7,B,3
+1,CCSS Algebra 1A*,"""A""",8,C,3
+1,CCSS Algebra 2A,"""B""",8,C,25
+1,AP Statistics A,Bookwalter,8,C,15
+1,AP Principles of Computer Science*,Cernuto,8,C,21
+1,Pre-Calculus A,Chu,8,C,0
+1,Pre-Calculus A Honors,Li,8,C,10
+1,CCSS Geometry A,Sinn,8,C,0
+1,CCSS Algebra 2A,Tran,8,C,18
+2,Biology A*,"Amirapu, Anjana",1,B,1
+2,Biology A*,"Christensen, Catherine",1,B,1
+2,Physics A,"Dela Riarte, Sirly",1,B,23
+2,Chemistry A,"Dowd, James III",1,B,27
+2,Chemistry A Honors,"Fong, Jonathan C",1,B,0
+2,AP Chemistry A*,"Marten, Bryan",1,B,32
+2,AP Environmental Science A,"Melvin, Katherine",1,B,14
+2,Physiology A,"Robinson, Freja",1,B,32
+2,Biology A*,"Wenning, Mark",1,B,1
+2,Biology A*,"Amirapu, Anjana",2,C,1
+2,Physics A,"Cooley, Bryan",2,C,0
+2,Biology A*,"Daley, Bonnie",2,C,1
+2,AP Physics 1A,"Dickerman, Scott",2,C,21
+2,AP Chemistry A*,"Fong, Jonathan C",2,C,3
+2,AP Biology A*,"Johnson, Theodore",2,C,33
+2,Chemistry A,"Lian, Ai",2,C,0
+2,AP Environmental Science A,"Melvin, Katherine",2,C,19
+2,Physics A,"Prothro, Randell",2,C,17
+2,Physiology A,"Robinson, Freja",2,C,2
+2,"AP Physics C A, Mechanics","Shapiro, Richard",2,C,16
+2,Chemistry A,Staff-N,2,C,31
+2,Chemistry A Honors,"Trimble, Michelle",2,C,32
+2,Biology A*,"Wenning, Mark",2,C,1
+2,Marine Science 1A,"Christensen, Catherine",3,B,12
+2,Biology A*,"Daley, Bonnie",3,B,1
+2,Physics A,"Dela Riarte, Sirly",3,B,23
+2,Chemistry A,"Dowd, James III",3,B,25
+2,AP Biology A*,"Killpack, Alena",3,B,8
+2,AP Environmental Science A,"Laureyns, Shawn",3,B,24
+2,AP Physics 1A,"Marten, Bryan",3,B,33
+2,Biology A*,"Robinson, Freja",3,B,1
+2,Chemistry A Honors,"Trimble, Michelle",3,B,25
+2,Biology A*,"Wenning, Mark",3,C,1
+2,Biology A*,"Christensen, Catherine",4,C,1
+2,Physics A,"Cooley, Bryan",4,C,0
+2,AP Physics 1A,"Dickerman, Scott",4,C,24
+2,AP Chemistry A*,"Fong, Jonathan C",4,C,2
+2,AP Biology A*,"Johnson, Theodore",4,C,32
+2,Chemistry A,"Lian, Ai",4,C,1
+2,AP Environmental Science A,"Melvin, Katherine",4,C,17
+2,Physics A,"Prothro, Randell",4,C,14
+2,"AP Physics C A, Mechanics","Shapiro, Richard",4,C,24
+2,Biology A*,Staff-N,4,C,1
+2,Chemistry A Honors,"Trimble, Michelle",4,C,27
+2,Marine Science 1A,"Amirapu, Anjana",5,B,28
+2,AP Physics 2A,"Cooley, Bryan",5,B,21
+2,Principles of Biotech 1A,"Daley, Bonnie",5,B,22
+2,Physics A,"Dela Riarte, Sirly",5,B,28
+2,Chemistry A,"Dowd, James III",5,B,31
+2,AP Biology A*,"Johnson, Theodore",5,B,33
+2,AP Environmental Science A,"Laureyns, Shawn",5,B,27
+2,AP Physics 1A,"Marten, Bryan",5,B,34
+2,Biology A*,Staff-N,5,B,1
+2,Biology A*,"Wenning, Mark",5,B,1
+2,Biology A*,"Amirapu, Anjana",6,C,1
+2,Biology A*,"Christensen, Catherine",6,C,1
+2,Principles of Biotech 1A,"Daley, Bonnie",6,C,25
+2,Physics A,"Dela Riarte, Sirly",6,C,25
+2,AP Physics 1A,"Dickerman, Scott",6,C,21
+2,Chemistry A,"Dowd, James III",6,C,24
+2,AP Biology A*,"Killpack, Alena",6,C,6
+2,Chemistry A,"Lian, Ai",6,C,6
+2,AP Environmental Science A,"Melvin, Katherine",6,C,13
+2,Physiology A,"Robinson, Freja",6,C,22
+2,Chemistry A Honors,"Trimble, Michelle",6,C,25
+2,Biology A*,"Wenning, Mark",6,C,1
+2,Biology A*,"Amirapu, Anjana",7,B,1
+2,Biology A*,"Christensen, Catherine",7,B,1
+2,AP Physics 2A,"Cooley, Bryan",7,B,21
+2,Physics A,"Dela Riarte, Sirly",7,B,24
+2,Geology A,"Dickerman, Scott",7,B,28
+2,Chemistry A,"Dowd, James III",7,B,22
+2,AP Biology A*,"Killpack, Alena",7,B,0
+2,AP Environmental Science A,"Laureyns, Shawn",7,B,16
+2,Chemistry A,"Lian, Ai",7,B,0
+2,AP Chemistry A*,"Marten, Bryan",7,B,30
+2,AP Physics 1A,"Prothro, Randell",7,B,0
+2,Physiology A,"Robinson, Freja",7,B,15
+2,Biology A*,Staff-N,7,B,1
+2,Biology A*,"Daley, Bonnie",8,C,1
+2,Biology A*,"Johnson, Theodore",8,C,1
+2,AP Environmental Science A,"Laureyns, Shawn",8,C,24
+2,Chemistry A,"Lian, Ai",8,C,17
+2,AP Physics 1A,"Prothro, Randell",8,C,15
+2,Biology A*,Staff-N,8,C,1
+2,Science Research A,"Killpack, Alena",10,X,57
+3,English 2A,"Arriaga, Adela",1,B,20
+3,Shakespeare,"Galang, Lorna",1,B,22
+3,Literature & Psychology ,"Henares, Nicole",1,B,13
+3,Critical Writing ,"Hereford, David",1,B,0
+3,Novel,"Mitchell, Kristen",1,B,21
+3,English 1A*,"Moses, Jacqueline",1,B,25
+3,English 2B,"Park, Claudia",1,B,16
+3,English 1A*,"Williams, Sam",1,B,25
+3,English 1A*,"Arriaga, Adela",2,C,25
+3,AP English Language and Composition 74A (72)*,"Bajet, Lael",2,C,22
+3,English 1A*,"Carney, Staci",2,C,25
+3,Epic & Myth,"Crabtree, Stephanie",2,C,22
+3,English 2B,"Freeland, Anne",2,C,26
+3,English 1A*,"Guina, Anne",2,C,25
+3,Journalism 1A,"Gustafson, Eric",2,C,7
+3,Critical Writing ,"Gustafson, Eric",2,C,11
+3,English 1A*,"Henares, Nicole",2,C,25
+3,Comedy & Satire,"Lamarre, Tim",2,C,25
+3,English 2B,"Mitchell, Kristen",2,C,10
+3,AP English Language and Composition 75A (77)*,"Moffitt, Jennifer",2,C,17
+3,English 2A,"Moses, Jacqueline",2,C,21
+3,Shakespeare,"Ritter, Bryan",2,C,0
+3,English 2A,"Santiago, Meredith",2,C,-2
+3,AP English Language and Composition 75A (73)*,"Yuan, David",2,C,26
+3,Epic & Myth,"Bajet, Lael",3,B,16
+3,AP English Literature and Composition 80A (86)*,"Carney, Staci",3,B,15
+3,AP English Language and Composition 74A (77)*,"Crabtree, Stephanie",3,B,11
+3,Shakespeare,"Galang, Lorna",3,B,21
+3,English 1A*,"Hereford, David",3,B,25
+3,English 1A*,"Lamarre, Tim",3,B,25
+3,English 1A*,"Moses, Jacqueline",3,B,25
+3,English 2A,"Nickels, Carolyn",3,B,22
+3,English 2A,"Park, Claudia",3,B,27
+3,English 2B,"Recht, Sydney",3,B,19
+3,American Literature A,"Santiago, Meredith",3,B,15
+3,Critical Writing ,"Williams, Sam",3,B,20
+3,Literature & Psychology ,"Yu, Samantha",3,C,0
+3,Communications in Writing (ELD),"Arriaga, Adela",4,C,14
+3,AP English Literature and Composition 80A (86)*,"Galang, Lorna",4,C,19
+3,English 1A*,"Guina, Anne",4,C,25
+3,Journalism 1A,"Gustafson, Eric",4,C,8
+3,Critical Writing ,"Gustafson, Eric",4,C,4
+3,English 1A*,"Henares, Nicole",4,C,25
+3,English 2B,"Hereford, David",4,C,0
+3,English 2B,"Mitchell, Kristen",4,C,6
+3,AP English Language and Composition 75A (77)*,"Moffitt, Jennifer",4,C,12
+3,American Literature A,"Nickels, Carolyn",4,C,25
+3,Critical Writing ,"Park, Claudia",4,C,24
+3,AP English Literature and Composition 83A (84)*,"Recht, Sydney",4,C,3
+3,English 1A*,"Williams, Sam",4,C,25
+3,Literature & Psychology ,"Yu, Samantha",4,C,0
+3,English 2A,"Yuan, David",4,C,28
+3,Epic & Myth,"Bajet, Lael",5,B,23
+3,English 2B,"Crabtree, Stephanie",5,B,26
+3,English 1A*,"Freeland, Anne",5,B,25
+3,Critical Writing ,"Hereford, David",5,B,0
+3,English 1A*,"Lamarre, Tim",5,B,25
+3,English 2A,"Moses, Jacqueline",5,B,28
+3,English 2A,"Park, Claudia",5,B,21
+3,AP English Language and Composition 74A (72)*,"Ritter, Bryan",5,C,10
+3,American Literature A,"Santiago, Meredith",5,B,20
+3,English 1A*,"Williams, Sam",5,B,25
+3,English 1A*,"Arriaga, Adela",6,C,25
+3,AP English Language and Composition 74A (72)*,"Bajet, Lael",6,C,27
+3,AP English Literature and Composition 80A (86)*,"Galang, Lorna",6,C,26
+3,Critical Writing ,"Gustafson, Eric",6,C,9
+3,Journalism 1A,"Gustafson, Eric",6,C,9
+3,English 1A*,"Henares, Nicole",6,C,25
+3,Comedy & Satire,"Lamarre, Tim",6,C,22
+3,English 2B,"Mitchell, Kristen",6,C,9
+3,English 1A*,"Moffitt, Jennifer",6,C,25
+3,AP English Literature and Composition 83A (84)*,"Recht, Sydney",6,C,12
+3,English 2A,"Santiago, Meredith",6,C,0
+3,Literature & Psychology ,"Yu, Samantha",6,C,0
+3,AP English Language and Composition 75A (73)*,"Yuan, David",6,C,24
+3,English 2A,"Arriaga, Adela",7,B,19
+3,AP English Literature and Composition 80A (86)*,"Carney, Staci",7,B,19
+3,AP English Language and Composition 74A (77)*,"Crabtree, Stephanie",7,B,10
+3,English 1A*,"Freeland, Anne",7,B,25
+3,Journalism 2A,"Gustafson, Eric",7,B,17
+3,Literature & Psychology ,"Henares, Nicole",7,B,10
+3,English 1A*,"Hereford, David",7,B,25
+3,Comedy & Satire,"Lamarre, Tim",7,C,24
+3,Novel,"Mitchell, Kristen",7,B,19
+3,English 2B,"Moses, Jacqueline",7,B,29
+3,English 2A,"Nickels, Carolyn",7,B,26
+3,English 2B,"Park, Claudia",7,B,16
+3,AP English Language and Composition 74A (72)*,"Ritter, Bryan",7,C,0
+3,Critical Writing ,"Williams, Sam",7,B,20
+3,English 1A*,"Carney, Staci",8,C,25
+3,Epic & Myth,"Crabtree, Stephanie",8,C,23
+3,English 2B,"Freeland, Anne",8,C,24
+3,English 1A*,"Guina, Anne",8,C,25
+3,Journalism 2A,"Gustafson, Eric",8,C,19
+3,English 1A*,"Moffitt, Jennifer",8,C,25
+3,Yearbook A,"Nickels, Carolyn",8,C,19
+3,Shakespeare,"Ritter, Bryan",8,C,22
+3,Media Arts - TV Lowell Video Production,"Yu, Samantha",8,T,34
+4,AP Microeconomics*,"JOHNSON, R.",1,B,22
+4,World History A*,"KLEIN, A",1,B,30
+4,American Democracy ,"KOMLOS, L.",1,B,23
+4,Economics,"LIN, S.",1,B,0
+4,AP World History A*,"MAGSANAY, M.",1,B,23
+4,AP United States History A*,"PROPHET, M.",1,B,0
+4,AP Psychology A*,"SHIMMON, S.",1,B,0
+4,US History A,"SLOAN, W.",1,B,14
+4,World History A*,STAFF A,1,B,30
+4,World History A*,"STARR, D",1,B,30
+4,World History A*,"SUTILOVIC, Z",1,B,30
+4,AP Government and Politics: United States ,"UNGAR, M.",1,B,19
+4,Ethnic Studies A,"BELL, M.",2,C,21
+4,US History A,"FUREY, M.",2,C,30
+4,World History A*,"HANLON, E.",2,C,30
+4,World History A*,KOMLOS L.,2,C,30
+4,AP Psychology A*,KWONG-BALLARD,2,C,28
+4,AP Microeconomics*,"LUBENOW, K.",2,C,12
+4,Economics,"MARTIN, T.",2,C,20
+4,AP Psychology A*,"MICHELS, A.",2,C,23
+4,World History A*,STAFF B,2,C,30
+4,US History A,"STARR, D",2,C,2
+4,AP United States History A*,"TUASON, J.",2,C,25
+4,American Democracy ,"WORTH, J.",2,C,31
+4,American Democracy ,"HANLON, E.",3,B,21
+4,AP Microeconomics*,"JOHNSON, R.",3,B,24
+4,World History A*,"KLEIN, A",3,B,30
+4,AP Psychology A*,"LIN, S.",3,B,0
+4,AP World History A*,"MAGSANAY, M.",3,B,17
+4,AP United States History A*,"PROPHET, M.",3,B,0
+4,AP Psychology A*,"SHIMMON, S.",3,B,0
+4,US History A,"SLOAN, W.",3,B,25
+4,World History A*,STAFF A,3,B,30
+4,US History A,STAFF B,3,B,32
+4,World History A*,"SUTILOVIC, Z",3,B,30
+4,AP Government and Politics: United States ,"UNGAR, M.",3,B,24
+4,AP World History A*,"BELL, M.",4,C,21
+4,US History A,"FUREY, M.",4,C,32
+4,World History A*,"KOMLOS, L.",4,C,30
+4,AP Psychology A*,KWONG-BALLARD,4,C,32
+4,AP Microeconomics*,"LUBENOW, K.",4,C,14
+4,Economics,"MARTIN, T.",4,C,22
+4,AP Psychology A*,"MICHELS, A.",4,C,31
+4,World History A*,STAFF B,4,C,30
+4,US History A,"STARR, D",4,C,1
+4,AP United States History A*,"TUASON, J.",4,C,7
+4,American Democracy ,"WORTH, J.",4,C,31
+4,American Democracy ,"HANLON, E.",5,B,14
+4,World History A*,"JOHNSON, R.",5,B,30
+4,AP United States History A*,"KLEIN, A",5,B,25
+4,AP Psychology A*,"LIN, S.",5,B,24
+4,World History A*,"MAGSANAY, M.",5,B,30
+4,US History A,"PROPHET, M.",5,B,7
+4,AP Microeconomics*,"SHIMMON, S.",5,B,13
+4,AP Government and Politics: United States ,"SLOAN, W.",5,B,13
+4,AP Human Geography ,STAFF A,5,B,23
+4,AP European History A*,"SUTILOVIC, Z",5,B,17
+4,Economics,"UNGAR, M.",5,B,13
+4,US History A,"WORTH, J.",5,B,32
+4,AP World History A*,"BELL, M.",6,C,16
+4,AP United States History A*,"FUREY, M.",6,C,29
+4,World History A*,"HANLON, E.",6,C,29
+4,World History A*,"KOMLOS, L.",6,C,30
+4,AP Psychology A*,KWONG-BALLARD,6,C,24
+4,AP Psychology A*,"LUBENOW, K.",6,C,23
+4,AP Microeconomics*,"MARTIN, T.",6,C,31
+4,American Democracy ,"MICHELS, A.",6,C,12
+4,US History A,STAFF B,6,C,31
+4,US History A,"STARR, D",6,C,0
+4,World History A*,"TUASON, J.",6,C,30
+4,World History A*,"JOHNSON, R.",7,B,30
+4,AP United States History A*,"KLEIN, A",7,B,29
+4,American Democracy ,"KOMLOS, L.",7,B,17
+4,AP Psychology A*,"LIN, S.",7,B,2
+4,World History A*,"MAGSANAY, M.",7,B,30
+4,US History A,"PROPHET, M.",7,B,1
+4,AP Microeconomics*,"SHIMMON, S.",7,B,19
+4,AP Government and Politics: United States ,"SLOAN, W.",7,B,6
+4,AP Human Geography ,STAFF A,7,B,19
+4,World History A*,"STARR, D",7,B,29
+4,AP European History A*,"SUTILOVIC, Z",7,B,19
+4,Economics,"UNGAR, M.",7,B,26
+4,US History A,"WORTH, J.",7,B,32
+4,World History A*,"BELL, M.",8,C,30
+4,US History A,"FUREY, M.",8,C,29
+4,World History A*,"HANLON, E.",8,C,30
+4,AP Psychology A*,"LUBENOW, K.",8,C,27
+4,Economics,"MARTIN, T.",8,C,28
+4,American Democracy ,"MICHELS, A.",8,C,21
+4,US History A,STAFF B,8,C,30
+4,World History A*,"TUASON, J.",8,C,30
+5,Ceramics A,Reller,1,A,22
+5,Art In Architecture A,Staff W,1,A,17
+5,Art In Architecture B,Staff W,1,A,4
+5,Art In Architecture Advanced A,Staff W,1,A,5
+5,Art In Architecture Advanced B,Staff W,1,A,2
+5,Symphony Orchestra 1A,Hollander,2,C,50
+5,Art A,Janssen,2,A,4
+5,Ceramics A,Reller,2,A,9
+5,Art In Architecture A,Staff W,2,A,19
+5,Art In Architecture B,Staff W,2,A,5
+5,Art In Architecture Advanced A,Staff W,2,A,5
+5,Art In Architecture Advanced B,Staff W,2,A,2
+5,Symphonic Band A,Wagner,2,C,55
+5,Vocal Music 2A,Chan,3,A,18
+5,Orchestra 3A,Hollander,3,A,55
+5,Art Advanced A,Janssen,3,A,26
+5,Dance 1A,Staff J,3,A,28
+5,Video Production 1A,Ullman,3,C,20
+5,Video Production 2A,Ullman,3,C,2
+5,Vocal Music 1A,Chan,4,A,20
+5,AP Studio Art: 3-D Design A*,Janssen,4,B,17
+5,AP Studio Art: Drawing A*,Janssen,4,B,3
+5,Dance 1A,Staff J,4,A,32
+5,Drama 1A,Ullman,4,A,19
+5,Drama 1B,Ullman,4,A,-2
+5,Band 3A,Wagner,4,A,42
+5,AP Music Theory A*,Hollander,5,B,18
+5,Ceramics B,Reller,5,B,4
+5,Ceramics Advanced A,Reller,5,B,8
+5,Ceramics Advanced B,Reller,5,B,2
+5,Ceramics A,Reller,5,A,0
+5,Dance 2A,Staff J,5,A,15
+5,Drama 1A,Ullman,5,A,18
+5,Drama 2A,Ullman,5,A,6
+5,Drama Advanced A,Ullman,5,C,10
+5,Guitar A,Wagner,5,A,15
+5,Vocal Music 1A,Chan,6,A,7
+5,Ceramics A,Reller,6,B,14
+5,Drama Advanced A,Ullman,6,C,22
+5,Vocal Music 3A,Chan,7,B,48
+5,Dance 3A,Staff J,7,B,24
+5,Theater Tech 2A,Ullman,7,A,6
+5,Theater Tech 3A,Ullman,7,A,5
+5,Jazz Band A,Wagner,7,B,39
+5,Vocal Music 1A,Chan,8,A,15
+5,Orchestra 2A,Hollander,8,A,74
+5,Art A,Janssen,8,A,10
+5,Dance Production A,Staff J,8,C,25
+5,Theater Tech 1A,Ullman,8,A,13
+5,Piano Lab 1A,Wagner,8,A,12
+6,Chinese 1A,Danforth,1,B,14
+6,Chinese 3A Honors,Li,1,B,11
+6,Korean 1A,Park,1,B,13
+6,French 3A Honors,Raya,1,B,21
+6,Spanish 2A,Staff Z,1,A,25
+6,Latin 2A,TCHR XY,1,A,19
+6,Chinese 3A,Zhang,1,B,17
+6,Spanish 2A,Ballbé,2,A,11
+6,Spanish Native 3A,Cadoppi,2,C,24
+6,Chinese 3A Honors,Danforth,2,C,15
+6,Chinese 2A,Li,2,A,0
+6,AP Chinese Language and Culture A*,Liang,2,C,18
+6,Spanish 3A,Martínez,2,C,10
+6,Japanese 2A,Okada,2,A,10
+6,Italian 1A,Pelagatti,2,C,9
+6,Spanish 1A,TCHR X,2,C,10
+6,Latin 3A,TCHR XY,2,C,26
+6,Chinese 1A,Zhang,2,C,12
+6,Spanish 2A,Ballbé,3,A,21
+6,Spanish 1A,Cadoppi,3,B,13
+6,Chinese 1A,Danforth,3,B,15
+6,Chinese 3A Honors,Li,3,B,18
+6,Spanish 3A Honors,Martinez,3,B,6
+6,Japanese 2A,Okada,3,A,16
+6,French 1A,Pang,3,B,11
+6,Korean 1A,Park,3,B,13
+6,Italian 4A Honors,Pelagatti,3,B,11
+6,French 2A,Raya,3,A,24
+6,Spanish 3A,TCHR X,3,B,33
+6,Spanish 2A,Ballbé,4,A,18
+6,Spanish 1A,Cadoppi,4,C,7
+6,Hebrew 1A,Horsky,4,C,3
+6,AP Chinese Language and Culture A*,Liang,4,C,19
+6,Chinese 2A,Pang,4,A,24
+6,Korean 3A Honors,Park,4,C,24
+6,Italian 3A Honors,Pelagatti,4,C,3
+6,Italian 3A Honors,Pelagatti,4,C,24
+6,Latin 1A,TCHR XY,4,C,14
+6,Japanese 3A Honors,Wong,4,C,20
+6,Hebrew 2A,Horsky,5,A,3
+6,AP Spanish Literature and Culture A*,Martínez,5,B,22
+6,AP Japanese Language and Culture A*,Okada,5,B,22
+6,Chinese 2A,Pang,5,A,23
+6,AP Spanish Language and Culture A*,Raya,5,B,21
+6,Spanish 2A,TCHR X,5,A,29
+6,Chinese Native 3A,Zhang,5,B,2
+6,Spanish 3A Honors,Ballbé,6,C,20
+6,Chinese 3A Honors,Danforth,6,C,9
+6,Chinese 2A,Li,6,A,9
+6,AP Chinese Language and Culture A*,Liang,6,C,22
+6,Korean 4A Honors,Park,6,C,8
+6,Korean 2A,Park,6,A,23
+6,Italian 2A,Pelagatti,6,A,17
+6,Japanese 1A,Wong,6,C,11
+6,Chinese 1A,Zhang,6,C,12
+6,Spanish 2A,Ballbe,7,A,16
+6,Spanish 1A,Cadoppi,7,B,9
+6,Chinese 1A,Danforth,7,B,15
+6,Chinese 3A Honors,Li,7,B,6
+6,French 1A,Pang,7,B,11
+6,Korean 2A,Park,7,A,12
+6,Korean 4A Honors,Park,7,B,8
+6,Italian 2A,Pelagatti,7,A,15
+6,Spanish 3A,TCHR X,7,B,27
+6,Chinese 3A,Zhang,7,B,14
+6,Italian 1A,Cadoppi,8,C,14
+6,AP Chinese Language and Culture A*,Liang,8,C,22
+6,Spanish 3A,Martínez,8,C,15
+6,Japanese 3A Honors,Okada,8,C,18
+6,Spanish 1A,TCHR X,8,C,11
+6,Japanese 1A,Wong,8,C,14
+7,Swimming A ,"Doherty, Terence",1,A,25
+7,PE 1A*,"Hosoda, Christine",1,A,34
+7,PE 1A*,"Lopez, Juan",1,A,34
+7,PE 2A,"Ray, Robert",1,A,23
+7,PE 2A,"Taylor-Ray, Sascha",1,A,21
+7,PE 1A*,"Axt, Milt",2,A,34
+7,PE 2A,"Geren, Thomas",2,A,23
+7,PE 1A*,"Hosoda, Christine",2,A,34
+7,PE 1A*,"Lopez, Juan",2,A,34
+7,PE 2A,"Ray, Robert",2,A,33
+7,PE 1A*,Staff A,2,A,34
+7,PE 2A,"Taylor-Ray, Sascha",2,A,31
+7,PE 1A*,"Axt, Milt",3,A,34
+7,YOGA A,"Doherty, Terence",3,A,0
+7,PE 2A,"Geren, Thomas",3,A,7
+7,PE 1A*,"Hosoda, Christine",3,A,34
+7,PE 1A*,Staff A,3,A,34
+7,PE 2A,"Taylor-Ray, Sascha",3,A,19
+7,PE 2A,"Doherty, Terence",4,A,29
+7,PE 2A,"Geren, Thomas",4,A,17
+7,PE 1A*,"Lopez, Juan",4,A,34
+7,PE 1A*,Staff A,4,A,34
+7,PE 2A,"Doherty, Terence",5,A,29
+7,PE 1A*,"Gersten, Cambria",5,A,34
+7,Racket Sports 1A,"Hosoda, Christine",5,A,13
+7,PE 1A*,"Taylor-Ray, Sascha",5,A,34
+7,PE 2A,"Axt, Milt",6,A,27
+7,PE 1A*,"Hosoda, Christine",6,A,34
+7,PE 1A*,"Lopez, Juan",6,A,34
+7,YOGA A,Staff A,6,A,0
+7,Weight Training A,"Taylor-Ray, Sascha",6,A,20
+7,PE 2A,"Axt, Milt",7,A,11
+7,PE 1A*,"Geren, Thomas",7,A,34
+7,PE 1A*,"Gersten, Cambria",7,A,34
+7,Soccer A,"Lopez, Juan",7,A,30
+7,Basketball A,"Ray, Robert",7,A,20
+7,PE 1A*,Staff A,7,A,34
+7,PE 2A,"Axt, Milt",8,A,10
+7,PE 2A,"Geren, Thomas",8,A,0
+7,PE 1A*,"Gersten, Cambria",8,A,33
+8,ATHLETIC DIRECTOR,"Ray, Robert",8,A,177
+8,LIFE SKILLS A,KIRAMICHYAN,1,A,20
+8,SKILLS STRATEGIES A,Pollock,1,A,16
+8,Library Training 2B,Sasso,1,A,2
+8,Library Training 1B,Sasso,1,A,2
+8,Library Training 2A,Sasso,1,A,1
+8,Library Training 1A,Sasso,1,A,1
+8,LIFE SKILLS A,SOLER,1,A,20
+8,LIFE SKILLS A,Buckley,2,A,20
+8,Health,COLE,2,A,9
+8,LIFE SKILLS A,ESQUER,2,A,15
+8,COMMUNITY BASED WORK A,KIRAMICHYAN,2,A,20
+8,CAREER PREPARATION A,La Mastra,2,A,13
+8,LIFE SKILLS A,NICKLESS,2,A,18
+8,SKILLS STRATEGIES A,Pollock,2,A,13
+8,ENGLISH 1A,PURETZ,2,A,20
+8,ENGLISH 2A,PURETZ,2,A,10
+8,Library Training 2B,Sasso,2,A,2
+8,Library Training 2A,Sasso,2,A,2
+8,Library Training 1B,Sasso,2,A,2
+8,Library Training 1A,Sasso,2,A,1
+8,COMMUNITY BASED WORK A,SOLER,2,A,20
+8,CCSS ALGEBRA 2A,STROTHER,2,A,15
+8,Health,BROOKS,3,A,36
+8,CAREER PREPARATION A,Buckley,3,A,20
+8,Health,COLE,3,A,14
+8,CAREER PREPARATION A,ESQUER,3,A,17
+8,Critical Thinking/Social Change A,HORN,3,A,10
+8,CAREER PREPARATION A,KIRAMICHYAN,3,A,20
+8,LIFE SKILLS A,La Mastra,3,A,17
+8,CAREER PREPARATION A,NICKLESS,3,A,20
+8,SKILLS STRATEGIES A,Pollock,3,A,15
+8,ENGLISH/EURO LIT A,PURETZ,3,A,16
+8,Library Training 2B,Sasso,3,A,2
+8,Library Training 1B,Sasso,3,A,2
+8,Library Training 2A,Sasso,3,A,2
+8,Library Training 1A,Sasso,3,A,2
+8,CAREER PREPARATION A,SOLER,3,A,20
+8,CCSS ALGEBRA 1A,STROTHER,3,A,19
+8,CCSS GEOMETRY A,STROTHER,3,A,10
+8,College/Career,BROOKS,4,A,31
+8,Health,COLE,4,A,5
+8,Critical Thinking/Social Change A,HORN,4,A,11
+8,CAREER WORK EXPERIENCE A,KIRAMICHYAN,4,A,20
+8,CAREER WORK EXPERIENCE A,NICKLESS,4,A,16
+8,AMERICAN LITERATURE A,PURETZ,4,A,18
+8,SKILLS STRATEGIES A,PURETZ,4,A,18
+8,Library Training 2B,Sasso,4,A,2
+8,Library Training 2A,Sasso,4,A,2
+8,Library Training 1B,Sasso,4,A,2
+8,Library Training 1A,Sasso,4,A,0
+8,CAREER WORK EXPERIENCE A,SOLER,4,A,20
+8,Health,BROOKS,5,A,29
+8,JROTC 1A,Bullard,5,A,177
+8,JROTC 1B,Bullard,5,A,35
+8,JROTC 4B,Bullard,5,A,35
+8,JROTC 2A,Bullard,5,A,35
+8,JROTC 2B,Bullard,5,A,35
+8,JROTC 3A,Bullard,5,A,35
+8,JROTC 3B,Bullard,5,A,35
+8,JROTC 4A,Bullard,5,A,34
+8,JOB LEARNING A,KIRAMICHYAN,5,A,20
+8,Library Training 2B,Sasso,5,A,2
+8,Library Training 1B,Sasso,5,A,2
+8,Library Training 2A,Sasso,5,A,2
+8,Library Training 1A,Sasso,5,A,2
+8,JOB LEARNING A,SOLER,5,A,20
+8,CAREER WORK EXPERIENCE A,Buckley,6,A,20
+8,JROTC 4A,Bullard,6,A,35
+8,JROTC 4B,Bullard,6,A,35
+8,JROTC 3B,Bullard,6,A,35
+8,JROTC 3A,Bullard,6,A,35
+8,JROTC 2B,Bullard,6,A,35
+8,JROTC 2A,Bullard,6,A,35
+8,JROTC 1B,Bullard,6,A,35
+8,JROTC 1A,Bullard,6,A,35
+8,Health,COLE,6,A,10
+8,CAREER WORK EXPERIENCE A,ESQUER,6,A,17
+8,Leadership 1A,GUINA,6,A,14
+8,CAREER WORK EXPERIENCE A,La Mastra,6,A,16
+8,Library Training 2B,Sasso,6,A,2
+8,Library Training 2A,Sasso,6,A,2
+8,Library Training 1B,Sasso,6,A,2
+8,Library Training 1A,Sasso,6,A,2
+8,Health,STROTHER,6,A,15
+8,Health,BROOKS,7,A,23
+8,LIFE SKILLS A,Buckley,7,A,20
+8,JROTC 4A,Bullard,7,A,35
+8,JROTC 1A,Bullard,7,A,35
+8,JROTC 1B,Bullard,7,A,35
+8,JROTC 4B,Bullard,7,A,35
+8,JROTC 2A,Bullard,7,A,33
+8,JROTC 2B,Bullard,7,A,35
+8,JROTC 3A,Bullard,7,A,33
+8,JROTC 3B,Bullard,7,A,35
+8,LIFE SKILLS A,ESQUER,7,A,15
+8,Critical Thinking/Social Change A,HORN,7,A,12
+8,COMMUNITY BASED WORK A,La MAstra,7,A,16
+8,LIFE SKILLS A,NICKLESS,7,A,19
+8,SKILLS STRATEGIES A,Pollock,7,A,18
+8,US HISTORY A,Puretz,7,A,19
+8,Library Training 2B,Sasso,7,A,2
+8,Library Training 1B,Sasso,7,A,2
+8,Library Training 2A,Sasso,7,A,2
+8,Library Training 1A,Sasso,7,A,2
+8,BIOLOGY A,STROTHER,7,A,20
+8,Social Emotional Intelligence A,WONG,7,A,32
+8,COMMUNITY BASED WORK A,Buckley,8,A,20
+8,JROTC 4A,Bullard,8,A,34
+8,JROTC 1B,Bullard,8,A,35
+8,JROTC 1A,Bullard,8,A,34
+8,JROTC 4B,Bullard,8,A,35
+8,JROTC 3B,Bullard,8,A,35
+8,JROTC 3A,Bullard,8,A,35
+8,JROTC 2B,Bullard,8,A,34
+8,JROTC 2A,Bullard,8,A,34
+8,Health,COLE,8,A,0
+8,COMMUNITY BASED WORK A,ESQUER,8,A,17
+8,Critical Thinking/Social Change Leadership A,HORN,8,A,7
+8,COMMUNITY BASED WORK A,LaMastra,8,A,15
+8,COMMUNITY BASED WORK A,NICKLESS,8,A,17
+8,SKILLS STRATEGIES A,PURETZ,8,A,11
+8,Library Training 2B,Sasso,8,A,2
+8,Library Training 2A,Sasso,8,A,2
+8,Library Training 1B,Sasso,8,A,2
+8,Library Training 1A,Sasso,8,A,2
+8,LIFE SKILLS A,STROTHER,8,A,16
+8,Media Arts - TV Lowell Video Production,YU,8,A,26
+8,JROTC Drill Lab A,Bullard,11,A,22
+8,JROTC Leaders Lab A,Bullard,11,A,29
+8,PE Independent Study 1A,Bullard,13,A,34
+8,PE Independent Study 2A,Bullard,13,A,32
