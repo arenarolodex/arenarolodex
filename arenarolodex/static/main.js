@@ -1,22 +1,37 @@
-var choices = ["#one-choice", "#two-choice", "#three-choice", "#four-choice",
-							"#five-choice", "#six-choice", "#seven-choice", "#eight-choice"];
-var choices2 = ["#first-choice-select", "#second-choice-select","#third-choice-select", "#fourth-choice-select",
-							"#fifth-choice-select", "#sixth-choice-select", "#seventh-choice-select", "#eighth-choice-select"];
-var choices3 = ["#teach1","#teach2","#teach3","#teach4","#teach5","#teach6","#teach7","#teach8"];
-
-var classdata = ["#first-choice", "#second-choice","#third-choice", "#fourth-choice",
-							"#fifth-choice", "#sixth-choice", "#seventh-choice", "#eighth-choice"];
-var teachdata = ["#first-teach", "#second-teach", "#third-teach", "#fourth-teach",
-							"#fifth-teach", "#sixth-teach", "#seventh-teach", "#eighth-teach"]
-var blockdata = ["#first-pref", "#second-pref", "#third-pref", "#fourth-pref",
-							"#fifth-pref", "#sixth-pref", "#seventh-pref", "#eighth-pref"]
-
-
 $(function() {
+	for (var i = 1; i<=8; i++){
+		var choice = "<div>" +
+	                "<select id=\"category" + i + "\">" +
+	                    "<option selected value=\"base\">Please Select</option>" +
+	                    "<option value=\"math\">Math/CS</option>" +
+	                    "<option value=\"english\">English</option>" +
+	                    "<option value=\"science\">Science</option>" +
+	                    "<option value=\"history\">History/Social Studies</option>" +
+	                    "<option value=\"vpa\">VPAs</option>" +
+	                    "<option value=\"language\">World Language</option>" +
+	                    "<option value=\"pe\">PE/Sports</option>" +
+	                    "<option value=\"others\">Other</option>" +
+	                    "<option value=\"snacks\">Snacks</option>" +
+	                    "</select>" +
+	                "<br>" +
+	                "<label>Choose a class from the list:" +
+	                    "<select id=\"block"+i+"\" name=\"block"+i+"\"></select></label>" +
+	                "<label>Preferred teacher?" +
+	                    "<select id=\"teach"+i+"\" name=\"teach"+i+"\"></select></label>" +
+	                "<label>Preferred block?" +
+	                    "<select id=\"pref"+i+"\" name=\"pref"+i+"\"></select></label>" +
+	                "<br>" +
+	            "</div>";
+		$('form').prepend(choice);
+		$('#block'+i).append("<option selected>Choose a course...</option>");
+		$('#teach'+i).append("<option selected>Choose a teacher...</option>");
+		$('#pref'+i).append("<option selected>Choose a block...</option>");
+	}
+
 
 	var i;
-	for (i = 0; i<8; i++){
-		$(choices[i]).on("change", { value: i }, function(event) {
+	for (i = 1; i<=8; i++){
+		$("#category"+i).on("change", { value: i }, function(event) {
 
 			var $dropdown = $(this);
 
@@ -37,18 +52,17 @@ $(function() {
 				else
 					vals = courses[key]
 
-				$(classdata[event.data.value]).empty();
-				console.log("Emptied " + classdata[event.data.value] + " from " + choices[event.data.value]);
+				$("#block"+event.data.value).empty();
+				console.log("Emptied block data from #block"+event.data.value);
 				console.log(event.data.value);
+				$("#block"+event.data.value).append("<option selected value=\"base\">Please select</option>");
 				$.each(vals, function(index, value) {
-					$(classdata[event.data.value]).append("<option value=\"" + value + "\"></option>");
+					$("#block"+event.data.value).append("<option value=\"" + value + "\">"+value+"</option>");
 				});
 			});
 		});
-	}
 
-	for (i = 0; i<8; i++){
-		$(choices2[i]).on("change", { value: i }, function(event) {
+		$("#block"+i).on("change", { value: i }, function(event) {
 			console.log("Switched "+$(this).val());
 
 			var $dropdown = $(this);
@@ -58,7 +72,7 @@ $(function() {
 				var key = $dropdown.val();
 				var vals = [];
 
-				for (var obj of data[$(choices[event.data.value]).val()]){
+				for (var obj of data[$("#category"+event.data.value).val()]){
 					if (obj.name == $dropdown.val())
 						for (teach of obj.teachers){
 							vals.push(teach.name);
@@ -66,16 +80,15 @@ $(function() {
 				}
 
 				console.log("Emptied teachdata");
-				$(teachdata[event.data.value]).empty();
+				$("#teach"+event.data.value).empty();
+				$("#teach"+event.data.value).append("<option selected value=\"base\">Please select</option>");
 				$.each(vals, function(index, value) {
-					$(teachdata[event.data.value]).append("<option value=\"" + value + "\"></option>");
+					$("#teach"+event.data.value).append("<option value=\"" + value + "\">"+value+"</option>");
 				});
 			});
 		});
-	}
 
-	for (i = 0; i<8; i++){
-		$(choices3[i]).on("change", { value: i }, function(event) {
+		$("#teach"+i).on("change", { value: i }, function(event) {
 			console.log("Switched "+$(this).val());
 
 			var $dropdown = $(this);
@@ -85,18 +98,19 @@ $(function() {
 				var key = $dropdown.val();
 				var vals = [];
 
-				for (var obj of data[$(choices[event.data.value]).val()]){
-					if (obj.name == $(choices2[event.data.value]).val())
+				for (var obj of data[$("#category"+event.data.value).val()]){
+					if (obj.name == $("#block"+event.data.value).val())
 						for (teach of obj.teachers){
-							if (teach.name == $(choices3[event.data.value]).val())
+							if (teach.name == $("#teach"+event.data.value).val())
 								vals = teach.blocks;
 						}
 				}
 
 				console.log("Emptied blockdata");
-				$(blockdata[event.data.value]).empty();
+				$("#pref"+event.data.value).empty();
+				$("#pref"+event.data.value).append("<option selected value=\"base\">Please select</option>");
 				$.each(vals, function(index, value) {
-					$(blockdata[event.data.value]).append("<option value=\"" + value + "\"></option>");
+					$("#pref"+event.data.value).append("<option value=\"" + value + "\">"+value+"</option>");
 				});
 			});
 		});
