@@ -1,2 +1,2 @@
 web gunicorn arenarolodex:app
-worker python3 lhsrequest.py
+worker rq worker high normal low
