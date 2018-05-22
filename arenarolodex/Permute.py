@@ -24,6 +24,9 @@ def index_post():
         mylist.append(request.form['block'+str(i)])
         teachers.append(request.form['teach'+str(i)])
         blocks.append(request.form['pref'+str(i)])
+        print(request.form['block'+str(i)])
+        print(request.form['teach'+str(i)])
+        print(request.form['pref'+str(i)])
 
     # This holds the preferred teachers and blocks for each class
     courseguide = [];
@@ -118,12 +121,12 @@ def index_post():
             count = 0
             block = True
             for course in schedule:
-                print("Now checking "+course[1]+" for block "+course[3])
+                # print("Now checking "+course[1]+" for block "+course[3])
                 # If this coincides with the preferred off block, lower priority
                 if course[3] == request.form['off-block']:
                     block = False
                 for c in courseguide:
-                    if course[2] == c["class"]:
+                    if course[1] == c["class"]:
                         if c["teacher"] == course[2]:
                             print("teacher match for "+course[1])
                             count+=1

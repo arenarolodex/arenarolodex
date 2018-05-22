@@ -23,9 +23,9 @@ $(function() {
 	                "<br>" +
 	            "</div>";
 		$('form').prepend(choice);
-		$('#block'+i).append("<option selected>Choose a course...</option>");
-		$('#teach'+i).append("<option selected>Choose a teacher...</option>");
-		$('#pref'+i).append("<option selected>Choose a block...</option>");
+		$('#block'+i).append("<option selected value=\"\">Choose a course...</option>");
+		$('#teach'+i).append("<option selected value=\"\">Choose a teacher...</option>");
+		$('#pref'+i).append("<option selected value=\"\">Choose a block...</option>");
 	}
 
 
