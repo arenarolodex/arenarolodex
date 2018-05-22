@@ -12,26 +12,30 @@ logging.basicConfig(level=logging.DEBUG)
 
 @app.route('/results', methods = ['GET', 'POST'])
 def index_post():
-    block1 = request.form['block1']
-    block2 = request.form['block2']
-    block3 = request.form['block3']
-    block4 = request.form['block4']
-    block5 = request.form['block5']
-    block6 = request.form['block6']
-    block7 = request.form['block7']
-    block8 = request.form['block8']
-
-    teachers = [request.form['teach1'],request.form['teach2'],
-        request.form['teach3'],request.form['teach4'],
-        request.form['teach5'],request.form['teach6'],
-        request.form['teach7'],request.form['teach8']]
-
-    blocks = [request.form['pref1'],request.form['pref2'],
-        request.form['pref3'],request.form['pref4'],
-        request.form['pref5'],request.form['pref6'],
-        request.form['pref7'],request.form['pref8']]
-
-    mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
+    mylist, teachers, blocks = [], [], []
+    for i in range(1,9):
+        mylist.append(request.form['block'+str(i)])
+        teachers.append(request.form['teach'+str(i)])
+        blocks.append(request.form['pref'+str(i)])
+    # block1 = request.form['block1']
+    # block2 = request.form['block2']
+    # block3 = request.form['block3']
+    # block4 = request.form['block4']
+    # block5 = request.form['block5']
+    # block6 = request.form['block6']
+    # block7 = request.form['block7']
+    # block8 = request.form['block8']
+    #
+    # teachers = [request.form['teach1'],request.form['teach2'],
+    #     request.form['teach3'],request.form['teach4'],
+    #     request.form['teach5'],request.form['teach6'],
+    #     request.form['teach7'],request.form['teach8']]
+    #
+    # blocks = [request.form['pref1'],request.form['pref2'],
+    #     request.form['pref3'],request.form['pref4'],
+    #     request.form['pref5'],request.form['pref6'],
+    #     request.form['pref7'],request.form['pref8']]
+    # mylist = [block1, block2, block3, block4, block5, block6, block7, block8]
 
     # This holds the preferred teachers and blocks for each class
     courseguide = [];
