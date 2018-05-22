@@ -8,10 +8,7 @@ import pandas as pd
 from flask import Flask, request, render_template, url_for, send_from_directory, jsonify
 from arenarolodex import app
 
-from rq import Queue
-from lhsrequest import conn, update_options2
-
-q = Queue(connection=conn)
+from lhsrequest import update_options2
 
 logging.basicConfig(level=logging.DEBUG)
 
