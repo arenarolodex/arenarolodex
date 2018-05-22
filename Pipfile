@@ -45,6 +45,7 @@ werkzeug = "==0.13"
 wrapt = "==1.10.11"
 rq = "*"
 "beautifulsoup4" = "*"
+redis = "*"
 
 
 [dev-packages]
