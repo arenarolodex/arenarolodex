@@ -18,15 +18,15 @@ def index_post():
 
     mylist, teachers, blocks = [], [], []
     for i in range(1,9):
-        mylist.append(request.form['block'+str(i)])
-        teachers.append(request.form['teach'+str(i)])
-        blocks.append(request.form['pref'+str(i)])
-        print(request.form['block'+str(i)])
-        print(request.form['teach'+str(i)])
-        print(request.form['pref'+str(i)])
+        mylist.append(request.form['block' + str(i)])
+        teachers.append(request.form['teach' + str(i)])
+        blocks.append(request.form['pref' + str(i)])
+        print(request.form['block' + str(i)])
+        print(request.form['teach' + str(i)])
+        print(request.form['pref' + str(i)])
 
     # This holds the preferred teachers and blocks for each class
-    courseguide = [];
+    courseguide = []
     for c in range(len(mylist)):
         if mylist[c] =="":
             continue
@@ -71,7 +71,7 @@ def index_post():
                 for c in courses:
                     # For each course, we're going to sort out the block
                     c = list(itertools.filterfalse(lambda x: x[3] == course[0][3] and x != course[0], course))
-                print("Course " + course[0][1] + " was cleaned of intersections");
+                print("Course " + course[0][1] + " was cleaned of intersections")
             if len(course) == 0:
                 # If there are no course options, remove the course
                 courses.remove(course)
