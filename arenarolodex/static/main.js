@@ -1,5 +1,5 @@
 $(function() {
-	for (var i = 1; i<=8; i++){
+	for (var i = 1; i <= 8; i++){
 		var choice = "<div>" +
 	                "<select id=\"category" + i + "\">" +
 	                    "<option selected value=\"base\">Please Select</option>" +
@@ -15,23 +15,23 @@ $(function() {
 	                    "</select>" +
 	                "<br>" +
 	                "<label>Choose a class from the list:" +
-	                    "<select id=\"block"+i+"\" name=\"block"+i+"\"></select></label>" +
+	                    "<select id=\"block" + i + "\" name=\"block" + i + "\"></select></label>" +
 	                "<label>Preferred teacher?" +
-	                    "<select id=\"teach"+i+"\" name=\"teach"+i+"\"></select></label>" +
+	                    "<select id=\"teach" + i + "\" name=\"teach" + i + "\"></select></label>" +
 	                "<label>Preferred block?" +
-	                    "<select id=\"pref"+i+"\" name=\"pref"+i+"\"></select></label>" +
+	                    "<select id=\"pref" + i + "\" name=\"pref" + i + "\"></select></label>" +
 	                "<br>" +
 	            "</div>";
 		$('form').prepend(choice);
-		$('#block'+i).append("<option selected value=\"\">Choose a course...</option>");
-		$('#teach'+i).append("<option selected value=\"\">Choose a teacher...</option>");
-		$('#pref'+i).append("<option selected value=\"\">Choose a block...</option>");
+		$('#block' + i).append("<option selected value=\"\">Choose a course...</option>");
+		$('#teach' + i).append("<option selected value=\"\">Choose a teacher...</option>");
+		$('#pref' + i).append("<option selected value=\"\">Choose a block...</option>");
 	}
 
 
 	var i;
-	for (i = 1; i<=8; i++){
-		$("#category"+i).on("change", { value: i }, function(event) {
+	for (i = 1; i <= 8; i++){
+		$("#category" + i).on("change", { value: i }, function(event) {
 
 			var $dropdown = $(this);
 
@@ -62,8 +62,8 @@ $(function() {
 			});
 		});
 
-		$("#block"+i).on("change", { value: i }, function(event) {
-			console.log("Switched "+$(this).val());
+		$("#block" + i).on("change", { value: i }, function(event) {
+			console.log("Switched " + $(this).val());
 
 			var $dropdown = $(this);
 
@@ -88,8 +88,8 @@ $(function() {
 			});
 		});
 
-		$("#teach"+i).on("change", { value: i }, function(event) {
-			console.log("Switched "+$(this).val());
+		$("#teach" + i).on("change", { value: i }, function(event) {
+			console.log("Switched " + $(this).val());
 
 			var $dropdown = $(this);
 
