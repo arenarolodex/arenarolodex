@@ -1,4 +1,15 @@
 $(function() {
+	//Display the news
+
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function(){
+		if (this.readyState == 4 && this.status == 200){
+			$('#instructions').after(this.responseText);
+		}
+	};
+	xhttp.open("GET", "https://gist.githubusercontent.com/epixtallion/55ea460b3ba4c911b1e6e82304305a1f/raw", true);
+	xhttp.send();
+
 	for (var i = 1; i <= 8; i++){
 		var choice = "<div>" +
 	                "<select id=\"category" + i + "\">" +
