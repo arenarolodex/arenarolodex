@@ -1,18 +1,36 @@
-/* 
+/*
 	 CSS-Tricks Example
 	 by Chris Coyier
 	 http://css-tricks.com
 */
 
-/* * { margin: 0; padding: 0; }
-body { font: 14px Georgia, serif; }
+* { margin: 0; padding: 0; }
+body { font: 14px Georgia, serif; overflow-x: hidden;}
+div { margin: 0 0 2vmin 0; }
+#instructions {
+  margin: 2vh 0 2vh 5vmin;
+  width: 50vw;
+}
+.news{
+  margin-left: 2vmin;
+  font-family: sans-serif;
+  width: 70vw;
+}
+.news h3 {
+  color: red;
+}
+
+footer {
+  width: 100vw;
+  text-align: center;
+  font-size: 3vmin;
+  margin-top: 10vh;
+  margin-bottom: 3vh;
+}
 
 article, aside, figure, footer, header, hgroup,
 menu, nav, section { display: block; }
 
 #page-wrap { width: 960px; margin: 60px auto; }
 
-h1 { font: bold 32px Helvetica, Sans-Serif; margin: 20px 0 5px 0; letter-spacing: -1px; } */
-
-
-
+h1 { font: bold 32px Helvetica, Sans-Serif; margin: 20px 0 5px 0; letter-spacing: -1px; }
