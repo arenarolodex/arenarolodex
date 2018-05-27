@@ -22,7 +22,6 @@ $(function() {
 	                    "<option value=\"language\">World Language</option>" +
 	                    "<option value=\"pe\">PE/Sports</option>" +
 	                    "<option value=\"others\">Other</option>" +
-	                    "<option value=\"snacks\">Snacks</option>" +
 	                    "</select>" +
 	                "<br>" +
 	                "<label>Choose a class from the list:" +
