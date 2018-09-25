@@ -1,18 +1,39 @@
-/* 
-	 CSS-Tricks Example
-	 by Chris Coyier
-	 http://css-tricks.com
-*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-/* * { margin: 0; padding: 0; }
-body { font: 14px Georgia, serif; }
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+}
 
-article, aside, figure, footer, header, hgroup,
-menu, nav, section { display: block; }
+.wrapper {
+	display: flex;
+	flex-direction: row;
+}
 
-#page-wrap { width: 960px; margin: 60px auto; }
+#instructions {
+	width: 28vw;
+	margin-left: 25px;
+	margin-right: 15px;
+}
 
-h1 { font: bold 32px Helvetica, Sans-Serif; margin: 20px 0 5px 0; letter-spacing: -1px; } */
+.body{
+	margin: 5px 5px 5px 11px;
+}
 
+h1 {
+	margin: 16px 5px 16px 10px;
+	font-size: 40px;
+}
 
-
+.button {
+	-moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin: auto;
+	width: 96px;
+	height: 36px;
+	display: block;
+	
+	background-color: rgb(196, 25, 25);
+	color: rgb(255, 255, 255);
+}

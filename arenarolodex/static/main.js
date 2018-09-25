@@ -7,8 +7,8 @@ $(function() {
 			$('#instructions').after(this.responseText);
 		}
 	};
-	xhttp.open("GET", "https://gist.githubusercontent.com/epixtallion/55ea460b3ba4c911b1e6e82304305a1f/raw", true);
-	xhttp.send();
+	// xhttp.open("GET", "https://gist.githubusercontent.com/epixtallion/55ea460b3ba4c911b1e6e82304305a1f/raw", true);
+	// xhttp.send();
 
 	for (var i = 1; i <= 8; i++){
 		var choice = "<div>" +
@@ -24,13 +24,14 @@ $(function() {
 	                    "<option value=\"others\">Other</option>" +
 	                    "</select>" +
 	                "<br>" +
-	                "<label>Choose a class from the list:" +
+	                "<label>Choose a class from the list: " +
 	                    "<select id=\"block" + i + "\" name=\"block" + i + "\"></select></label>" +
-	                "<label>Preferred teacher?" +
+	                "<label> Preferred teacher? " +
 	                    "<select id=\"teach" + i + "\" name=\"teach" + i + "\"></select></label>" +
-	                "<label>Preferred block?" +
+	                "<label> Preferred block? " +
 	                    "<select id=\"pref" + i + "\" name=\"pref" + i + "\"></select></label>" +
-	                "<br>" +
+					"<br>" +
+					"<br>" + 
 	            "</div>";
 		$('form').prepend(choice);
 		$('#block' + i).append("<option selected value=\"\">Choose a course...</option>");
