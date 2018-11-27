@@ -39,39 +39,55 @@ class Course extends React.Component{
   constructor(){
     super();
     this.state = {class: null, subject: null, prefTeach: null, prefBlock: null,
-      priorityTeach: 1, priorityBlock: 1};
+      priorityTeach: 1, priorityBlock: 1, options: {"Subject": ["","Math","Science"]}};
   }
-  render(){
+  classChange(e) {
+    e.preventDefault();
+    console.log("class changed");
+  }
+  teacherChange(e) {
+    e.preventDefault();
+    console.log("teacher changed");
+  }
+  subjectChange(e) {
+    e.preventDefault();
+    var state = this.state;
+    state.options.Class = ["class 1", "class 2"];
+    state.subject = e.target.value;
+    this.setState(state);
+    console.log("subject changed to "+this.state.subject);
+  }
+  blockChange(e) {
+    e.preventDefault();
+    console.log("block changed");
+  }
+  render() {
     return (
       <div className={styles.course}>
-        <CourseSelect name="Class" />
-        <CourseSelect name="Teacher" />
-        <CourseSelect name="Subject" options='{"optionArray": ["Math","Science"]}' />
-        <CourseSelect name="Block" />
+        <CourseSelect name="Class" handleChange={this.classChange.bind(this)}
+          options={this.state.options} />
+        <CourseSelect name="Teacher" handleChange={this.teacherChange.bind(this)}
+          options={this.state.options} />
+        <CourseSelect name="Subject" handleChange={this.subjectChange.bind(this)}
+          options={this.state.options} />
+        <CourseSelect name="Block" handleChange={this.blockChange.bind(this)}
+          options={this.state.options} />
       </div>
     );
   }
 }
 
 class CourseSelect extends React.Component{
-  constructor() {
-    super();
-    this.state = {options:[]};
-  }
-  componentDidMount() {
-    if (this.props.options !== undefined) {
-      this.setState({options: JSON.parse(this.props.options).optionArray});
-      console.log(this.state.options);
-    }
-  }
   render() {
+    const options = (this.props.options[this.props.name] !== undefined) ?
+      this.props.options[this.props.name] : [];
     return (
       // <label onChange={this.props.onchange}>
       //TODO write onChange handler for component, pass changes to parent Course
       <label>
         {this.props.name}
-        <select>
-          {this.state.options.map((option) =>
+        <select onChange={this.props.handleChange}>
+          {options.map((option) =>
             <option key={option} value={option}>{option}</option>
           )}
         </select>
