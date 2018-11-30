@@ -30,9 +30,10 @@ fs.readFile('announcer.json', (err, data) => {
     if (!newannouncer[deptIndex][name])
       newannouncer[deptIndex][name] = {};
     if (!newannouncer[deptIndex][name][teacher])
-      newannouncer[deptIndex][name][teacher] = {};
+      newannouncer[deptIndex][name][teacher] = [];
 
-    newannouncer[deptIndex][name][teacher] = [course["Block"], course["Room"]];
+    newannouncer[deptIndex][name][teacher].push([course["Block"], course["Room"], course["Seats Cap"]]);
+  });
 
   //Write newannouncer.json
   const announcerData = new Uint8Array(Buffer.from(JSON.stringify(newannouncer)));
@@ -40,9 +41,4 @@ fs.readFile('announcer.json', (err, data) => {
     if (err) throw err;
     console.log("newannouncer.json has been written.");
   });
-
-  //Test
-  const testAnnouncer = JSON.parse(JSON.stringify(newannouncer));
-  console.log(testAnnouncer);
-
 });

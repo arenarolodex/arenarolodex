@@ -1,17 +1,27 @@
 import React from 'react'
 
 import styles from './courses.module.css'
+import CourseUtils from '../courseutils'
 
 /**A container for all the courses from user input.*/
 export default class Courses extends React.Component{
   constructor() {
     super();
-    this.state = {courses: {}};
+    this.state = {courses: {}, disableAddButton: false};
     this.handleChange = this.handleChange.bind(this);
+    this.utils = new CourseUtils();
   }
   handleSumbit(e) {
     e.preventDefault();
-    var selection = Object.keys(this.state.courses).map((key) => (this.state.courses[key]));
+    var selection = Object.keys(this.state.courses)
+      .map((key) => ({
+        Class: this.state.courses[key].Class,
+        Subject: this.state.courses[key].Subject,
+        prefTeach: this.state.courses[key].prefTeach,
+        prefBlock: this.state.courses[key].prefBlock,
+        priorityTeach: this.state.courses[key].priorityTeach,
+        priorityBlock: this.state.courses[key].priorityBlock,
+      }));
     alert("Form was submitted. "+JSON.stringify(selection));
     //TODO Handle submission of course selection here
   }
@@ -24,24 +34,72 @@ export default class Courses extends React.Component{
               options={this.state.courses[key].options} />)
           )}
         </div>
-        <button onClick={this.addcourse.bind(this)}>Add class</button>
+        <button onClick={this.addcourse.bind(this)} disabled={this.state.disableAddButton}>Add class</button>
         <input type="submit" value="Find schedules" />
       </form>
     );
   }
   handleChange(key, type, value) {
-    //TODO Handle <select> changes at the Courses component level
+    //Set new state
+    var state = this.state.courses[key];
+    state[type] = value;
+
     console.log("Course "+key+" changed its "+type+" to "+value);
-    var state = this.state;
-    state.courses[key][type] = value;
+
+    //TODO Handle <select> changes at the Courses component level
+    if(type === "Subject"){
+      state.options["Class"] = this.utils.getClasses(value);
+      state.options["Teacher"] = this.utils.getTeachers("", "");
+      state.options["Block"] = this.utils.getClassInfo("", "", "");
+    }
+    if(type === "Class"){
+      state.options["Teacher"] = this.utils.getTeachers(state["Subject"], value);
+      state.options["Block"] = this.utils.getClassInfo("", "", "");
+    }
+    if(type === "Teacher")
+      state.options["Block"] =
+        this.utils.getClassInfo(state["Subject"],state["Class"],value).map((info)=>{
+          console.log(info);
+          if (info[1] === "emptychoose")
+            return info[0];
+          return info[0]+", "+info[2]+" seats available";
+        });
+
+    // state.options = {
+    //   "Subject": this.utils.getDepartments(),
+    //   "Class": this.util.getClasses(),
+    //   "Teacher": this.util.getTeachers(),
+    //   "Block": this.util.getClassInfo().map((info)=>{
+    //     return info["Block"]+", "+info["Seats"]+" seats available"
+    //   });
+    // }
     this.setState(state);
   }
   addcourse(e){
+    if (Object.keys(this.state.courses).length >= 7){
+      alert("Hey! That's not a legal schedule!");
+      return;
+    }
     e.preventDefault();
     var state = this.state;
     var key = (new Date()).getTime()
-    state.courses[key] = {Class: null, Subject: null, prefTeach: null, prefBlock: null,
-      priorityTeach: 1, priorityBlock: 1, options: {"Subject": ["","Math","Science"]}};
+    var options = {
+      "Subject": this.utils.getDepartments(),
+      "Class": this.utils.getClasses(""),
+      "Teacher": this.utils.getTeachers("",""),
+      "Block": this.utils.getClassInfo("","","")
+    }
+    state.courses[key] = {
+      Class: null,
+      Subject: null,
+      prefTeach: null,
+      prefBlock: null,
+      priorityTeach: 1,
+      priorityBlock: 1,
+      options: options
+    };
+    if (Object.keys(this.state.courses).length >= 7)
+      state.disableAddButton = true;
     this.setState(state);
   }
 }
@@ -55,12 +113,15 @@ class Course extends React.Component{
   render() {
     return (
       <div className={styles.course}>
-        <CourseSelect name="Class" parentKey={this.props.id} handleChange={this.props.changeHandler}
-          options={this.props.options} />
-        <CourseSelect name="Teacher" parentKey={this.props.id} handleChange={this.props.changeHandler}
-          options={this.props.options} />
         <CourseSelect name="Subject" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options} />
+        <br />
+        <CourseSelect name="Class" parentKey={this.props.id} handleChange={this.props.changeHandler}
+          options={this.props.options} />
+        <br />
+        <CourseSelect name="Teacher" parentKey={this.props.id} handleChange={this.props.changeHandler}
+          options={this.props.options} />
+        <br />
         <CourseSelect name="Block" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options} />
       </div>

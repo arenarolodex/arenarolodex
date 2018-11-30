@@ -10,6 +10,7 @@ fs.readFile('newannouncer.json', (err, data) => {
 const server = http.createServer(function (req,res) {
   //Send JSON
   res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.end(announcer);
 });
 server.listen(6969,()=>{
