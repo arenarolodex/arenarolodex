@@ -27,6 +27,7 @@ export default class Courses extends React.Component{
       }));
     alert("Form was submitted. "+JSON.stringify(selection));
     //TODO Handle submission of course selection here
+    this.utils.generateSchedules(selection);
   }
   render() {
     return (

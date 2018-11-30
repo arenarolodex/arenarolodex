@@ -16,7 +16,57 @@ export default class SelectionUtilities {
   }
   //Schedule generator
   generateSchedules(courses){
-    //// TODO: redo Permute.py
+    var schedules = [];
+    var announcer = this.courses;
+    var recursiveScheduleMaker = function(courses, schedule) {
+      //Which class are we on?
+      const index = schedule.length;
+      const currentClass = courses[index];
+
+      var coursesLooping = [];
+
+      //Some loops to push all courses we need to look at to coursesLooping
+      Object.keys(announcer[currentClass.Subject][currentClass.Class]).forEach((key) => {
+        var teacher = key;
+        announcer[currentClass.Subject][currentClass.Class][key].forEach((teach) => {
+          teach.push(teacher);
+          teach.push(currentClass.Class);
+          coursesLooping.push(teach);
+        });
+      });
+
+      //Loop through coursesLooping, only continue if it doesn't intersect
+      coursesLooping.forEach((newCourse) => {
+        //Look for block intersection - use flag blockIntersect
+        var blockIntersect = false;
+        schedule.forEach((existingCourse) => {
+          if (existingCourse[0] === newCourse[0]) { //Do the blocks intersect?
+            blockIntersect = true;
+            return;
+          }
+        });
+
+        //After we checked, let's continue adding courses if there wasn't any
+        //intersection
+        if (!blockIntersect) {
+          var newSchedule = schedule.slice(0);
+          newSchedule.push(newCourse); //Add the new course to the schedule
+
+          if(newSchedule.length === courses.length){ //Is the schedule already done?
+            schedules.push(newSchedule); //Push this schedule to schedules[]
+            return; //Continue to the next newCourse
+          } else {
+            recursiveScheduleMaker(courses, newSchedule); //If we weren't done, go to next course
+          }
+        }
+      });
+    };
+
+    //Use recursive function to make schedules!
+    recursiveScheduleMaker(courses, []);
+
+    //Log all the schedules to the console
+    console.log(schedules);
   }
   //Getters ONLY for filling out CourseSelect components
   getDepartments(){
