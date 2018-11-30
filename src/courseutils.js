@@ -11,7 +11,7 @@ export default class SelectionUtilities {
       };
     };
     this.xhttp.onreadystatechange.bind(this);
-    this.xhttp.open("GET", "http://localhost:6969/", true);
+    this.xhttp.open("GET", "https://courseserver-tzhixcebgk.now.sh/", true);
     this.xhttp.send();
   }
   //Schedule generator

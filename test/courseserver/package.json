@@ -4,7 +4,8 @@
   "description": "Only for testing. Hosts a JSON containing course selection information.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "Alexander Ruiz <ruiz.alex0302@gmail.com>",
   "license": "ISC"
