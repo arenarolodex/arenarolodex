@@ -18,9 +18,16 @@ export default class SelectionUtilities {
   generateSchedules(courses){
     var schedules = [];
     var announcer = this.courses;
+
+    //Weed out empty values
+    courses.forEach((course,index)=>{
+      if (course.Class === "") //If class field is empty
+        courses.splice(index,1); //Remove that course from courses
+    });
+
     var recursiveScheduleMaker = function(courses, schedule) {
       //Which class are we on?
-      const index = schedule.length;
+      const index = schedule.schedule.length;
       const currentClass = courses[index];
 
       var coursesLooping = [];
@@ -39,7 +46,7 @@ export default class SelectionUtilities {
       coursesLooping.forEach((newCourse) => {
         //Look for block intersection - use flag blockIntersect
         var blockIntersect = false;
-        schedule.forEach((existingCourse) => {
+        schedule.schedule.forEach((existingCourse) => {
           if (existingCourse[0] === newCourse[0]) { //Do the blocks intersect?
             blockIntersect = true;
             return;
@@ -49,10 +56,17 @@ export default class SelectionUtilities {
         //After we checked, let's continue adding courses if there wasn't any
         //intersection
         if (!blockIntersect) {
-          var newSchedule = schedule.slice(0);
-          newSchedule.push(newCourse); //Add the new course to the schedule
+          var points = schedule.points;
+          var sched = schedule.schedule.slice(0);
+          var newSchedule = {schedule: sched, points: points};
+          newSchedule.schedule.push(newCourse); //Add the new course to the schedule
+          if(newCourse[3] === currentClass.Teacher){ //Is this the user's preferred teacher?
+            newSchedule.points += currentClass.priorityTeach;
+            if(newCourse[0] === currentClass.Block) //Is this the user's preferred teacher AND block?
+            newSchedule.points += currentClass.priorityBlock;
+          }
 
-          if(newSchedule.length === courses.length){ //Is the schedule already done?
+          if(newSchedule.schedule.length === courses.length){ //Is the schedule already done?
             schedules.push(newSchedule); //Push this schedule to schedules[]
             return; //Continue to the next newCourse
           } else {
@@ -63,7 +77,12 @@ export default class SelectionUtilities {
     };
 
     //Use recursive function to make schedules!
-    recursiveScheduleMaker(courses, []);
+    recursiveScheduleMaker(courses, {schedule:[], points:0});
+
+    //Sort schedules by points
+    schedules.sort(function(a, b){
+      return b.points - a.points;
+    });
 
     //Log all the schedules to the console
     console.log(schedules);

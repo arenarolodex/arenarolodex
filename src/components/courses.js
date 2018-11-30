@@ -20,13 +20,57 @@ export default class Courses extends React.Component{
       .map((key) => ({
         Class: this.state.courses[key].Class,
         Subject: this.state.courses[key].Subject,
-        Teacher: this.state.courses[key].Teach,
+        Teacher: this.state.courses[key].Teacher,
         Block: this.state.courses[key].Block,
         priorityTeach: this.state.courses[key].priorityTeach,
         priorityBlock: this.state.courses[key].priorityBlock,
       }));
+    // selection =
+    // [{
+    //   "Class": "AP STATISTICS B",
+    //   "Subject": "Math",
+    //   "Teacher": "Ambrose",
+    //   "Block": "3",
+    //   "priorityTeach": 1,
+    //   "priorityBlock": 1
+    // }, {
+    //   "Class": "PRE-CALCULUS B H",
+    //   "Subject": "Math",
+    //   "Teacher": "Li",
+    //   "Block": "6",
+    //   "priorityTeach": 1,
+    //   "priorityBlock": 1
+    // }, {
+    //   "Class": "AP Physics 1B",
+    //   "Subject": "Science",
+    //   "Teacher": "Dickerman, Scott",
+    //   "Block": "2",
+    //   "priorityTeach": 1,
+    //   "priorityBlock": 1
+    // }, {
+    //   "Class": "THE NOVEL",
+    //   "Subject": "English",
+    //   "Teacher": "MITCHELL, KRISTEN",
+    //   "Block": "1",
+    //   "priorityTeach": 1,
+    //   "priorityBlock": 1
+    // }, {
+    //   "Class": "AP US HISTORY B",
+    //   "Subject": "Social Studies",
+    //   "Teacher": "KLEIN, A",
+    //   "Block": "7",
+    //   "priorityTeach": 1,
+    //   "priorityBlock": 1
+    // }, {
+    //   "Class": "Japanese 3B Honors",
+    //   "Subject": "World Language",
+    //   "Teacher": "Okada",
+    //   "Block": "8",
+    //   "priorityTeach": 1,
+    //   "priorityBlock": 1
+    // }];
     alert("Form was submitted. "+JSON.stringify(selection));
-    //TODO Handle submission of course selection here
+
     this.utils.generateSchedules(selection);
   }
   render() {
@@ -55,15 +99,22 @@ export default class Courses extends React.Component{
       state.options["Class"] = this.utils.getClasses(value);
       state.options["Teacher"] = this.utils.getTeachers("", "");
       state.options["Block"] = this.utils.getClassInfo("", "", "");
+      state.Class = "";
+      state.Teacher = "";
+      state.Block = "";
     }
     if(type === "Class"){
       console.log("CLASSCHANGE");
       state.options["Teacher"] = this.utils.getTeachers(state["Subject"], value);
       state.options["Block"] = this.utils.getClassInfo("", "", "");
+      state.Teacher = "";
+      state.Block = "";
     }
-    if(type === "Teacher")
+    if(type === "Teacher"){
       state.options["Block"] =
         this.utils.getClassInfo(state["Subject"],state["Class"],value);
+      state.Block = "";
+    }
 
     // state.options = {
     //   "Subject": this.utils.getDepartments(),
@@ -90,10 +141,10 @@ export default class Courses extends React.Component{
       "Block": this.utils.getClassInfo("","","")
     }
     state.courses[key] = {
-      Class: null,
-      Subject: null,
-      Teacher: null,
-      Block: null,
+      Class: "",
+      Subject: "",
+      Teacher: "",
+      Block: "",
       priorityTeach: 1,
       priorityBlock: 1,
       options: options
