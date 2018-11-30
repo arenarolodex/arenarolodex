@@ -9,6 +9,9 @@ export default class Courses extends React.Component{
     super();
     this.state = {courses: {}, disableAddButton: false};
     this.handleChange = this.handleChange.bind(this);
+    this.utils = undefined;
+  }
+  componentDidMount() {
     this.utils = new CourseUtils();
   }
   handleSumbit(e) {
@@ -17,8 +20,8 @@ export default class Courses extends React.Component{
       .map((key) => ({
         Class: this.state.courses[key].Class,
         Subject: this.state.courses[key].Subject,
-        prefTeach: this.state.courses[key].prefTeach,
-        prefBlock: this.state.courses[key].prefBlock,
+        Teacher: this.state.courses[key].Teach,
+        Block: this.state.courses[key].Block,
         priorityTeach: this.state.courses[key].priorityTeach,
         priorityBlock: this.state.courses[key].priorityBlock,
       }));
@@ -53,17 +56,13 @@ export default class Courses extends React.Component{
       state.options["Block"] = this.utils.getClassInfo("", "", "");
     }
     if(type === "Class"){
+      console.log("CLASSCHANGE");
       state.options["Teacher"] = this.utils.getTeachers(state["Subject"], value);
       state.options["Block"] = this.utils.getClassInfo("", "", "");
     }
     if(type === "Teacher")
       state.options["Block"] =
-        this.utils.getClassInfo(state["Subject"],state["Class"],value).map((info)=>{
-          console.log(info);
-          if (info[1] === "emptychoose")
-            return info[0];
-          return info[0]+", "+info[2]+" seats available";
-        });
+        this.utils.getClassInfo(state["Subject"],state["Class"],value);
 
     // state.options = {
     //   "Subject": this.utils.getDepartments(),
@@ -92,8 +91,8 @@ export default class Courses extends React.Component{
     state.courses[key] = {
       Class: null,
       Subject: null,
-      prefTeach: null,
-      prefBlock: null,
+      Teacher: null,
+      Block: null,
       priorityTeach: 1,
       priorityBlock: 1,
       options: options
@@ -141,7 +140,7 @@ class CourseSelect extends React.Component{
         {this.props.name}
         <select onChange={this.handleChange.bind(this)}>
           {options.map((option) =>
-            <option key={option} value={option}>{option}</option>
+            <option key={option[1]} value={option[1]}>{option[0]}</option>
           )}
         </select>
       </label>
