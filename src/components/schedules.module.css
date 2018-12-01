@@ -2,9 +2,9 @@
   background-color: #ffd4c8;
   border-radius: 1rem;
   margin-bottom: 2rem;
-  padding: 1rem;
+  padding: 1px 1rem 1px 1rem;
 }
 .class {
   display:block;
-  margin-bottom: 20px;
+  margin: 20px 0 20px 0;
 }

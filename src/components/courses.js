@@ -45,10 +45,10 @@ export default class Courses extends React.Component{
         <button onClick={this.addcourse.bind(this)} disabled={nocourse}>Add class</button>
         <button onClick={this.addfreeblock.bind(this)} disabled={nofree}>Add free block (optional)</button>
         <div>
-          {Object.keys(this.state.freeblocks).map((key) =>
+          {Object.keys(this.state.freeblocks).reverse().map((key) =>
             (<FreeBlock changeHandler={this.handleChange} id={key} key={key} />)
           )}
-          {Object.keys(this.state.courses).map((key) =>
+          {Object.keys(this.state.courses).reverse().map((key) =>
             (<Course changeHandler={this.handleChange} id={key} key={key}
               options={this.state.courses[key].options} />)
           )}
@@ -59,10 +59,10 @@ export default class Courses extends React.Component{
   }
   handleChange(key, type, value, freeblock) {
     if(freeblock){
-      var state = this.state;
-      state.freeblocks[key][type] = value;
+      var state2 = this.state;
+      state2.freeblocks[key][type] = value;
       console.log("Free block "+key+" changed its "+type+" to "+value);
-      this.setState(state);
+      this.setState(state2);
       return;
     }
 
