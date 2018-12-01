@@ -42,7 +42,6 @@ export default class Courses extends React.Component{
     var nofree = Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
     return (
       <form onSubmit={this.handleSumbit.bind(this)}>
-        <button onClick={this.addcourse.bind(this)} disabled={nocourse}>Add class</button>
         <button onClick={this.addfreeblock.bind(this)} disabled={nofree}>Add free block (optional)</button>
         <div>
           {Object.keys(this.state.freeblocks).reverse().map((key) =>
@@ -53,6 +52,7 @@ export default class Courses extends React.Component{
               options={this.state.courses[key].options} />)
           )}
         </div>
+        <button onClick={this.addcourse.bind(this)} disabled={nocourse}>Add class</button>
         <input type="submit" value="Find schedules" />
       </form>
     );
