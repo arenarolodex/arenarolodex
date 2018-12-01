@@ -1,0 +1,10 @@
+.schedule {
+  background-color: #ffd4c8;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.class {
+  display:block;
+  margin-bottom: 20px;
+}

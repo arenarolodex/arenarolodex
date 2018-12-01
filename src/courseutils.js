@@ -15,7 +15,9 @@ export default class SelectionUtilities {
     this.xhttp.send();
   }
   //Schedule generator
-  generateSchedules(courses){
+  generateSchedules(courses, freeblocks){
+    // TODO: Get free block preference to work
+    // TODO: Check for seats in class (maybe set a flag, grey out bad schedules?)
     var schedules = [];
     var announcer = this.courses;
 
@@ -67,6 +69,11 @@ export default class SelectionUtilities {
           }
 
           if(newSchedule.schedule.length === courses.length){ //Is the schedule already done?
+            //Let's check if this one has the free blocks the user wanted:
+            freeblocks.forEach((block) => {
+              if(!newSchedule.schedule.find((course) => block.Block === course[0]))
+                newSchedule.points += block.priorityBlock; //Add preference points
+            });
             schedules.push(newSchedule); //Push this schedule to schedules[]
             return; //Continue to the next newCourse
           } else {
@@ -86,6 +93,9 @@ export default class SelectionUtilities {
 
     //Log all the schedules to the console
     console.log(schedules);
+
+    //Return the schedules
+    return schedules;
   }
   //Getters ONLY for filling out CourseSelect components
   getDepartments(){

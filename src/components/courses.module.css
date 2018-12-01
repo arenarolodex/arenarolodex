@@ -1,6 +1,26 @@
 .course {
   background-color: #e7cb54;
-  width: 80%;
+  width: 60%;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: .5rem;
+}
+.freeblock {
+  background-color: #78f1ea;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: .5rem;
+}
+.freeblock > label, .course > label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.freeblock input {
+  width: 2rem;
 }

@@ -7,7 +7,7 @@ import CourseUtils from '../courseutils'
 export default class Courses extends React.Component{
   constructor() {
     super();
-    this.state = {courses: {}, disableAddButton: false};
+    this.state = {courses: {}, freeblocks: {}, disableAddButton: false};
     this.handleChange = this.handleChange.bind(this);
     this.utils = undefined;
   }
@@ -25,76 +25,54 @@ export default class Courses extends React.Component{
         priorityTeach: this.state.courses[key].priorityTeach,
         priorityBlock: this.state.courses[key].priorityBlock,
       }));
-    // selection =
-    // [{
-    //   "Class": "AP STATISTICS B",
-    //   "Subject": "Math",
-    //   "Teacher": "Ambrose",
-    //   "Block": "3",
-    //   "priorityTeach": 1,
-    //   "priorityBlock": 1
-    // }, {
-    //   "Class": "PRE-CALCULUS B H",
-    //   "Subject": "Math",
-    //   "Teacher": "Li",
-    //   "Block": "6",
-    //   "priorityTeach": 1,
-    //   "priorityBlock": 1
-    // }, {
-    //   "Class": "AP Physics 1B",
-    //   "Subject": "Science",
-    //   "Teacher": "Dickerman, Scott",
-    //   "Block": "2",
-    //   "priorityTeach": 1,
-    //   "priorityBlock": 1
-    // }, {
-    //   "Class": "THE NOVEL",
-    //   "Subject": "English",
-    //   "Teacher": "MITCHELL, KRISTEN",
-    //   "Block": "1",
-    //   "priorityTeach": 1,
-    //   "priorityBlock": 1
-    // }, {
-    //   "Class": "AP US HISTORY B",
-    //   "Subject": "Social Studies",
-    //   "Teacher": "KLEIN, A",
-    //   "Block": "7",
-    //   "priorityTeach": 1,
-    //   "priorityBlock": 1
-    // }, {
-    //   "Class": "Japanese 3B Honors",
-    //   "Subject": "World Language",
-    //   "Teacher": "Okada",
-    //   "Block": "8",
-    //   "priorityTeach": 1,
-    //   "priorityBlock": 1
-    // }];
-    alert("Form was submitted. "+JSON.stringify(selection));
+    var blocks = Object.keys(this.state.freeblocks)
+      .map((key) => ({
+        Block: this.state.freeblocks[key].Block,
+        priorityBlock: this.state.freeblocks[key].priorityBlock
+      }));
+    // alert("Form was submitted. "+JSON.stringify(selection));
 
-    this.utils.generateSchedules(selection);
+    var results = this.utils.generateSchedules(selection,blocks);
+    this.props.displaySchedules(results);
   }
   render() {
+    //Flags for when to stop adding courses and free blocks
+    var nocourse = Object.keys(this.state.courses).length >= 7
+     || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
+    var nofree = Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
     return (
       <form onSubmit={this.handleSumbit.bind(this)}>
+        <button onClick={this.addcourse.bind(this)} disabled={nocourse}>Add class</button>
+        <button onClick={this.addfreeblock.bind(this)} disabled={nofree}>Add free block (optional)</button>
         <div>
+          {Object.keys(this.state.freeblocks).map((key) =>
+            (<FreeBlock changeHandler={this.handleChange} id={key} key={key} />)
+          )}
           {Object.keys(this.state.courses).map((key) =>
             (<Course changeHandler={this.handleChange} id={key} key={key}
               options={this.state.courses[key].options} />)
           )}
         </div>
-        <button onClick={this.addcourse.bind(this)} disabled={this.state.disableAddButton}>Add class</button>
         <input type="submit" value="Find schedules" />
       </form>
     );
   }
-  handleChange(key, type, value) {
+  handleChange(key, type, value, freeblock) {
+    if(freeblock){
+      var state = this.state;
+      state.freeblocks[key][type] = value;
+      console.log("Free block "+key+" changed its "+type+" to "+value);
+      this.setState(state);
+      return;
+    }
+
     //Set new state
-    var state = this.state.courses[key];
+    var s = this.state;
+    var state = s.courses[key]
     state[type] = value;
 
     console.log("Course "+key+" changed its "+type+" to "+value);
 
-    //TODO Handle <select> changes at the Courses component level
     if(type === "Subject"){
       state.options["Class"] = this.utils.getClasses(value);
       state.options["Teacher"] = this.utils.getTeachers("", "");
@@ -115,19 +93,21 @@ export default class Courses extends React.Component{
         this.utils.getClassInfo(state["Subject"],state["Class"],value);
       state.Block = "";
     }
-
-    // state.options = {
-    //   "Subject": this.utils.getDepartments(),
-    //   "Class": this.util.getClasses(),
-    //   "Teacher": this.util.getTeachers(),
-    //   "Block": this.util.getClassInfo().map((info)=>{
-    //     return info["Block"]+", "+info["Seats"]+" seats available"
-    //   });
-    // }
+    s.courses[key] = state;
+    this.setState(s);
+  }
+  /**A function to add a FreeBlock object to this component's state.courses*/
+  addfreeblock(e){
+    e.preventDefault();
+    var state = this.state;
+    var key = (new Date()).getTime()
+    state.freeblocks[key] = {Block: "", priorityBlock: ""};
     this.setState(state);
   }
+  /**A function to add a Course object to this component's state.courses*/
   addcourse(e){
-    if (Object.keys(this.state.courses).length >= 7){
+    if (Object.keys(this.state.courses).length >= 7
+     || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8){
       alert("Hey! That's not a legal schedule!");
       return;
     }
@@ -149,8 +129,6 @@ export default class Courses extends React.Component{
       priorityBlock: 1,
       options: options
     };
-    if (Object.keys(this.state.courses).length >= 7)
-      state.disableAddButton = true;
     this.setState(state);
   }
 }
@@ -158,9 +136,6 @@ export default class Courses extends React.Component{
 /**An individual Course where the user inputs their class, preferred teacher
 and block, etc.*/
 class Course extends React.Component{
-  constructor() {
-    super();
-  }
   render() {
     return (
       <div className={styles.course}>
@@ -182,7 +157,7 @@ class Course extends React.Component{
 
 class CourseSelect extends React.Component{
   handleChange(e) {
-    this.props.handleChange(this.props.parentKey,this.props.name,e.target.value);
+    this.props.handleChange(this.props.parentKey,this.props.name,e.target.value,false);
   }
   render() {
     const options = (this.props.options[this.props.name] !== undefined) ?
@@ -199,3 +174,33 @@ class CourseSelect extends React.Component{
     );
   }
 }
+ class FreeBlock extends React.Component {
+   handleChange(e) {
+     this.props.changeHandler(this.props.id, e.target.name, e.target.value, true);
+     e.preventDefault();
+   }
+   render() {
+     return (
+       <div className={styles.freeblock}>
+         <label>
+           Preferred free block
+           <select onChange={this.handleChange.bind(this)} name="Block">
+             <option value="">Choose a block</option>
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+             <option value="7">7</option>
+             <option value="8">8</option>
+           </select>
+         </label><br />
+         <label>
+           Free block priority
+           <input type="number" min="1" onInput={this.handleChange.bind(this)} name="priorityBlock" />
+         </label>
+       </div>
+     );
+   }
+ }

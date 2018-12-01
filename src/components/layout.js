@@ -21,10 +21,11 @@ const Layout = ({ children }) => (
       <>
         <Helmet
           title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Lowell arena helper. A tool to generate\
-            schedules for Lowell High School students.' }
-          ]}
+          meta={[{
+            name: 'description',
+            content: `Lowell arena helper. A tool to generate schedules
+              for Lowell High School students.`
+          }]}
         >
           <html lang="en" />
         </Helmet>
