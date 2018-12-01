@@ -31,10 +31,10 @@ export default class Schedules extends React.Component {
             this.props.schedules.length : state.page*20} out of {this.props.schedules.length}
         </p>
         <p>
-          <button onClick={this.previousPage.bind(this)}
-            disabled={state.page === 1}>Previous</button>
           <button onClick={this.nextPage.bind(this)}
             disabled={state.page === state.numPages || state.numPages === 0}>Next</button>
+          <button onClick={this.previousPage.bind(this)}
+            disabled={state.page === 1}>Previous</button>
         </p>
         {this.props.schedules.slice(20*(state.page-1),(20*state.page)-1).map((sched) =>
           (<ScheduleComponent schedule={sched.schedule} key={JSON.stringify(sched.schedule)} />)
