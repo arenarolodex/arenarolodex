@@ -1459,17 +1459,17 @@
     "Department Number": "2",
     "Course Name": "AP Physics 1B",
     "Seats Cap": "34",
-    "Block": "4",
-    "Room": "S201",
-    "Teacher": "Dickerman, Scott"
+    "Block": "5",
+    "Room": "335",
+    "Teacher": "Marten, Bryan"
   },
   {
     "Department Number": "2",
     "Course Name": "AP Physics 1B",
     "Seats Cap": "34",
-    "Block": "5",
-    "Room": "335",
-    "Teacher": "Marten, Bryan"
+    "Block": "6",
+    "Room": "S201",
+    "Teacher": "Dickerman, Scott"
   },
   {
     "Department Number": "2",
@@ -3957,7 +3957,7 @@
     "Seats Cap": "29",
     "Block": "2",
     "Room": "W104",
-    "Teacher": "Ballbé"
+    "Teacher": "Ballbï¿½"
   },
   {
     "Department Number": "6",
@@ -3965,7 +3965,7 @@
     "Seats Cap": "29",
     "Block": "3",
     "Room": "W104",
-    "Teacher": "Ballbé"
+    "Teacher": "Ballbï¿½"
   },
   {
     "Department Number": "6",
@@ -3973,7 +3973,7 @@
     "Seats Cap": "29",
     "Block": "4",
     "Room": "W104",
-    "Teacher": "Ballbé"
+    "Teacher": "Ballbï¿½"
   },
   {
     "Department Number": "6",
@@ -3989,7 +3989,7 @@
     "Seats Cap": "26",
     "Block": "2",
     "Room": "W109",
-    "Teacher": "Martínez"
+    "Teacher": "Martï¿½nez"
   },
   {
     "Department Number": "6",
@@ -3997,7 +3997,7 @@
     "Seats Cap": "26",
     "Block": "8",
     "Room": "W109",
-    "Teacher": "Martínez"
+    "Teacher": "Martï¿½nez"
   },
   {
     "Department Number": "6",
@@ -4037,7 +4037,7 @@
     "Seats Cap": "27",
     "Block": "6",
     "Room": "W104",
-    "Teacher": "Ballbé"
+    "Teacher": "Ballbï¿½"
   },
   {
     "Department Number": "6",
@@ -4061,7 +4061,7 @@
     "Seats Cap": "21",
     "Block": "5",
     "Room": "W109",
-    "Teacher": "Martínez"
+    "Teacher": "Martï¿½nez"
   },
   {
     "Department Number": "7",
