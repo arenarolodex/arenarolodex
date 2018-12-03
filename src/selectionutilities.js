@@ -1,6 +1,6 @@
 /**A class that handles courses and generating schedules for the client*/
 export default class SelectionUtilities {
-  constructor(){
+  constructor() {
     var self = this;
     this.courses = undefined;
     //Make AJAX request to get course list
@@ -11,20 +11,23 @@ export default class SelectionUtilities {
       };
     };
     this.xhttp.onreadystatechange.bind(this);
-    this.xhttp.open("GET", "https://courseserver-tzhixcebgk.now.sh/", true);
+    //Define which URL to get info from here
+    this.coursesURL = process.env.GATSBY_COURSES_API
+      || "https://raw.githubusercontent.com/areyoualex/arenarolodex/master/test/courseserver/newannouncer.json";
+    this.xhttp.open("GET", this.coursesURL, true);
     this.xhttp.send();
   }
   //Schedule generator
-  generateSchedules(courses, freeblocks){
+  generateSchedules(courses, freeblocks) {
     // TODO: Get free block preference to work
     // TODO: Check for seats in class (maybe set a flag, grey out bad schedules?)
     var schedules = [];
     var announcer = this.courses;
 
     //Weed out empty values
-    courses.forEach((course,index)=>{
+    courses.forEach((course, index) => {
       if (course.Class === "") //If class field is empty
-        courses.splice(index,1); //Remove that course from courses
+        courses.splice(index, 1); //Remove that course from courses
     });
 
     var recursiveScheduleMaker = function(courses, schedule) {
@@ -60,18 +63,21 @@ export default class SelectionUtilities {
         if (!blockIntersect) {
           var points = schedule.points;
           var sched = schedule.schedule.slice(0);
-          var newSchedule = {schedule: sched, points: points};
+          var newSchedule = {
+            schedule: sched,
+            points: points
+          };
           newSchedule.schedule.push(newCourse); //Add the new course to the schedule
-          if(newCourse[3] === currentClass.Teacher){ //Is this the user's preferred teacher?
+          if (newCourse[3] === currentClass.Teacher) { //Is this the user's preferred teacher?
             newSchedule.points += currentClass.priorityTeach;
-            if(newCourse[0] === currentClass.Block) //Is this the user's preferred teacher AND block?
-            newSchedule.points += currentClass.priorityBlock;
+            if (newCourse[0] === currentClass.Block) //Is this the user's preferred teacher AND block?
+              newSchedule.points += currentClass.priorityBlock;
           }
 
-          if(newSchedule.schedule.length === courses.length){ //Is the schedule already done?
+          if (newSchedule.schedule.length === courses.length) { //Is the schedule already done?
             //Let's check if this one has the free blocks the user wanted:
             freeblocks.forEach((block) => {
-              if(!newSchedule.schedule.find((course) => block.Block === course[0]))
+              if (!newSchedule.schedule.find((course) => block.Block === course[0]))
                 newSchedule.points += block.priorityBlock; //Add preference points
             });
             schedules.push(newSchedule); //Push this schedule to schedules[]
@@ -84,10 +90,13 @@ export default class SelectionUtilities {
     };
 
     //Use recursive function to make schedules!
-    recursiveScheduleMaker(courses, {schedule:[], points:0});
+    recursiveScheduleMaker(courses, {
+      schedule: [],
+      points: 0
+    });
 
     //Sort schedules by points
-    schedules.sort(function(a, b){
+    schedules.sort(function(a, b) {
       return b.points - a.points;
     });
 
@@ -98,52 +107,92 @@ export default class SelectionUtilities {
     return schedules;
   }
   //Getters ONLY for filling out CourseSelect components
-  getDepartments(){
+  getDepartments() {
     if (!this.courses)
-      return [["Could not get courses from http://localhost:6969/",""]];
-    var ret = [["Choose a department",""]];
-    Object.keys(this.courses).forEach((dept)=>{ret.push([dept,dept])});
+      return [
+        ["Could not get courses from "+this.coursesURL, ""]
+      ];
+    var ret = [
+      ["Choose a department", ""]
+    ];
+    Object.keys(this.courses).forEach((dept) => {
+      ret.push([dept, dept])
+    });
     return ret;
   }
-  getClasses(dept){
+  getClasses(dept) {
     if (!this.courses)
-      return [["Could not get courses from http://localhost:6969/",""]];
-    if(dept === "")
-      return [["Select a department",""]];
-    if(!this.courses[dept])
-      return [["invalid department?",""]];
-    var ret = [["Choose a class",""]];
-    Object.keys(this.courses[dept]).forEach((className) => {ret.push([className,className]);});
+      return [
+        ["Could not get courses from "+this.coursesURL, ""]
+      ];
+    if (dept === "")
+      return [
+        ["Select a department", ""]
+      ];
+    if (!this.courses[dept])
+      return [
+        ["invalid department?", ""]
+      ];
+    var ret = [
+      ["Choose a class", ""]
+    ];
+    Object.keys(this.courses[dept]).forEach((className) => {
+      ret.push([className, className]);
+    });
     return ret;
   }
-  getTeachers(dept, className){
+  getTeachers(dept, className) {
     if (!this.courses)
-      return [["Could not get courses from http://localhost:6969/",""]];
-    if(className === "")
-      return [["Select a class",""]];
-    if(!this.courses[dept])
-      return [["invalid department?",""]];
-    if(!this.courses[dept][className])
-      return [["invalid class?",""]];
-    var ret = [["Choose a teacher",""]];
-    Object.keys(this.courses[dept][className]).forEach((teacher) => {ret.push([teacher,teacher]);});
+      return [
+        ["Could not get courses from "+this.coursesURL, ""]
+      ];
+    if (className === "")
+      return [
+        ["Select a class", ""]
+      ];
+    if (!this.courses[dept])
+      return [
+        ["invalid department?", ""]
+      ];
+    if (!this.courses[dept][className])
+      return [
+        ["invalid class?", ""]
+      ];
+    var ret = [
+      ["Choose a teacher", ""]
+    ];
+    Object.keys(this.courses[dept][className]).forEach((teacher) => {
+      ret.push([teacher, teacher]);
+    });
     return ret;
   }
-  getClassInfo(dept, className, teacher){
+  getClassInfo(dept, className, teacher) {
     if (!this.courses)
-      return [["Could not get courses from http://localhost:6969/",""]];
-    if(teacher === "")
-      return [["Select a teacher",""]];
-    if(!this.courses[dept])
-      return [["invalid department?",""]];
-    if(!this.courses[dept][className])
-      return [["invalid class?",""]];
-    if(!this.courses[dept][className][teacher])
-      return [["invalid teacher?",""]];
+      return [
+        ["Could not get courses from "+this.coursesURL, ""]
+      ];
+    if (teacher === "")
+      return [
+        ["Select a teacher", ""]
+      ];
+    if (!this.courses[dept])
+      return [
+        ["invalid department?", ""]
+      ];
+    if (!this.courses[dept][className])
+      return [
+        ["invalid class?", ""]
+      ];
+    if (!this.courses[dept][className][teacher])
+      return [
+        ["invalid teacher?", ""]
+      ];
 
-    var ret = [["Choose a block",""]];
-    this.courses[dept][className][teacher].forEach((info)=>{
-      ret.push([info[0]+", "+info[2]+" seats available", info[0]]);
+    var ret = [
+      ["Choose a block", ""]
+    ];
+    this.courses[dept][className][teacher].forEach((info) => {
+      ret.push([info[0] + ", " + info[2] + " seats available", info[0]]);
     });
     return ret;
   }
