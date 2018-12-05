@@ -23,7 +23,8 @@ const Footer = () => (
                         textDecoration: 'none',
                     }}
                 >
-                    
+                    Have any feedback on how this website could be improved?
+                    <br/>
                     Created by <a href="https://github.com/areyoualex">Alex Ruiz</a>
                     and <a href="https://github.com/WhizardXD">Chris Yuan</a>
                     <br/>

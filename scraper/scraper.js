@@ -1,6 +1,8 @@
+const fs = require('fs');
 const rp = require('request-promise');
 const tough = require('tough-cookie');
-var cheerio = require('cheerio');
+var cheerio = require('cheerio'),
+    cheerioTableparser = require('cheerio-tableparser');
 
 
 let cookie = new tough.Cookie({
@@ -14,7 +16,6 @@ var cookiejar = rp.jar();
 cookiejar._jar.rejectPublicSuffixes = false;
 cookiejar.setCookie(cookie.toString(), 'http://www.lowell-courseselection.org');
 
-
 var options = {
     method: "GET",
     uri: 'http://www.lowell-courseselection.org/',
@@ -26,17 +27,36 @@ var options = {
 };
 
 
-// const
-
+var jason;
 rp(options)
     .then(function($) {
-        console.log($('table').text());
-        // console.log("DELETE succeeded with status %d", response.statusCode);
-        // console.log($('big > tr', html).length);
-        // console.log($('table td')[0].text());
+        cheerioTableparser($);
+        var data = $("table").parsetable();
+        var transpose = data[0].map((col, i) => data.map(row => row[i]));
+        jason = JSON.stringify(transpose);
+        console.log(jason);
     })
 
     .catch(function(err){
         console.log("There was an error");
         console.log(err);
     })
+
+
+/*
+fs.readFile('newannouncer.json', (err, data) => {
+    if (err) throw err;
+    const nannouncer = JSON.parse(data);
+
+    for (int i = 0; i < nannouncer.size(); i++) {
+        if (nannouncer[i].) {
+            
+        }        
+    }
+    
+*/
+
+})
+
+
+
