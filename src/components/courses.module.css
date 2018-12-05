@@ -11,8 +11,13 @@
 .freeblock > label, .course > label {
   padding: 0.2rem 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+}
+.freeblock > label > div, .course > label > div {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
 }
 .freeblock input {
   width: 2rem;
