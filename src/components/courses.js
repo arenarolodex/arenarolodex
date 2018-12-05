@@ -141,13 +141,10 @@ class Course extends React.Component {
       <div className={styles.course}>
         <CourseSelect name="Subject" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options} />
-        <br />
         <CourseSelect name="Class" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options} />
-        <br />
         <CourseSelect name="Teacher" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options} />
-        <br />
         <CourseSelect name="Block" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options} />
       </div>
@@ -195,7 +192,7 @@ class FreeBlock extends React.Component {
             <option value="7">7</option>
             <option value="8">8</option>
           </select>
-        </label><br />
+        </label>
         <label>
           Free block priority
            <input type="number" min="1" onInput={this.handleChange.bind(this)} name="priorityBlock" />
