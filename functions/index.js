@@ -81,6 +81,9 @@ exports.updateSeats = functions.https.onRequest((req, res) => {
         }
       }
       //Send the data!!!
+      res.set({
+        'Access-Control-Allow-Origin':'*'
+      });
       res.status(200).send(JSON.stringify(newannouncer));
       return;
     }).catch(function(err){
