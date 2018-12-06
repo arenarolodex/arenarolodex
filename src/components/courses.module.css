@@ -1,25 +1,24 @@
-.course {
-  background-color: #e7cb54;
+.course { background-color: #e7cb54; }
+.freeblock { background-color: #78f1ea; }
+.freeblock, .course {
   width: 60%;
   margin: auto;
   margin-bottom: 1rem;
   margin-top: 1rem;
-  padding: 1rem;
-  border-radius: .5rem;
-}
-.freeblock {
-  background-color: #78f1ea;
-  width: 60%;
-  margin: auto;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  padding: 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: .5rem;
 }
 .freeblock > label, .course > label {
+  padding: 0.2rem 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+}
+.freeblock > label > div, .course > label > div {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-left: auto;
 }
 .freeblock input {
   width: 2rem;
@@ -29,6 +28,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    font-size: 1.8vh;
   }
   .course, .freeblock {
     width: 90%;
@@ -36,5 +36,6 @@
   .course select, .course option {
     overflow-x: hidden;
     max-width: 100%;
+    font-size: 2vh;
   }
 }
