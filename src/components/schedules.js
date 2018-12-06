@@ -53,7 +53,7 @@ class ScheduleComponent extends React.Component {
             <div className={styles.class} key={course[0]}>
               <b>Block {course[0]}: <i>{course[4]}</i></b>
               <br />
-              <b>{course[3]}</b> in room {course[1]} <i>({course[2]} seats left)</i>
+              <b>{course[3]}</b> <i>({course[2]} seats left)</i>
             </div>
           ))}
       </div>

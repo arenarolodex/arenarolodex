@@ -7,6 +7,8 @@
     "Chris Yuan"
   ],
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "cheerio-tableparser": "^1.0.1",
     "gatsby": "^2.0.19",
     "gatsby-image": "^2.0.15",
     "gatsby-plugin-google-analytics": "^2.0.8",
@@ -16,7 +18,10 @@
     "gatsby-source-filesystem": "^2.0.4",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "request-promise": "^4.2.2",
+    "request-promise-native": "^1.0.5",
+    "tough-cookie": "^2.5.0"
   },
   "keywords": [
     "gatsby"

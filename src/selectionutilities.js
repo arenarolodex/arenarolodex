@@ -1,6 +1,6 @@
 /**A class that handles courses and generating schedules for the client*/
 export default class SelectionUtilities {
-  constructor() {
+  constructor(callback) {
     var self = this;
     this.courses = undefined;
     //Make AJAX request to get course list
@@ -9,6 +9,8 @@ export default class SelectionUtilities {
       if (this.readyState === 4 && this.status === 200) {
         self.courses = JSON.parse(this.responseText);
       };
+      if (this.readyState === 4)
+        callback();
     };
     this.xhttp.onreadystatechange.bind(this);
     //Define which URL to get info from here
@@ -43,7 +45,8 @@ export default class SelectionUtilities {
         announcer[currentClass.Subject][currentClass.Class][key].forEach((teach) => {
           teach.push(teacher);
           teach.push(currentClass.Class);
-          coursesLooping.push(teach);
+          if (teach[2] !== "0")
+            coursesLooping.push(teach);
         });
       });
 

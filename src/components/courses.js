@@ -7,12 +7,15 @@ import SelectionUtilities from '../selectionutilities'
 export default class Courses extends React.Component {
   constructor() {
     super();
-    this.state = { courses: {}, freeblocks: {}, disableAddButton: false };
+    this.state = { courses: {}, freeblocks: {}, disableAddButton: false, loading: true };
     this.handleChange = this.handleChange.bind(this);
     this.utils = undefined;
   }
+  finishLoading = () => {
+    this.setState({loading: false});
+  }
   componentDidMount() {
-    this.utils = new SelectionUtilities();
+    this.utils = new SelectionUtilities(this.finishLoading);
   }
   handleSumbit(e) {
     e.preventDefault();
@@ -43,8 +46,8 @@ export default class Courses extends React.Component {
     var nofree = Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
     return (
       <form onSubmit={this.handleSumbit.bind(this)}>
-        <button onClick={this.addcourse.bind(this)} disabled={nocourse}>Add class</button>
-        <button onClick={this.addfreeblock.bind(this)} disabled={nofree}>Add free block (optional)</button>
+        <button onClick={this.addcourse.bind(this)} disabled={nocourse || this.state.loading}>Add class</button>
+        <button onClick={this.addfreeblock.bind(this)} disabled={nofree || this.state.loading}>Add free block (optional)</button>
         <div>
           {Object.keys(this.state.freeblocks).reverse().map((key) =>
             (<FreeBlock changeHandler={this.handleChange} id={key} key={key} />)
