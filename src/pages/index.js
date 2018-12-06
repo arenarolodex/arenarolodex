@@ -19,7 +19,7 @@ export default class IndexPage extends React.Component {
       <Layout>
         <div style={{fontSize:"0.8rem", padding: "0.5rem", backgroundColor: "#ffbd8e",
           marginBottom: "1rem"}}>
-          <span style={{backgroundColor: "#ff603d", fontWeight:"bold"}}>NOTICE: (12/5/18 6:48 PST)</span><br />
+          <span style={{backgroundColor: "#ff603d", fontWeight:"bold"}}>NOTICE: (12/5/18 7:28 PST)</span><br />
           <span>Live seats are up and <b>working!</b> Sorry to those who already picked.
           Arenarolodex will now filter out schedules that have courses with empty
           seats. Sorry for the delay!</span>
