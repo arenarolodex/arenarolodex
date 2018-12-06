@@ -44,8 +44,10 @@ export default class Courses extends React.Component {
     var nocourse = Object.keys(this.state.courses).length >= 7
       || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
     var nofree = Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
+    let loading = !this.state.loading ? "" : (<span>Loading live seats...</span>);
     return (
       <form onSubmit={this.handleSumbit.bind(this)}>
+        {loading}
         <button onClick={this.addcourse.bind(this)} disabled={nocourse || this.state.loading}>Add class</button>
         <button onClick={this.addfreeblock.bind(this)} disabled={nofree || this.state.loading}>Add free block (optional)</button>
         <div>
