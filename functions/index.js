@@ -18,7 +18,7 @@ exports.updateSeats = functions.https.onRequest((req, res) => {
 
   let cookie = new tough.Cookie({
       key: ".ASPXAUTH",
-      value: process.env.ARENACOOKIE,
+      value: functions.config().updateseats.arenacookie,
       domain: "www.lowell-courseselection.org",
       httpOnly: true,
   });
