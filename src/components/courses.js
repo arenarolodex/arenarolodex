@@ -24,6 +24,7 @@ export default class Courses extends React.Component {
         Block: this.state.courses[key].Block,
         priorityTeach: this.state.courses[key].priorityTeach,
         priorityBlock: this.state.courses[key].priorityBlock,
+        TeacherRequired: this.state.courses[key].TeacherRequired
       }));
     var blocks = Object.keys(this.state.freeblocks)
       .map((key) => ({
@@ -127,6 +128,7 @@ export default class Courses extends React.Component {
       Block: "",
       priorityTeach: 1,
       priorityBlock: 1,
+      TeacherRequired: false,
       options: options
     };
     this.setState(state);
@@ -141,13 +143,11 @@ class Course extends React.Component {
       <div className={styles.course}>
         <CourseSelect name="Subject" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options} />
-        <br />
         <CourseSelect name="Class" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options} />
-        <br />
         <CourseSelect name="Teacher" parentKey={this.props.id} handleChange={this.props.changeHandler}
-          options={this.props.options} />
-        <br />
+          options={this.props.options}>
+        </CourseSelect>
         <CourseSelect name="Block" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options} />
       </div>
@@ -159,17 +159,31 @@ class CourseSelect extends React.Component {
   handleChange(e) {
     this.props.handleChange(this.props.parentKey, this.props.name, e.target.value, false);
   }
+  handleChangeRequired(e) {
+    this.props.handleChange(this.props.parentKey, this.props.name+"Required", e.target.checked, false);
+  }
   render() {
+    let checkbox = "";
+    if (this.props.name === "Teacher")
+        checkbox = (
+          <label style={{textAlign:"right", marginTop:"0.2rem"}}
+          onChange={this.handleChangeRequired.bind(this)}>
+            Is this a required {this.props.name.toLowerCase()}? <input type="checkbox" />
+          </label>
+        );
     const options = (this.props.options[this.props.name] !== undefined) ?
       this.props.options[this.props.name] : [];
     return (
       <label>
         {this.props.name}
-        <select onChange={this.handleChange.bind(this)}>
-          {options.map((option) =>
-            <option key={option[1]} value={option[1]}>{option[0]}</option>
-          )}
-        </select>
+        <div>
+          <select onChange={this.handleChange.bind(this)}>
+            {options.map((option) =>
+              <option key={option[1]} value={option[1]}>{option[0]}</option>
+            )}
+          </select>
+          {checkbox}
+        </div>
       </label>
     );
   }
@@ -195,7 +209,7 @@ class FreeBlock extends React.Component {
             <option value="7">7</option>
             <option value="8">8</option>
           </select>
-        </label><br />
+        </label>
         <label>
           Free block priority
            <input type="number" min="1" onInput={this.handleChange.bind(this)} name="priorityBlock" />

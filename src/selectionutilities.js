@@ -60,31 +60,32 @@ export default class SelectionUtilities {
 
         //After we checked, let's continue adding courses if there wasn't any
         //intersection
-        if (!blockIntersect) {
-          var points = schedule.points;
-          var sched = schedule.schedule.slice(0);
-          var newSchedule = {
-            schedule: sched,
-            points: points
-          };
-          newSchedule.schedule.push(newCourse); //Add the new course to the schedule
-          if (newCourse[3] === currentClass.Teacher) { //Is this the user's preferred teacher?
-            newSchedule.points += currentClass.priorityTeach;
-            if (newCourse[0] === currentClass.Block) //Is this the user's preferred teacher AND block?
-              newSchedule.points += currentClass.priorityBlock;
-          }
+        if (blockIntersect) return;
+        if (currentClass.TeacherRequired && newCourse[3] !== currentClass.Teacher) return;
 
-          if (newSchedule.schedule.length === courses.length) { //Is the schedule already done?
-            //Let's check if this one has the free blocks the user wanted:
-            freeblocks.forEach((block) => {
-              if (!newSchedule.schedule.find((course) => block.Block === course[0]))
-                newSchedule.points += block.priorityBlock; //Add preference points
-            });
-            schedules.push(newSchedule); //Push this schedule to schedules[]
-            return; //Continue to the next newCourse
-          } else {
-            recursiveScheduleMaker(courses, newSchedule); //If we weren't done, go to next course
-          }
+        var points = schedule.points;
+        var sched = schedule.schedule.slice(0);
+        var newSchedule = {
+          schedule: sched,
+          points: points
+        };
+        newSchedule.schedule.push(newCourse); //Add the new course to the schedule
+        if (newCourse[3] === currentClass.Teacher) { //Is this the user's preferred teacher?
+          newSchedule.points += currentClass.priorityTeach;
+          if (newCourse[0] === currentClass.Block) //Is this the user's preferred teacher AND block?
+            newSchedule.points += currentClass.priorityBlock;
+        }
+
+        if (newSchedule.schedule.length === courses.length) { //Is the schedule already done?
+          //Let's check if this one has the free blocks the user wanted:
+          freeblocks.forEach((block) => {
+            if (!newSchedule.schedule.find((course) => block.Block === course[0]))
+              newSchedule.points += block.priorityBlock; //Add preference points
+          });
+          schedules.push(newSchedule); //Push this schedule to schedules[]
+          return; //Continue to the next newCourse
+        } else {
+          recursiveScheduleMaker(courses, newSchedule); //If we weren't done, go to next course
         }
       });
     };
