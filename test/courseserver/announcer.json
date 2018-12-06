@@ -277,7 +277,7 @@
     "Seats Cap": "35",
     "Block": "1",
     "Room": "340",
-    "Teacher": "Karepetyan"
+    "Teacher": "Karapetyan"
   },
   {
     "Department Number": "1",
@@ -3212,40 +3212,40 @@
     "Course Name": "Dance 1B",
     "Seats Cap": "34",
     "Block": "3",
-    "Room": "Dance StudioPalaby",
-    "Teacher": ""
+    "Room": "Dance Studio",
+    "Teacher": "Palaby"
   },
   {
     "Department Number": "5",
     "Course Name": "Dance 1B",
     "Seats Cap": "34",
     "Block": "4",
-    "Room": "Dance StudioPalaby",
-    "Teacher": ""
+    "Room": "Dance Studio",
+    "Teacher": "Palaby"
   },
   {
     "Department Number": "5",
     "Course Name": "Dance 2B",
     "Seats Cap": "37",
     "Block": "5",
-    "Room": "Dance StudioPalaby",
-    "Teacher": ""
+    "Room": "Dance Studio",
+    "Teacher": "Palaby"
   },
   {
     "Department Number": "5",
     "Course Name": "Dance 3B",
     "Seats Cap": "38",
     "Block": "7",
-    "Room": "Dance StudioPalaby",
-    "Teacher": ""
+    "Room": "Dance Studio",
+    "Teacher": "Palaby"
   },
   {
     "Department Number": "5",
     "Course Name": "Dance Production B",
     "Seats Cap": "13",
     "Block": "8",
-    "Room": "Dance StudioPalaby",
-    "Teacher": ""
+    "Room": "Dance Studio",
+    "Teacher": "Palaby"
   },
   {
     "Department Number": "5",
@@ -3420,32 +3420,32 @@
     "Course Name": "Theater Tech 1B",
     "Seats Cap": "24",
     "Block": "8",
-    "Room": "Carol ChanninUgllman",
-    "Teacher": ""
+    "Room": "Carol Channing",
+    "Teacher": "Ullman"
   },
   {
     "Department Number": "5",
     "Course Name": "Theater Tech 2B",
     "Seats Cap": "10",
     "Block": "7",
-    "Room": "Carol ChanninUgllman",
-    "Teacher": ""
+    "Room": "Carol Channing",
+    "Teacher": "Ullman"
   },
   {
     "Department Number": "5",
     "Course Name": "Theater Tech 2B",
     "Seats Cap": "5",
     "Block": "8",
-    "Room": "Carol ChanninUgllman",
-    "Teacher": ""
+    "Room": "Carol Channing",
+    "Teacher": "Ullman"
   },
   {
     "Department Number": "5",
     "Course Name": "Theater Tech 3B",
     "Seats Cap": "10",
     "Block": "7",
-    "Room": "Carol ChanninUgllman",
-    "Teacher": ""
+    "Room": "Carol Channing",
+    "Teacher": "Ullman"
   },
   {
     "Department Number": "5",
@@ -3892,8 +3892,8 @@
     "Course Name": "Spanish 1B",
     "Seats Cap": "10",
     "Block": "2",
-    "Room": "S105 (WL LabF)errey",
-    "Teacher": ""
+    "Room": "S105 (WL Lab)",
+    "Teacher": "Ferrey"
   },
   {
     "Department Number": "6",
