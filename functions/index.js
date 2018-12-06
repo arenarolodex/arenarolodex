@@ -66,7 +66,6 @@ exports.updateSeats = functions.https.onRequest((req, res) => {
       ];
       for (let index in newData) {
         for (let dept of indexDept) {
-          let found = false;
           if (index <= dept.lastIndex && !found) {
             //Make objects that don't exist yet
             if (!newannouncer[dept.dept][newData[index][0]])
@@ -76,7 +75,7 @@ exports.updateSeats = functions.https.onRequest((req, res) => {
 
             newannouncer[dept.dept][newData[index][0]][newData[index][1]]
               .push([newData[index][2], null, newData[index][4]]);
-            found = true;
+            break;
           }
         }
       }
