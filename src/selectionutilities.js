@@ -45,7 +45,7 @@ export default class SelectionUtilities {
         announcer[currentClass.Subject][currentClass.Class][key].forEach((teach) => {
           teach.push(teacher);
           teach.push(currentClass.Class);
-          if (teach[2] !== "0")
+          if (teach[2] !== "0" && teach[2] !== "-1" && teach[2] !== "-2")
             coursesLooping.push(teach);
         });
       });
