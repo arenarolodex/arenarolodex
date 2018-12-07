@@ -19,6 +19,7 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
+    "react-loading-overlay": "^1.0.0",
     "request-promise": "^4.2.2",
     "request-promise-native": "^1.0.5",
     "tough-cookie": "^2.5.0"
