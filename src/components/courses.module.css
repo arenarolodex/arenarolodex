@@ -1,3 +1,7 @@
+.deleteBut {
+  margin: 0 0 0 auto;
+  /* TODO: get it to align better */
+}
 .course { background-color: #e7cb54; }
 .freeblock { background-color: #78f1ea; }
 .freeblock, .course {

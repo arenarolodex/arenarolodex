@@ -52,11 +52,13 @@ export default class Courses extends React.Component {
         <button onClick={this.addfreeblock.bind(this)} disabled={nofree || this.state.loading}>Add free block (optional)</button>
         <div>
           {Object.keys(this.state.freeblocks).reverse().map((key) =>
-            (<FreeBlock changeHandler={this.handleChange} id={key} key={key} />)
+            (<FreeBlock changeHandler={this.handleChange} id={key} key={key}
+              remove={this.removefreeblock.bind(this)} />)
           )}
           {Object.keys(this.state.courses).reverse().map((key) =>
             (<Course changeHandler={this.handleChange} id={key} key={key}
-              options={this.state.courses[key].options} />)
+              options={this.state.courses[key].options}
+              remove={this.removecourse.bind(this)} />)
           )}
         </div>
         <input type="submit" value="Find schedules" />
@@ -110,6 +112,16 @@ export default class Courses extends React.Component {
     state.freeblocks[key] = { Block: "", priorityBlock: "" };
     this.setState(state);
   }
+  removecourse(key) {
+    var state = this.state;
+    delete state.courses[key];
+    this.setState(state);
+  }
+  removefreeblock(key) {
+    var state = this.state;
+    delete state.freeblocks[key];
+    this.setState(state);
+  }
   /**A function to add a Course object to this component's state.courses*/
   addcourse(e) {
     if (Object.keys(this.state.courses).length >= 7
@@ -143,9 +155,15 @@ export default class Courses extends React.Component {
 /**An individual Course where the user inputs their class, preferred teacher
 and block, etc.*/
 class Course extends React.Component {
+  removeSelf() {
+    this.props.remove(this.props.id);
+  }
   render() {
     return (
       <div className={styles.course}>
+        <button className={styles.deleteBut}
+          onClick={this.removeSelf.bind(this)}>
+          Remove</button>
         <CourseSelect name="Subject" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options} />
         <CourseSelect name="Class" parentKey={this.props.id} handleChange={this.props.changeHandler}
@@ -194,6 +212,9 @@ class CourseSelect extends React.Component {
   }
 }
 class FreeBlock extends React.Component {
+  removeSelf() {
+    this.props.remove(this.props.id);
+  }
   handleChange(e) {
     this.props.changeHandler(this.props.id, e.target.name, e.target.value, true);
     e.preventDefault();
@@ -201,6 +222,9 @@ class FreeBlock extends React.Component {
   render() {
     return (
       <div className={styles.freeblock}>
+        <button className={styles.deleteBut}
+          onClick={this.removeSelf.bind(this)}>
+          Remove</button>
         <label>
           Preferred free block
            <select onChange={this.handleChange.bind(this)} name="Block">
