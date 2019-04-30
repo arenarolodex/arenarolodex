@@ -25,6 +25,7 @@ fs.readFile('announcer.json', (err, data) => {
     const deptIndex = deptKey[parseInt(course["Department Number"])-1]
     const name = course["Course Name"];
     const teacher = course["Teacher"];
+    // console.log(course);
 
     //Make objects that don't exist yet
     if (!newannouncer[deptIndex][name])
@@ -32,7 +33,7 @@ fs.readFile('announcer.json', (err, data) => {
     if (!newannouncer[deptIndex][name][teacher])
       newannouncer[deptIndex][name][teacher] = [];
 
-    newannouncer[deptIndex][name][teacher].push([course["Block"], course["Room"], course["Seats Cap"]]);
+    newannouncer[deptIndex][name][teacher].push([course["Block"], course["Room"], "0"]);
   });
 
   //Write newannouncer.json
