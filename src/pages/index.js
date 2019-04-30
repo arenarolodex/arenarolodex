@@ -2,6 +2,7 @@ import React from 'react'
 import LoadingOverlay from 'react-loading-overlay';
 
 import Layout from '../components/layout'
+import EmbeddedGist from '../components/embeddedgist'
 import Courses from '../components/courses'
 import Schedules from '../components/schedules'
 
@@ -26,7 +27,7 @@ export default class IndexPage extends React.Component {
         text="Loading..."
         >
       <Layout>
-        <div style={{fontSize:"0.8rem", padding: "0.5rem", backgroundColor: "#ffbd8e",
+        {/* <div style={{fontSize:"0.8rem", padding: "0.5rem", backgroundColor: "#ffbd8e",
           marginBottom: "1rem"}}>
           <span style={{backgroundColor: "#ff603d", fontWeight:"bold"}}>
             NOTICE: (04/30/19 4:13 PST)
@@ -38,7 +39,8 @@ export default class IndexPage extends React.Component {
             Apologies for the delay; we anticipate to have everything working around 5.
             Thanks for your patience!
           </span>
-        </div>
+        </div> */}
+          <EmbeddedGist gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"></EmbeddedGist>
 
           <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
           <Schedules schedules={this.state.schedules} />
