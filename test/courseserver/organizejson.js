@@ -33,7 +33,7 @@ fs.readFile('announcer.json', (err, data) => {
     if (!newannouncer[deptIndex][name][teacher])
       newannouncer[deptIndex][name][teacher] = [];
 
-    newannouncer[deptIndex][name][teacher].push([course["Block"], course["Room"], "0"]);
+    newannouncer[deptIndex][name][teacher].push([course["Block"], course["Room"], "34"]);
   });
 
   //Write newannouncer.json
