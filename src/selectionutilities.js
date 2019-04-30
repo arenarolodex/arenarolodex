@@ -21,6 +21,24 @@ export default class SelectionUtilities {
   }
   //Schedule generator
   generateSchedules(courses, freeblocks) {
+    var self = this;
+    this.courses = undefined;
+    //Make AJAX request to get course list
+    this.xhttp = new XMLHttpRequest();
+    this.xhttp.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+        self.courses = JSON.parse(this.responseText);
+        self.scheduleMaker(courses,freeblocks);
+      };
+    };
+    this.xhttp.onreadystatechange.bind(this);
+    //Define which URL to get info from here
+    this.coursesURL = process.env.GATSBY_COURSES_API
+      || "https://raw.githubusercontent.com/areyoualex/arenarolodex/master/test/courseserver/newannouncer.json";
+    this.xhttp.open("GET", this.coursesURL, true);
+    this.xhttp.send();
+  }
+  scheduleMaker(courses,freeblocks) {
     // TODO: Get free block preference to work
     // TODO: Check for seats in class (maybe set a flag, grey out bad schedules?)
     var schedules = [];
