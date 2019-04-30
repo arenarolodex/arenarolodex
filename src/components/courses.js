@@ -57,7 +57,7 @@ export default class Courses extends React.Component {
               options={this.state.courses[key].options} />)
           )}
         </div>
-        <input type="submit" value="Find schedules" />
+        <input type="submit" onClick={this.componentDidMount()} value="Find schedules" disabled={nocourse || this.state.loading}  />
       </form>
     );
   }
