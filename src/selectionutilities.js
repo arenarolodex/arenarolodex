@@ -1,6 +1,7 @@
 /**A class that handles courses and generating schedules for the client*/
 export default class SelectionUtilities {
   constructor(callback) {
+    this.loadingHandler = callback;
     var self = this;
     this.courses = undefined;
     //Make AJAX request to get course list
@@ -10,9 +11,9 @@ export default class SelectionUtilities {
         self.courses = JSON.parse(this.responseText);
       };
       if (this.readyState === 4)
-        callback();
+        self.loadingHandler();
     };
-    this.xhttp.onreadystatechange.bind(this);
+    // this.xhttp.onreadystatechange.bind(this);
     //Define which URL to get info from here
     this.coursesURL = process.env.GATSBY_COURSES_API
       || "https://raw.githubusercontent.com/areyoualex/arenarolodex/master/test/courseserver/newannouncer.json";
@@ -21,6 +22,29 @@ export default class SelectionUtilities {
   }
   //Schedule generator
   generateSchedules(courses, freeblocks) {
+    //Make AJAX request to get course list
+    var self = this;
+    this.xhttp = new XMLHttpRequest();
+    return new Promise((resolve, reject) => {
+      var onReady = function() {
+        if (this.readyState === 4 && this.status === 200) {
+          self.courses = JSON.parse(this.responseText);
+          self.loadingHandler();
+          resolve(self.generator(courses, freeblocks));
+        };
+        if (this.readyState === 4)
+          self.loadingHandler();
+      };
+      this.xhttp.onreadystatechange = onReady;
+      // this.xhttp.onreadystatechange.bind(this);
+      //Define which URL to get info from here
+      this.coursesURL = process.env.GATSBY_COURSES_API
+        || "https://raw.githubusercontent.com/areyoualex/arenarolodex/master/test/courseserver/newannouncer.json";
+      this.xhttp.open("GET", this.coursesURL, true);
+      this.xhttp.send();
+    });
+  }
+  generator(courses, freeblocks) {
     // TODO: Get free block preference to work
     // TODO: Check for seats in class (maybe set a flag, grey out bad schedules?)
     var schedules = [];

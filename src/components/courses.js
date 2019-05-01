@@ -11,13 +11,14 @@ export default class Courses extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.utils = undefined;
   }
-  finishLoading = () => {
-    this.props.loadedCallback();
+  finishLoading = (value) => {
+    if (!value) value = false;
+    this.props.loadedCallback(value);
   }
   componentDidMount() {
     this.utils = new SelectionUtilities(this.finishLoading);
   }
-  handleSumbit(e) {
+  async handleSumbit(e) {
     e.preventDefault();
     var selection = Object.keys(this.state.courses)
       .map((key) => ({
@@ -35,8 +36,9 @@ export default class Courses extends React.Component {
         priorityBlock: this.state.freeblocks[key].priorityBlock
       }));
     // alert("Form was submitted. "+JSON.stringify(selection));
-
-    var results = this.utils.generateSchedules(selection, blocks);
+    this.finishLoading(true);
+    var results = await this.utils.generateSchedules(selection, blocks);
+    this.finishLoading();
     this.props.displaySchedules(results);
   }
   render() {
