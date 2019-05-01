@@ -41,7 +41,7 @@ export default class Courses extends React.Component {
   }
   render() {
     //Flags for when to stop adding courses and free blocks
-    var nocourse = Object.keys(this.state.courses).length >= 7
+    var nocourse = Object.keys(this.state.courses).length >= 8
       || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
     var nofree = Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
     return (
