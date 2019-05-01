@@ -59,7 +59,7 @@ export default class Courses extends React.Component {
               remove={this.removecourse.bind(this)} />)
           )}
         </div>
-        <input type="submit" value="Find schedules" disabled={this.state.loading}  />
+        <input type="submit" value="Find schedules" disabled={Object.keys(this.state.courses).length == 0 ||this.state.loading}  />
       </form>
     );
   }
