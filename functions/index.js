@@ -55,16 +55,17 @@ exports.updateSeats = functions.https.onRequest((req, res) => {
         "Other":{}
       };
       let indexDept = [
-        {lastIndex:109, dept:"Math"},
-        {lastIndex:196, dept:"Science"},
-        {lastIndex:295, dept:"English"},
-        {lastIndex:388, dept:"Social Studies"},
-        {lastIndex:431, dept:"VPA"},
-        {lastIndex:506, dept:"World Language"},
-        {lastIndex:547, dept:"PE"},
+        {lastIndex:110, dept:"Math"},
+        {lastIndex:197, dept:"Science"},
+        {lastIndex:299, dept:"English"},
+        {lastIndex:389, dept:"Social Studies"},
+        {lastIndex:439, dept:"VPA"},
+        {lastIndex:517, dept:"World Language"},
+        {lastIndex:558, dept:"PE"},
         {lastIndex:newData.length, dept:"Other"}
       ];
       for (let index in newData) {
+        console.log(index+": "+newData[index][0]);
         for (let dept of indexDept) {
           if (index <= dept.lastIndex) {
             //Make objects that don't exist yet
