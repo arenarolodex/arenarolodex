@@ -119,7 +119,7 @@ export default class SelectionUtilities {
     var ret = [
       ["Choose a department", ""]
     ];
-    Object.keys(this.courses).forEach((dept) => {
+    Object.keys(this.courses).sort().forEach((dept) => {
       ret.push([dept, dept])
     });
     return ret;
@@ -140,7 +140,7 @@ export default class SelectionUtilities {
     var ret = [
       ["Choose a class", ""]
     ];
-    Object.keys(this.courses[dept]).forEach((className) => {
+    Object.keys(this.courses[dept]).sort().forEach((className) => {
       ret.push([className, className]);
     });
     return ret;
@@ -165,7 +165,7 @@ export default class SelectionUtilities {
     var ret = [
       ["Choose a teacher", ""]
     ];
-    Object.keys(this.courses[dept][className]).forEach((teacher) => {
+    Object.keys(this.courses[dept][className]).sort().forEach((teacher) => {
       ret.push([teacher, teacher]);
     });
     return ret;
@@ -195,7 +195,7 @@ export default class SelectionUtilities {
     var ret = [
       ["Choose a block", ""]
     ];
-    this.courses[dept][className][teacher].forEach((info) => {
+    this.courses[dept][className][teacher].sort().forEach((info) => {
       ret.push([info[0] + ", " + info[2] + " seats available", info[0]]);
     });
     return ret;
