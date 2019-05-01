@@ -239,7 +239,7 @@ class FreeBlock extends React.Component {
         </label>
         <label>
           Free block priority
-           <input type="number" min="1" onInput={this.handleChange.bind(this)} name="priorityBlock" />
+           <input type="number" min="1" max="10" onInput={this.handleChange.bind(this)} name="priorityBlock" />
         </label>
       </div>
     );

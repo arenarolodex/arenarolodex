@@ -2,6 +2,8 @@ import React from "react";
 
 import PropTypes from 'prop-types';
 
+import styles from './courses.module.css'
+
 export default class EmbeddedGist extends React.Component {
   constructor(props) {
     super(props);
@@ -59,9 +61,9 @@ export default class EmbeddedGist extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <div>loading...</div>;
+      return <div>Loading...</div>;
     } else {
-      return <div dangerouslySetInnerHTML={{ __html: this.state.src }} />;
+      return <div className={styles} dangerouslySetInnerHTML={{ __html: this.state.src }} />;
     }
   }
 }
