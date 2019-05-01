@@ -122,8 +122,8 @@ export default class Courses extends React.Component {
   }
   /**A function to add a Course object to this component's state.courses*/
   addcourse(e) {
-    if (Object.keys(this.state.courses).length >= 7
-      || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8) {
+    if (Object.keys(this.state.courses).length >= 9
+      || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 9) {
       alert("Hey! That's not a legal schedule!");
       return;
     }
