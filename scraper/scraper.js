@@ -22,7 +22,9 @@ var options = {
     jar: cookiejar,
     // resolveWithFullResponse: true
     transform: function (body) {
-        return cheerio.load(body);
+        return cheerio.load(body, {
+            decodeEntities: false
+        });
     }
 };
 

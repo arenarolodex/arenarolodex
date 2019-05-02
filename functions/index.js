@@ -33,7 +33,9 @@ exports.updateSeats = functions.https.onRequest((req, res) => {
       jar: cookiejar,
       // resolveWithFullResponse: true
       transform: function (body) {
-          return cheerio.load(body);
+          return cheerio.load(body, {
+            decodeEntities: false
+          });
       }
   };
 
