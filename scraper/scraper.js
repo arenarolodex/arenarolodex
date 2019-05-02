@@ -20,9 +20,12 @@ var options = {
     method: "GET",
     uri: 'http://www.lowell-courseselection.org/',
     jar: cookiejar,
+    // decodeEntities: true,
     // resolveWithFullResponse: true
     transform: function (body) {
-        return cheerio.load(body);
+        return cheerio.load(body, {
+          decodeEntities: true
+        });
     }
 };
 
