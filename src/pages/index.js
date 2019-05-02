@@ -27,21 +27,7 @@ export default class IndexPage extends React.Component {
         text="Loading..."
         >
       <Layout>
-        {/* <div style={{fontSize:"0.8rem", padding: "0.5rem", backgroundColor: "#ffbd8e",
-          marginBottom: "1rem"}}>
-          <span style={{backgroundColor: "#ff603d", fontWeight:"bold"}}>
-            NOTICE: (04/30/19 4:13 PST)
-          </span>
-          <br />
-          <span>
-            Arenarolodex is almost ready to roll for people to use! We're still working out a 
-            couple of bugs that were birthed while adding new improvements!
-            Apologies for the delay; we anticipate to have everything working around 5.
-            Thanks for your patience!
-          </span>
-        </div> */}
           <EmbeddedGist gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"></EmbeddedGist>
-
           <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
           <Schedules schedules={this.state.schedules} />
       </Layout>
