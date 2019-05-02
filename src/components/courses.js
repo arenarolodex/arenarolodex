@@ -10,6 +10,7 @@ export default class Courses extends React.Component {
     this.state = { courses: {}, freeblocks: {}, disableAddButton: false};
     this.handleChange = this.handleChange.bind(this);
     this.utils = undefined;
+    this.state.subText = "Find schedules";
   }
   finishLoading = () => {
     this.props.loadedCallback();
@@ -39,6 +40,13 @@ export default class Courses extends React.Component {
     var results = this.utils.generateSchedules(selection, blocks);
     this.props.displaySchedules(results);
   }
+
+  changeSubmitText() {
+    var state = this.state;
+    state.subText="Reload schedules";
+    this.setState(state);
+  }
+
   render() {
     //Flags for when to stop adding courses and free blocks
     var nocourse = Object.keys(this.state.courses).length >= 8
@@ -59,7 +67,7 @@ export default class Courses extends React.Component {
               remove={this.removecourse.bind(this)} />)
           )}
         </div>
-        <input type="submit" value="Find schedules" disabled={Object.keys(this.state.courses).length == 0 ||this.state.loading}  />
+        <input type="submit" value={this.state.subText} onClick={this.changeSubmitText.bind(this)} disabled={Object.keys(this.state.courses).length == 0 || this.state.loading}  />
       </form>
     );
   }

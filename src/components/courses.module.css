@@ -83,12 +83,12 @@ input {
   padding: 7px;
 }
 
-/* input:hover,
-input:focus {
+input[type=submit]:hover,
+input[type=submit]:focus {
   color: #fff;
   border-color: #e8ca6f;
   background-color: #e8ca6f
-} */
+}
 
 input:disabled {
   background-color: buttonface;
