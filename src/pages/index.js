@@ -16,8 +16,8 @@ export default class IndexPage extends React.Component {
     state.schedules = scheds;
     this.setState(state);
   }
-  loadingCallback = () => {
-    this.setState({loading:false});
+  loadingCallback = (value) => {
+    this.setState({loading:value});
   };
   render(){
     return (
@@ -34,7 +34,7 @@ export default class IndexPage extends React.Component {
           </span>
           <br />
           <span>
-            Arenarolodex is almost ready to roll for people to use! We're still working out a 
+            Arenarolodex is almost ready to roll for people to use! We're still working out a
             couple of bugs that were birthed while adding new improvements!
             Apologies for the delay; we anticipate to have everything working around 5.
             Thanks for your patience!
