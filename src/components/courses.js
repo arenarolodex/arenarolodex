@@ -69,7 +69,8 @@ export default class Courses extends React.Component {
         <div>
           {Object.keys(this.state.freeblocks).reverse().map((key) =>
             (<FreeBlock changeHandler={this.handleChange} id={key} key={key}
-              remove={this.removefreeblock.bind(this)} />)
+              remove={this.removefreeblock.bind(this)}
+              default={this.state.freeblocks[key]} />)
           )}
           {Object.keys(this.state.courses).reverse().map((key) =>
             (<Course changeHandler={this.handleChange} id={key} key={key}
@@ -88,6 +89,7 @@ export default class Courses extends React.Component {
       state2.freeblocks[key][type] = value;
       console.log("Free block " + key + " changed its " + type + " to " + value);
       this.setState(state2);
+      window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
       return;
     }
 
@@ -121,7 +123,6 @@ export default class Courses extends React.Component {
     s.courses[key] = state;
     this.setState(s);
     window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
-    window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
   }
   /**A function to add a FreeBlock object to this component's state.courses*/
   addfreeblock(e) {
@@ -254,7 +255,8 @@ class FreeBlock extends React.Component {
           Remove</button>
         <label>
           Preferred free block
-           <select onChange={this.handleChange.bind(this)} name="Block">
+           <select onChange={this.handleChange.bind(this)} name="Block"
+             defaultValue={this.props.default.Block}>
             <option value="">Choose a block</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -268,7 +270,9 @@ class FreeBlock extends React.Component {
         </label>
         <label>
           Free block priority
-           <input type="number" min="1" max="10" onInput={this.handleChange.bind(this)} name="priorityBlock" />
+           <input
+             value={this.props.default.priorityBlock}
+             type="number" min="1" max="10" onInput={this.handleChange.bind(this)} name="priorityBlock" />
         </label>
       </div>
     );
