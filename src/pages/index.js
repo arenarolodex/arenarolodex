@@ -16,8 +16,8 @@ export default class IndexPage extends React.Component {
     state.schedules = scheds;
     this.setState(state);
   }
-  loadingCallback = () => {
-    this.setState({loading:false});
+  loadingCallback = (value) => {
+    this.setState({loading:value});
   };
   render(){
     return (

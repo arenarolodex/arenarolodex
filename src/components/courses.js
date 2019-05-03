@@ -16,8 +16,9 @@ export default class Courses extends React.Component {
     this.utils = undefined;
     this.state.subText = "Find schedules";
   }
-  finishLoading = () => {
-    this.props.loadedCallback();
+  finishLoading = (value) => {
+    if (!value) value = false;
+    this.props.loadedCallback(value);
   }
   componentDidMount() {
     var courses = undefined;
@@ -34,7 +35,7 @@ export default class Courses extends React.Component {
     this.setState(state);
     console.log(this.state);
   }
-  handleSumbit(e) {
+  async handleSumbit(e) {
     e.preventDefault();
     var selection = Object.keys(this.state.courses)
       .map((key) => ({
@@ -52,8 +53,9 @@ export default class Courses extends React.Component {
         priorityBlock: this.state.freeblocks[key].priorityBlock
       }));
     // alert("Form was submitted. "+JSON.stringify(selection));
-
-    var results = this.utils.generateSchedules(selection, blocks);
+    this.finishLoading(true);
+    var results = await this.utils.generateSchedules(selection, blocks);
+    this.finishLoading();
     this.props.displaySchedules(results);
   }
 
