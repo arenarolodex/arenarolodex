@@ -6,12 +6,14 @@ import EmbeddedGist from '../components/embeddedgist'
 import Courses from '../components/courses'
 import Schedules from '../components/schedules'
 
+import styles from '../pages/index.css'
+
 export default class IndexPage extends React.Component {
   constructor() {
     super();
     this.state = {schedules: [], loading: true};
   }
-  schedules(scheds){
+  schedules(scheds) {
     var state = this.state;
     state.schedules = scheds;
     this.setState(state);
@@ -19,7 +21,7 @@ export default class IndexPage extends React.Component {
   loadingCallback = (value) => {
     this.setState({loading:value});
   };
-  render(){
+  render() {
     return (
       <LoadingOverlay
         active={this.state.loading}
