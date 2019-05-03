@@ -7,7 +7,11 @@ import SelectionUtilities from '../selectionutilities'
 export default class Courses extends React.Component {
   constructor() {
     super();
-    this.state = { courses: {}, freeblocks: {}, disableAddButton: false};
+    this.state = {
+      courses: {},
+      freeblocks: {},
+      disableAddButton: false
+    };
     this.handleChange = this.handleChange.bind(this);
     this.utils = undefined;
     this.state.subText = "Find schedules";
@@ -17,7 +21,19 @@ export default class Courses extends React.Component {
     this.props.loadedCallback(value);
   }
   componentDidMount() {
+    var courses = undefined;
+    var freeblocks = undefined;
+    courses = window.localStorage.getItem('courses');
+    freeblocks = window.localStorage.getItem('freeblocks');
+    var courses = courses ? JSON.parse(courses) : {};
+    var freeblocks = freeblocks ? JSON.parse(freeblocks) : {};
     this.utils = new SelectionUtilities(this.finishLoading);
+    var state = this.state;
+    state.window = window;
+    state.courses = courses;
+    state.freeblocks = freeblocks;
+    this.setState(state);
+    console.log(this.state);
   }
   async handleSumbit(e) {
     e.preventDefault();
@@ -61,12 +77,14 @@ export default class Courses extends React.Component {
         <div>
           {Object.keys(this.state.freeblocks).reverse().map((key) =>
             (<FreeBlock changeHandler={this.handleChange} id={key} key={key}
-              remove={this.removefreeblock.bind(this)} />)
+              remove={this.removefreeblock.bind(this)}
+              default={this.state.freeblocks[key]} />)
           )}
           {Object.keys(this.state.courses).reverse().map((key) =>
             (<Course changeHandler={this.handleChange} id={key} key={key}
               options={this.state.courses[key].options}
-              remove={this.removecourse.bind(this)} />)
+              remove={this.removecourse.bind(this)}
+              default={this.state.courses[key]} />)
           )}
         </div>
         <input type="submit" value={this.state.subText} onClick={this.changeSubmitText.bind(this)} disabled={Object.keys(this.state.courses).length == 0 || this.state.loading}  />
@@ -79,6 +97,8 @@ export default class Courses extends React.Component {
       state2.freeblocks[key][type] = value;
       console.log("Free block " + key + " changed its " + type + " to " + value);
       this.setState(state2);
+      if (this.state.window)
+        this.state.window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
       return;
     }
 
@@ -111,6 +131,8 @@ export default class Courses extends React.Component {
     }
     s.courses[key] = state;
     this.setState(s);
+    if (this.state.window)
+      this.state.window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
   }
   /**A function to add a FreeBlock object to this component's state.courses*/
   addfreeblock(e) {
@@ -124,11 +146,15 @@ export default class Courses extends React.Component {
     var state = this.state;
     delete state.courses[key];
     this.setState(state);
+    if(this.state.window)
+      this.state.window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
   }
   removefreeblock(key) {
     var state = this.state;
     delete state.freeblocks[key];
     this.setState(state);
+    if(this.state.window)
+      this.state.window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
   }
   /**A function to add a Course object to this component's state.courses*/
   addcourse(e) {
@@ -173,14 +199,17 @@ class Course extends React.Component {
           onClick={this.removeSelf.bind(this)}>
           Remove</button>
         <CourseSelect name="Subject" parentKey={this.props.id} handleChange={this.props.changeHandler}
-          options={this.props.options} />
+          options={this.props.options}
+          defValue={this.props.default.Subject} />
         <CourseSelect name="Class" parentKey={this.props.id} handleChange={this.props.changeHandler}
-          options={this.props.options} />
+          options={this.props.options}
+          defValue={this.props.default.Class} />
         <CourseSelect name="Teacher" parentKey={this.props.id} handleChange={this.props.changeHandler}
-          options={this.props.options}>
-        </CourseSelect>
+          options={this.props.options}
+          defValue={this.props.default.Teacher} />
         <CourseSelect name="Block" parentKey={this.props.id} handleChange={this.props.changeHandler}
-          options={this.props.options} />
+          options={this.props.options}
+          defValue={this.props.default.Block} />
       </div>
     );
   }
@@ -202,13 +231,14 @@ class CourseSelect extends React.Component {
             Is this a required {this.props.name.toLowerCase()}? <input type="checkbox" />
           </label>
         );
-    const options = (this.props.options[this.props.name] !== undefined) ?
+    const options = (this.props.options && this.props.options[this.props.name] !== undefined) ?
       this.props.options[this.props.name] : [];
     return (
       <label>
         {this.props.name}
         <div>
-          <select onChange={this.handleChange.bind(this)}>
+          <select defaultValue={this.props.defValue}
+            onChange={this.handleChange.bind(this)}>
             {options.map((option) =>
               <option key={option[1]} value={option[1]}>{option[0]}</option>
             )}
@@ -235,7 +265,8 @@ class FreeBlock extends React.Component {
           Remove</button>
         <label>
           Preferred free block
-           <select onChange={this.handleChange.bind(this)} name="Block">
+           <select onChange={this.handleChange.bind(this)} name="Block"
+             defaultValue={this.props.default.Block}>
             <option value="">Choose a block</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -249,7 +280,10 @@ class FreeBlock extends React.Component {
         </label>
         <label>
           Free block priority
-           <input type="number" min="1" max="10" onInput={this.handleChange.bind(this)} name="priorityBlock" />
+           <input
+             value={this.props.default.priorityBlock}
+             type="number" min="1" max="10"
+             onChange={this.handleChange.bind(this)} name="priorityBlock" />
         </label>
       </div>
     );
