@@ -13,7 +13,6 @@ export default class Courses extends React.Component {
       freeblocks: {},
       disableAddButton: false
     };
-    this.handleChange = this.handleChange.bind(this);
     this.utils = undefined;
     this.state.subText = 'Find schedules';
   }
@@ -21,18 +20,19 @@ export default class Courses extends React.Component {
     if (!value) value = false;
     this.props.loadedCallback(value);
   }
-  componentDidMount() {
-    var courses = undefined;
-    var freeblocks = undefined;
-    courses = window.localStorage.getItem('courses');
-    freeblocks = window.localStorage.getItem('freeblocks');
+  componentDidMount = () => {
+    var courses = window.localStorage.getItem('courses');
+    var freeblocks = window.localStorage.getItem('freeblocks');
     courses = courses ? JSON.parse(courses) : {};
     freeblocks = freeblocks ? JSON.parse(freeblocks) : {};
+
     this.utils = new SelectionUtilities(this.finishLoading);
+
     var state = this.state;
     state.window = window;
     state.courses = courses;
     state.freeblocks = freeblocks;
+
     this.setState(state);
   }
   async handleSumbit(e) {
@@ -59,7 +59,7 @@ export default class Courses extends React.Component {
     this.props.displaySchedules(results);
   }
 
-  changeSubmitText() {
+  changeSubmitText = () => {
     var state = this.state;
     state.subText='Reload schedules';
     this.setState(state);
@@ -72,30 +72,30 @@ export default class Courses extends React.Component {
     var nofree = Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
     return (
       <form onSubmit={this.handleSumbit.bind(this)}>
-        <button onClick={this.addcourse.bind(this)} disabled={nocourse || this.state.loading}>Add class</button>
-        <button onClick={this.addfreeblock.bind(this)} disabled={nofree || this.state.loading}>Add free block (optional)</button>
+        <button onClick={this.addcourse} disabled={nocourse || this.state.loading}>Add class</button>
+        <button onClick={this.addfreeblock} disabled={nofree || this.state.loading}>Add free block (optional)</button>
         <div>
           {Object.keys(this.state.freeblocks).reverse().map((key) =>
             (<FreeBlock changeHandler={this.handleChange} id={key} key={key}
-              remove={this.removefreeblock.bind(this)}
+              remove={this.removefreeblock}
               default={this.state.freeblocks[key]} />)
           )}
           {Object.keys(this.state.courses).reverse().map((key) =>
             (<Course changeHandler={this.handleChange} id={key} key={key}
               options={this.state.courses[key].options}
-              remove={this.removecourse.bind(this)}
+              remove={this.removecourse}
               default={this.state.courses[key]} />)
           )}
         </div>
         <input type="submit" value={this.state.subText}
-          onClick={this.changeSubmitText.bind(this)}
+          onClick={this.changeSubmitText}
           disabled={
             Object.keys(this.state.courses).length === 0 || this.state.loading
           }  />
       </form>
     );
   }
-  handleChange(key, type, value, freeblock) {
+  handleChange = (key, type, value, freeblock) => {
     if (freeblock) {
       var state2 = this.state;
       state2.freeblocks[key][type] = value;
@@ -139,21 +139,21 @@ export default class Courses extends React.Component {
       this.state.window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
   }
   /**A function to add a FreeBlock object to this component's state.courses*/
-  addfreeblock(e) {
+  addfreeblock = (e) => {
     e.preventDefault();
     var state = this.state;
     var key = (new Date()).getTime();
     state.freeblocks[key] = { Block: '', priorityBlock: '' };
     this.setState(state);
   }
-  removecourse(key) {
+  removecourse = (key) => {
     var state = this.state;
     delete state.courses[key];
     this.setState(state);
     if(this.state.window)
       this.state.window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
   }
-  removefreeblock(key) {
+  removefreeblock = (key) => {
     var state = this.state;
     delete state.freeblocks[key];
     this.setState(state);
@@ -161,7 +161,7 @@ export default class Courses extends React.Component {
       this.state.window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
   }
   /**A function to add a Course object to this component's state.courses*/
-  addcourse(e) {
+  addcourse = (e) => {
     if (Object.keys(this.state.courses).length >= 9
     || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 9) {
       alert('Hey! That\'s not a legal schedule!');
