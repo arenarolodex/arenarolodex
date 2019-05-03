@@ -5,17 +5,7 @@ const tough = require('tough-cookie');
 const cheerio = require('cheerio');
 const cheerioTableparser = require('cheerio-tableparser');
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
-
 exports.updateSeats = functions.https.onRequest((req, res) => {
-  //TODO get live seats from lowell-course-selection and update Firebase
-
-
   let cookie = new tough.Cookie({
       key: ".ASPXAUTH",
       value: functions.config().updateseats.arenacookie,

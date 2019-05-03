@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import styles from './courses.module.css'
-import SelectionUtilities from '../selectionutilities'
+import styles from './courses.module.css';
+import SelectionUtilities from '../selectionutilities';
 
 /**A container for all the courses from user input.*/
 export default class Courses extends React.Component {
@@ -14,7 +14,7 @@ export default class Courses extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.utils = undefined;
-    this.state.subText = "Find schedules";
+    this.state.subText = 'Find schedules';
   }
   finishLoading = (value) => {
     if (!value) value = false;
@@ -25,15 +25,14 @@ export default class Courses extends React.Component {
     var freeblocks = undefined;
     courses = window.localStorage.getItem('courses');
     freeblocks = window.localStorage.getItem('freeblocks');
-    var courses = courses ? JSON.parse(courses) : {};
-    var freeblocks = freeblocks ? JSON.parse(freeblocks) : {};
+    courses = courses ? JSON.parse(courses) : {};
+    freeblocks = freeblocks ? JSON.parse(freeblocks) : {};
     this.utils = new SelectionUtilities(this.finishLoading);
     var state = this.state;
     state.window = window;
     state.courses = courses;
     state.freeblocks = freeblocks;
     this.setState(state);
-    console.log(this.state);
   }
   async handleSumbit(e) {
     e.preventDefault();
@@ -61,7 +60,7 @@ export default class Courses extends React.Component {
 
   changeSubmitText() {
     var state = this.state;
-    state.subText="Reload schedules";
+    state.subText='Reload schedules';
     this.setState(state);
   }
 
@@ -87,7 +86,11 @@ export default class Courses extends React.Component {
               default={this.state.courses[key]} />)
           )}
         </div>
-        <input type="submit" value={this.state.subText} onClick={this.changeSubmitText.bind(this)} disabled={Object.keys(this.state.courses).length == 0 || this.state.loading}  />
+        <input type="submit" value={this.state.subText}
+          onClick={this.changeSubmitText.bind(this)}
+          disabled={
+            Object.keys(this.state.courses).length === 0 || this.state.loading
+          }  />
       </form>
     );
   }
@@ -95,7 +98,7 @@ export default class Courses extends React.Component {
     if (freeblock) {
       var state2 = this.state;
       state2.freeblocks[key][type] = value;
-      console.log("Free block " + key + " changed its " + type + " to " + value);
+      // console.log('Free block ' + key + ' changed its ' + type + ' to ' + value);
       this.setState(state2);
       if (this.state.window)
         this.state.window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
@@ -104,30 +107,30 @@ export default class Courses extends React.Component {
 
     //Set new state
     var s = this.state;
-    var state = s.courses[key]
+    var state = s.courses[key];
     state[type] = value;
 
-    console.log("Course " + key + " changed its " + type + " to " + value);
+    // console.log('Course ' + key + ' changed its ' + type + ' to ' + value);
 
-    if (type === "Subject") {
-      state.options["Class"] = this.utils.getClasses(value);
-      state.options["Teacher"] = this.utils.getTeachers("", "");
-      state.options["Block"] = this.utils.getClassInfo("", "", "");
-      state.Class = "";
-      state.Teacher = "";
-      state.Block = "";
+    if (type === 'Subject') {
+      state.options['Class'] = this.utils.getClasses(value);
+      state.options['Teacher'] = this.utils.getTeachers('', '');
+      state.options['Block'] = this.utils.getClassInfo('', '', '');
+      state.Class = '';
+      state.Teacher = '';
+      state.Block = '';
     }
-    if (type === "Class") {
-      console.log("CLASSCHANGE");
-      state.options["Teacher"] = this.utils.getTeachers(state["Subject"], value);
-      state.options["Block"] = this.utils.getClassInfo("", "", "");
-      state.Teacher = "";
-      state.Block = "";
+    if (type === 'Class') {
+      // console.log('CLASSCHANGE');
+      state.options['Teacher'] = this.utils.getTeachers(state['Subject'], value);
+      state.options['Block'] = this.utils.getClassInfo('', '', '');
+      state.Teacher = '';
+      state.Block = '';
     }
-    if (type === "Teacher") {
-      state.options["Block"] =
-        this.utils.getClassInfo(state["Subject"], state["Class"], value);
-      state.Block = "";
+    if (type === 'Teacher') {
+      state.options['Block'] =
+      this.utils.getClassInfo(state['Subject'], state['Class'], value);
+      state.Block = '';
     }
     s.courses[key] = state;
     this.setState(s);
@@ -138,8 +141,8 @@ export default class Courses extends React.Component {
   addfreeblock(e) {
     e.preventDefault();
     var state = this.state;
-    var key = (new Date()).getTime()
-    state.freeblocks[key] = { Block: "", priorityBlock: "" };
+    var key = (new Date()).getTime();
+    state.freeblocks[key] = { Block: '', priorityBlock: '' };
     this.setState(state);
   }
   removecourse(key) {
@@ -159,24 +162,24 @@ export default class Courses extends React.Component {
   /**A function to add a Course object to this component's state.courses*/
   addcourse(e) {
     if (Object.keys(this.state.courses).length >= 9
-      || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 9) {
-      alert("Hey! That's not a legal schedule!");
+    || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 9) {
+      alert('Hey! That\'s not a legal schedule!');
       return;
     }
     e.preventDefault();
     var state = this.state;
-    var key = (new Date()).getTime()
+    var key = (new Date()).getTime();
     var options = {
-      "Subject": this.utils.getDepartments(),
-      "Class": this.utils.getClasses(""),
-      "Teacher": this.utils.getTeachers("", ""),
-      "Block": this.utils.getClassInfo("", "", "")
-    }
+      'Subject': this.utils.getDepartments(),
+      'Class': this.utils.getClasses(''),
+      'Teacher': this.utils.getTeachers('', ''),
+      'Block': this.utils.getClassInfo('', '', '')
+    };
     state.courses[key] = {
-      Class: "",
-      Subject: "",
-      Teacher: "",
-      Block: "",
+      Class: '',
+      Subject: '',
+      Teacher: '',
+      Block: '',
       priorityTeach: 1,
       priorityBlock: 1,
       TeacherRequired: false,
@@ -220,17 +223,17 @@ class CourseSelect extends React.Component {
     this.props.handleChange(this.props.parentKey, this.props.name, e.target.value, false);
   }
   handleChangeRequired(e) {
-    this.props.handleChange(this.props.parentKey, this.props.name+"Required", e.target.checked, false);
+    this.props.handleChange(this.props.parentKey, this.props.name+'Required', e.target.checked, false);
   }
   render() {
-    let checkbox = "";
-    if (this.props.name === "Teacher")
-        checkbox = (
-          <label style={{textAlign:"right", marginTop:"0.2rem"}}
+    let checkbox = '';
+    if (this.props.name === 'Teacher')
+      checkbox = (
+        <label style={{textAlign:'right', marginTop:'0.2rem'}}
           onChange={this.handleChangeRequired.bind(this)}>
             Is this a required {this.props.name.toLowerCase()}? <input type="checkbox" />
-          </label>
-        );
+        </label>
+      );
     const options = (this.props.options && this.props.options[this.props.name] !== undefined) ?
       this.props.options[this.props.name] : [];
     return (
@@ -265,8 +268,8 @@ class FreeBlock extends React.Component {
           Remove</button>
         <label>
           Preferred free block
-           <select onChange={this.handleChange.bind(this)} name="Block"
-             defaultValue={this.props.default.Block}>
+          <select onChange={this.handleChange.bind(this)} name="Block"
+            defaultValue={this.props.default.Block}>
             <option value="">Choose a block</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -280,10 +283,10 @@ class FreeBlock extends React.Component {
         </label>
         <label>
           Free block priority
-           <input
-             value={this.props.default.priorityBlock}
-             type="number" min="1" max="10"
-             onChange={this.handleChange.bind(this)} name="priorityBlock" />
+          <input
+            value={this.props.default.priorityBlock}
+            type="number" min="1" max="10"
+            onChange={this.handleChange.bind(this)} name="priorityBlock" />
         </label>
       </div>
     );

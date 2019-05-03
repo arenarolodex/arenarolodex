@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import styles from './schedules.module.css'
+import styles from './schedules.module.css';
 
 export default class Schedules extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ export default class Schedules extends React.Component {
           <br />
           Showing {20*(state.page-1)+1} through {
             state.page*20 > this.props.schedules.length ?
-            this.props.schedules.length : state.page*20} out of {this.props.schedules.length}
+              this.props.schedules.length : state.page*20} out of {this.props.schedules.length}
         </p>
         <p>
           <button onClick={this.previousPage.bind(this)}
@@ -45,7 +45,7 @@ export default class Schedules extends React.Component {
           <button onClick={this.nextPage.bind(this)}
             disabled={state.page === state.numPages || state.numPages === 0}>Next</button>
         </p>
-        </div>
+      </div>
     );
   }
 }
@@ -54,7 +54,7 @@ class ScheduleComponent extends React.Component {
   render() {
     return (
       <div className={styles.schedule}>
-        {this.props.schedule.sort(function(a,b){return parseInt(a[0])-parseInt(b[0])})
+        {this.props.schedule.sort(function(a,b){return parseInt(a[0])-parseInt(b[0]);})
           .map((course) => (
             <div className={styles.class} key={course[0]}>
               <b>Block {course[0]}: <i>{course[4]}</i></b>

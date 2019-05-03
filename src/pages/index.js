@@ -1,12 +1,10 @@
-import React from 'react'
+import React from 'react';
 import LoadingOverlay from 'react-loading-overlay';
 
-import Layout from '../components/layout'
-import EmbeddedGist from '../components/embeddedgist'
-import Courses from '../components/courses'
-import Schedules from '../components/schedules'
-
-import styles from '../pages/index.css'
+import Layout from '../components/layout';
+import EmbeddedGist from '../components/embeddedgist';
+import Courses from '../components/courses';
+import Schedules from '../components/schedules';
 
 export default class IndexPage extends React.Component {
   constructor() {
@@ -27,13 +25,13 @@ export default class IndexPage extends React.Component {
         active={this.state.loading}
         spinner
         text="Loading..."
-        >
-      <Layout>
+      >
+        <Layout>
           <EmbeddedGist gist="areyoualex/32570ce054822f8eb855095ec615baca" file="changelog.md"></EmbeddedGist>
           <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
           <Schedules schedules={this.state.schedules} />
-      </Layout>
+        </Layout>
       </LoadingOverlay>
-    )
+    );
   }
 }

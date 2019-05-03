@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import styles from './courses.module.css'
+import styles from './courses.module.css';
 
 export default class EmbeddedGist extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ export default class EmbeddedGist extends React.Component {
     this.stylesheetAdded = false;
     this.state = {
       loading: true,
-      src: ""
+      src: ''
     };
   }
 
@@ -22,9 +22,9 @@ export default class EmbeddedGist extends React.Component {
   addStylesheet = href => {
     if (!this.stylesheetAdded) {
       this.stylesheetAdded = true;
-      var link = document.createElement("link");
-      link.type = "text/css";
-      link.rel = "stylesheet";
+      var link = document.createElement('link');
+      link.type = 'text/css';
+      link.rel = 'stylesheet';
       link.href = href;
 
       document.head.appendChild(link);
@@ -44,17 +44,17 @@ export default class EmbeddedGist extends React.Component {
     }.bind(this);
 
     var url =
-      "https://gist.github.com/" +
+      'https://gist.github.com/' +
       this.props.gist +
-      ".json?callback=" +
+      '.json?callback=' +
       gistCallback;
     if (this.props.file) {
-      url += "&file=" + this.props.file;
+      url += '&file=' + this.props.file;
     }
 
     // Add the JSONP script tag to the document.
-    var script = document.createElement("script");
-    script.type = "text/javascript";
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
     script.src = url;
     document.head.appendChild(script);
   }
@@ -77,7 +77,7 @@ EmbeddedGist.propTypes = {
 // global function name to serve as the JSONP callback.
 var gistCallbackId = 0;
 EmbeddedGist.nextGistCallback = () => {
-  return "embed_gist_callback_" + gistCallbackId++;
+  return 'embed_gist_callback_' + gistCallbackId++;
 };
 
 

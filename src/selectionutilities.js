@@ -9,15 +9,15 @@ export default class SelectionUtilities {
     this.xhttp.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
         self.courses = JSON.parse(this.responseText);
-      };
+      }
       if (this.readyState === 4)
         self.loadingHandler();
     };
     // this.xhttp.onreadystatechange.bind(this);
     //Define which URL to get info from here
     this.coursesURL = process.env.GATSBY_COURSES_API
-      || "https://raw.githubusercontent.com/areyoualex/arenarolodex/master/test/courseserver/newannouncer.json";
-    this.xhttp.open("GET", this.coursesURL, true);
+      || 'https://raw.githubusercontent.com/areyoualex/arenarolodex/master/test/courseserver/newannouncer.json';
+    this.xhttp.open('GET', this.coursesURL, true);
     this.xhttp.send();
   }
   //Schedule generator
@@ -31,7 +31,7 @@ export default class SelectionUtilities {
           self.courses = JSON.parse(this.responseText);
           self.loadingHandler();
           resolve(self.generator(courses, freeblocks));
-        };
+        }
         if (this.readyState === 4)
           self.loadingHandler();
       };
@@ -39,8 +39,8 @@ export default class SelectionUtilities {
       // this.xhttp.onreadystatechange.bind(this);
       //Define which URL to get info from here
       this.coursesURL = process.env.GATSBY_COURSES_API
-        || "https://raw.githubusercontent.com/areyoualex/arenarolodex/master/test/courseserver/newannouncer.json";
-      this.xhttp.open("GET", this.coursesURL, true);
+        || 'https://raw.githubusercontent.com/areyoualex/arenarolodex/master/test/courseserver/newannouncer.json';
+      this.xhttp.open('GET', this.coursesURL, true);
       this.xhttp.send();
     });
   }
@@ -52,7 +52,7 @@ export default class SelectionUtilities {
 
     //Weed out empty values
     courses.forEach((course, index) => {
-      if (course.Class === "") //If class field is empty
+      if (course.Class === '') //If class field is empty
         courses.splice(index, 1); //Remove that course from courses
     });
 
@@ -69,7 +69,7 @@ export default class SelectionUtilities {
         announcer[currentClass.Subject][currentClass.Class][key].forEach((teach) => {
           teach.push(teacher);
           teach.push(currentClass.Class);
-          if (teach[2] !== "0" && teach[2] !== "-1" && teach[2] !== "-2")
+          if (teach[2] !== '0' && teach[2] !== '-1' && teach[2] !== '-2')
             coursesLooping.push(teach);
         });
       });
@@ -129,7 +129,7 @@ export default class SelectionUtilities {
     });
 
     //Log all the schedules to the console
-    console.log(schedules);
+    // console.log(schedules);
 
     //Return the schedules
     return schedules;
@@ -138,31 +138,31 @@ export default class SelectionUtilities {
   getDepartments() {
     if (!this.courses)
       return [
-        ["Could not get courses from "+this.coursesURL, ""]
+        ['Could not get courses from '+this.coursesURL, '']
       ];
     var ret = [
-      ["Choose a department", ""]
+      ['Choose a department', '']
     ];
     Object.keys(this.courses).sort().forEach((dept) => {
-      ret.push([dept, dept])
+      ret.push([dept, dept]);
     });
     return ret;
   }
   getClasses(dept) {
     if (!this.courses)
       return [
-        ["Could not get courses from "+this.coursesURL, ""]
+        ['Could not get courses from '+this.coursesURL, '']
       ];
-    if (dept === "")
+    if (dept === '')
       return [
-        ["Select a department", ""]
+        ['Select a department', '']
       ];
     if (!this.courses[dept])
       return [
-        ["invalid department?", ""]
+        ['invalid department?', '']
       ];
     var ret = [
-      ["Choose a class", ""]
+      ['Choose a class', '']
     ];
     Object.keys(this.courses[dept]).sort().forEach((className) => {
       ret.push([className, className]);
@@ -172,22 +172,22 @@ export default class SelectionUtilities {
   getTeachers(dept, className) {
     if (!this.courses)
       return [
-        ["Could not get courses from "+this.coursesURL, ""]
+        ['Could not get courses from '+this.coursesURL, '']
       ];
-    if (className === "")
+    if (className === '')
       return [
-        ["Select a class", ""]
+        ['Select a class', '']
       ];
     if (!this.courses[dept])
       return [
-        ["invalid department?", ""]
+        ['invalid department?', '']
       ];
     if (!this.courses[dept][className])
       return [
-        ["invalid class?", ""]
+        ['invalid class?', '']
       ];
     var ret = [
-      ["Choose a teacher", ""]
+      ['Choose a teacher', '']
     ];
     Object.keys(this.courses[dept][className]).sort().forEach((teacher) => {
       ret.push([teacher, teacher]);
@@ -197,30 +197,30 @@ export default class SelectionUtilities {
   getClassInfo(dept, className, teacher) {
     if (!this.courses)
       return [
-        ["Could not get courses from "+this.coursesURL, ""]
+        ['Could not get courses from '+this.coursesURL, '']
       ];
-    if (teacher === "")
+    if (teacher === '')
       return [
-        ["Select a teacher", ""]
+        ['Select a teacher', '']
       ];
     if (!this.courses[dept])
       return [
-        ["invalid department?", ""]
+        ['invalid department?', '']
       ];
     if (!this.courses[dept][className])
       return [
-        ["invalid class?", ""]
+        ['invalid class?', '']
       ];
     if (!this.courses[dept][className][teacher])
       return [
-        ["invalid teacher?", ""]
+        ['invalid teacher?', '']
       ];
 
     var ret = [
-      ["Choose a block", ""]
+      ['Choose a block', '']
     ];
     this.courses[dept][className][teacher].sort().forEach((info) => {
-      ret.push([info[0] + ", " + info[2] + " seats available", info[0]]);
+      ret.push([info[0] + ', ' + info[2] + ' seats available', info[0]]);
     });
     return ret;
   }
