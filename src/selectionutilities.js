@@ -16,7 +16,7 @@ export default class SelectionUtilities {
     // this.xhttp.onreadystatechange.bind(this);
     //Define which URL to get info from here
     this.coursesURL = process.env.GATSBY_COURSES_API
-      || 'https://raw.githubusercontent.com/areyoualex/arenarolodex/master/test/courseserver/newannouncer.json';
+      || 'https://raw.githubusercontent.com/areyoualex/arenarolodex/master/courseserver/newannouncer.json';
     this.xhttp.open('GET', this.coursesURL, true);
     this.xhttp.send();
   }
@@ -39,7 +39,7 @@ export default class SelectionUtilities {
       // this.xhttp.onreadystatechange.bind(this);
       //Define which URL to get info from here
       this.coursesURL = process.env.GATSBY_COURSES_API
-        || 'https://raw.githubusercontent.com/areyoualex/arenarolodex/master/test/courseserver/newannouncer.json';
+        || 'https://raw.githubusercontent.com/areyoualex/arenarolodex/master/courseserver/newannouncer.json';
       this.xhttp.open('GET', this.coursesURL, true);
       this.xhttp.send();
     });
