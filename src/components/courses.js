@@ -4,6 +4,8 @@ import Course from './course-ui';
 import FreeBlock from './freeblock-ui';
 import SelectionUtilities from '../selectionutilities';
 
+import styles from './courses.module.css';
+
 /**A container for all the courses from user input.*/
 export default class Courses extends React.Component {
   constructor() {
@@ -74,6 +76,7 @@ export default class Courses extends React.Component {
       <form onSubmit={this.handleSumbit.bind(this)}>
         <button onClick={this.addcourse} disabled={nocourse || this.state.loading}>Add class</button>
         <button onClick={this.addfreeblock} disabled={nofree || this.state.loading}>Add free block (optional)</button>
+        <button onClick={this.removeall} disabled={(Object.keys(this.state.courses).length === 0 && Object.keys(this.state.freeblocks).length === 0) || this.state.loading} className={styles.removeall}>Remove all</button>
         <div>
           {Object.keys(this.state.freeblocks).reverse().map((key) =>
             (<FreeBlock changeHandler={this.handleChange} id={key} key={key}
@@ -160,6 +163,17 @@ export default class Courses extends React.Component {
     if(this.state.window)
       this.state.window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
   }
+  removeall = () => {
+    var state = this.state;
+    state.freeblocks = [];
+    state.courses = [];
+    this.setState(state);
+    if(this.state.window) {
+      this.state.window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
+      this.state.window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
+    }
+  }
+
   /**A function to add a Course object to this component's state.courses*/
   addcourse = (e) => {
     if (Object.keys(this.state.courses).length >= 9

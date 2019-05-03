@@ -71,6 +71,10 @@ button:disabled {
   border-color: rgb(128, 128, 128);
 }
 
+.removeall {
+  float: right;
+}
+
 
 input {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
