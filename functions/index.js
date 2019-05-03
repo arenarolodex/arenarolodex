@@ -40,7 +40,7 @@ exports.updateSeats = functions.https.onRequest((req, res) => {
   };
 
   rp(options)
-    .then(function($) {
+    .then(($) => {
       cheerioTableparser($);
       var table = $("table").parsetable();
       var newData = table[0].map((col, i) => table.map(row => row[i]));
@@ -67,7 +67,7 @@ exports.updateSeats = functions.https.onRequest((req, res) => {
         {lastIndex:newData.length, dept:"Other"}
       ];
       for (let index in newData) {
-        console.log(index+": "+newData[index][0]);
+        // console.log(index+": "+newData[index][0]);
         for (let dept of indexDept) {
           if (index <= dept.lastIndex) {
             //Make objects that don't exist yet
@@ -88,7 +88,8 @@ exports.updateSeats = functions.https.onRequest((req, res) => {
       });
       res.status(200).send(JSON.stringify(newannouncer));
       return;
-    }).catch(function(err){
+    }).catch((err) => {
+      console.error(new Error("There's been an error with the scraper. \n"+err));
       res.status(500).send("There's been an error with the scraper. \n"+err);
     });
 });
