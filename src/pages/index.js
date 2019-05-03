@@ -29,7 +29,7 @@ export default class IndexPage extends React.Component {
         text="Loading..."
         >
       <Layout>
-          <EmbeddedGist gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"></EmbeddedGist>
+          <EmbeddedGist gist="areyoualex/32570ce054822f8eb855095ec615baca" file="changelog.md"></EmbeddedGist>
           <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
           <Schedules schedules={this.state.schedules} />
       </Layout>
