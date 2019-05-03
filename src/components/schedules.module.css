@@ -4,6 +4,12 @@
   margin-bottom: 2rem;
   padding: 1px 1rem 1px 1rem;
 }
+.impossibleSchedule {
+  background-color: #d6d6d6;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  padding: 1px 1rem 1px 1rem;
+}
 .class {
   display:block;
   margin: 20px 0 20px 0;

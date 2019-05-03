@@ -69,8 +69,7 @@ export default class SelectionUtilities {
         announcer[currentClass.Subject][currentClass.Class][key].forEach((teach) => {
           teach.push(teacher);
           teach.push(currentClass.Class);
-          if (teach[2] !== '0' && teach[2] !== '-1' && teach[2] !== '-2')
-            coursesLooping.push(teach);
+          coursesLooping.push(teach);
         });
       });
 
@@ -92,9 +91,13 @@ export default class SelectionUtilities {
 
         var points = schedule.points;
         var sched = schedule.schedule.slice(0);
+        var impossible = schedule.impossible ? true
+          : parseInt(newCourse[2]) < 1;
+        // console.log(parseInt(newCourse[2]));
         var newSchedule = {
           schedule: sched,
-          points: points
+          points: points,
+          impossible: impossible
         };
         newSchedule.schedule.push(newCourse); //Add the new course to the schedule
         if (newCourse[3] === currentClass.Teacher) { //Is this the user's preferred teacher?
