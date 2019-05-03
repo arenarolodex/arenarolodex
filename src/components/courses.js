@@ -7,15 +7,9 @@ import SelectionUtilities from '../selectionutilities'
 export default class Courses extends React.Component {
   constructor() {
     super();
-    var courses = window.localStorage.getItem('courses');
-    var freeblocks = window.localStorage.getItem('freeblocks');
-    console.log(courses);
-    console.log(freeblocks);
-    var courses = courses ? JSON.parse(courses) : {};
-    var freeblocks = freeblocks ? JSON.parse(freeblocks) : {};
     this.state = {
-      courses: courses,
-      freeblocks: freeblocks,
+      courses: {},
+      freeblocks: {},
       disableAddButton: false
     };
     this.handleChange = this.handleChange.bind(this);
@@ -26,7 +20,19 @@ export default class Courses extends React.Component {
     this.props.loadedCallback();
   }
   componentDidMount() {
+    var courses = undefined;
+    var freeblocks = undefined;
+    courses = window.localStorage.getItem('courses');
+    freeblocks = window.localStorage.getItem('freeblocks');
+    var courses = courses ? JSON.parse(courses) : {};
+    var freeblocks = freeblocks ? JSON.parse(freeblocks) : {};
     this.utils = new SelectionUtilities(this.finishLoading);
+    var state = this.state;
+    state.window = window;
+    state.courses = courses;
+    state.freeblocks = freeblocks;
+    this.setState(state);
+    console.log(this.state);
   }
   handleSumbit(e) {
     e.preventDefault();
@@ -89,7 +95,8 @@ export default class Courses extends React.Component {
       state2.freeblocks[key][type] = value;
       console.log("Free block " + key + " changed its " + type + " to " + value);
       this.setState(state2);
-      window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
+      if (this.state.window)
+        this.state.window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
       return;
     }
 
@@ -122,7 +129,8 @@ export default class Courses extends React.Component {
     }
     s.courses[key] = state;
     this.setState(s);
-    window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
+    if (this.state.window)
+      this.state.window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
   }
   /**A function to add a FreeBlock object to this component's state.courses*/
   addfreeblock(e) {
@@ -136,15 +144,15 @@ export default class Courses extends React.Component {
     var state = this.state;
     delete state.courses[key];
     this.setState(state);
-    window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
-    window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
+    if(this.state.window)
+      this.state.window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
   }
   removefreeblock(key) {
     var state = this.state;
     delete state.freeblocks[key];
     this.setState(state);
-    window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
-    window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
+    if(this.state.window)
+      this.state.window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
   }
   /**A function to add a Course object to this component's state.courses*/
   addcourse(e) {
@@ -190,16 +198,16 @@ class Course extends React.Component {
           Remove</button>
         <CourseSelect name="Subject" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options}
-          value={this.props.default.Subject} />
+          defValue={this.props.default.Subject} />
         <CourseSelect name="Class" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options}
-          value={this.props.default.Class} />
+          defValue={this.props.default.Class} />
         <CourseSelect name="Teacher" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options}
-          value={this.props.default.Teacher} />
+          defValue={this.props.default.Teacher} />
         <CourseSelect name="Block" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options}
-          value={this.props.default.Block} />
+          defValue={this.props.default.Block} />
       </div>
     );
   }
@@ -227,7 +235,7 @@ class CourseSelect extends React.Component {
       <label>
         {this.props.name}
         <div>
-          <select defaultValue={this.props.value}
+          <select defaultValue={this.props.defValue}
             onChange={this.handleChange.bind(this)}>
             {options.map((option) =>
               <option key={option[1]} value={option[1]}>{option[0]}</option>
@@ -272,7 +280,8 @@ class FreeBlock extends React.Component {
           Free block priority
            <input
              value={this.props.default.priorityBlock}
-             type="number" min="1" max="10" onInput={this.handleChange.bind(this)} name="priorityBlock" />
+             type="number" min="1" max="10"
+             onChange={this.handleChange.bind(this)} name="priorityBlock" />
         </label>
       </div>
     );
