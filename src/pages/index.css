@@ -4,3 +4,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.gist {
+    max-width: 100%;
+    overflow: auto;
+}
+
+.gist .blob-wrapper.data {
+    max-height: 20px;
+    overflow: auto;
+}
