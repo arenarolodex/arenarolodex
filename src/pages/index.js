@@ -3,7 +3,7 @@ import LoadingOverlay from 'react-loading-overlay';
 
 import Layout from '../components/layout';
 import EmbeddedGist from '../components/embeddedgist';
-import Changelog from '../components/changelog'
+// import Changelog from '../components/changelog'
 import Courses from '../components/courses';
 import Schedules from '../components/schedules';
 
