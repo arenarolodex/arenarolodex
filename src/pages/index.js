@@ -8,6 +8,7 @@ import Courses from '../components/courses';
 import Schedules from '../components/schedules';
 
 import '../pages/index.css';
+import Changelog from '../components/changelog';
 
 export default class IndexPage extends React.Component {
   constructor() {
@@ -30,8 +31,8 @@ export default class IndexPage extends React.Component {
         text="Loading..."
       >
         <Layout>
-          {/* <EmbeddedGist gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"></EmbeddedGist> */}
-          <Changelog></Changelog>
+          <EmbeddedGist gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"></EmbeddedGist>
+          {/* <Changelog></Changelog> */}
           <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
           <Schedules schedules={this.state.schedules} />
         </Layout>
