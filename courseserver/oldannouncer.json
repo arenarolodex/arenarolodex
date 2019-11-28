@@ -1,0 +1,4887 @@
+[
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "1",
+    "Room": "273",
+    "Teacher": "Liu"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "1",
+    "Room": "338",
+    "Teacher": "Staff A"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "1",
+    "Room": "S104",
+    "Teacher": "Fortin"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "2",
+    "Room": "340",
+    "Teacher": "Grice"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "2",
+    "Room": "275",
+    "Teacher": "Hong"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "2",
+    "Room": "270",
+    "Teacher": "Knight"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "2",
+    "Room": "274",
+    "Teacher": "Statmore"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "3",
+    "Room": "273",
+    "Teacher": "Staff A"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "3",
+    "Room": "256",
+    "Teacher": "Staff B"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "5",
+    "Room": "274",
+    "Teacher": "Grice"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "5",
+    "Room": "340",
+    "Teacher": "Fortin"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "5",
+    "Room": "275",
+    "Teacher": "Knight"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "5",
+    "Room": "S104",
+    "Teacher": "Nghe"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "6",
+    "Room": "271",
+    "Teacher": "Grice"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "6",
+    "Room": "275",
+    "Teacher": "Hong"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "6",
+    "Room": "274",
+    "Teacher": "Statmore"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "7",
+    "Room": "332",
+    "Teacher": "Chan, R"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "7",
+    "Room": "275",
+    "Teacher": "Grice"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "8",
+    "Room": "336",
+    "Teacher": "Chan, R"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1A",
+    "Block": "8",
+    "Room": "275",
+    "Teacher": "Grice"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1B",
+    "Block": "2",
+    "Room": "260",
+    "Teacher": "Nghe"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 1B",
+    "Block": "6",
+    "Room": "S104",
+    "Teacher": "Nghe"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2 & Precalc",
+    "Block": "7",
+    "Room": "256",
+    "Teacher": "Li"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "1",
+    "Room": "272",
+    "Teacher": "Arnold"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "1",
+    "Room": "256",
+    "Teacher": "Staff B"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "2",
+    "Room": "258",
+    "Teacher": "Sinn"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "3",
+    "Room": "258",
+    "Teacher": "Arnold"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "3",
+    "Room": "S104",
+    "Teacher": "Tran"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "4",
+    "Room": "273",
+    "Teacher": "Staff A"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "4",
+    "Room": "340",
+    "Teacher": "Karapetyan"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "4",
+    "Room": "258",
+    "Teacher": "Sinn"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "6",
+    "Room": "332",
+    "Teacher": "Staff A"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "6",
+    "Room": "338",
+    "Teacher": "Chan, T"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "6",
+    "Room": "340",
+    "Teacher": "Karapetyan"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "6",
+    "Room": "256",
+    "Teacher": "Li"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "7",
+    "Room": "260",
+    "Teacher": "Staff B"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "7",
+    "Room": "270",
+    "Teacher": "Knight"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "7",
+    "Room": "S104",
+    "Teacher": "Tran"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "8",
+    "Room": "338",
+    "Teacher": "Chan, T"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "8",
+    "Room": "270",
+    "Teacher": "Knight"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2A",
+    "Block": "8",
+    "Room": "256",
+    "Teacher": "Li"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2B",
+    "Block": "5",
+    "Room": "271",
+    "Teacher": "Chu"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Algebra 2B",
+    "Block": "7",
+    "Room": "271",
+    "Teacher": "Chu"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Calculus AB A*",
+    "Block": "1",
+    "Room": "271",
+    "Teacher": "Warshaw"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Calculus AB A*",
+    "Block": "3",
+    "Room": "271",
+    "Teacher": "Warshaw"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Calculus AB A*",
+    "Block": "4",
+    "Room": "272",
+    "Teacher": "Gribler"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Calculus AB A*",
+    "Block": "5",
+    "Room": "272",
+    "Teacher": "Gribler"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Calculus AB A*",
+    "Block": "6",
+    "Room": "272",
+    "Teacher": "Gribler"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Calculus AB A*",
+    "Block": "7",
+    "Room": "272",
+    "Teacher": "Gribler"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Calculus AB A*",
+    "Block": "8",
+    "Room": "332",
+    "Teacher": "Sullivan"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Calculus BC A*",
+    "Block": "1",
+    "Room": "270",
+    "Teacher": "Hoffman"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Calculus BC A*",
+    "Block": "4",
+    "Room": "270",
+    "Teacher": "Hoffman"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Calculus BC A*",
+    "Block": "5",
+    "Room": "270",
+    "Teacher": "Hoffman"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Computer Science A B*",
+    "Block": "1",
+    "Room": "334",
+    "Teacher": "Simon"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Computer Science A B*",
+    "Block": "2",
+    "Room": "334",
+    "Teacher": "Simon"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Computer Science A B*",
+    "Block": "4",
+    "Room": "334",
+    "Teacher": "Simon"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Computer Science A B*",
+    "Block": "6",
+    "Room": "334",
+    "Teacher": "Simon"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Principles of CS*",
+    "Block": "2",
+    "Room": "332",
+    "Teacher": "Sullivan"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Principles of CS*",
+    "Block": "3",
+    "Room": "334",
+    "Teacher": "Cernuto"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Principles of CS*",
+    "Block": "4",
+    "Room": "332",
+    "Teacher": "Sullivan"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Principles of CS*",
+    "Block": "5",
+    "Room": "334",
+    "Teacher": "Cernuto"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Principles of CS*",
+    "Block": "5",
+    "Room": "332",
+    "Teacher": "Sullivan"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Principles of CS*",
+    "Block": "7",
+    "Room": "334",
+    "Teacher": "Cernuto"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Principles of CS*",
+    "Block": "8",
+    "Room": "334",
+    "Teacher": "Cernuto"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Statistics A*",
+    "Block": "1",
+    "Room": "336",
+    "Teacher": "Ambrose"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Statistics A*",
+    "Block": "3",
+    "Room": "336",
+    "Teacher": "Ambrose"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Statistics A*",
+    "Block": "3",
+    "Room": "260",
+    "Teacher": "Bookwalter"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Statistics A*",
+    "Block": "4",
+    "Room": "260",
+    "Teacher": "Bookwalter"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Statistics A*",
+    "Block": "5",
+    "Room": "336",
+    "Teacher": "Ambrose"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Statistics A*",
+    "Block": "6",
+    "Room": "260",
+    "Teacher": "Bookwalter"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Statistics A*",
+    "Block": "7",
+    "Room": "336",
+    "Teacher": "Ambrose"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "AP Statistics A*",
+    "Block": "8",
+    "Room": "260",
+    "Teacher": "Bookwalter"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Computer Programming A",
+    "Block": "4",
+    "Room": "336",
+    "Teacher": "Chan, R"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "1",
+    "Room": "260",
+    "Teacher": "Nghe"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "1",
+    "Room": "274",
+    "Teacher": "Statmore"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "2",
+    "Room": "272",
+    "Teacher": "Arnold"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "2",
+    "Room": "273",
+    "Teacher": "Liu"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "3",
+    "Room": "272",
+    "Teacher": "Nghe"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "3",
+    "Room": "274",
+    "Teacher": "Statmore"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "4",
+    "Room": "274",
+    "Teacher": "Arnold"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "4",
+    "Room": "338",
+    "Teacher": "Staff B"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "4",
+    "Room": "275",
+    "Teacher": "Hong"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "6",
+    "Room": "258",
+    "Teacher": "Staff B"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "6",
+    "Room": "273",
+    "Teacher": "Liu"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "7",
+    "Room": "340",
+    "Teacher": "Karapetyan"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A",
+    "Block": "7",
+    "Room": "274",
+    "Teacher": "Statmore"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A (9th Grade)",
+    "Block": "3",
+    "Room": "270",
+    "Teacher": "Fortin"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A (9th Grade)",
+    "Block": "5",
+    "Room": "258",
+    "Teacher": "Sinn"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A (9th Grade)",
+    "Block": "6",
+    "Room": "270",
+    "Teacher": "Arnold"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry A (9th Grade)",
+    "Block": "7",
+    "Room": "258",
+    "Teacher": "Sinn"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry B",
+    "Block": "2",
+    "Room": "336",
+    "Teacher": "Chan, R"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Geometry B",
+    "Block": "3",
+    "Room": "332",
+    "Teacher": "Chan, R"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "1",
+    "Room": "275",
+    "Teacher": "Hong"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "1",
+    "Room": "340",
+    "Teacher": "Karapetyan"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "2",
+    "Room": "338",
+    "Teacher": "Staff A"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "2",
+    "Room": "271",
+    "Teacher": "Chu"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "2",
+    "Room": "S104",
+    "Teacher": "Tran"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "3",
+    "Room": "275",
+    "Teacher": "Hong"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "3",
+    "Room": "340",
+    "Teacher": "Karapetyan"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "4",
+    "Room": "271",
+    "Teacher": "Chu"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "4",
+    "Room": "S104",
+    "Teacher": "Tran"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "5",
+    "Room": "273",
+    "Teacher": "Liu"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "7",
+    "Room": "273",
+    "Teacher": "Liu"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "8",
+    "Room": "271",
+    "Teacher": "Chu"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A",
+    "Block": "8",
+    "Room": "S104",
+    "Teacher": "Tran"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A Honors",
+    "Block": "2",
+    "Room": "256",
+    "Teacher": "Li"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A Honors",
+    "Block": "3",
+    "Room": "338",
+    "Teacher": "Chan, T"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A Honors",
+    "Block": "4",
+    "Room": "256",
+    "Teacher": "Li"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A Honors",
+    "Block": "5",
+    "Room": "338",
+    "Teacher": "Chan, T"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A Honors",
+    "Block": "7",
+    "Room": "338",
+    "Teacher": "Chan, T"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Pre-Calculus A Honors",
+    "Block": "8",
+    "Room": "258",
+    "Teacher": "Sinn"
+  },
+  {
+    "Department Number": "1",
+    "Course Name": "Avid 1A",
+    "Block": "3",
+    "Room": "333",
+    "Teacher": "Knight"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "1",
+    "Room": "263",
+    "Teacher": "Amirapu, Anjana"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "1",
+    "Room": "241",
+    "Teacher": "West, Kathleen"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "1",
+    "Room": "S204",
+    "Teacher": "Wenning, Mark"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "2",
+    "Room": "263",
+    "Teacher": "Amirapu, Anjana"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "2",
+    "Room": "114",
+    "Teacher": "Daley, Bonnie"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "2",
+    "Room": "241",
+    "Teacher": "West, Kathleen"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "2",
+    "Room": "239",
+    "Teacher": "Staff-T"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "3",
+    "Room": "263",
+    "Teacher": "Amirapu, Anjana"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "3",
+    "Room": "114",
+    "Teacher": "Daley, Bonnie"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "3",
+    "Room": "239",
+    "Teacher": "Staff-T"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "5",
+    "Room": "263",
+    "Teacher": "Amirapu, Anjana"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "5",
+    "Room": "114",
+    "Teacher": "Dowd, James III"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "5",
+    "Room": "241",
+    "Teacher": "West, Kathleen"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "5",
+    "Room": "S204",
+    "Teacher": "Staff-T"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "6",
+    "Room": "114",
+    "Teacher": "Daley, Bonnie"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "6",
+    "Room": "241",
+    "Teacher": "West, Kathleen"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "6",
+    "Room": "S204",
+    "Teacher": "Wenning, Mark"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "7",
+    "Room": "114",
+    "Teacher": "Dowd, James III"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "7",
+    "Room": "241",
+    "Teacher": "West, Kathleen"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "7",
+    "Room": "S204",
+    "Teacher": "Staff-T"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "8",
+    "Room": "114",
+    "Teacher": "Daley, Bonnie"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Biology A",
+    "Block": "8",
+    "Room": "S204",
+    "Teacher": "Staff-T"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Biology A*",
+    "Block": "1",
+    "Room": "239",
+    "Teacher": "Christensen, Catherine"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Biology A*",
+    "Block": "2",
+    "Room": "S204",
+    "Teacher": "Wenning, Mark"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Biology A*",
+    "Block": "3",
+    "Room": "241",
+    "Teacher": "Killpack, Alena"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Biology A*",
+    "Block": "4",
+    "Room": "241",
+    "Teacher": "Killpack, Alena"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Biology A*",
+    "Block": "4",
+    "Room": "S204",
+    "Teacher": "Wenning, Mark"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Biology A*",
+    "Block": "6",
+    "Room": "239",
+    "Teacher": "Christensen, Catherine"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Biology A*",
+    "Block": "7",
+    "Room": "239",
+    "Teacher": "Christensen, Catherine"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Biology A*",
+    "Block": "8",
+    "Room": "241",
+    "Teacher": "Killpack, Alena"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A",
+    "Block": "1",
+    "Room": "339",
+    "Teacher": "Dowd, James III"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A",
+    "Block": "2",
+    "Room": "335",
+    "Teacher": "Lian, Ai"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A",
+    "Block": "2",
+    "Room": "339",
+    "Teacher": "Dowd, James III"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A",
+    "Block": "3",
+    "Room": "339",
+    "Teacher": "Dowd, James III"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A",
+    "Block": "4",
+    "Room": "339",
+    "Teacher": "Lian, Ai"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A",
+    "Block": "6",
+    "Room": "337",
+    "Teacher": "Dela Riarte, Sirly"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A",
+    "Block": "6",
+    "Room": "339",
+    "Teacher": "Lian, Ai"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A",
+    "Block": "7",
+    "Room": "337",
+    "Teacher": "Dela Riarte, Sirly"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A",
+    "Block": "7",
+    "Room": "339",
+    "Teacher": "Lian, Ai"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A",
+    "Block": "8",
+    "Room": "337",
+    "Teacher": "Dela Riarte, Sirly"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A Honors",
+    "Block": "1",
+    "Room": "337",
+    "Teacher": "Fong, Jonathan C"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A Honors",
+    "Block": "2",
+    "Room": "333",
+    "Teacher": "Trimble, Michelle"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A Honors",
+    "Block": "3",
+    "Room": "335",
+    "Teacher": "Marten, Bryan"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A Honors",
+    "Block": "5",
+    "Room": "335",
+    "Teacher": "Marten, Bryan"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A Honors",
+    "Block": "7",
+    "Room": "333",
+    "Teacher": "Trimble, Michelle"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A Honors",
+    "Block": "8",
+    "Room": "333",
+    "Teacher": "Trimble, Michelle"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Chemistry A Honors",
+    "Block": "8",
+    "Room": "339",
+    "Teacher": "Lian, Ai"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Chemistry A*",
+    "Block": "1",
+    "Room": "335",
+    "Teacher": "Marten, Bryan"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Chemistry A*",
+    "Block": "2",
+    "Room": "337",
+    "Teacher": "Fong, Jonathan C"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Chemistry A*",
+    "Block": "4",
+    "Room": "337",
+    "Teacher": "Fong, Jonathan C"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Chemistry A*",
+    "Block": "7",
+    "Room": "335",
+    "Teacher": "Marten, Bryan"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Organic Chemistry A",
+    "Block": "5",
+    "Room": "335",
+    "Teacher": "Trimble, Michelle"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Environmental Science A",
+    "Block": "1",
+    "Room": "261",
+    "Teacher": "Melvin, Katherine"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Environmental Science A",
+    "Block": "2",
+    "Room": "261",
+    "Teacher": "Melvin, Katherine"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Environmental Science A",
+    "Block": "3",
+    "Room": "261",
+    "Teacher": "Laureyns, Shawn"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Environmental Science A",
+    "Block": "4",
+    "Room": "261",
+    "Teacher": "Melvin, Katherine"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Environmental Science A",
+    "Block": "5",
+    "Room": "261",
+    "Teacher": "Laureyns, Shawn"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Environmental Science A",
+    "Block": "6",
+    "Room": "261",
+    "Teacher": "Melvin, Katherine"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Environmental Science A",
+    "Block": "7",
+    "Room": "261",
+    "Teacher": "Laureyns, Shawn"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Environmental Science A",
+    "Block": "8",
+    "Room": "261",
+    "Teacher": "Laureyns, Shawn"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Marine Science A",
+    "Block": "4",
+    "Room": "239",
+    "Teacher": "Christensen, Catherine"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Marine Science A",
+    "Block": "7",
+    "Room": "235",
+    "Teacher": "Robinson, Freja"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Principles of Biotech A",
+    "Block": "4",
+    "Room": "114",
+    "Teacher": "Daley, Bonnie"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Physics (10-12) A",
+    "Block": "1",
+    "Room": "S202",
+    "Teacher": "Shapiro, Richard"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Physics (10-12) A",
+    "Block": "1",
+    "Room": "S203",
+    "Teacher": "Cooley, Bryan"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Physics (10-12) A",
+    "Block": "2",
+    "Room": "S203",
+    "Teacher": "Dela Riarte, Sirly"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Physics (10-12) A",
+    "Block": "3",
+    "Room": "S203",
+    "Teacher": "Dela Riarte, Sirly"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Physics (10-12) A",
+    "Block": "4",
+    "Room": "S203",
+    "Teacher": "Cooley, Bryan"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "NGSS Physics (10-12) A",
+    "Block": "7",
+    "Room": "S205",
+    "Teacher": "Prothro, Randell"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Physics 1A",
+    "Block": "1",
+    "Room": "S201",
+    "Teacher": "Dickerman, Scott"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Physics 1A",
+    "Block": "2",
+    "Room": "S205",
+    "Teacher": "Prothro, Randell"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Physics 1A",
+    "Block": "3",
+    "Room": "S201",
+    "Teacher": "Dickerman, Scott"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Physics 1A",
+    "Block": "4",
+    "Room": "S205",
+    "Teacher": "Prothro, Randell"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Physics 1A",
+    "Block": "6",
+    "Room": "S201",
+    "Teacher": "Dickerman, Scott"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Physics 1A",
+    "Block": "7",
+    "Room": "S201",
+    "Teacher": "Dickerman, Scott"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Physics 1A",
+    "Block": "8",
+    "Room": "S205",
+    "Teacher": "Prothro, Randell"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Physics 2A",
+    "Block": "5",
+    "Room": "S203",
+    "Teacher": "Cooley, Bryan"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Physics 2A",
+    "Block": "7",
+    "Room": "S203",
+    "Teacher": "Cooley, Bryan"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Physics C: Mech",
+    "Block": "2",
+    "Room": "S202",
+    "Teacher": "Shapiro, Richard"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AP Physics C: Mech",
+    "Block": "4",
+    "Room": "S202",
+    "Teacher": "Shapiro, Richard"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Physiology A",
+    "Block": "1",
+    "Room": "235",
+    "Teacher": "Robinson, Freja"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Physiology A",
+    "Block": "2",
+    "Room": "235",
+    "Teacher": "Robinson, Freja"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Physiology A",
+    "Block": "3",
+    "Room": "235",
+    "Teacher": "Robinson, Freja"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Physiology A",
+    "Block": "7",
+    "Room": "235",
+    "Teacher": "Robinson, Freja"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Science Research A",
+    "Block": "7",
+    "Room": "263",
+    "Teacher": "Amirapu, Anjana"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "Science Lab A",
+    "Block": "10",
+    "Room": "263",
+    "Teacher": "Killpack, Alena"
+  },
+  {
+    "Department Number": "2",
+    "Course Name": "AVID 10",
+    "Block": "4",
+    "Room": "333",
+    "Teacher": "Trimble, Michelle"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AMERICAN LITERATURE A",
+    "Block": "1",
+    "Room": "214",
+    "Teacher": "Moussavi, Sam"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AMERICAN LITERATURE A",
+    "Block": "2",
+    "Room": "140",
+    "Teacher": "Santiago, Meredith"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AMERICAN LITERATURE A",
+    "Block": "6",
+    "Room": "140",
+    "Teacher": "Santiago, Meredith"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AMERICAN LITERATURE A",
+    "Block": "7",
+    "Room": "134",
+    "Teacher": "Moussavi, Sam"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LANG AND COMP 74A(72)",
+    "Block": "2",
+    "Room": "137",
+    "Teacher": "Ritter, Bryan"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LANG AND COMP 74A(72)",
+    "Block": "3",
+    "Room": "135",
+    "Teacher": "Bajet, Lael"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LANG AND COMP 74A(72)",
+    "Block": "6",
+    "Room": "135",
+    "Teacher": "Bajet, Lael"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LANG AND COMP 74A(72)",
+    "Block": "7",
+    "Room": "137",
+    "Teacher": "Ritter, Bryan"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LANG AND COMP 74A(77)",
+    "Block": "1",
+    "Room": "140",
+    "Teacher": "Crabtree, Stephanie"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LANG AND COMP 74A(77)",
+    "Block": "5",
+    "Room": "140",
+    "Teacher": "Crabtree, Stephanie"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LANG AND COMP 75A(73)",
+    "Block": "3",
+    "Room": "214",
+    "Teacher": "Yuan, David"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LANG AND COMP 75A(77)",
+    "Block": "4",
+    "Room": "136",
+    "Teacher": "Moffitt, Jennifer"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LANG AND COMP 75A(77)",
+    "Block": "6",
+    "Room": "136",
+    "Teacher": "Moffitt, Jennifer"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LIT AND COMP 80A(86)",
+    "Block": "4",
+    "Room": "139",
+    "Teacher": "Carney, Staci"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LIT AND COMP 80A(86)",
+    "Block": "6",
+    "Room": "139",
+    "Teacher": "Carney, Staci"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LIT AND COMP 83A(84)",
+    "Block": "2",
+    "Room": "216",
+    "Teacher": "Recht, Sydney"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LIT AND COMP 83A(84)",
+    "Block": "3",
+    "Room": "134",
+    "Teacher": "Galang, Lorna"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LIT AND COMP 83A(84)",
+    "Block": "4",
+    "Room": "216",
+    "Teacher": "Recht, Sydney"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "AP ENGLISH LIT AND COMP 83A(84)",
+    "Block": "5",
+    "Room": "134",
+    "Teacher": "Galang, Lorna"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "COMEDY & SATIRE",
+    "Block": "1",
+    "Room": "139",
+    "Teacher": "Carney, Staci"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "COMEDY & SATIRE",
+    "Block": "3",
+    "Room": "142",
+    "Teacher": "Lamarre, Tim"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "COMEDY & SATIRE",
+    "Block": "5",
+    "Room": "142",
+    "Teacher": "Lamarre, Tim"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "COMEDY & SATIRE",
+    "Block": "7",
+    "Room": "139",
+    "Teacher": "Carney, Staci"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "COMM & WRITING",
+    "Block": "4",
+    "Room": "215",
+    "Teacher": "Arriaga, Adela"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "CRITICAL WRITING A",
+    "Block": "1",
+    "Room": "133",
+    "Teacher": "Williams, Sam"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "CRITICAL WRITING A",
+    "Block": "2",
+    "Room": "139",
+    "Teacher": "Bamberger, Terry"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "CRITICAL WRITING A",
+    "Block": "2",
+    "Room": "S108",
+    "Teacher": "Gustafson, Eric"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "CRITICAL WRITING A",
+    "Block": "3",
+    "Room": "219",
+    "Teacher": "Hereford, David"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "CRITICAL WRITING A",
+    "Block": "4",
+    "Room": "S108",
+    "Teacher": "Gustafson, Eric"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "CRITICAL WRITING A",
+    "Block": "5",
+    "Room": "219",
+    "Teacher": "Hereford, David"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "CRITICAL WRITING A",
+    "Block": "6",
+    "Room": "S108",
+    "Teacher": "Gustafson, Eric"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "CRITICAL WRITING A",
+    "Block": "7",
+    "Room": "133",
+    "Teacher": "Williams, Sam"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "1",
+    "Room": "211",
+    "Teacher": "Henares, Nicole"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "1",
+    "Room": "219",
+    "Teacher": "Hereford, David"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "1",
+    "Room": "214",
+    "Teacher": "Mitchell, Kristen"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "2",
+    "Room": "142",
+    "Teacher": "Lamarre, Tim"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "2",
+    "Room": "214",
+    "Teacher": "Moussavi, Sam"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "2",
+    "Room": "133",
+    "Teacher": "Williams, Sam"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "3",
+    "Room": "211",
+    "Teacher": "Henares, Nicole"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "3",
+    "Room": "217B",
+    "Teacher": "Park, Claudia"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "3",
+    "Room": "216",
+    "Teacher": "Torres, Anne"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "4",
+    "Room": "134",
+    "Teacher": "Moussavi, Sam"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "4",
+    "Room": "133",
+    "Teacher": "Williams, Sam"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "5",
+    "Room": "136",
+    "Teacher": "Mitchell, Kristen"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "5",
+    "Room": "217B",
+    "Teacher": "Park, Claudia"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "5",
+    "Room": "216",
+    "Teacher": "Torres, Anne"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "6",
+    "Room": "135",
+    "Teacher": "Bamberger, Terry"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "6",
+    "Room": "142",
+    "Teacher": "Lamarre, Tim"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "6",
+    "Room": "133",
+    "Teacher": "Williams, Sam"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "7",
+    "Room": "211",
+    "Teacher": "Henares, Nicole"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "7",
+    "Room": "219",
+    "Teacher": "Hereford, David"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "7",
+    "Room": "137",
+    "Teacher": "Mitchell, Kristen"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "7",
+    "Room": "136",
+    "Teacher": "Park, Claudia"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "8",
+    "Room": "214",
+    "Teacher": "Bamberger, Terry"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 1",
+    "Block": "8",
+    "Room": "142",
+    "Teacher": "Lamarre, Tim"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2A",
+    "Block": "1",
+    "Room": "215",
+    "Teacher": "Arriaga, Adela"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2A",
+    "Block": "2",
+    "Room": "215",
+    "Teacher": "Arriaga, Adela"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2A",
+    "Block": "2",
+    "Room": "141",
+    "Teacher": "Freeland, Anne"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2A",
+    "Block": "3",
+    "Room": "139",
+    "Teacher": "Santiago, Meredith"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2A",
+    "Block": "4",
+    "Room": "217B",
+    "Teacher": "Yu, Samantha"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2A",
+    "Block": "4",
+    "Room": "214",
+    "Teacher": "Yuan, David"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2A",
+    "Block": "5",
+    "Room": "139",
+    "Teacher": "Santiago, Meredith"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2A",
+    "Block": "6",
+    "Room": "215",
+    "Teacher": "Arriaga, Adela"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2A",
+    "Block": "6",
+    "Room": "214",
+    "Teacher": "Yuan, David"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2A",
+    "Block": "7",
+    "Room": "215",
+    "Teacher": "Arriaga, Adela"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2A",
+    "Block": "7",
+    "Room": "216",
+    "Teacher": "Freeland, Anne"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2A",
+    "Block": "8",
+    "Room": "141",
+    "Teacher": "Freeland, Anne"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2B",
+    "Block": "1",
+    "Room": "137",
+    "Teacher": "Park, Claudia"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2B",
+    "Block": "2",
+    "Room": "219",
+    "Teacher": "Torres, Anne"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2B",
+    "Block": "2",
+    "Room": "217B",
+    "Teacher": "Yu, Samantha"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2B",
+    "Block": "3",
+    "Room": "215",
+    "Teacher": "Bamberger, Terry"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2B",
+    "Block": "3",
+    "Room": "141",
+    "Teacher": "Freeland, Anne"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2B",
+    "Block": "4",
+    "Room": "219",
+    "Teacher": "Park, Claudia"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2B",
+    "Block": "5",
+    "Room": "141",
+    "Teacher": "Freeland, Anne"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2B",
+    "Block": "6",
+    "Room": "216",
+    "Teacher": "Recht, Sydney"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2B",
+    "Block": "6",
+    "Room": "217B",
+    "Teacher": "Yu, Samantha"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2B",
+    "Block": "7",
+    "Room": "214",
+    "Teacher": "Bamberger, Terry"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2B",
+    "Block": "7",
+    "Room": "141",
+    "Teacher": "Torres, Anne"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "ENGLISH 2B",
+    "Block": "8",
+    "Room": "216",
+    "Teacher": "Torres, Anne"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "EPIC & MYTH",
+    "Block": "3",
+    "Room": "140",
+    "Teacher": "Crabtree, Stephanie"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "EPIC & MYTH",
+    "Block": "4",
+    "Room": "135",
+    "Teacher": "Bajet, Lael"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "EPIC & MYTH",
+    "Block": "7",
+    "Room": "140",
+    "Teacher": "Crabtree, Stephanie"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "EPIC & MYTH",
+    "Block": "8",
+    "Room": "135",
+    "Teacher": "Bajet, Lael"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "JOURNALISM 1 A",
+    "Block": "2",
+    "Room": "S108",
+    "Teacher": "Gustafson, Eric"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "JOURNALISM 1 A",
+    "Block": "4",
+    "Room": "S108",
+    "Teacher": "Gustafson, Eric"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "JOURNALISM 1 A",
+    "Block": "6",
+    "Room": "S108",
+    "Teacher": "Gustafson, Eric"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "JOURNALISM 2 A",
+    "Block": "7",
+    "Room": "S108",
+    "Teacher": "Gustafson, Eric"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "JOURNALISM 2 A",
+    "Block": "8",
+    "Room": "S108",
+    "Teacher": "Gustafson, Eric"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "LITERATURE & PSYCHOLOGY",
+    "Block": "1",
+    "Room": "217B",
+    "Teacher": "Yu, Samantha"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "LITERATURE & PSYCHOLOGY",
+    "Block": "2",
+    "Room": "136",
+    "Teacher": "Moffitt, Jennifer"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "LITERATURE & PSYCHOLOGY",
+    "Block": "4",
+    "Room": "211",
+    "Teacher": "Henares, Nicole"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "LITERATURE & PSYCHOLOGY",
+    "Block": "6",
+    "Room": "211",
+    "Teacher": "Henares, Nicole"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "LITERATURE & PSYCHOLOGY",
+    "Block": "7",
+    "Room": "217B",
+    "Teacher": "Yu, Samantha"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "LITERATURE & PSYCHOLOGY",
+    "Block": "8",
+    "Room": "136",
+    "Teacher": "Moffitt, Jennifer"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "SHAKESPEARE",
+    "Block": "3",
+    "Room": "137",
+    "Teacher": "Ritter, Bryan"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "SHAKESPEARE",
+    "Block": "5",
+    "Room": "137",
+    "Teacher": "Ritter, Bryan"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "SHAKESPEARE",
+    "Block": "6",
+    "Room": "219",
+    "Teacher": "Hereford, David"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "THE NOVEL",
+    "Block": "2",
+    "Room": "134",
+    "Teacher": "Galang, Lorna"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "THE NOVEL",
+    "Block": "2",
+    "Room": "135",
+    "Teacher": "Mitchell, Kristen"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "THE NOVEL",
+    "Block": "4",
+    "Room": "141",
+    "Teacher": "Mitchell, Kristen"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "THE NOVEL",
+    "Block": "8",
+    "Room": "134",
+    "Teacher": "Galang, Lorna"
+  },
+  {
+    "Department Number": "3",
+    "Course Name": "YEARBOOK A",
+    "Block": "8",
+    "Room": "133",
+    "Teacher": "Ferrey, Christian"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "1",
+    "Room": "238",
+    "Teacher": "MALDONADO, A."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "1",
+    "Room": "244",
+    "Teacher": "PETRINI, K."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "2",
+    "Room": "230",
+    "Teacher": "FUREY, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "2",
+    "Room": "218",
+    "Teacher": "KOMLOS, L."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "2",
+    "Room": "244",
+    "Teacher": "PETRINI, K."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "2",
+    "Room": "259",
+    "Teacher": "STARR, D"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "3",
+    "Room": "254",
+    "Teacher": "BELL, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "3",
+    "Room": "236",
+    "Teacher": "HANLON, E."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "3",
+    "Room": "238",
+    "Teacher": "MALDONADO, A."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "3",
+    "Room": "233",
+    "Teacher": "STAFF A"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "5",
+    "Room": "236",
+    "Teacher": "HANLON, E."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "5",
+    "Room": "255",
+    "Teacher": "JOHNSON, R."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "5",
+    "Room": "231",
+    "Teacher": "KLEIN, A"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "5",
+    "Room": "257",
+    "Teacher": "MAGSANAY, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "6",
+    "Room": "230",
+    "Teacher": "FUREY, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "6",
+    "Room": "218",
+    "Teacher": "KOMLOS, L."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "6",
+    "Room": "257",
+    "Teacher": "TUASON, J."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "7",
+    "Room": "236",
+    "Teacher": "HANLON, E."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "7",
+    "Room": "255",
+    "Teacher": "JOHNSON, R."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "7",
+    "Room": "257",
+    "Teacher": "MAGSANAY, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "8",
+    "Room": "257",
+    "Teacher": "TUASON, J."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "World History A",
+    "Block": "8",
+    "Room": "233",
+    "Teacher": "STAFF A"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "American Democracy",
+    "Block": "1",
+    "Room": "230",
+    "Teacher": "SLOAN, W."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "American Democracy",
+    "Block": "2",
+    "Room": "236",
+    "Teacher": "MARTIN, T."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "American Democracy",
+    "Block": "3",
+    "Room": "230",
+    "Teacher": "SLOAN, W."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "American Democracy",
+    "Block": "4",
+    "Room": "218",
+    "Teacher": "KOMLOS, L."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "American Democracy",
+    "Block": "5",
+    "Room": "238",
+    "Teacher": "MARTIN, T."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "American Democracy",
+    "Block": "6",
+    "Room": "236",
+    "Teacher": "MICHELS, A."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "American Democracy",
+    "Block": "6",
+    "Room": "244",
+    "Teacher": "WORTH, J."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "American Democracy",
+    "Block": "7",
+    "Room": "244",
+    "Teacher": "WORTH, J."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "American Democracy",
+    "Block": "8",
+    "Room": "218",
+    "Teacher": "KOMLOS, L."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "ECONOMICS",
+    "Block": "1",
+    "Room": "253",
+    "Teacher": "LIN, S."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "ECONOMICS",
+    "Block": "3",
+    "Room": "244",
+    "Teacher": "WORTH, J."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "ECONOMICS",
+    "Block": "4",
+    "Room": "238",
+    "Teacher": "MARTIN, T."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "ECONOMICS",
+    "Block": "5",
+    "Room": "244",
+    "Teacher": "WORTH, J."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "ECONOMICS",
+    "Block": "6",
+    "Room": "238",
+    "Teacher": "MARTIN, T."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "ECONOMICS",
+    "Block": "8",
+    "Room": "238",
+    "Teacher": "MARTIN, T."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP U.S. GOVT & POL",
+    "Block": "1",
+    "Room": "254",
+    "Teacher": "UNGAR, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP U.S. GOVT & POL",
+    "Block": "4",
+    "Room": "254",
+    "Teacher": "UNGAR, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP U.S. GOVT & POL",
+    "Block": "7",
+    "Room": "230",
+    "Teacher": "SLOAN, W."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP MICROECONOMICS",
+    "Block": "1",
+    "Room": "255",
+    "Teacher": "JOHNSON, R."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP MICROECONOMICS",
+    "Block": "2",
+    "Room": "255",
+    "Teacher": "LUBENOW, K."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP MICROECONOMICS",
+    "Block": "3",
+    "Room": "255",
+    "Teacher": "JOHNSON, R."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP MICROECONOMICS",
+    "Block": "5",
+    "Room": "212",
+    "Teacher": "SHIMMON, S."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP MICROECONOMICS",
+    "Block": "6",
+    "Room": "255",
+    "Teacher": "LUBENOW, K."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP MICROECONOMICS",
+    "Block": "7",
+    "Room": "212",
+    "Teacher": "SHIMMON, S."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP MICROECONOMICS",
+    "Block": "8",
+    "Room": "255",
+    "Teacher": "LUBENOW, K."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP EUROPEAN HISTORY A",
+    "Block": "1",
+    "Room": "233",
+    "Teacher": "SUTILOVIC, Z"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP EUROPEAN HISTORY A",
+    "Block": "7",
+    "Room": "233",
+    "Teacher": "SUTILOVIC, Z"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP US HISTORY A",
+    "Block": "1",
+    "Room": "231",
+    "Teacher": "KLEIN, A"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP US HISTORY A",
+    "Block": "2",
+    "Room": "257",
+    "Teacher": "TUASON, J."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP US HISTORY A",
+    "Block": "2",
+    "Room": "253",
+    "Teacher": "STAFF A"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP US HISTORY A",
+    "Block": "3",
+    "Room": "231",
+    "Teacher": "KLEIN, A"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP US HISTORY A",
+    "Block": "4",
+    "Room": "230",
+    "Teacher": "FUREY, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP US HISTORY A",
+    "Block": "4",
+    "Room": "257",
+    "Teacher": "TUASON, J."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP US HISTORY A",
+    "Block": "5",
+    "Room": "218",
+    "Teacher": "MALDONADO, A."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP US HISTORY A",
+    "Block": "5",
+    "Room": "233",
+    "Teacher": "STAFF A"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP US HISTORY A",
+    "Block": "7",
+    "Room": "231",
+    "Teacher": "KLEIN, A"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP US HISTORY A",
+    "Block": "7",
+    "Room": "238",
+    "Teacher": "MALDONADO, A."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP US HISTORY A",
+    "Block": "8",
+    "Room": "230",
+    "Teacher": "FUREY, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP WORLD HISTORY A",
+    "Block": "1",
+    "Room": "257",
+    "Teacher": "MAGSANAY, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP WORLD HISTORY A",
+    "Block": "2",
+    "Room": "254",
+    "Teacher": "BELL, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP WORLD HISTORY A",
+    "Block": "3",
+    "Room": "257",
+    "Teacher": "MAGSANAY, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP WORLD HISTORY A",
+    "Block": "6",
+    "Room": "254",
+    "Teacher": "BELL, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP WORLD HISTORY A",
+    "Block": "8",
+    "Room": "254",
+    "Teacher": "BELL, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP HUMAN GEOGRAPHY",
+    "Block": "4",
+    "Room": "244",
+    "Teacher": "PETRINI, K."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP HUMAN GEOGRAPHY",
+    "Block": "7",
+    "Room": "218",
+    "Teacher": "PETRINI, K."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP PSYCHOLOGY A",
+    "Block": "1",
+    "Room": "212",
+    "Teacher": "SHIMMON, S."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP PSYCHOLOGY A",
+    "Block": "2",
+    "Room": "212",
+    "Teacher": "KWONG-BALLARD"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP PSYCHOLOGY A",
+    "Block": "2",
+    "Room": "236",
+    "Teacher": "MICHELS, A."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP PSYCHOLOGY A",
+    "Block": "3",
+    "Room": "253",
+    "Teacher": "LIN, S."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP PSYCHOLOGY A",
+    "Block": "3",
+    "Room": "212",
+    "Teacher": "SHIMMON, S."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP PSYCHOLOGY A",
+    "Block": "4",
+    "Room": "212",
+    "Teacher": "KWONG-BALLARD"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP PSYCHOLOGY A",
+    "Block": "4",
+    "Room": "255",
+    "Teacher": "LUBENOW, K."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP PSYCHOLOGY A",
+    "Block": "4",
+    "Room": "236",
+    "Teacher": "MICHELS, A."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP PSYCHOLOGY A",
+    "Block": "5",
+    "Room": "253",
+    "Teacher": "LIN, S."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP PSYCHOLOGY A",
+    "Block": "6",
+    "Room": "212",
+    "Teacher": "KWONG-BALLARD"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP PSYCHOLOGY A",
+    "Block": "7",
+    "Room": "253",
+    "Teacher": "LIN, S."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "AP PSYCHOLOGY A",
+    "Block": "8",
+    "Room": "236",
+    "Teacher": "MICHELS, A."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "ETHNIC STUDIES A",
+    "Block": "3",
+    "Room": "218",
+    "Teacher": "KOMLOS, L."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "U.S. HISTORY A",
+    "Block": "1",
+    "Room": "259",
+    "Teacher": "STARR, D"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "U.S. HISTORY A",
+    "Block": "2",
+    "Room": "231",
+    "Teacher": "HANLON, E."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "U.S. HISTORY A",
+    "Block": "2",
+    "Room": "233",
+    "Teacher": "SUTILOVIC, Z"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "U.S. HISTORY A",
+    "Block": "3",
+    "Room": "259",
+    "Teacher": "STARR, D"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "U.S. HISTORY A",
+    "Block": "4",
+    "Room": "233",
+    "Teacher": "SUTILOVIC, Z"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "U.S. HISTORY A",
+    "Block": "5",
+    "Room": "259",
+    "Teacher": "STARR, D"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "U.S. HISTORY A",
+    "Block": "5",
+    "Room": "254",
+    "Teacher": "UNGAR, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "U.S. HISTORY A",
+    "Block": "7",
+    "Room": "259",
+    "Teacher": "STARR, D"
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "U.S. HISTORY A",
+    "Block": "7",
+    "Room": "254",
+    "Teacher": "UNGAR, M."
+  },
+  {
+    "Department Number": "4",
+    "Course Name": "U.S. HISTORY A",
+    "Block": "8",
+    "Room": "231",
+    "Teacher": "HANLON, E."
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Vocal Music 2A",
+    "Block": "3",
+    "Room": "70",
+    "Teacher": "Chan"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Vocal Music 1A",
+    "Block": "4",
+    "Room": "70",
+    "Teacher": "Chan"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Vocal Music 1A",
+    "Block": "6",
+    "Room": "70",
+    "Teacher": "Chan"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Vocal Music 3A",
+    "Block": "7",
+    "Room": "70",
+    "Teacher": "Chan"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Vocal Music 1A",
+    "Block": "8",
+    "Room": "70",
+    "Teacher": "Chan"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Symphony Orchestra 1A",
+    "Block": "2",
+    "Room": "70",
+    "Teacher": "Hollander"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Orchestra 3A",
+    "Block": "3",
+    "Room": "71",
+    "Teacher": "Hollander"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "AP Music Theory A",
+    "Block": "4",
+    "Room": "74",
+    "Teacher": "Hollander"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Orchestra 2A",
+    "Block": "6",
+    "Room": "71",
+    "Teacher": "Hollander"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Art A",
+    "Block": "1",
+    "Room": "75",
+    "Teacher": "Janssen"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Art Advanced A",
+    "Block": "2",
+    "Room": "75",
+    "Teacher": "Janssen"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "AP Studio Art: 3-D Design A",
+    "Block": "4",
+    "Room": "75",
+    "Teacher": "Janssen"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Art A",
+    "Block": "7",
+    "Room": "75",
+    "Teacher": "Janssen"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Dance 1A",
+    "Block": "3",
+    "Room": "DS",
+    "Teacher": "Jones"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Dance 2A",
+    "Block": "4",
+    "Room": "DS",
+    "Teacher": "Jones"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Dance 1A",
+    "Block": "5",
+    "Room": "DS",
+    "Teacher": "Jones"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Dance 3A",
+    "Block": "7",
+    "Room": "DS",
+    "Teacher": "Jones"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Dance Production A",
+    "Block": "8",
+    "Room": "DS",
+    "Teacher": "Jones"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Photography 1A",
+    "Block": "1",
+    "Room": "76",
+    "Teacher": "Pollak"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Photography 3A",
+    "Block": "1",
+    "Room": "76",
+    "Teacher": "Pollak"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Art In Architecture A",
+    "Block": "2",
+    "Room": "76",
+    "Teacher": "Pollak"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Art In Architecture Advanced A",
+    "Block": "2",
+    "Room": "76",
+    "Teacher": "Pollak"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Photography 1A",
+    "Block": "4",
+    "Room": "76",
+    "Teacher": "Pollak"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Photography 3A",
+    "Block": "4",
+    "Room": "76",
+    "Teacher": "Pollak"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Art In Architecture A",
+    "Block": "5",
+    "Room": "76",
+    "Teacher": "Pollak"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Art In Architecture Advanced A",
+    "Block": "5",
+    "Room": "76",
+    "Teacher": "Pollak"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Ceramics 1A",
+    "Block": "1",
+    "Room": "S01",
+    "Teacher": "Reller"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Ceramics 1A",
+    "Block": "2",
+    "Room": "S01",
+    "Teacher": "Reller"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Ceramics 1A",
+    "Block": "4",
+    "Room": "S01",
+    "Teacher": "Reller"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Ceramics 1A",
+    "Block": "7",
+    "Room": "S01",
+    "Teacher": "Reller"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Ceramics 1A",
+    "Block": "6",
+    "Room": "S01",
+    "Teacher": "Reller"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Ceramics 1B",
+    "Block": "6",
+    "Room": "S01",
+    "Teacher": "Reller"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Ceramics 2A",
+    "Block": "6",
+    "Room": "S01",
+    "Teacher": "Reller"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Ceramics 2B",
+    "Block": "6",
+    "Room": "S01",
+    "Teacher": "Reller"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Ceramics 3A",
+    "Block": "6",
+    "Room": "S01",
+    "Teacher": "Reller"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Drama 1A",
+    "Block": "5",
+    "Room": "110",
+    "Teacher": "Ullman"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Drama 1A",
+    "Block": "3",
+    "Room": "110",
+    "Teacher": "Ullman"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Drama 1B",
+    "Block": "2",
+    "Room": "110",
+    "Teacher": "Ullman"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Drama 2A",
+    "Block": "4",
+    "Room": "110",
+    "Teacher": "Ullman"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Drama 3B",
+    "Block": "6",
+    "Room": "110",
+    "Teacher": "Ullman"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Drama 3A",
+    "Block": "6",
+    "Room": "110",
+    "Teacher": "Ullman"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Musical Theater 4",
+    "Block": "12",
+    "Room": "110",
+    "Teacher": "Ullman"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Theater Tech 2A",
+    "Block": "7",
+    "Room": "CCA",
+    "Teacher": "Ullman"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Theater Tech 3A",
+    "Block": "7",
+    "Room": "CCA",
+    "Teacher": "Ullman"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Theater Tech 1A",
+    "Block": "8",
+    "Room": "CCA",
+    "Teacher": "Ullman"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Symphonic Band A",
+    "Block": "2",
+    "Room": "71",
+    "Teacher": "Wagner"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Guitar 1A",
+    "Block": "4",
+    "Room": "71",
+    "Teacher": "Wagner"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Band 3A",
+    "Block": "5",
+    "Room": "71",
+    "Teacher": "Wagner"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Jazz Band A",
+    "Block": "7",
+    "Room": "71",
+    "Teacher": "Wagner"
+  },
+  {
+    "Department Number": "5",
+    "Course Name": "Piano Lab 1A",
+    "Block": "8",
+    "Room": "74",
+    "Teacher": "Wagner"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 1A",
+    "Block": "3",
+    "Room": "W108",
+    "Teacher": "Danforth"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 1A",
+    "Block": "6",
+    "Room": "W108",
+    "Teacher": "Danforth"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 1A",
+    "Block": "7",
+    "Room": "W108",
+    "Teacher": "Danforth"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 1A",
+    "Block": "5",
+    "Room": "W111",
+    "Teacher": "Zhang"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 2A",
+    "Block": "1",
+    "Room": "W106",
+    "Teacher": "Li"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 2A",
+    "Block": "2",
+    "Room": "W106",
+    "Teacher": "Li"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 2A",
+    "Block": "6",
+    "Room": "W106",
+    "Teacher": "Li"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 2A",
+    "Block": "3",
+    "Room": "W112",
+    "Teacher": "Pang"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 2A",
+    "Block": "4",
+    "Room": "W112",
+    "Teacher": "Pang"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 3A",
+    "Block": "2",
+    "Room": "W107",
+    "Teacher": "Liang"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 3A",
+    "Block": "7",
+    "Room": "W107",
+    "Teacher": "Liang"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 3A Honors",
+    "Block": "2",
+    "Room": "W108",
+    "Teacher": "Danforth"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 3A Honors",
+    "Block": "4",
+    "Room": "W106",
+    "Teacher": "Li"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Chinese 3A Honors",
+    "Block": "7",
+    "Room": "W106",
+    "Teacher": "Li"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "AP Chinese Language and Culture A*",
+    "Block": "1",
+    "Room": "W104",
+    "Teacher": "Zhang"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "AP Chinese Language and Culture A*",
+    "Block": "2",
+    "Room": "W111",
+    "Teacher": "Zhang"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "AP Chinese Language and Culture A*",
+    "Block": "7",
+    "Room": "W111",
+    "Teacher": "Zhang"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "AP Chinese Language and Culture A*",
+    "Block": "3",
+    "Room": "W107",
+    "Teacher": "Liang"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "AP Chinese Language and Culture A*",
+    "Block": "8",
+    "Room": "W107",
+    "Teacher": "Liang"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "French 1A",
+    "Block": "5",
+    "Room": "W112",
+    "Teacher": "Pang"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "French 1A",
+    "Block": "7",
+    "Room": "W112",
+    "Teacher": "Pang"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "French 2A",
+    "Block": "1",
+    "Room": "W110",
+    "Teacher": "Staff"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "French 2A",
+    "Block": "3",
+    "Room": "W107",
+    "Teacher": "Staff"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "French 3A Honors",
+    "Block": "4",
+    "Room": "W111",
+    "Teacher": "Raya"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Hebrew 1A",
+    "Block": "4",
+    "Room": "W108",
+    "Teacher": "Horsky"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Hebrew 2A",
+    "Block": "4",
+    "Room": "W108",
+    "Teacher": "Horsky"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Hebrew 3A",
+    "Block": "5",
+    "Room": "W108",
+    "Teacher": "Horsky"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Hebrew 4A",
+    "Block": "5",
+    "Room": "W108",
+    "Teacher": "Horsky"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Italian 1A",
+    "Block": "2",
+    "Room": "W110",
+    "Teacher": "Pelagatti"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Italian 1A",
+    "Block": "8",
+    "Room": "W103",
+    "Teacher": "Cadoppi"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Italian 2A",
+    "Block": "6",
+    "Room": "W110",
+    "Teacher": "Pelagatti"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Italian 3A",
+    "Block": "5",
+    "Room": "W110",
+    "Teacher": "Pelagatti"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Italian 3A",
+    "Block": "8",
+    "Room": "W110",
+    "Teacher": "Pelagatti"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Italian 3A Honors",
+    "Block": "5",
+    "Room": "W110",
+    "Teacher": "Pelagatti"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Italian 3A Honors",
+    "Block": "8",
+    "Room": "W110",
+    "Teacher": "Pelagatti"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Italian 4A Honors",
+    "Block": "4",
+    "Room": "W110",
+    "Teacher": "Pelagatti"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Japanese 1A",
+    "Block": "2",
+    "Room": "W105",
+    "Teacher": "Wong"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Japanese 1A",
+    "Block": "8",
+    "Room": "W105",
+    "Teacher": "Wong"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Japanese 2A",
+    "Block": "2",
+    "Room": "W102",
+    "Teacher": "Okada"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Japanese 2A",
+    "Block": "3",
+    "Room": "W102",
+    "Teacher": "Okada"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Japanese 3A Honors",
+    "Block": "5",
+    "Room": "W105",
+    "Teacher": "Wong"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Japanese 3A Honors",
+    "Block": "8",
+    "Room": "W102",
+    "Teacher": "Okada"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "AP Japanese Language Culture A*",
+    "Block": "5",
+    "Room": "W102",
+    "Teacher": "Okada"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Korean 1A",
+    "Block": "1",
+    "Room": "W105",
+    "Teacher": "Park"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Korean 1A",
+    "Block": "7",
+    "Room": "W105",
+    "Teacher": "Park"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Korean 2A",
+    "Block": "4",
+    "Room": "W105",
+    "Teacher": "Park"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Korean 2A",
+    "Block": "6",
+    "Room": "W105",
+    "Teacher": "Park"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Korean 3AH",
+    "Block": "3",
+    "Room": "W105",
+    "Teacher": "Park"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Korean 4AH",
+    "Block": "4",
+    "Room": "W105",
+    "Teacher": "Park"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Korean 4AH",
+    "Block": "6",
+    "Room": "W105",
+    "Teacher": "Park"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Latin 1A",
+    "Block": "2",
+    "Room": "W112",
+    "Teacher": "Huynh"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Latin 2A",
+    "Block": "1",
+    "Room": "W112",
+    "Teacher": "Huynh"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Latin 3A",
+    "Block": "4",
+    "Room": "W106",
+    "Teacher": "Huynh"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Latin AP",
+    "Block": "6",
+    "Room": "W102",
+    "Teacher": "Huynh"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 1A",
+    "Block": "2",
+    "Room": "W103",
+    "Teacher": "Cadoppi"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 1A",
+    "Block": "3",
+    "Room": "W103",
+    "Teacher": "Cadoppi"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 1A",
+    "Block": "5",
+    "Room": "W103",
+    "Teacher": "Cadoppi"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 1A",
+    "Block": "7",
+    "Room": "W103",
+    "Teacher": "Cadoppi"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 1A",
+    "Block": "6",
+    "Room": "W109",
+    "Teacher": "Lombardi"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 1A",
+    "Block": "8",
+    "Room": "W109",
+    "Teacher": "Lombardi"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 2A",
+    "Block": "3",
+    "Room": "W104",
+    "Teacher": "Ballbé"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 2A",
+    "Block": "4",
+    "Room": "W104",
+    "Teacher": "Ballbé"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 2A",
+    "Block": "7",
+    "Room": "W104",
+    "Teacher": "Ballbé"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 2A",
+    "Block": "8",
+    "Room": "W104",
+    "Teacher": "Ballbé"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 2A",
+    "Block": "2",
+    "Room": "W02",
+    "Teacher": "Ferrey"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 2A",
+    "Block": "6",
+    "Room": "W02",
+    "Teacher": "Ferrey"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 3A",
+    "Block": "2",
+    "Room": "W109",
+    "Teacher": "Lombardi"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 3A",
+    "Block": "3",
+    "Room": "W110",
+    "Teacher": "Lombardi"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 3A",
+    "Block": "5",
+    "Room": "W102",
+    "Teacher": "Lombardi"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 3A Honors",
+    "Block": "1",
+    "Room": "W109",
+    "Teacher": "Martinez"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 3A Honors",
+    "Block": "2",
+    "Room": "W104",
+    "Teacher": "Ballbé"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 3A Honors",
+    "Block": "3",
+    "Room": "W109",
+    "Teacher": "Martínez"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 3A Honors",
+    "Block": "7",
+    "Room": "W109",
+    "Teacher": "Martínez"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "Spanish 4A Honors",
+    "Block": "3",
+    "Room": "W02",
+    "Teacher": "Ferrey"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "AP Spanish Language and Culture A*",
+    "Block": "1",
+    "Room": "W111",
+    "Teacher": "Raya"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "AP Spanish Language and Culture A*",
+    "Block": "3",
+    "Room": "W111",
+    "Teacher": "Raya"
+  },
+  {
+    "Department Number": "6",
+    "Course Name": "AP Spanish Literature and Culture A*",
+    "Block": "5",
+    "Room": "W109",
+    "Teacher": "Martínez"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "1",
+    "Room": "GYM",
+    "Teacher": "Hosoda, Christine"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "1",
+    "Room": "Gym",
+    "Teacher": "Lopez, Juan"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "2",
+    "Room": "Gym",
+    "Teacher": "Barton. Maurice"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "2",
+    "Room": "Gym",
+    "Teacher": "Lopez, Juan"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "2",
+    "Room": "Gym",
+    "Teacher": "Welch, Jenna"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "2",
+    "Room": "Gym",
+    "Teacher": "Hosoda, Christine"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "3",
+    "Room": "Gym",
+    "Teacher": "Welch, Jenna"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "3",
+    "Room": "Gym",
+    "Teacher": "Hosoda, Christine"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "3",
+    "Room": "Gym",
+    "Teacher": "Barton. Maurice"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "3",
+    "Room": "Gym",
+    "Teacher": "Lopez, Juan"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "5",
+    "Room": "Gym",
+    "Teacher": "Gersten, Cambria"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "5",
+    "Room": "Gym",
+    "Teacher": "Hosoda, Christine"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "5",
+    "Room": "Gym",
+    "Teacher": "Taylor-Ray, Sascha"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "6",
+    "Room": "Gym",
+    "Teacher": "Barton. Maurice"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "6",
+    "Room": "Gym",
+    "Teacher": "Lopez, Juan"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "7",
+    "Room": "Gym",
+    "Teacher": "Gersten, Cambria"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "7",
+    "Room": "Gym",
+    "Teacher": "Barton. Maurice"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "7",
+    "Room": "Gym",
+    "Teacher": "Welch, Jenna"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "8",
+    "Room": "Gym",
+    "Teacher": "Welch, Jenna"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "PE 1 A",
+    "Block": "8",
+    "Room": "Gym",
+    "Teacher": "Gersten, Cambria"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "1",
+    "Room": "Gym",
+    "Teacher": "Taylor-Ray, Sascha"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "1",
+    "Room": "Gym",
+    "Teacher": "Ray, Robert"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "2",
+    "Room": "Gym",
+    "Teacher": "Geren, Thomas"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "2",
+    "Room": "Gym",
+    "Teacher": "Ray, Robert"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "3",
+    "Room": "Gym",
+    "Teacher": "Taylor-Ray, Sascha"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "3",
+    "Room": "Gym",
+    "Teacher": "Geren, Thomas"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "3",
+    "Room": "Gym",
+    "Teacher": "Taylor-Ray, Sascha"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "4",
+    "Room": "Gym",
+    "Teacher": "Geren, Thomas"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "4",
+    "Room": "Gym",
+    "Teacher": "Doherty, Terence"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "6",
+    "Room": "Gym",
+    "Teacher": "Doherty, Terence"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "7",
+    "Room": "Gym",
+    "Teacher": "Geren, Thomas"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "8",
+    "Room": "Gym",
+    "Teacher": "Barton. Maurice"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Fit4Life152A",
+    "Block": "8",
+    "Room": "Gym",
+    "Teacher": "Geren, Thomas"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "SWIMMING A",
+    "Block": "1",
+    "Room": "Gym",
+    "Teacher": "Doherty, Terence"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "RACKET SPORTS A",
+    "Block": "6",
+    "Room": "Gym",
+    "Teacher": "Hosoda, Christine"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "WEIGHT TRAINING A",
+    "Block": "6",
+    "Room": "Gym",
+    "Teacher": "Taylor-Ray, Sascha"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "BASKETBALL A",
+    "Block": "7",
+    "Room": "Gym",
+    "Teacher": "Ray, Robert"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "SOCCER A",
+    "Block": "7",
+    "Room": "Gym",
+    "Teacher": "Lopez, Juan"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "YOGA A",
+    "Block": "3",
+    "Room": "Gym",
+    "Teacher": "Doherty, Terence"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "YOGA A",
+    "Block": "6",
+    "Room": "Gym",
+    "Teacher": "Welch, Jenna"
+  },
+  {
+    "Department Number": "7",
+    "Course Name": "Athletic Director",
+    "Block": "8",
+    "Room": "Gym",
+    "Teacher": "Ray, Robert"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "LIFE SKILLS A",
+    "Block": "1",
+    "Room": "5",
+    "Teacher": "KIRAMICHYAN"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Community Based Work Exp A",
+    "Block": "2",
+    "Room": "5",
+    "Teacher": "KIRAMICHYAN"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Career Prep A",
+    "Block": "3",
+    "Room": "5",
+    "Teacher": "KIRAMICHYAN"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Career Work Experience A",
+    "Block": "4",
+    "Room": "5",
+    "Teacher": "KIRAMICHYAN"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JOA LEARNING A",
+    "Block": "5",
+    "Room": "5",
+    "Teacher": "KIRAMICHYAN"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "LIFE SKILLS A",
+    "Block": "2",
+    "Room": "S102",
+    "Teacher": "ESQUER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Career Prep A",
+    "Block": "3",
+    "Room": "S102",
+    "Teacher": "ESQUER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Career Work Experience A",
+    "Block": "6",
+    "Room": "S102",
+    "Teacher": "ESQUER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "LIFE SKILLS A",
+    "Block": "7",
+    "Room": "S102",
+    "Teacher": "ESQUER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Community Based Work Exp A",
+    "Block": "8",
+    "Room": "S102",
+    "Teacher": "ESQUER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Career Prep A",
+    "Block": "2",
+    "Room": "145",
+    "Teacher": "FREYMUTH"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "LIFE SKILLS A",
+    "Block": "4",
+    "Room": "145",
+    "Teacher": "FREYMUTH"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Reading",
+    "Block": "3",
+    "Room": "145",
+    "Teacher": "Freymuth"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Career Work Experience A",
+    "Block": "7",
+    "Room": "145",
+    "Teacher": "FREYMUTH"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Community Based Work Exp A",
+    "Block": "8",
+    "Room": "145",
+    "Teacher": "FREYMUTH"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "LIFE SKILLS A",
+    "Block": "2",
+    "Room": "130",
+    "Teacher": "NICKLESS"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Career Prep A",
+    "Block": "3",
+    "Room": "130",
+    "Teacher": "NICKLESS"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Career Work Experience A",
+    "Block": "4",
+    "Room": "130",
+    "Teacher": "NICKLESS"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "LIFE SKILLS A",
+    "Block": "7",
+    "Room": "130",
+    "Teacher": "NICKLESS"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Community Based Work Exp A",
+    "Block": "8",
+    "Room": "130",
+    "Teacher": "NICKLESS"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Skills Strategy A",
+    "Block": "1",
+    "Room": "330",
+    "Teacher": "Pollock"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Skills Strategy A",
+    "Block": "2",
+    "Room": "330",
+    "Teacher": "Pollock"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Skills Strategy A",
+    "Block": "3",
+    "Room": "330",
+    "Teacher": "Pollock"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Skills Strategy A",
+    "Block": "7",
+    "Room": "330",
+    "Teacher": "Pollock"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "English Support",
+    "Block": "2",
+    "Room": "S103",
+    "Teacher": "Puretz"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Reading",
+    "Block": "2",
+    "Room": "s103",
+    "Teacher": "PuretZ"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "English 1A",
+    "Block": "2",
+    "Room": "S103",
+    "Teacher": "PURETZ"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "English 2A",
+    "Block": "2",
+    "Room": "S103",
+    "Teacher": "PURETZ"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "American Lit A",
+    "Block": "4",
+    "Room": "S103",
+    "Teacher": "PURETZ"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Skills Strategy A",
+    "Block": "4",
+    "Room": "S103",
+    "Teacher": "PURETZ"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Eng Euro Lit A",
+    "Block": "3",
+    "Room": "S103",
+    "Teacher": "PURETZ"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "World History A",
+    "Block": "7",
+    "Room": "S103",
+    "Teacher": "PURETZ"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "US History A",
+    "Block": "7",
+    "Room": "S103",
+    "Teacher": "PURETZ"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Skills Strategy A",
+    "Block": "8",
+    "Room": "S-103",
+    "Teacher": "PURETZ"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "LIFE SKILLS A",
+    "Block": "1",
+    "Room": "146",
+    "Teacher": "SOLER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Community Based Work Exp A",
+    "Block": "2",
+    "Room": "146",
+    "Teacher": "SOLER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Career Prep A",
+    "Block": "3",
+    "Room": "146",
+    "Teacher": "SOLER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Career Work Experience A",
+    "Block": "4",
+    "Room": "146",
+    "Teacher": "SOLER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JOA LEARNING A",
+    "Block": "5",
+    "Room": "146",
+    "Teacher": "SOLER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "LIFE SKILLS A",
+    "Block": "2",
+    "Room": "41",
+    "Teacher": "BUCKLEY"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Career Prep A",
+    "Block": "3",
+    "Room": "41",
+    "Teacher": "BUCKLEY"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Career Work Experience A",
+    "Block": "6",
+    "Room": "41",
+    "Teacher": "BUCKLEY"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "LIFE SKILLS A",
+    "Block": "7",
+    "Room": "41",
+    "Teacher": "BUCKLEY"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Community Based Work Exp A",
+    "Block": "8",
+    "Room": "41",
+    "Teacher": "BUCKLEY"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "CCSS Algebra 2A",
+    "Block": "2",
+    "Room": "217A",
+    "Teacher": "STROTHER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Math",
+    "Block": "3",
+    "Room": "217A",
+    "Teacher": "Strother"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "College and Career",
+    "Block": "6",
+    "Room": "217A",
+    "Teacher": "STROTHER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Physics A",
+    "Block": "7",
+    "Room": "217A",
+    "Teacher": "STROTHER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Biology A",
+    "Block": "7",
+    "Room": "217A",
+    "Teacher": "STROTHER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "CCSS Geometry 1A",
+    "Block": "3",
+    "Room": "217A",
+    "Teacher": "STROTHER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Life Skills A",
+    "Block": "8",
+    "Room": "217A",
+    "Teacher": "STROTHER"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Skills Strategies A",
+    "Block": "7",
+    "Room": "330",
+    "Teacher": "La Mastra"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Skills Strategies A",
+    "Block": "6",
+    "Room": "330",
+    "Teacher": "La Mastra"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Critical Thinking Social Change 1A (Pee0r6s019A)",
+    "Block": "3",
+    "Room": "251",
+    "Teacher": "HORN"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Critical Thinking Social Change 1A (Pee0r6s110A)",
+    "Block": "4",
+    "Room": "251",
+    "Teacher": "HORN"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Critical Thinking Social Change 1A (Pee0r6s111A)",
+    "Block": "7",
+    "Room": "251",
+    "Teacher": "HORN"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "CTSC Leadership (Peers Leadership)",
+    "Block": "8",
+    "Room": "251",
+    "Teacher": "HORN"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Health Education",
+    "Block": "2",
+    "Room": "W02",
+    "Teacher": "COLE"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Health Education",
+    "Block": "3",
+    "Room": "W02",
+    "Teacher": "COLE"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Health Education",
+    "Block": "3",
+    "Room": "S106",
+    "Teacher": "BROOKS"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Health Education",
+    "Block": "4",
+    "Room": "W02",
+    "Teacher": "COLE"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Health Education",
+    "Block": "5",
+    "Room": "S106",
+    "Teacher": "BROOKS"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Health Education",
+    "Block": "6",
+    "Room": "W02",
+    "Teacher": "COLE"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Health Education",
+    "Block": "7",
+    "Room": "S106",
+    "Teacher": "BROOKS"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Health Education",
+    "Block": "8",
+    "Room": "W104",
+    "Teacher": "COLE"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC Drill LabA",
+    "Block": "11",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC Ldrs Lab A",
+    "Block": "11",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 1A",
+    "Block": "5",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 1A",
+    "Block": "6",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 1A",
+    "Block": "7",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 1A",
+    "Block": "8",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 1B",
+    "Block": "5",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 1B",
+    "Block": "6",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 1B",
+    "Block": "7",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 1B",
+    "Block": "8",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 2A",
+    "Block": "5",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 2A",
+    "Block": "6",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 2A",
+    "Block": "7",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 2A",
+    "Block": "8",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 2B",
+    "Block": "5",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 2B",
+    "Block": "6",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 2B",
+    "Block": "7",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 2B",
+    "Block": "8",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 3A",
+    "Block": "5",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 3A",
+    "Block": "6",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 3A",
+    "Block": "7",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 3A",
+    "Block": "8",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 3B",
+    "Block": "5",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 3B",
+    "Block": "6",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 3B",
+    "Block": "7",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 3B",
+    "Block": "8",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 4A",
+    "Block": "5",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 4A",
+    "Block": "6",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 4A",
+    "Block": "7",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 4A",
+    "Block": "8",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 4B",
+    "Block": "5",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 4B",
+    "Block": "6",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 4B",
+    "Block": "7",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "JROTC 4B",
+    "Block": "8",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "PEIS 1A",
+    "Block": "13",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "PEIS 2A",
+    "Block": "13",
+    "Room": "Range",
+    "Teacher": "Bullard"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1A",
+    "Block": "1",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1A",
+    "Block": "2",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1A",
+    "Block": "3",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1A",
+    "Block": "4",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1A",
+    "Block": "5",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1A",
+    "Block": "6",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1A",
+    "Block": "7",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1A",
+    "Block": "8",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1B",
+    "Block": "1",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1B",
+    "Block": "2",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1B",
+    "Block": "3",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1B",
+    "Block": "4",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1B",
+    "Block": "5",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1B",
+    "Block": "6",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1B",
+    "Block": "7",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 1B",
+    "Block": "8",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2A",
+    "Block": "1",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2A",
+    "Block": "2",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2A",
+    "Block": "3",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2A",
+    "Block": "4",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2A",
+    "Block": "5",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2A",
+    "Block": "6",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2A",
+    "Block": "7",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2A",
+    "Block": "8",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2B",
+    "Block": "1",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2B",
+    "Block": "2",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2B",
+    "Block": "3",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2B",
+    "Block": "4",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2B",
+    "Block": "5",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2B",
+    "Block": "6",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2B",
+    "Block": "7",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Library Training 2B",
+    "Block": "8",
+    "Room": "Library",
+    "Teacher": "Sasso"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Leadership 1A (LSA/SBC)",
+    "Block": "6",
+    "Room": "80A",
+    "Teacher": "Staff T"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Lunch for Sophomres",
+    "Block": "5",
+    "Room": "Café",
+    "Teacher": "Yee"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Lunch for Juniors",
+    "Block": "6",
+    "Room": "Café",
+    "Teacher": "Yee"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Lunch for Seniors",
+    "Block": "4",
+    "Room": "Café",
+    "Teacher": "Yee"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Lunch for Seniors",
+    "Block": "5",
+    "Room": "Café",
+    "Teacher": "Yee"
+  },
+  {
+    "Department Number": "8",
+    "Course Name": "Lunch for Seniors",
+    "Block": "6",
+    "Room": "Café",
+    "Teacher": "Yee"
+  }]
