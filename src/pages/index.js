@@ -8,7 +8,6 @@ import Courses from '../components/courses';
 import Schedules from '../components/schedules';
 
 import '../pages/index.css';
-import Changelog from '../components/changelog';
 
 export default class IndexPage extends React.Component {
   constructor() {
