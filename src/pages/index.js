@@ -3,6 +3,7 @@ import LoadingOverlay from 'react-loading-overlay';
 
 import Layout from '../components/layout';
 import EmbeddedGist from '../components/embeddedgist';
+import Changelog from '../components/changelog'
 import Courses from '../components/courses';
 import Schedules from '../components/schedules';
 
@@ -29,7 +30,8 @@ export default class IndexPage extends React.Component {
         text="Loading..."
       >
         <Layout>
-          <EmbeddedGist gist="areyoualex/32570ce054822f8eb855095ec615baca" file="changelog.md"></EmbeddedGist>
+          {/* <EmbeddedGist gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"></EmbeddedGist> */}
+          <Changelog></Changelog>
           <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
           <Schedules schedules={this.state.schedules} />
         </Layout>
