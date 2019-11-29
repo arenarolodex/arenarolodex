@@ -42,26 +42,26 @@ exports.updateSeats = functions.https.onRequest((req, res) => {
         "English":{},
         "Social Studies":{},
         "VPA":{},
-        "World Language":{},
-        "PE":{},
-        "Other":{},
+        "World Languages":{},
+        "Physical Education":{},
+        "Other/Learning Services":{},
         "Lunch":{}
       };
       let indexDept = [
-        {lastIndex:110, dept:"Math"},
-        {lastIndex:197, dept:"Science"},
-        {lastIndex:299, dept:"English"},
-        {lastIndex:390, dept:"Social Studies"},
-        {lastIndex:440, dept:"VPA"},
-        {lastIndex:518, dept:"World Language"},
-        {lastIndex:559, dept:"PE"},
-        {lastIndex:610, dept:"Other"},
-        {lastIndex:611, dept:"Lunch"},
-        {lastIndex:626, dept:"Other"},
-        {lastIndex:628, dept:"Lunch"},
-        {lastIndex:647, dept:"Other"},
-        {lastIndex:649, dept:"Lunch"},
-        {lastIndex:newData.length, dept:"Other"}
+        {lastIndex:114, dept:"Math"},
+        {lastIndex:200, dept:"Science"},
+        {lastIndex:302, dept:"English"},
+        {lastIndex:395, dept:"Social Studies"},
+        {lastIndex:447, dept:"VPA"},
+        {lastIndex:522, dept:"World Languages"},
+        {lastIndex:565, dept:"Physical Education"},
+        {lastIndex:603, dept:"Other/Learning Services"},
+        {lastIndex:604, dept:"Lunch"},
+        {lastIndex:622, dept:"Other/Learning Services"},
+        {lastIndex:623, dept:"Lunch"},
+        {lastIndex:635, dept:"Other/Learning Services"},
+        {lastIndex:636, dept:"Lunch"},
+        {lastIndex:newData.length, dept:"Other/Learning Services"}
       ];
       for (let index in newData) {
         // console.log(index+": "+newData[index][0]);
