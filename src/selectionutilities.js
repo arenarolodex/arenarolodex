@@ -140,8 +140,9 @@ export default class SelectionUtilities {
   //Getters ONLY for filling out CourseSelect components
   getDepartments() {
     if (!this.courses)
+      // this.courses = 'https://raw.githubusercontent.com/WhizardXD/arenarolodex/master/courseserver/newannouncer.json'
       return [
-        ['Could not get courses from '+this.coursesURL, '']
+        ['Could not get courses']
       ];
     var ret = [
       ['Choose a department', '']
@@ -154,7 +155,7 @@ export default class SelectionUtilities {
   getClasses(dept) {
     if (!this.courses)
       return [
-        ['Could not get courses from '+this.coursesURL, '']
+        ['Could not get courses']
       ];
     if (dept === '')
       return [
@@ -175,7 +176,7 @@ export default class SelectionUtilities {
   getTeachers(dept, className) {
     if (!this.courses)
       return [
-        ['Could not get courses from '+this.coursesURL, '']
+        ['Could not get courses']
       ];
     if (className === '')
       return [
@@ -200,7 +201,8 @@ export default class SelectionUtilities {
   getClassInfo(dept, className, teacher) {
     if (!this.courses)
       return [
-        ['Could not get courses from '+this.coursesURL, '']
+        ['Could not get courses']
+        // from '+this.coursesURL, ''
       ];
     if (teacher === '')
       return [
