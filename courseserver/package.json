@@ -8,5 +8,8 @@
     "start": "node index.js"
   },
   "author": "Alexander Ruiz <ruiz.alex0302@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "firebase-functions": "^3.3.0"
+  }
 }
