@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'arenarolodex',
+    url: 'arena.lowellhs.com'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
