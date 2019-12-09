@@ -22,7 +22,7 @@ export default class Courses extends React.Component {
     if (!value) value = false;
     this.props.loadedCallback(value);
   }
-  componentDidMount = () => {
+  async componentDidMount() {
     var courses = window.localStorage.getItem('courses');
     var freeblocks = window.localStorage.getItem('freeblocks');
     courses = courses ? JSON.parse(courses) : {};
@@ -34,6 +34,27 @@ export default class Courses extends React.Component {
     state.window = window;
     state.courses = courses;
     state.freeblocks = freeblocks;
+
+    var selection = Object.keys(courses)
+      .map((key) => ({
+        Class: this.state.courses[key].Class,
+        Subject: this.state.courses[key].Subject,
+        Teacher: this.state.courses[key].Teacher,
+        Block: this.state.courses[key].Block,
+        priorityTeach: this.state.courses[key].priorityTeach,
+        priorityBlock: this.state.courses[key].priorityBlock,
+        TeacherRequired: this.state.courses[key].TeacherRequired
+      }));
+    var blocks = Object.keys(freeblocks)
+      .map((key) => ({
+        Block: this.state.freeblocks[key].Block,
+        priorityBlock: this.state.freeblocks[key].priorityBlock
+      }));
+    // alert("Form was submitted. "+JSON.stringify(selection));
+    this.finishLoading(true);
+    var results = await this.utils.generateSchedules(selection, blocks);
+    this.finishLoading();
+    this.props.displaySchedules(results);
 
     this.setState(state);
   }
