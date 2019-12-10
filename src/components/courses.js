@@ -51,10 +51,12 @@ export default class Courses extends React.Component {
         priorityBlock: this.state.freeblocks[key].priorityBlock
       }));
     // alert("Form was submitted. "+JSON.stringify(selection));
-    this.finishLoading(true);
-    var results = await this.utils.generateSchedules(selection, blocks);
-    this.finishLoading();
-    this.props.displaySchedules(results);
+    if (Object.keys(courses).length !== 0) {
+      this.finishLoading(true);
+      var results = await this.utils.generateSchedules(selection, blocks);
+      this.finishLoading();
+      this.props.displaySchedules(results);
+    }
 
     this.setState(state);
   }
