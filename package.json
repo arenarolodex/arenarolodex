@@ -1,7 +1,7 @@
 {
   "name": "arenarolodex",
   "description": "A web application that creates schedule combinations for Lowell students.",
-  "version": "1.0.0",
+  "version": "2.2.6",
   "authors": [
     "Alexander Ruiz <ruiz.alex0302@gmail.com",
     "Chris Yuan"
@@ -32,6 +32,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "serve": "gatsby serve",
     "develop": "gatsby develop",
     "seats-develop": "GATSBY_COURSES_API=http://localhost:5000/lowellarenarolodex/us-central1/updateSeats gatsby develop",
     "start": "npm run develop",
@@ -61,6 +62,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/areyoualex/arenarolodex"
+    "url": "https://github.com/WhizardXD/arenarolodex"
   }
 }
