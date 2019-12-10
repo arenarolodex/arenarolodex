@@ -33,10 +33,19 @@ class FreeBlock extends React.Component {
         </label>
         <label>
           Free block priority
-          <input
+          <select onChange={this.handleChange.bind(this)} name="priorityBlock"
+            defaultValue={this.props.default.priorityBlock}>
+            <option value="">Choose a ranking</option>
+            <option value="1">Low</option>
+            <option value="5">Medium</option>
+            <option value="10">High</option>
+          </select>
+
+          {/* <input
             value={this.props.default.priorityBlock}
             type="number" min="1" max="10"
-            onChange={this.handleChange.bind(this)} name="priorityBlock" />
+            onChange={this.handleChange.bind(this)} name="priorityBlock" /> */}
+
         </label>
       </div>
     );
