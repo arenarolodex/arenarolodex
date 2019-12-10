@@ -32,8 +32,8 @@ export default class Courses extends React.Component {
 
     var state = this.state;
     state.window = window;
-    state.courses = courses;
-    state.freeblocks = freeblocks;
+    state.courses = !Array.isArray(courses) ? courses : {};
+    state.freeblocks = !Array.isArray(freeblocks) ? freeblocks : {};
 
     var selection = Object.keys(courses)
       .map((key) => ({
@@ -161,8 +161,11 @@ export default class Courses extends React.Component {
     }
     s.courses[key] = state;
     this.setState(s);
+    // console.log(this.state.window);
+    // console.log(s.courses);
+    // console.log(JSON.stringify(s.courses));
     if (this.state.window)
-      this.state.window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
+      this.state.window.localStorage.setItem('courses', JSON.stringify(s.courses));
   }
   /**A function to add a FreeBlock object to this component's state.courses*/
   addfreeblock = (e) => {
