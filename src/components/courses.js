@@ -191,8 +191,8 @@ export default class Courses extends React.Component {
   }
   removeall = () => {
     var state = this.state;
-    state.freeblocks = [];
-    state.courses = [];
+    state.freeblocks = {};
+    state.courses = {};
     this.setState(state);
     if(this.state.window) {
       this.state.window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
