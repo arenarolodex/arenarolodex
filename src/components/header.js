@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+import styles from './header.module.css';
+
 const Header = ({ siteTitle }) => (
   <div
     style={{
@@ -26,6 +28,10 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <nav className={styles.nav}>
+        <Link to="/" activeClassName={styles.current}>Home</Link>
+        <Link to="/courses" activeClassName={styles.current}>Courses</Link>
+      </nav>
     </div>
   </div>
 );

@@ -1,0 +1,12 @@
+.nav {
+  margin-top: 1rem;
+}
+.nav > a, .nav > a:visited {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+a.current {
+  text-decoration: underline;
+  font-weight: bold;
+}
