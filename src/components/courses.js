@@ -172,7 +172,7 @@ export default class Courses extends React.Component {
     e.preventDefault();
     var state = this.state;
     var key = (new Date()).getTime();
-    state.freeblocks[key] = { Block: '', priorityBlock: '' };
+    state.freeblocks[key] = { Block: '', priorityBlock: '', semester: '' };
     this.setState(state);
   }
   removecourse = (key) => {
@@ -202,8 +202,29 @@ export default class Courses extends React.Component {
 
   /**A function to add a Course object to this component's state.courses*/
   addcourse = (e) => {
-    if (Object.keys(this.state.courses).length >= 9
-    || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 9) {
+    let numFallBlocks = 0;
+    let numSpringBlocks = 0;
+    Object.values(this.state.courses).forEach(course => {
+      if (course[1] === '1') {
+        numFallBlocks++;
+      } else if (course[1] === '2') {
+        numSpringBlocks++;
+      } else if (course[1] === 'Both') {
+        numFallBlocks++;
+        numSpringBlocks++;
+      }
+    });
+    Object.values(this.state.freeblocks).forEach(freeBlock => {
+      if (freeBlock.semester === '1') {
+        numFallBlocks++;
+      } else if (freeBlock.semester === '2') {
+        numSpringBlocks++;
+      } else if (freeBlock.semester === 'Both') {
+        numFallBlocks++;
+        numSpringBlocks++;
+      }
+    });
+    if (numFallBlocks >= 9 || numSpringBlocks >= 9) {
       alert('Hey! That\'s not a legal schedule!');
       return;
     }

@@ -3,7 +3,7 @@ const fs = require('fs');
 
 //Get announcer
 var announcer = undefined;
-fs.readFile('newannouncer.json', (err, data) => {
+fs.readFile('2020_2021announcer.json', (err, data) => {
   announcer = data;
 });
 

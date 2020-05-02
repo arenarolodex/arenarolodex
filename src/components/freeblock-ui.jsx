@@ -47,6 +47,16 @@ class FreeBlock extends React.Component {
             onChange={this.handleChange.bind(this)} name="priorityBlock" /> */}
 
         </label>
+        <label>
+          Free block semester
+          <select onChange={this.handleChange.bind(this)} name="Semester"
+                  defaultValue={this.props.default.Semester}>
+            <option value="">Choose a semester</option>
+            <option value="1">Fall Semester</option>
+            <option value="2">Spring Semester</option>
+            <option value="Both">Both</option>
+          </select>
+        </label>
       </div>
     );
   }

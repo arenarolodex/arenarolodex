@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styles from './schedules.module.css';
+import SelectionUtilities from '../selectionutilities';
 
 export default class Schedules extends React.Component {
   constructor(props) {
@@ -57,9 +58,9 @@ export default class Schedules extends React.Component {
         </p>
         {noScheds}
         {schedules.slice(20*(state.page-1),(20*state.page)-1).map((sched) =>
-          (<ScheduleComponent schedule={sched.schedule}
+          (<ScheduleComponent schedule={sched.classes}
             impossible={sched.impossible}
-            key={JSON.stringify(sched.schedule)} />)
+            key={JSON.stringify(sched.classes)} />)
         )}
         <p>
           <button onClick={this.previousPage.bind(this)}
@@ -81,7 +82,7 @@ class ScheduleComponent extends React.Component {
         {this.props.schedule.sort(function(a,b){return parseInt(a[0])-parseInt(b[0]);})
           .map((course) => (
             <div className={styles.class} key={course[0]}>
-              <b>Block {course[0]}: <i>{course[4]}</i></b>
+              <b>Block {course[0]}: <i>{course[4]}</i></b> ({ SelectionUtilities.getCourseType(course[1]) })
               <br />
               <b>{course[3]}</b> <i>({course[2]} seats left)</i>
             </div>

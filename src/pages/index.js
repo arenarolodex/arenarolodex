@@ -32,8 +32,8 @@ export default class IndexPage extends React.Component {
         <Layout>
           <EmbeddedGist gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"></EmbeddedGist>
           {/* <Changelog></Changelog> */}
-          {/* <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
-          <Schedules schedules={this.state.schedules} /> */}
+          <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
+          <Schedules schedules={this.state.schedules} />
         </Layout>
       // </LoadingOverlay>
     );
