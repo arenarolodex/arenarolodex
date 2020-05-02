@@ -55,6 +55,7 @@ export default class SelectionUtilities {
       if (course.Class === '') //If class field is empty
         courses.splice(index, 1); //Remove that course from courses
     });
+    console.log(freeblocks);
 
     var recursiveScheduleMaker = function(courses, schedule) {
       //Which class are we on?
@@ -84,7 +85,7 @@ export default class SelectionUtilities {
         }
 
         //After we checked, let's continue adding courses if there wasn't any intersection
-        if (currentClass.TeacherRequired && possibleClass[3] !== currentClass.Teacher) return;
+        if (currentClass.TeacherRequired && possibleClass[3] !== currentClass.Teacher && currentClass[3] !== '') return;
 
         const points = schedule.points;
         const newClasses = schedule.classes.slice();
@@ -110,7 +111,7 @@ export default class SelectionUtilities {
           //Let's check if this one has the free blocks the user wanted:
           freeblocks.forEach(block => {
             if (!newSchedule.classes.find(course => block.Block === course[0] &&
-                (block.Semester === 'Both' || course[1] === 'Both' || block.Semester === semesterKey[course[1]]))) {
+                (block.semester === 'Both' || course[1] === 'Both' || block.semester === semesterKey[course[1]]))) {
               newSchedule.points += block.priorityBlock; //Add preference points
             }
           });
