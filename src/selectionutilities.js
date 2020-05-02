@@ -57,7 +57,6 @@ export default class SelectionUtilities {
       if (course.Class === '') //If class field is empty
         courses.splice(index, 1); //Remove that course from courses
     });
-    console.log(freeblocks);
 
     var recursiveScheduleMaker = function(courses, schedule) {
       //Which class are we on?

@@ -35,8 +35,6 @@ export default class Courses extends React.Component {
     state.courses = !Array.isArray(courses) ? courses : {};
     state.freeblocks = !Array.isArray(freeblocks) ? freeblocks : {};
 
-    console.log(window.localStorage.getItem('courses'));
-
     this.setState(state);
     this.generateSchedulesFromCourses(state);
   }
