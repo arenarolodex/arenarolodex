@@ -41,7 +41,8 @@ export default class Courses extends React.Component {
 
   generateSchedulesFromCourses = state => {
     var selection = Object.keys(state.courses)
-        .map((key) => ({
+        .filter(key => state.courses[key].Class !== '')
+        .map(key => ({
           Class: state.courses[key].Class,
           Subject: state.courses[key].Subject,
           Teacher: state.courses[key].Teacher,
@@ -57,7 +58,7 @@ export default class Courses extends React.Component {
           semester: state.freeblocks[key].semester
         }));
     // alert("Form was submitted. "+JSON.stringify(selection));
-    if (Object.keys(state.courses).length !== 0) {
+    if (Object.keys(selection).length !== 0) {
       this.finishLoading(true);
       this.utils.generateSchedules(selection, blocks)
           .then(results => {
