@@ -92,13 +92,11 @@ export default class Courses extends React.Component {
 
   render() {
     //Flags for when to stop adding courses and free blocks
-    var nocourse = Object.keys(this.state.courses).length >= 8
-      || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
-    var nofree = Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
+    const canAddBlocks = (Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length) < 16;
     return (
       <form onSubmit={this.handleSumbit.bind(this)}>
-        <button onClick={this.addcourse} disabled={nocourse || this.state.loading}>Add class</button>
-        <button onClick={this.addfreeblock} disabled={nofree || this.state.loading}>Add free block (optional)</button>
+        <button onClick={this.addcourse} disabled={!canAddBlocks || this.state.loading}>Add class</button>
+        <button onClick={this.addfreeblock} disabled={!canAddBlocks || this.state.loading}>Add free block (optional)</button>
         <button onClick={this.removeall} disabled={(Object.keys(this.state.courses).length === 0 && Object.keys(this.state.freeblocks).length === 0) || this.state.loading} className={styles.removeall}>Remove all</button>
         <div>
           {Object.keys(this.state.freeblocks).reverse().map((key) =>
@@ -198,36 +196,10 @@ export default class Courses extends React.Component {
       this.state.window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
       this.state.window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
     }
-  }
+  };
 
   /**A function to add a Course object to this component's state.courses*/
   addcourse = (e) => {
-    let numFallBlocks = 0;
-    let numSpringBlocks = 0;
-    Object.values(this.state.courses).forEach(course => {
-      if (course[1] === '1') {
-        numFallBlocks++;
-      } else if (course[1] === '2') {
-        numSpringBlocks++;
-      } else if (course[1] === 'Both') {
-        numFallBlocks++;
-        numSpringBlocks++;
-      }
-    });
-    Object.values(this.state.freeblocks).forEach(freeBlock => {
-      if (freeBlock.semester === '1') {
-        numFallBlocks++;
-      } else if (freeBlock.semester === '2') {
-        numSpringBlocks++;
-      } else if (freeBlock.semester === 'Both') {
-        numFallBlocks++;
-        numSpringBlocks++;
-      }
-    });
-    if (numFallBlocks >= 9 || numSpringBlocks >= 9) {
-      alert('Hey! That\'s not a legal schedule!');
-      return;
-    }
     e.preventDefault();
     var state = this.state;
     var key = (new Date()).getTime();
