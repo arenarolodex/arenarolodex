@@ -86,7 +86,7 @@ export default class SelectionUtilities {
         }
 
         //After we checked, let's continue adding courses if there wasn't any intersection
-        if (currentClass.TeacherRequired && possibleClass[3] !== currentClass.Teacher && currentClass[3] !== '') return;
+        if (currentClass.TeacherRequired && possibleClass[3] !== currentClass.Teacher && currentClass.Teacher !== '') return;
 
         const points = schedule.points;
         const newClasses = schedule.classes.slice();
