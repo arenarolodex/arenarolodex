@@ -24,18 +24,18 @@ export default class IndexPage extends React.Component {
   };
   render() {
     return (
-      <LoadingOverlay
-        active={this.state.loading}
-        spinner
-        text="Loading..."
-      >
+      // <LoadingOverlay
+      //   active={this.state.loading}
+      //   spinner
+      //   text="Loading..."
+      // >
         <Layout>
           <EmbeddedGist gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"></EmbeddedGist>
           {/* <Changelog></Changelog> */}
-          <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
-          <Schedules schedules={this.state.schedules} />
+          {/* <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
+          <Schedules schedules={this.state.schedules} /> */}
         </Layout>
-      </LoadingOverlay>
+      // </LoadingOverlay>
     );
   }
 }
