@@ -233,12 +233,4 @@ export default class SelectionUtilities {
     });
     return ret;
   }
-  // returns human-readable course type from id
-  static getCourseType(lengthId) {
-    return {
-      '1': 'Fall Semester',
-      '2': 'Spring Semester',
-      'Both': 'Yearlong'
-    }[lengthId];
-  }
 }
