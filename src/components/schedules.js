@@ -5,7 +5,7 @@ import styles from './schedules.module.css';
 export default class Schedules extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {page:1,numPages:0,showImpossible:false};
+    this.state = {page:1, numPages:0, showImpossible:false, blockify:false};
   }
   componentDidUpdate(prevProps) {
     if(this.props.schedules !== prevProps.schedules)
@@ -22,6 +22,11 @@ export default class Schedules extends React.Component {
   toggleImpossible = (e) => {
     var state = this.state;
     state.showImpossible = !state.showImpossible;
+    this.setState(state);
+  };
+  toggleBlock = (e) => {
+    var state = this.state;
+    state.blockify = !state.blockify;
     this.setState(state);
   };
   render() {
@@ -54,6 +59,12 @@ export default class Schedules extends React.Component {
               type='checkbox'
               onChange={this.toggleImpossible} />
           </label>
+          <label>
+            Change to arena block form
+            <input checked={this.state.blockify}
+              type='checkbox'
+              onChange={this.toggleBlock} />
+          </label>
         </p>
         {noScheds}
         {schedules.slice(20*(state.page-1),(20*state.page)-1).map((sched) =>
@@ -72,6 +83,13 @@ export default class Schedules extends React.Component {
   }
 }
 
+function easyRead(props) {
+  return <b>{ course[1] === 'Both' ? 'Yearlong' : 'Semester ' + course[1] }, Block {course[0]}: <i>{course[4]}</i></b>;
+}
+function arenaBlock(props) {
+  return <b>Block {course[0]}: <i>{course[4]}</i></b>;
+}
+
 class ScheduleComponent extends React.Component {
   render() {
     return (
@@ -81,7 +99,10 @@ class ScheduleComponent extends React.Component {
         {this.props.schedule.sort(function(a,b){return parseInt(a[0])-parseInt(b[0]);})
           .map((course) => (
             <div className={styles.class} key={course[0]}>
-              <b>{ course[1] === 'Both' ? 'Yearlong' : 'Semester ' + course[1] }, Block {course[0]}: <i>{course[4]}</i></b>
+
+              {/*insert here*/}
+              {/* <b>{ course[1] === 'Both' ? 'Yearlong' : 'Semester ' + course[1] }, Block {course[0]}: <i>{course[4]}</i></b> */}
+
               <br />
               <b>{course[3]}</b> <i>({course[2]} seats left)</i>
             </div>
