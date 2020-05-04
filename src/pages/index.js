@@ -11,7 +11,7 @@ import '../pages/index.css';
 export default class IndexPage extends React.Component {
   constructor() {
     super();
-    this.state = {schedules: [], loading: true, visible: false};
+    this.state = {schedules: [], loading: true, visible: true};
   }
   schedules(scheds) {
     var state = this.state;
