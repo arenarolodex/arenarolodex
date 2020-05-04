@@ -20,7 +20,7 @@
   align-items: flex-start;
   justify-content: space-between;
 }
-.freeblock > label > div, .course > label > div {
+.freeblock > label > div, .course > label > div, .course > .classes > label > div {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
