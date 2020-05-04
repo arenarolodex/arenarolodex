@@ -17,9 +17,11 @@ class Course extends React.Component {
         <CourseSelect name="Subject" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options}
           defValue={this.props.default.Subject} />
-        <CourseSelect name="Class" parentKey={this.props.id} handleChange={this.props.changeHandler}
-          options={this.props.options}
-          defValue={this.props.default.Class} />
+        <div className={styles.classes}>
+          <CourseSelect name="Class" parentKey={this.props.id} handleChange={this.props.changeHandler}
+            options={this.props.options}
+            defValue={this.props.default.Class} />
+        </div>
         <CourseSelect name="Teacher" parentKey={this.props.id} handleChange={this.props.changeHandler}
           options={this.props.options}
           defValue={this.props.default.Teacher} />
@@ -40,13 +42,13 @@ class CourseSelect extends React.Component {
   }
   render() {
     let checkbox = '';
-    if (this.props.name === 'Teacher')
-      checkbox = (
-        <label style={{textAlign:'right', marginTop:'0.2rem'}}
-          onChange={this.handleChangeRequired.bind(this)}>
-            Is this a required {this.props.name.toLowerCase()}? <input type="checkbox" />
-        </label>
-      );
+    // if (this.props.name === 'Teacher')
+    //   checkbox = (
+    //     <label style={{textAlign:'right', marginTop:'0.2rem'}}
+    //       onChange={this.handleChangeRequired.bind(this)}>
+    //         Is this a required {this.props.name.toLowerCase()}? <input type="checkbox" />
+    //     </label>
+    //   );
     const options = (this.props.options && this.props.options[this.props.name] !== undefined) ?
       this.props.options[this.props.name] : [];
     return (

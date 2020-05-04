@@ -10,6 +10,7 @@ export default class EmbeddedGist extends React.Component {
     this.gist = props.gist;
     this.file = props.file;
     this.stylesheetAdded = false;
+    this.visible = props.visible;
     this.state = {
       loading: true,
       src: ''
@@ -62,8 +63,10 @@ export default class EmbeddedGist extends React.Component {
   render() {
     if (this.state.loading) {
       return <div>Loading...</div>;
-    } else {
+    } else if (this.visible) {
       return <div className={styles} dangerouslySetInnerHTML={{ __html: this.state.src }} />;
+    } else {
+      return <div />;
     }
   }
 }

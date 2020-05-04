@@ -15,8 +15,10 @@ export default class SelectionUtilities {
     };
     // this.xhttp.onreadystatechange.bind(this);
     //Define which URL to get info from here
-    this.coursesURL = process.env.GATSBY_COURSES_API
-      || 'https://raw.githubusercontent.com/WhizardXD/arenarolodex/fullyear-scheduling/courseserver/2020_2021announcer.json'
+    this.coursesURL =
+      // process.env.GATSBY_COURSES_API
+      // ||
+      'https://raw.githubusercontent.com/WhizardXD/arenarolodex/fullyear-scheduling/courseserver/2020_2021announcer.json'
       // || 'https://raw.githubusercontent.com/WhizardXD/arenarolodex/master/courseserver/newannouncer.json';
     this.xhttp.open('GET', this.coursesURL, true);
     this.xhttp.send();
@@ -39,8 +41,10 @@ export default class SelectionUtilities {
       this.xhttp.onreadystatechange = onReady;
       // this.xhttp.onreadystatechange.bind(this);
       //Define which URL to get info from here
-      this.coursesURL = process.env.GATSBY_COURSES_API
-        || 'https://raw.githubusercontent.com/WhizardXD/arenarolodex/fullyear-scheduling/courseserver/2020_2021announcer.json'
+      this.coursesURL =
+        // process.env.GATSBY_COURSES_API
+        // ||
+        'https://raw.githubusercontent.com/WhizardXD/arenarolodex/fullyear-scheduling/courseserver/2020_2021announcer.json'
         // || 'https://raw.githubusercontent.com/WhizardXD/arenarolodex/master/courseserver/newannouncer.json';
       this.xhttp.open('GET', this.coursesURL, true);
       this.xhttp.send();
