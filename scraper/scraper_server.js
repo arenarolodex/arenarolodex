@@ -72,6 +72,59 @@ function updateAnnouncer() {
                 let block = newData[index][2];
                 const seats = newData[index][4];
 
+
+                if (name == "Upper Division Junior/Senior English A (Non AP)" || name == "Upper Division Junior/Senior English B (Non AP)") {
+                    if (teacher == "Bajet, Lael") {if (block < 19) {name = "Film as Literature (fall semester)";} else {name = "Film as Literature (spring semester)";}}
+                    if (teacher == "Carney, Staci") {if (block < 19) {name = "Comedy and Satire (fall semester)";} else {name = "Literature and Psychology (spring semester)";}}
+                    if (teacher == "Crabtree, Stephanie") {if (block < 19) {name = "Film as Literature (fall semester)";} else {name = "Film as Literature (spring semester)";}}
+                    if (teacher == "Franklin, Karen") {if (block < 19) {name = "Critical Writing (fall semester)";} else {name = "Critical Writing (spring semester)";}}
+                    if (teacher == "Galang, Lorna") {if (block < 19) {name = "Film as Literature (fall semester)";} else {name = "Film as Literature (spring semester)";}}
+                    if (teacher == "Gustafson, Eric") {if (block < 19) {name = "Critical Writing (fall semester)";} else {name = "Critical Writing (spring semester)";}}
+                    if (teacher == "Lamarre, Timothy") {if (block < 19) {name = "Science Fiction and Fantasy (fall semester)";} else {name = "Science Fiction and Fantasy (spring semester)";}}
+                    if (teacher == "Mitchell, Kristen") {name = "Novel (fall semester)";}
+                    if (teacher == "Moffitt, Jennifer") {if (block < 19) {name = "American Literature: The Short Story (fall semester)";} else {name = "Lit and Phil: Ethics of Eating (spring semester)";}}
+                    if (teacher == "TBD") {if (block < 19) {name = "Critical Writing (fall semester)";} else {name = "Critical Writing (spring semester)";}}
+                    if (teacher == "Williams, Sam") {if (block < 19) {name = "Critical Writing (fall semester)";} else {name = "Critical Writing (spring semester)";}}
+                    if (teacher == "Henares, Nicole") {
+                      if (block < 19) {
+                        if (block == '13' || block == '17') {name = "Epic and Myth (fall semester)";}
+                        else if (block == '14' || block == '16') {name = "Literature and Psychology (fall semester)";}
+                      } else {
+                        if (block == '23' || block == '27') {name = "Epic and Myth (spring semester)";}
+                        else if (block == '24' || block == '26') {name = "Literature and Psychology (spring semester)";}
+                      }
+                    }
+                    if (teacher == "Hereford, David") {
+                      if (block < 19) {
+                        if (block == '13' || block == '17') {name = "Critical Writing (fall semester)";}
+                        else if (block == '11' || block == '15') {name = "Shakespeare (fall semester)";}
+                      } else {
+                        if (block == '23' || block == '27') {name = "Critical Writing (spring semester)";}
+                        else if (block == '21' || block == '25') {name = "Shakespeare (spring semester)";}
+                      }
+                    }
+                    if (teacher == "Yu, Samantha") {
+                      if (block < 19) {name = "Literature and Psychology (fall semester)";}
+                      else {
+                        if (block == '22' || block == '24') {name = "Film as Literature (spring semester)";}
+                        else if (block == '21' || block == '27') {name = "Literature and Philosophy (spring semester)";}
+                      }
+                    }
+                }
+                if (name == "AP English Language and Composition for Juniors") {
+                    name = "AP Lang:";
+                    if (teacher == "Moffitt, Jennifer") {name += " Heroine/20th Century";}
+                    if (teacher == "Crabtree, Stephanie") {name += " Knight/Heroine";}
+                    if (teacher == "Bajet, Lael" || teacher == "Ritter, Bryan") {name += " Knight/Journey Through Hell";}
+                    if (teacher == "Yuan, David") {name += " Lit & Phil/20th Century";}
+                }
+                if (name == "AP English Literature and Composition for Seniors") {
+                    name = "AP Lit:";
+                    if (teacher == "Carney, Staci") {name += " Heroes/Masterworks";}
+                    if (teacher == "Galang, Lorna" || teacher == "Recht, Sydney") {name += " Individual in Universe/Portraits of the Artist";}
+                }
+
+
                 let semester;
 
                 if (block > 10) {
