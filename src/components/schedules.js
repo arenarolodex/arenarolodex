@@ -68,7 +68,7 @@ export default class Schedules extends React.Component {
         </p>
         {noScheds}
         {schedules.slice(20*(state.page-1),(20*state.page)-1).map((sched) =>
-          (<ScheduleComponent schedule={sched.classes}
+          (<ScheduleComponent blockify={this.state.blockify} schedule={sched.classes}
             impossible={sched.impossible}
             key={JSON.stringify(sched.classes)} />)
         )}
@@ -83,11 +83,15 @@ export default class Schedules extends React.Component {
   }
 }
 
-function easyRead(props) {
-  return <b>{ course[1] === 'Both' ? 'Yearlong' : 'Semester ' + course[1] }, Block {course[0]}: <i>{course[4]}</i></b>;
+function easyRead(e) {
+  return <b>{ e[1] === 'Both' ? 'Yearlong' : 'Semester ' + e[1] }, Block { e[0] }: <i>{ e[4] }</i></b>;
 }
-function arenaBlock(props) {
-  return <b>Block {course[0]}: <i>{course[4]}</i></b>;
+function arenaBlock(e) {
+  if (e[1] == "Both") {
+    return <b>Block { e[0] }: <i>{ e[4] }</i></b>;
+  } else {
+    return <b>Block { e[1]+e[0] }: <i>{ e[4] }</i></b>;
+  }
 }
 
 class ScheduleComponent extends React.Component {
@@ -97,12 +101,9 @@ class ScheduleComponent extends React.Component {
         className={this.props.impossible ? styles.impossibleSchedule
           : styles.schedule}>
         {this.props.schedule.sort(function(a,b){return parseInt(a[0])-parseInt(b[0]);})
-          .map((course) => (
-            <div className={styles.class} key={course[0]}>
-
-              {/*insert here*/}
-              {/* <b>{ course[1] === 'Both' ? 'Yearlong' : 'Semester ' + course[1] }, Block {course[0]}: <i>{course[4]}</i></b> */}
-
+          .map((course, index) => (
+            <div className={styles.class} key={index}>
+              {this.props.blockify ? arenaBlock(course) : easyRead(course)}
               <br />
               <b>{course[3]}</b> <i>({course[2]} seats left)</i>
             </div>
