@@ -13,10 +13,12 @@ const Footer = () => (
       color: 'white',
       textDecoration: 'none',
     }}>
-        Created by <a href="https://github.com/areyoualex">Alex Ruiz</a>
-        &nbsp;and <a href="https://github.com/WhizardXD">Chris Yuan</a>
+        Created by <a style={{color: 'red'}} href="https://github.com/areyoualex" target="_blank">Alex Ruiz</a>
+        &nbsp;and <a style={{color: 'red'}} href="https://github.com/WhizardXD" target="_blank">Chris Yuan</a>
       <br />
-        View source code: <a href="https://github.com/WhizardXD/arenarolodex">https://github.com/WhizardXD/arenarolodex</a>
+        View source code: <a style={{color: 'red'}} href="https://github.com/WhizardXD/arenarolodex" target="_blank">https://github.com/WhizardXD/arenarolodex</a>
+      <br />
+        <a style={{color: 'red', textAlign: 'right'}} href="/privpolicy" target="_blank">Privacy Policy</a>
     </small>
   </div>
 );
