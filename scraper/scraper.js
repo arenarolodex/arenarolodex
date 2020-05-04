@@ -1,3 +1,4 @@
+const http = require('http');
 const fs = require('fs');
 const rp = require('request-promise');
 const tough = require('tough-cookie');
@@ -46,20 +47,33 @@ rp(options)
       "Other":{}
     };
     let indexDept = [
-      {lastIndex:109, dept:"Math"},
-      {lastIndex:196, dept:"Science"},
-      {lastIndex:295, dept:"English"},
-      {lastIndex:388, dept:"Social Studies"},
-      {lastIndex:431, dept:"VPA"},
-      {lastIndex:506, dept:"World Language"},
-      {lastIndex:547, dept:"PE"},
+      {lastIndex:85, dept:"Math"},
+      {lastIndex:149, dept:"Science"},
+      {lastIndex:283, dept:"English"},
+      {lastIndex:391, dept:"Social Studies"},
+      {lastIndex:501, dept:"VPA"},
+      {lastIndex:574, dept:"World Language"},
+      {lastIndex:601, dept:"PE"},
       {lastIndex:newData.length, dept:"Other"}
     ];
+    // console.log(newData[198][0]);
+
     for (let index in newData) {
-      console.log(index+": "+newData[index][0]);
+      // console.log(index+": " + newData[index][0]);
+      if (newData[index][0] === "") continue;
+
+      if (newData[index][2] > 9 && newData[index][2] < 19) {
+        newData[index][3] = "1";
+        newData[index][2] = JSON.stringify(newData[index][2]-10);
+      } else if (newData[index][2] > 20 && newData[index][2] < 29) {
+        newData[index][3] = "2";
+        newData[index][2] = JSON.stringify(newData[index][2]-20);
+      } else if (newData[index][2] < 9) {
+        newData[index][3] = "Both";
+      }
+
       for (let dept of indexDept) {
-        let found = false;
-        if (index <= dept.lastIndex && !found) {
+        if (index <= dept.lastIndex) {
           //Make objects that don't exist yet
           if (!newannouncer[dept.dept][newData[index][0]])
             newannouncer[dept.dept][newData[index][0]] = {};
@@ -67,11 +81,12 @@ rp(options)
             newannouncer[dept.dept][newData[index][0]][newData[index][1]] = [];
 
           newannouncer[dept.dept][newData[index][0]][newData[index][1]]
-            .push([newData[index][2], null, newData[index][4]]);
-          found = true;
+            .push([newData[index][2], newData[index][3], newData[index][4]]);
+          break;
         }
       }
     }
+    // console.log(newData[4]);
 
     //Write newannouncer.json
     const announcerData = new Uint8Array(Buffer.from(JSON.stringify(newannouncer)));

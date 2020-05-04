@@ -3,6 +3,9 @@ module.exports = {
     title: 'arenarolodex',
     url: 'arena.lowellhs.com'
   },
+  require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+  }),
   plugins: [
     'gatsby-plugin-react-helmet',
     {
