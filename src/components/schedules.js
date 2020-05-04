@@ -59,6 +59,7 @@ export default class Schedules extends React.Component {
               type='checkbox'
               onChange={this.toggleImpossible} />
           </label>
+          <br />
           <label>
             Change to arena block form
             <input checked={this.state.blockify}

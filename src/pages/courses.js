@@ -1,50 +1,73 @@
-import React from 'react';
+import React from "react";
 
-import Layout from '../components/layout';
+import Layout from "../components/layout";
 
-import '../pages/courses.css';
+import "../pages/courses.css";
 
 class Courses extends React.Component {
-  render () {
+  render() {
     return (
       <Layout>
-        <div style={{lineHeight:"30px"}}>
-          Alright so this is a guide to how I <strong>think</strong> arena works this time around. 
-          Note that I might be wrong: if I am, please do notify me some way some how. 
+        <div style={{ lineHeight: "30px" }}>
+          Hello, Sam Lim here! You have found the other tab on this website! I
+          don’t know anything about coding (kudos to Chris, Alex, and Kai), but
+          here, I will attempt to explain how arena works.
           <br />
-          1) Arena happens once a year now, as opposed to once a semester. This means that you must 
-          pick your classes for the entire school year at once. 
           <br />
-          2) The way blocks work has been changed. Year-long classes are now given "regular" single-digit blocks, 
-          such as 1, 2, 3, etc., while semester-long classes have double digit numbers, either 1x or 2x, 
-          with the 1 and 2 denoting that the class is a fall or spring class, respectively, and the x being 
-          the block of the class. This means that when you pick your classes, you may have a schedule that looks 
-          something like this in terms of blocks: 
+          Arena now happens just once a year. For this arena, you are choosing
+          classes for your entire next year.
           <br />
-          1, 12, 22, 3, 4, 15, 25, 6, 7 . 
+          The announcer and arena website has a new system of listing blocks.
+          Yearlong classes are denoted with blocks 1-8. Fall semester classes
+          are denoted with blocks 11-18, with the first “1” indicating that the
+          class is a fall class. Spring semester classes are denoted with block
+          21-28, with the first “2” indicating that the class is a spring class.
           <br />
-          This means you will have to be careful not to potentially overlap your classes, such as by doing: 
+          A schedule like this is totally legal: 1, 12, 22, 3, 4, 5, 16, 26, 7
           <br />
-          1, 11, 12, ... 
+          You have to be careful to not choose overlapping classes: 1, 11, 21
           <br />
-          It also seems as if that, for any year-long classes that you choose, you must stay in the same block for 
-          the entire year (different from before, where the general rule for year-long classes was that you could 
-          switch blocks and teacher if the class wasn't an AP class). 
+          arenarolodex will make the fall and spring semester distinction in the
+          classes’ names in the “Class” dropdown menu. The “Block” dropdown menu
+          only ever lists blocks 1-8, but this website already makes the
+          distinction of a fall, spring, or yearlong course by your choice in
+          the “Class” dropdown menu.
           <br />
-          3) English classes for juniors and seniors now no longer have any "selectable" differences, meaning that 
-          you cannot really choose which class you want (Epic and Myth vs Film as Literature, for example), 
-          and you can only choose when you want to have your English class. For non-AP juniors, admin has "mitigated" 
-          the situation by making at least one course of Critical Writing exists in every block. Basically, this means 
-          that strategizing your choice of English class now becomes one of looking at the choice of teachers and hoping 
-          that you will enter your desired class without getting your schedule rearranged. 
+          For yearlong classes, you must stay in that block for the entire year
+          (before, you were allowed to switch blocks and teachers for non-AP
+          courses).
           <br />
-          I have no idea if this makes any sense; turns out all nighters are not conducive to the using of one's brain. 
-          If it helps, great, if it confuses the crap out of you, then uhh... yeah. Good luck!
-
-
-
-
-
+          <br />
+          English classes are… complicated.
+          <br />
+          SOPHOMORES, it does not matter when you take each English class! As
+          long as you take English 2A and 2B in different semesters, you’re
+          good.
+          <br />
+          NON-AP JUNIORS AND SENIORS, you should see “Upper Division
+          Junior/Senior English A” and “Upper Division Junior/Senior English B”
+          on the arena confirmation email you got a few days ago. On the arena
+          website, you will only see the different teachers and blocks, not a
+          specific name for each class (e.g. you won’t see “Epic and Myth”,
+          “Critical Writing”, etc.). This means that you’ll have to know which
+          teachers and blocks correspond to the class you want (e.g. Epic and
+          Myth is taught by Ms. Henares in blocks 13, 17, 23, 27). You will find
+          these specific names in the Note 2 column in the announcer, or through
+          using arenarolodex. You can basically choose whatever class you want
+          as long as you haven’t taken it before. JUNIORS, remember that one of
+          these English classes must correspond to a Critical Writing class!
+          (They'll make sure you're in a Crit Writing class either way).
+          <br />
+          AP JUNIORS AND SENIORS, you should see “AP English Language and
+          Composition for Juniors” or “AP English Literature and Composition for
+          Seniors” on your arena confirmation email. On the arena website, like
+          with the non-AP English classes, you will only see different teachers
+          and blocks, not the specific names. arenarolodex has the specific
+          names of every English class, so it’s easier for you to make your
+          schedules.
+          <br />
+          <br />
+          Best of luck!
         </div>
       </Layout>
     );

@@ -31,6 +31,7 @@ const Header = ({ siteTitle }) => (
       <nav className={styles.nav}>
         <Link to="/" activeClassName={styles.current}>Home</Link>
         <Link to="/courses" activeClassName={styles.current}>How Arena Works</Link>
+        <a href="https://forms.gle/JgrnajzCEfNxYCqz8" target="_blank">Feedback form</a>
       </nav>
     </div>
   </div>
