@@ -73,6 +73,7 @@ yarn-error.log
 
 # Gatsby Environment Variables
 .env.development
+.env.production
 
 # VSCode settings file
 .vscode/settings.json
