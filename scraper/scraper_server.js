@@ -82,7 +82,7 @@ function updateAnnouncer() {
                     if (teacher == "Gustafson, Eric") {if (block < 19) {name = "Critical Writing (fall semester)";} else {name = "Critical Writing (spring semester)";}}
                     if (teacher == "Lamarre, Timothy") {if (block < 19) {name = "Science Fiction and Fantasy (fall semester)";} else {name = "Science Fiction and Fantasy (spring semester)";}}
                     if (teacher == "Mitchell, Kristen") {name = "Novel (fall semester)";}
-                    if (teacher == "Moffit, Jennifer") {if (block < 19) {name = "American Literature: The Short Story (fall semester)";} else {name = "Lit and Phil: Ethics of Eating (spring semester)";}}
+                    if (teacher == "Moffitt, Jennifer") {if (block < 19) {name = "American Literature: The Short Story (fall semester)";} else {name = "Lit and Phil: Ethics of Eating (spring semester)";}}
                     if (teacher == "TBD") {if (block < 19) {name = "Critical Writing (fall semester)";} else {name = "Critical Writing (spring semester)";}}
                     if (teacher == "Williams, Sam") {if (block < 19) {name = "Critical Writing (fall semester)";} else {name = "Critical Writing (spring semester)";}}
                     if (teacher == "Henares, Nicole") {
