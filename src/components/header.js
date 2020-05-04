@@ -30,7 +30,7 @@ const Header = ({ siteTitle }) => (
       </h1>
       <nav className={styles.nav}>
         <Link to="/" activeClassName={styles.current}>Home</Link>
-        <Link to="/courses" activeClassName={styles.current}>Courses</Link>
+        <Link to="/courses" activeClassName={styles.current}>How Arena Works</Link>
       </nav>
     </div>
   </div>
