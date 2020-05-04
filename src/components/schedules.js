@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from './schedules.module.css';
-import SelectionUtilities from '../selectionutilities';
 
 export default class Schedules extends React.Component {
   constructor(props) {
@@ -82,7 +81,7 @@ class ScheduleComponent extends React.Component {
         {this.props.schedule.sort(function(a,b){return parseInt(a[0])-parseInt(b[0]);})
           .map((course) => (
             <div className={styles.class} key={course[0]}>
-              <b>Block {course[0]}: <i>{course[4]}</i></b> ({ SelectionUtilities.getCourseType(course[1]) })
+              <b>{ course[1] === 'Both' ? 'Yearlong' : 'Semester ' + course[1] }, Block {course[0]}: <i>{course[4]}</i></b>
               <br />
               <b>{course[3]}</b> <i>({course[2]} seats left)</i>
             </div>

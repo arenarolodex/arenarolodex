@@ -90,7 +90,7 @@ export default class SelectionUtilities {
         }
 
         //After we checked, let's continue adding courses if there wasn't any intersection
-        if (currentClass.TeacherRequired && possibleClass[3] !== currentClass.Teacher && currentClass[3] !== '') return;
+        if (currentClass.TeacherRequired && possibleClass[3] !== currentClass.Teacher && currentClass.Teacher !== '') return;
 
         const points = schedule.points;
         const newClasses = schedule.classes.slice();
@@ -236,13 +236,5 @@ export default class SelectionUtilities {
       ret.push([info[0] + ', ' + info[2] + ' seats available', info[0]]);
     });
     return ret;
-  }
-  // returns human-readable course type from id
-  static getCourseType(lengthId) {
-    return {
-      '1': 'Fall Semester',
-      '2': 'Spring Semester',
-      'Both': 'Yearlong'
-    }[lengthId];
   }
 }
