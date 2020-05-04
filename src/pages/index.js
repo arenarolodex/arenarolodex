@@ -12,7 +12,7 @@ import '../pages/index.css';
 export default class IndexPage extends React.Component {
   constructor() {
     super();
-    this.state = {schedules: [], loading: true};
+    this.state = {schedules: [], loading: true, visible: false};
   }
   schedules(scheds) {
     var state = this.state;
@@ -22,6 +22,10 @@ export default class IndexPage extends React.Component {
   loadingCallback = (value) => {
     this.setState({loading:value});
   };
+  hide = () => {
+    this.setState({visible:!this.state.visible});
+  };
+
   render() {
     return (
       // <LoadingOverlay
@@ -30,10 +34,10 @@ export default class IndexPage extends React.Component {
       //   text="Loading..."
       // >
         <Layout>
-          <EmbeddedGist gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"></EmbeddedGist>
-          {/* <Changelog></Changelog> */}
-          {/* <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
-          <Schedules schedules={this.state.schedules} /> */}
+          <button onClick={this.hide}>Messages</button>
+          {this.state.visible && <EmbeddedGist visible={this.state.visible} gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"></EmbeddedGist>}
+          <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
+          <Schedules schedules={this.state.schedules} />
         </Layout>
       // </LoadingOverlay>
     );

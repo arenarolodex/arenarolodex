@@ -1,0 +1,1554 @@
+{
+  "Other": {
+    "Library Training 2A (spring semester)": {
+      "Sasso": [
+        ["5", "2", 40],
+        ["6", "2", 40],
+        ["7", "2", 40],
+        ["8", "2", 40]
+      ],
+      "Jones": [
+        ["1", "2", 40],
+        ["2", "2", 40],
+        ["3", "2", 40],
+        ["4", "2", 40]
+      ]
+    },
+    "College/Career (fall semester)": { "Brooks": [["2", "1", 40]] },
+    "Student Aide B (fall semester)": {
+      "Staff": [
+        ["1", "1", 40],
+        ["2", "1", 40],
+        ["3", "1", 40],
+        ["4", "1", 40],
+        ["5", "1", 40],
+        ["6", "1", 40],
+        ["7", "1", 40],
+        ["8", "1", 40]
+      ]
+    },
+    "JROTC 1 (Full Year)": {
+      "Bullard": [
+        ["5", "Both", 40],
+        ["6", "Both", 40],
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "Library Training 1B (fall semester)": {
+      "Sasso": [
+        ["5", "1", 40],
+        ["6", "1", 40],
+        ["7", "1", 40],
+        ["8", "1", 40]
+      ],
+      "Jones": [
+        ["1", "1", 40],
+        ["2", "1", 40],
+        ["3", "1", 40],
+        ["4", "1", 40]
+      ]
+    },
+    "Peer Resources Leadership B": { "Horn": [["8", "2", 40]] },
+    "College/Career (spring semester)": { "Brooks": [["2", "2", 40]] },
+    "Health (spring semester)": {
+      "Brooks": [
+        ["3", "2", 40],
+        ["6", "2", 40],
+        ["7", "2", 40],
+        ["8", "2", 40]
+      ],
+      "Cole": [
+        ["1", "2", 40],
+        ["2", "2", 40],
+        ["4", "2", 40],
+        ["5", "2", 40]
+      ]
+    },
+    "JROTC 3A": {
+      "Bullard": [
+        ["5", "1", 40],
+        ["6", "1", 40],
+        ["7", "1", 40],
+        ["8", "1", 40]
+      ]
+    },
+    "Library Training 2A (fall semester)": {
+      "Sasso": [
+        ["5", "1", 40],
+        ["6", "1", 40],
+        ["7", "1", 40],
+        ["8", "1", 40]
+      ],
+      "Jones": [
+        ["1", "1", 40],
+        ["2", "1", 40],
+        ["3", "1", 40],
+        ["4", "1", 40]
+      ]
+    },
+    "Library Training 2B (fall semester)": {
+      "Sasso": [
+        ["5", "1", 40],
+        ["6", "1", 40],
+        ["7", "1", 40],
+        ["8", "1", 40]
+      ],
+      "Jones": [
+        ["1", "1", 40],
+        ["2", "1", 40],
+        ["3", "1", 40],
+        ["4", "1", 40]
+      ]
+    },
+    "JROTC 4B": {
+      "Bullard": [
+        ["5", "2", 40],
+        ["6", "2", 40],
+        ["7", "2", 40],
+        ["8", "2", 40]
+      ]
+    },
+    "AVID 2": { "Knight": [["4", "Both", 40]] },
+    "Peer Resources Leadership A": { "Horn": [["8", "1", 40]] },
+    "JROTC 2A": {
+      "Bullard": [
+        ["5", "1", 40],
+        ["6", "1", 40],
+        ["7", "1", 40],
+        ["8", "1", 40]
+      ]
+    },
+    "Skills Strategies": {
+      "LaMastra": [
+        ["2", "Both", 40],
+        ["3", "Both", 40],
+        ["6", "Both", 40],
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Pollock": [
+        ["1", "Both", 40],
+        ["2", "Both", 40],
+        ["3", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "JROTC 4 (Full Year)": {
+      "Bullard": [
+        ["5", "Both", 40],
+        ["6", "Both", 40],
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "JROTC 3 (Full Year)": {
+      "Bullard": [
+        ["5", "Both", 40],
+        ["6", "Both", 40],
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "JROTC 2 (Full Year)": {
+      "Bullard": [
+        ["5", "Both", 40],
+        ["6", "Both", 40],
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "Critical Thinking and Social Change A": {
+      "Horn": [
+        ["3", "Both", 40],
+        ["4", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "JROTC 4A": {
+      "Bullard": [
+        ["5", "1", 40],
+        ["6", "1", 40],
+        ["7", "1", 40],
+        ["8", "1", 40]
+      ]
+    },
+    "JROTC 1A": {
+      "Bullard": [
+        ["5", "1", 40],
+        ["6", "1", 40],
+        ["7", "1", 40],
+        ["8", "1", 40]
+      ]
+    },
+    "Library Training 1A (spring semester)": {
+      "Sasso": [
+        ["5", "2", 40],
+        ["6", "2", 40],
+        ["7", "2", 40],
+        ["8", "2", 40]
+      ],
+      "Jones": [
+        ["1", "2", 40],
+        ["2", "2", 40],
+        ["3", "2", 40],
+        ["4", "2", 40]
+      ]
+    },
+    "JROTC 3B": {
+      "Bullard": [
+        ["5", "2", 40],
+        ["6", "2", 40],
+        ["7", "2", 40],
+        ["8", "2", 40]
+      ]
+    },
+    "Library Training 1B (spring semester)": {
+      "Sasso": [
+        ["5", "2", 40],
+        ["6", "2", 40],
+        ["7", "2", 40],
+        ["8", "2", 40]
+      ],
+      "Jones": [
+        ["1", "2", 40],
+        ["2", "2", 40],
+        ["3", "2", 40],
+        ["4", "2", 40]
+      ]
+    },
+    "Library Training 1A (fall semester)": {
+      "Sasso": [
+        ["5", "1", 40],
+        ["6", "1", 40],
+        ["7", "1", 40],
+        ["8", "1", 40]
+      ],
+      "Jones": [
+        ["1", "1", 40],
+        ["2", "1", 40],
+        ["3", "1", 40],
+        ["4", "1", 40]
+      ]
+    },
+    "Leadership 1": { "Wong": [["6", "Both", 40]] },
+    "JROTC 1B": {
+      "Bullard": [
+        ["5", "2", 40],
+        ["6", "2", 40],
+        ["7", "2", 40],
+        ["8", "2", 40]
+      ]
+    },
+    "Health (fall semester)": {
+      "Brooks": [
+        ["3", "1", 40],
+        ["6", "1", 40],
+        ["7", "1", 40],
+        ["8", "1", 40]
+      ],
+      "Cole": [
+        ["1", "1", 40],
+        ["2", "1", 40],
+        ["4", "1", 40],
+        ["5", "1", 40]
+      ]
+    },
+    "Student Aide B (spring semester)": {
+      "Staff": [
+        ["1", "2", 40],
+        ["2", "2", 40],
+        ["3", "2", 40],
+        ["4", "2", 40],
+        ["5", "2", 40],
+        ["6", "2", 40],
+        ["7", "2", 40],
+        ["8", "2", 40]
+      ]
+    },
+    "AVID 3": { "Trimble": [["4", "Both", 40]] },
+    "JROTC 2B": {
+      "Bullard": [
+        ["5", "2", 40],
+        ["6", "2", 40],
+        ["7", "2", 40],
+        ["8", "2", 40]
+      ]
+    },
+    "Student Aide A (spring semester)": {
+      "Staff": [
+        ["1", "2", 40],
+        ["2", "2", 40],
+        ["3", "2", 40],
+        ["4", "2", 40],
+        ["5", "2", 40],
+        ["6", "2", 40],
+        ["7", "2", 40],
+        ["8", "2", 40]
+      ]
+    },
+    "Library Training 2B (spring semester)": {
+      "Sasso": [
+        ["5", "2", 40],
+        ["6", "2", 40],
+        ["7", "2", 40],
+        ["8", "2", 40]
+      ],
+      "Jones": [
+        ["1", "2", 40],
+        ["2", "2", 40],
+        ["3", "2", 40],
+        ["4", "2", 40]
+      ]
+    },
+    "Student Aide A (fall semester)": {
+      "Staff": [
+        ["1", "1", 40],
+        ["2", "1", 40],
+        ["3", "1", 40],
+        ["4", "1", 40],
+        ["5", "1", 40],
+        ["6", "1", 40],
+        ["7", "1", 40],
+        ["8", "1", 40]
+      ]
+    }
+  },
+  "Science": {
+    "AP Physics 2": {
+      "Cooley": [
+        ["6", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "Physiology": {
+      "Robinson": [
+        ["1", "Both", 40],
+        ["2", "Both", 40],
+        ["5", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "AP Environmental Science": {
+      "Laureyns": [
+        ["3", "Both", 40],
+        ["5", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Melvin": [
+        ["1", "Both", 40],
+        ["2", "Both", 40],
+        ["4", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "Scientific Research (Fruit Fly)": { "Amirapu": [["7", "Both", 40]] },
+    "Geology": { "Dickerman": [["3", "Both", 40]] },
+    "AP Chemistry": {
+      "Marten": [
+        ["6", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Fong": [
+        ["1", "Both", 40],
+        ["2", "Both", 40],
+        ["4", "Both", 40]
+      ]
+    },
+    "AP Physics 1": {
+      "Prothro": [
+        ["2", "Both", 40],
+        ["3", "Both", 40],
+        ["6", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Dickerman": [
+        ["1", "Both", 40],
+        ["5", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "Physics, NGSS": {
+      "Shapiro": [["1", "Both", 40]],
+      "Cooley": [
+        ["2", "Both", 40],
+        ["3", "Both", 40]
+      ],
+      "De La Riarte": [
+        ["2", "Both", 40],
+        ["4", "Both", 40],
+        ["5", "Both", 40],
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "AP Physics C: Mech / E&M": {
+      "Shapiro": [
+        ["3", "Both", 40],
+        ["4", "Both", 40]
+      ]
+    },
+    "AP Biology": {
+      "Wenning": [
+        ["2", "Both", 40],
+        ["4", "Both", 40]
+      ],
+      "Killpack": [
+        ["3", "Both", 40],
+        ["5", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Christensen": [
+        ["1", "Both", 40],
+        ["4", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "Marine Science": {
+      "Christensen": [["7", "Both", 40]],
+      "Robinson": [["3", "Both", 40]]
+    },
+    "Principles of Biotechnology 1": { "Daley": [["4", "Both", 40]] },
+    "Chemistry NGSS, Honors": {
+      "Trimble": [
+        ["2", "Both", 40],
+        ["6", "Both", 40],
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Marten": [
+        ["1", "Both", 40],
+        ["4", "Both", 40]
+      ],
+      "Lian": [
+        ["2", "Both", 40],
+        ["3", "Both", 40],
+        ["5", "Both", 40]
+      ]
+    },
+    "Chemistry, NGSS": {
+      "Cho": [
+        ["2", "Both", 40],
+        ["3", "Both", 40],
+        ["5", "Both", 40],
+        ["6", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Lian": [
+        ["1", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    }
+  },
+  "World Languages": {
+    "Chinese for Native Speakers 3": { "Zhang": [["5", "Both", 40]] },
+    "Spanish 4 Honors": { "Mart\u00ednez": [["7", "Both", 40]] },
+    "Chinese 3": {
+      "Liang": [
+        ["4", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "Korean 1": {
+      "Choi": [
+        ["2", "Both", 40],
+        ["4", "Both", 40]
+      ]
+    },
+    "Italian 3 Honors": { "Pelagatti": [["4", "Both", 40]] },
+    "Italian 2": {
+      "Pelagatti": [
+        ["2", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "French 1": {
+      "Pang": [
+        ["6", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "Chinese 2": {
+      "Pang": [
+        ["3", "Both", 40],
+        ["5", "Both", 40]
+      ],
+      "Li": [
+        ["1", "Both", 40],
+        ["4", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "AP Latin": { "Huynh": [["7", "Both", 40]] },
+    "Spanish 1": {
+      "Cadoppi": [
+        ["3", "Both", 40],
+        ["5", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Lombardi": [
+        ["2", "Both", 40],
+        ["4", "Both", 40],
+        ["6", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "Chinese 3 Honors": {
+      "Danforth": [["1", "Both", 40]],
+      "Li": [
+        ["3", "Both", 40],
+        ["5", "Both", 40]
+      ],
+      "Zhang": [["7", "Both", 40]]
+    },
+    "French 3 Honors": {
+      "Raya": [["3", "Both", 40]],
+      "Barakat": [["8", "Both", 40]]
+    },
+    "Korean 3 Honors": { "Choi": [["3", "Both", 40]] },
+    "AP Spanish Language and Culture": {
+      "Raya": [
+        ["1", "Both", 40],
+        ["4", "Both", 40]
+      ]
+    },
+    "AP Japanese Language and Culture": { "Okada": [["5", "Both", 40]] },
+    "AP Spanish Literature and Culture": {
+      "Mart\u00ednez": [["5", "Both", 40]]
+    },
+    "Spanish 2": {
+      "Billingsly-Ballb\u00e9": [
+        ["3", "Both", 40],
+        ["4", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Ferrey": [["5", "Both", 40]],
+      "Cadoppi": [
+        ["2", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Lombardi": [["8", "Both", 40]]
+    },
+    "Latin 2": { "Huynh": [["1", "Both", 40]] },
+    "Latin 3": { "Huynh": [["7", "Both", 40]] },
+    "Latin 1": { "Huynh": [["4", "Both", 40]] },
+    "AP Chinese Language and Culture": {
+      "Liang": [
+        ["2", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Zhang": [
+        ["1", "Both", 40],
+        ["3", "Both", 40]
+      ]
+    },
+    "Japanese 2": {
+      "Okada": [
+        ["2", "Both", 40],
+        ["3", "Both", 40]
+      ]
+    },
+    "Italian 3": { "Pelagatti": [["4", "Both", 40]] },
+    "Spanish 3 Honors": {
+      "Mart\u00ednez": [
+        ["1", "Both", 40],
+        ["4", "Both", 40]
+      ],
+      "Billingsly-Ballb\u00e9": [
+        ["2", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "Spanish 3": {
+      "Ferrey": [
+        ["2", "Both", 40],
+        ["4", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "French 2": {
+      "Barakat": [
+        ["5", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "Italian 1": {
+      "Pelagatti": [
+        ["3", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "Japanese 3 Honors": {
+      "Wong": [["5", "Both", 40]],
+      "Okada": [["8", "Both", 40]]
+    },
+    "Korean 2": {
+      "Choi": [
+        ["1", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "Chinese 1": {
+      "Danforth": [
+        ["2", "Both", 40],
+        ["3", "Both", 40],
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "Japanese 1": {
+      "Wong": [
+        ["2", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    }
+  },
+  "VPA": {
+    "Orchestra 3 (full year)": { "Hollander": [["3", "Both", 40]] },
+    "Architecture 2A": {
+      "Pollak": [
+        ["1", "1", 40],
+        ["5", "1", 40]
+      ]
+    },
+    "Symphonic Band (full year)": { "Wagner": [["2", "Both", 40]] },
+    "Ceramics 3A (fall semester)": { "Reller": [["6", "1", 40]] },
+    "Drama 1A (fall semester only)": {
+      "Bamberger": [
+        ["3", "1", 40],
+        ["4", "1", 40],
+        ["7", "1", 40]
+      ]
+    },
+    "Architecture 1A": {
+      "Pollak": [
+        ["1", "1", 40],
+        ["5", "1", 40]
+      ]
+    },
+    "Technical Theater 1B (spring semester)": {
+      "Campolongo": [["8", "2", 40]]
+    },
+    "Dance 3B (spring semester only)": { "Jones": [["7", "2", 40]] },
+    "Vocal Music 1A (fall semester only)": {
+      "Chan": [
+        ["4", "1", 40],
+        ["6", "1", 40],
+        ["8", "1", 40]
+      ]
+    },
+    "Art 2 (full year)": { "Janssen": [["2", "Both", 40]] },
+    "Dance 3 (full year)": { "Jones": [["7", "Both", 40]] },
+    "Architecture 1B": {
+      "Pollak": [
+        ["1", "2", 40],
+        ["5", "2", 40]
+      ]
+    },
+    "Piano Lab 1A (fall semester only)": { "Wagner": [["8", "1", 40]] },
+    "Technical Theater 2B": { "Campolongo": [["7", "2", 40]] },
+    "Drama 1B (spring semester only)": {
+      "Bamberger": [
+        ["3", "2", 40],
+        ["4", "2", 40],
+        ["7", "2", 40]
+      ]
+    },
+    "Dance 3A (fall semester only)": { "Jones": [["7", "1", 40]] },
+    "Guitar 1A (fall semester only)": { "Wagner": [["4", "1", 40]] },
+    "Vocal Music 3 (full year)": { "Chan": [["7", "Both", 40]] },
+    "Ceramics 2B (spring semester only)": { "Reller": [["6", "2", 40]] },
+    "Vocal Music 2 (full year)": { "Chan": [["3", "Both", 40]] },
+    "Drama 2B (spring semester only)": { "Bamberger": [["6", "2", 40]] },
+    "Ceramics 1B (spring semester only)": {
+      "Reller": [
+        ["1", "2", 40],
+        ["2", "2", 40],
+        ["4", "2", 40],
+        ["7", "2", 40]
+      ]
+    },
+    "Dance 1 (full year)": {
+      "Jones": [
+        ["3", "Both", 40],
+        ["4", "Both", 40]
+      ]
+    },
+    "Technical Theater 2A": { "Campolongo": [["7", "1", 40]] },
+    "Drama 2A (fall semester only)": { "Bamberger": [["6", "1", 40]] },
+    "Ceramics 2A (fall semester only)": { "Reller": [["6", "1", 40]] },
+    "Vocal Music 2B (spring semester only)": { "Chan": [["3", "2", 40]] },
+    "Dance Production A (fall semester)": { "Jones": [["8", "1", 40]] },
+    "Technical Theater 1B (fall semester)": { "Campolongo": [["8", "1", 40]] },
+    "Drama 3 (FY)": { "Bamberger": [["6", "Both", 40]] },
+    "Art 1 (full year)": {
+      "Janssen": [
+        ["1", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "Vocal Music 3A (fall semester only)": { "Chan": [["7", "1", 40]] },
+    "Orchestra 2 (full year)": { "Hollander": [["1", "Both", 40]] },
+    "Drama 2 (full year)": { "Bamberger": [["6", "Both", 40]] },
+    "Photography 1A (fall semester only)": {
+      "Pollak": [
+        ["2", "1", 40],
+        ["4", "1", 40]
+      ]
+    },
+    "Technical Theater 1A (spring semester)": {
+      "Campolongo": [["8", "2", 40]]
+    },
+    "Drama 3A (fall semester only)": { "Bamberger": [["6", "1", 40]] },
+    "Vocal Music 2A (fall semester only)": { "Chan": [["3", "1", 40]] },
+    "Piano Lab 1B (spring semester only)": { "Wagner": [["8", "2", 40]] },
+    "Technical Theater 3A": { "Campolongo": [["7", "1", 40]] },
+    "Technical Theater 3B": { "Campolongo": [["7", "2", 40]] },
+    "Photography 1B (spring semester only)": {
+      "Pollak": [
+        ["2", "2", 40],
+        ["5", "2", 40]
+      ]
+    },
+    "Technical Theater 1A (fall semester)": { "Campolongo": [["8", "1", 40]] },
+    "Vocal Music 1 (full year)": {
+      "Chan": [
+        ["4", "Both", 40],
+        ["6", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "Symphony Orchestra (full year)": { "Hollander": [["2", "Both", 40]] },
+    "Dance 1B (spring semester only)": {
+      "Jones": [
+        ["3", "2", 40],
+        ["4", "2", 40]
+      ]
+    },
+    "Drama 3B (spring semester only)": { "Bamberger": [["6", "2", 40]] },
+    "Guitar 1B (spring semester only)": { "Wagner": [["4", "2", 40]] },
+    "Band 3": { "Wagner": [["5", "Both", 40]] },
+    "Art 2A (fall semester only)": { "Janssen": [["2", "1", 40]] },
+    "Dance 2A (fall semester only)": { "Jones": [["5", "1", 40]] },
+    "Drama 1 (full year)": {
+      "Bamberger": [
+        ["3", "Both", 40],
+        ["4", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "Ceramics 1 (full year)": {
+      "Reller": [
+        ["1", "Both", 40],
+        ["2", "Both", 40],
+        ["4", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "Ceramics 1A (fall semester only)": {
+      "Reller": [
+        ["1", "1", 40],
+        ["2", "1", 40],
+        ["4", "1", 40],
+        ["7", "1", 40]
+      ]
+    },
+    "Dance 2B (spring semester only)": { "Jones": [["5", "2", 40]] },
+    "Dance Production B (spring semester)": { "Jones": [["8", "2", 40]] },
+    "Vocal Music 1B (spring semester only)": {
+      "Chan": [
+        ["4", "2", 40],
+        ["6", "2", 40],
+        ["8", "2", 40]
+      ]
+    },
+    "Guitar 1 (full year)": { "Wagner": [["4", "Both", 40]] },
+    "Art 1A (fall semester only)": {
+      "Janssen": [
+        ["1", "1", 40],
+        ["7", "1", 40]
+      ]
+    },
+    "AP Music Theory": { "Hollander": [["5", "Both", 40]] },
+    "Piano Lab 1 (full year)": { "Wagner": [["8", "Both", 40]] },
+    "Jazz Band (full year)": { "Wagner": [["7", "Both", 40]] },
+    "Photography 1 (full year)": {
+      "Pollak": [
+        ["2", "Both", 40],
+        ["4", "Both", 40]
+      ]
+    },
+    "Photography 2 (spring semester only)": { "Pollak": [["4", "2", 40]] },
+    "Art 2B (spring semester only)": { "Janssen": [["2", "2", 40]] },
+    "Architecture 2B": {
+      "Pollak": [
+        ["1", "2", 40],
+        ["5", "2", 40]
+      ]
+    },
+    "Dance 1A (fall semester only)": {
+      "Jones": [
+        ["3", "1", 40],
+        ["4", "1", 40]
+      ]
+    },
+    "Vocal Music 3B (spring semester only)": { "Chan": [["7", "2", 40]] },
+    "Art 1B (spring semester only)": {
+      "Janssen": [
+        ["1", "2", 40],
+        ["7", "2", 40]
+      ]
+    },
+    "Ceramics 2 (full year)": { "Reller": [["6", "Both", 40]] },
+    "Ceramics 3B (spring semester)": { "Reller": [["6", "2", 40]] },
+    "Dance 2 (full year)": { "Jones": [["5", "Both", 40]] },
+    "AP Art Drawing": { "Janssen": [["4", "Both", 40]] }
+  },
+  "English": {
+    "English 2A: The Adolescent in Literature (spring semester)": {
+      "Yuan, David": [["4", "2", 40]],
+      "TBD": [
+        ["3", "2", 40],
+        ["6", "2", 40]
+      ],
+      "Moussavi, Sam": [
+        ["7", "2", 40],
+        ["8", "2", 40]
+      ],
+      "Recht, Sydney": [["3", "2", 40]],
+      "Santiago, Meredith": [
+        ["2", "2", 40],
+        ["6", "2", 40]
+      ],
+      "Franklin, Karen": [
+        ["2", "2", 40],
+        ["5", "2", 40]
+      ]
+    },
+    "AP English Literature and Composition for Seniors": {
+      "Carney, Staci": [
+        ["4", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Galang, Lorna": [
+        ["3", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Recht, Sydney": [
+        ["2", "Both", 40],
+        ["5", "Both", 40]
+      ]
+    },
+    "Yearbook B (spring semester)": { "Ferrey": [["8", "2", 40]] },
+    "Science Fiction and Fantasy (spring semester)": {
+      "Lamarre, Timothy": [
+        ["2", "2", 40],
+        ["5", "2", 40]
+      ]
+    },
+    "Yearbook A (fall semester)": { "Ferrey": [["8", "1", 40]] },
+    "Film as Literature (spring semester)": {
+      "Yu, Samantha": [
+        ["2", "2", 40],
+        ["4", "2", 40]
+      ],
+      "Crabtree, Stephanie": [
+        ["4", "2", 40],
+        ["7", "2", 40]
+      ],
+      "Galang, Lorna": [
+        ["5", "2", 40],
+        ["8", "2", 40]
+      ],
+      "Bajet, Lael": [
+        ["3", "2", 40],
+        ["6", "2", 40]
+      ]
+    },
+    "Epic & Myth (spring semester)": {
+      "Henares, Nicole": [
+        ["3", "2", 40],
+        ["7", "2", 40]
+      ]
+    },
+    "Journalism 1": {
+      "Gustafson, Eric": [
+        ["2", "Both", 40],
+        ["4", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "Epic & Myth (fall semester)": {
+      "Henares, Nicole": [
+        ["3", "1", 40],
+        ["7", "1", 40]
+      ]
+    },
+    "English 2A: The Adolescent in Literature (fall semester)": {
+      "Yuan, David": [["4", "1", 40]],
+      "TBD": [
+        ["3", "1", 40],
+        ["6", "1", 40]
+      ],
+      "Moussavi, Sam": [
+        ["7", "1", 40],
+        ["8", "1", 40]
+      ],
+      "Recht, Sydney": [["3", "1", 40]],
+      "Santiago, Meredith": [
+        ["2", "1", 40],
+        ["6", "1", 40]
+      ],
+      "Franklin, Karen": [
+        ["1", "1", 40],
+        ["2", "1", 40],
+        ["2", "1", 40],
+        ["5", "1", 40]
+      ]
+    },
+    "English 2B: Points of View (fall semester)": {
+      "Yu, Samantha": [
+        ["2", "1", 40],
+        ["4", "1", 40],
+        ["6", "1", 40]
+      ],
+      "Torres, Anne": [
+        ["3", "1", 40],
+        ["8", "1", 40]
+      ],
+      "Park, Claudia": [
+        ["2", "1", 40],
+        ["6", "1", 40]
+      ],
+      "Moses, Jaqueline": [
+        ["1", "1", 40],
+        ["7", "1", 40]
+      ],
+      "Santiago, Meredith": [
+        ["3", "1", 40],
+        ["5", "1", 40]
+      ]
+    },
+    "Critical Writing (spring semester)": {
+      "TBD": [["8", "2", 40]],
+      "Hereford, David": [
+        ["3", "2", 40],
+        ["7", "2", 40]
+      ],
+      "Franklin, Karen": [
+        ["4", "2", 40],
+        ["7", "2", 40]
+      ],
+      "Williams, Sam": [
+        ["1", "2", 40],
+        ["5", "2", 40]
+      ],
+      "Gustafson, Eric": [
+        ["2", "2", 40],
+        ["4", "2", 40],
+        ["6", "2", 40]
+      ]
+    },
+    "Journalism 2": {
+      "Gustafson, Eric": [
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "American Literature: The Short Story (fall semester)": {
+      "Moffitt, Jennifer": [
+        ["2", "1", 40],
+        ["8", "1", 40]
+      ]
+    },
+    "English 2B: Points of View (spring semester)": {
+      "Torres, Anne": [
+        ["3", "2", 40],
+        ["8", "2", 40]
+      ],
+      "Moses, Jaqueline": [
+        ["1", "2", 40],
+        ["7", "2", 40]
+      ],
+      "Yu, Samantha": [["6", "2", 40]],
+      "Park, Claudia": [
+        ["2", "2", 40],
+        ["6", "2", 40]
+      ],
+      "Mitchell, Kristen": [
+        ["2", "2", 40],
+        ["4", "2", 40]
+      ],
+      "Santiago, Meredith": [
+        ["3", "2", 40],
+        ["5", "2", 40]
+      ]
+    },
+    "Novel (fall semester)": {
+      "Mitchell, Kristen": [
+        ["2", "1", 40],
+        ["4", "1", 40]
+      ]
+    },
+    "AP Art History": {
+      "Ritter, Bryan": [
+        ["2", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "Critical Writing (fall semester)": {
+      "TBD": [["8", "1", 40]],
+      "Hereford, David": [
+        ["3", "1", 40],
+        ["7", "1", 40]
+      ],
+      "Franklin, Karen": [
+        ["4", "1", 40],
+        ["7", "1", 40]
+      ],
+      "Williams, Sam": [
+        ["1", "1", 40],
+        ["5", "1", 40]
+      ],
+      "Gustafson, Eric": [
+        ["2", "1", 40],
+        ["4", "1", 40],
+        ["6", "1", 40]
+      ]
+    },
+    "AP English Language and Composition for Juniors": {
+      "Crabtree, Stephanie": [
+        ["1", "Both", 40],
+        ["5", "Both", 40]
+      ],
+      "Yuan, David": [
+        ["3", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Ritter, Bryan": [
+        ["4", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Bajet, Lael": [
+        ["2", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Moffitt, Jennifer": [
+        ["3", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "Shakespeare (fall semester)": {
+      "Hereford, David": [
+        ["1", "1", 40],
+        ["5", "1", 40]
+      ]
+    },
+    "Shakespeare (spring semester)": {
+      "Hereford, David": [
+        ["1", "2", 40],
+        ["5", "2", 40]
+      ]
+    },
+    "Science Fiction and Fantasy (fall semester)": {
+      "Lamarre, Timothy": [
+        ["2", "1", 40],
+        ["5", "1", 40]
+      ]
+    },
+    "Literature and Psychology (spring semester)": {
+      "Carney, Staci": [
+        ["1", "2", 40],
+        ["3", "2", 40]
+      ],
+      "Henares, Nicole": [
+        ["4", "2", 40],
+        ["6", "2", 40]
+      ]
+    },
+    "Communication and Writing": { "Moses, Jaqueline": [["4", "Both", 40]] },
+    "Literature and Philosophy (spring semester)": {
+      "Yu, Samantha": [
+        ["1", "2", 40],
+        ["7", "2", 40]
+      ]
+    },
+    "Literature and Psychology (fall semester)": {
+      "Yu, Samantha": [
+        ["1", "1", 40],
+        ["7", "1", 40]
+      ],
+      "Henares, Nicole": [
+        ["4", "1", 40],
+        ["6", "1", 40]
+      ]
+    },
+    "Film as Literature (fall semester)": {
+      "Crabtree, Stephanie": [
+        ["4", "1", 40],
+        ["7", "1", 40]
+      ],
+      "Galang, Lorna": [
+        ["5", "1", 40],
+        ["8", "1", 40]
+      ],
+      "Bajet, Lael": [
+        ["3", "1", 40],
+        ["6", "1", 40]
+      ]
+    },
+    "Lit and Phil: Ethics of Eating (spring semester)": {
+      "Moffitt, Jennifer": [
+        ["2", "2", 40],
+        ["8", "2", 40]
+      ]
+    },
+    "Comedy & Satire (fall semester)": {
+      "Carney, Staci": [
+        ["1", "1", 40],
+        ["3", "1", 40]
+      ]
+    }
+  },
+  "Math": {
+    "AP Calculus AB": {
+      "Sullivan": [
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Chan, T.": [["2", "Both", 40]],
+      "Gribler": [
+        ["4", "Both", 40],
+        ["5", "Both", 40]
+      ],
+      "Warshaw": [
+        ["1", "Both", 40],
+        ["3", "Both", 40]
+      ]
+    },
+    "Algebra 2B (off semester)": { "Chu": [["7", "1", 40]] },
+    "AP Computer Science Principles": {
+      "Sullivan": [
+        ["2", "Both", 40],
+        ["4", "Both", 40]
+      ],
+      "Cernuto": [
+        ["3", "Both", 40],
+        ["5", "Both", 40],
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "AP Calculus BC": {
+      "Chan, T.": [["8", "Both", 40]],
+      "Hoffman": [
+        ["1", "Both", 40],
+        ["2", "Both", 40],
+        ["5", "Both", 40]
+      ]
+    },
+    "Pre-Calculus": {
+      "Liu, Kathy": [
+        ["2", "Both", 40],
+        ["4", "Both", 40]
+      ],
+      "Karapetyan": [
+        ["1", "Both", 40],
+        ["3", "Both", 40]
+      ],
+      "Centers": [["1", "Both", 40]],
+      "Hong, Lisa": [
+        ["6", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Chu": [
+        ["2", "Both", 40],
+        ["4", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Tran": [
+        ["3", "Both", 40],
+        ["5", "Both", 40]
+      ],
+      "Cheng": [["5", "Both", 40]]
+    },
+    "AP Computer Science": {
+      "Chan, R.": [
+        ["1", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Simon": [
+        ["2", "Both", 40],
+        ["4", "Both", 40]
+      ]
+    },
+    "Computer Programming B (Fall Semester Only)": {
+      "Simon": [
+        ["1", "1", 40],
+        ["6", "1", 40]
+      ]
+    },
+    "Algebra 2 CCSS + Precalculus": { "Tran": [["1", "Both", 40]] },
+    "Pre-Calculus Honors": {
+      "Sinn": [
+        ["4", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Gribler": [
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Li, Ernest": [
+        ["2", "Both", 40],
+        ["3", "Both", 40]
+      ]
+    },
+    "Algebra 1B / Geometry A (off Semester)": {
+      "Centers/Chan": [["7", "Both", 40]]
+    },
+    "Computer Programming (Year Long)": {
+      "Simon": [
+        ["1", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "Computer Programming A (Fall Semester Only)": {
+      "Simon": [
+        ["1", "1", 40],
+        ["6", "1", 40]
+      ]
+    },
+    "Geometry B / Algebra 2A (Off Semester)": {
+      "Chan, R./Chu": [["7", "Both", 40]]
+    },
+    "Geometry CCSS": {
+      "Nghe, Henry": [
+        ["2", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Karapetyan": [["7", "Both", 40]],
+      "Fortin": [
+        ["3", "Both", 40],
+        ["5", "Both", 40]
+      ],
+      "Hong, Lisa": [
+        ["2", "Both", 40],
+        ["3", "Both", 40]
+      ],
+      "Statmore": [
+        ["1", "Both", 40],
+        ["3", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Arnold": [
+        ["1", "Both", 40],
+        ["4", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "Algebra 2 CCSS": {
+      "Sinn": [["8", "Both", 40]],
+      "Karapetyan": [
+        ["4", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Arnold": [
+        ["3", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Grice": [["3", "Both", 40]],
+      "Knight": [
+        ["2", "Both", 40],
+        ["4", "Both", 40]
+      ],
+      "Tran": [
+        ["2", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Li, Ernest": [
+        ["6", "Both", 40],
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Chu": [["5", "Both", 40]],
+      "Cheng": [["1", "Both", 40]]
+    },
+    "AP Statistics": {
+      "Ambrose": [
+        ["1", "Both", 40],
+        ["2", "Both", 40],
+        ["5", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Bookwalter": [
+        ["3", "Both", 40],
+        ["4", "Both", 40],
+        ["6", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    }
+  },
+  "Social Studies": {
+    "American Democracy (fall semester)": {
+      "Michels": [
+        ["2", "1", 40],
+        ["5", "1", 40],
+        ["8", "1", 40]
+      ],
+      "Sloan": [
+        ["1", "1", 40],
+        ["3", "1", 40],
+        ["4", "1", 40],
+        ["6", "1", 40],
+        ["7", "1", 40]
+      ]
+    },
+    "AP European History": {
+      "Sekis Sutilovic": [
+        ["3", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "AP Human Geography (spring semester)": {
+      "Martin": [
+        ["2", "2", 40],
+        ["5", "2", 40]
+      ]
+    },
+    "Ethnic Studies": { "Komlos": [["3", "Both", 40]] },
+    "AP Psychology": {
+      "Michels": [["6", "Both", 40]],
+      "Lubenow": [
+        ["2", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Shimmon": [
+        ["1", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Kwong-Ballard": [
+        ["2", "Both", 40],
+        ["5", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Lin": [
+        ["3", "Both", 40],
+        ["4", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "Economics (fall semester)": {
+      "Martin": [
+        ["4", "1", 40],
+        ["8", "1", 40]
+      ],
+      "Worth": [["5", "1", 40]],
+      "Furey": [["2", "1", 40]],
+      "Staff": [
+        ["1", "1", 40],
+        ["7", "1", 40]
+      ]
+    },
+    "AP Human Geography (fall semester)": {
+      "Martin": [
+        ["2", "1", 40],
+        ["5", "1", 40]
+      ]
+    },
+    "US History": {
+      "Petrini": [
+        ["3", "Both", 40],
+        ["4", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Sekis Sutilovic": [
+        ["1", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Hanlon": [
+        ["4", "Both", 40],
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Staff": [
+        ["2", "Both", 40],
+        ["5", "Both", 40],
+        ["6", "Both", 40]
+      ]
+    },
+    "AP Government and Politics: U.S. / Comparative": {
+      "Ungar": [
+        ["5", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Worth": [
+        ["2", "Both", 40],
+        ["3", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "Economics (spring semester)": {
+      "Martin": [
+        ["4", "2", 40],
+        ["8", "2", 40]
+      ],
+      "Worth": [["5", "2", 40]],
+      "Furey": [["2", "2", 40]],
+      "Staff": [
+        ["1", "2", 40],
+        ["7", "2", 40]
+      ]
+    },
+    "AP World History": {
+      "Bell": [
+        ["2", "Both", 40],
+        ["4", "Both", 40],
+        ["5", "Both", 40]
+      ],
+      "Magsanay": [
+        ["1", "Both", 40],
+        ["7", "Both", 40]
+      ]
+    },
+    "World History": {
+      "Johnson": [
+        ["3", "Both", 40],
+        ["4", "Both", 40]
+      ],
+      "Komlos": [
+        ["1", "Both", 40],
+        ["4", "Both", 40],
+        ["6", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Tuason": [
+        ["2", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Lin": [["1", "Both", 40]],
+      "Klein": [
+        ["6", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Petrini": [
+        ["1", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Bell": [["8", "Both", 40]],
+      "Watters": [
+        ["1", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Magsanay": [
+        ["3", "Both", 40],
+        ["4", "Both", 40]
+      ],
+      "Maldonado-Silva": [
+        ["5", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Hanlon": [
+        ["2", "Both", 40],
+        ["5", "Both", 40]
+      ]
+    },
+    "AP Microeconomics / Macroeconomics": {
+      "Johnson": [
+        ["1", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Lubenow": [
+        ["5", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Ungar": [
+        ["2", "Both", 40],
+        ["8", "Both", 40]
+      ],
+      "Shimmon": [
+        ["3", "Both", 40],
+        ["4", "Both", 40]
+      ]
+    },
+    "AP US History": {
+      "Watters": [
+        ["3", "Both", 40],
+        ["7", "Both", 40]
+      ],
+      "Tuason": [
+        ["5", "Both", 40],
+        ["6", "Both", 40]
+      ],
+      "Maldonado-Silva": [
+        ["2", "Both", 40],
+        ["4", "Both", 40]
+      ],
+      "Klein": [
+        ["1", "Both", 40],
+        ["3", "Both", 40]
+      ],
+      "Furey": [
+        ["4", "Both", 40],
+        ["6", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "American Democracy (spring semester)": {
+      "Michels": [
+        ["2", "2", 40],
+        ["5", "2", 40],
+        ["8", "2", 40]
+      ],
+      "Sloan": [
+        ["1", "2", 40],
+        ["3", "2", 40],
+        ["4", "2", 40],
+        ["6", "2", 40],
+        ["7", "2", 40]
+      ]
+    }
+  },
+  "PE": {
+    "Weight Training (spring semester only)": {
+      "Taylor-Ray": [["6", "2", 40]]
+    },
+    "Racket Activities (spring semester only)": { "Hosoda": [["6", "2", 40]] },
+    "Yoga 1": { "Doherty": [["6", "Both", 40]], "Welch": [["2", "Both", 40]] },
+    "Soccer B (spring semester only)": { "Lopez": [["7", "2", 40]] },
+    "Weight Training (fall semester only)": { "Taylor-Ray": [["6", "1", 40]] },
+    "Basketball (spring semester only)": { "Ray": [["7", "2", 40]] },
+    "Soccer (full year)": { "Lopez": [["7", "Both", 40]] },
+    "Racket Activities (full year)": { "Hosoda": [["6", "Both", 40]] },
+    "Swimming (full year)": { "Doherty": [["1", "Both", 40]] },
+    "Swimming (spring semester only)": { "Doherty": [["1", "2", 40]] },
+    "Soccer A (fall semester only)": { "Lopez": [["7", "1", 40]] },
+    "Weight Training (full year)": { "Taylor-Ray": [["6", "Both", 40]] },
+    "Basketball (full year)": { "Ray": [["7", "Both", 40]] },
+    "Racket Activities (fall semester only)": { "Hosoda": [["6", "1", 40]] },
+    "Fit for Life 2": {
+      "Doherty": [
+        ["3", "Both", 40],
+        ["4", "Both", 40]
+      ],
+      "Ray": [
+        ["1", "Both", 40],
+        ["2", "Both", 40]
+      ],
+      "Barton": [["8", "Both", 40]],
+      "Taylor-Ray": [
+        ["1", "Both", 40],
+        ["2", "Both", 40],
+        ["3", "Both", 40]
+      ],
+      "Mitcheltree": [
+        ["2", "Both", 40],
+        ["3", "Both", 40],
+        ["4", "Both", 40],
+        ["7", "Both", 40],
+        ["8", "Both", 40]
+      ]
+    },
+    "Basketball (fall semester only)": { "Ray": [["7", "1", 40]] },
+    "Swimming (fall semester only)": { "Doherty": [["1", "1", 40]] }
+  }
+}

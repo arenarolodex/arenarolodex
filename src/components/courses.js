@@ -22,7 +22,7 @@ export default class Courses extends React.Component {
     if (!value) value = false;
     this.props.loadedCallback(value);
   }
-  async componentDidMount() {
+  componentDidMount() {
     var courses = window.localStorage.getItem('courses');
     var freeblocks = window.localStorage.getItem('freeblocks');
     courses = courses ? JSON.parse(courses) : {};
@@ -35,53 +35,43 @@ export default class Courses extends React.Component {
     state.courses = !Array.isArray(courses) ? courses : {};
     state.freeblocks = !Array.isArray(freeblocks) ? freeblocks : {};
 
-    var selection = Object.keys(courses)
-      .map((key) => ({
-        Class: this.state.courses[key].Class,
-        Subject: this.state.courses[key].Subject,
-        Teacher: this.state.courses[key].Teacher,
-        Block: this.state.courses[key].Block,
-        priorityTeach: this.state.courses[key].priorityTeach,
-        priorityBlock: this.state.courses[key].priorityBlock,
-        TeacherRequired: this.state.courses[key].TeacherRequired
-      }));
-    var blocks = Object.keys(freeblocks)
-      .map((key) => ({
-        Block: this.state.freeblocks[key].Block,
-        priorityBlock: this.state.freeblocks[key].priorityBlock
-      }));
-    // alert("Form was submitted. "+JSON.stringify(selection));
-    if (Object.keys(courses).length !== 0) {
-      this.finishLoading(true);
-      var results = await this.utils.generateSchedules(selection, blocks);
-      this.finishLoading();
-      this.props.displaySchedules(results);
-    }
-
     this.setState(state);
+    this.generateSchedulesFromCourses(state);
   }
-  async handleSumbit(e) {
-    e.preventDefault();
-    var selection = Object.keys(this.state.courses)
-      .map((key) => ({
-        Class: this.state.courses[key].Class,
-        Subject: this.state.courses[key].Subject,
-        Teacher: this.state.courses[key].Teacher,
-        Block: this.state.courses[key].Block,
-        priorityTeach: this.state.courses[key].priorityTeach,
-        priorityBlock: this.state.courses[key].priorityBlock,
-        TeacherRequired: this.state.courses[key].TeacherRequired
-      }));
-    var blocks = Object.keys(this.state.freeblocks)
-      .map((key) => ({
-        Block: this.state.freeblocks[key].Block,
-        priorityBlock: this.state.freeblocks[key].priorityBlock
-      }));
+
+  generateSchedulesFromCourses = state => {
+    var selection = Object.keys(state.courses)
+        .filter(key => state.courses[key].Class !== '')
+        .map(key => ({
+          Class: state.courses[key].Class,
+          Subject: state.courses[key].Subject,
+          Teacher: state.courses[key].Teacher,
+          Block: state.courses[key].Block,
+          priorityTeach: state.courses[key].priorityTeach,
+          priorityBlock: state.courses[key].priorityBlock,
+          TeacherRequired: state.courses[key].TeacherRequired
+        }));
+    var blocks = Object.keys(state.freeblocks)
+        .map((key) => ({
+          Block: state.freeblocks[key].Block,
+          priorityBlock: state.freeblocks[key].priorityBlock,
+          semester: state.freeblocks[key].semester
+        }));
     // alert("Form was submitted. "+JSON.stringify(selection));
-    this.finishLoading(true);
-    var results = await this.utils.generateSchedules(selection, blocks);
-    this.finishLoading();
-    this.props.displaySchedules(results);
+    if (Object.keys(selection).length !== 0) {
+      this.finishLoading(true);
+      this.utils.generateSchedules(selection, blocks)
+          .then(results => {
+            this.finishLoading();
+            this.props.displaySchedules(results);
+          })
+          .catch(console.error);
+    }
+  };
+
+  handleSumbit(e) {
+    e.preventDefault();
+    this.generateSchedulesFromCourses(this.state);
   }
 
   changeSubmitText = () => {
@@ -92,13 +82,11 @@ export default class Courses extends React.Component {
 
   render() {
     //Flags for when to stop adding courses and free blocks
-    var nocourse = Object.keys(this.state.courses).length >= 8
-      || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
-    var nofree = Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 8;
+    const canAddBlocks = (Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length) < 16;
     return (
       <form onSubmit={this.handleSumbit.bind(this)}>
-        <button onClick={this.addcourse} disabled={nocourse || this.state.loading}>Add class</button>
-        <button onClick={this.addfreeblock} disabled={nofree || this.state.loading}>Add free block (optional)</button>
+        <button onClick={this.addcourse} disabled={!canAddBlocks || this.state.loading}>Add class</button>
+        <button onClick={this.addfreeblock} disabled={!canAddBlocks || this.state.loading}>Add free block (optional)</button>
         <button onClick={this.removeall} disabled={(Object.keys(this.state.courses).length === 0 && Object.keys(this.state.freeblocks).length === 0) || this.state.loading} className={styles.removeall}>Remove all</button>
         <div>
           {Object.keys(this.state.freeblocks).reverse().map((key) =>
@@ -172,7 +160,7 @@ export default class Courses extends React.Component {
     e.preventDefault();
     var state = this.state;
     var key = (new Date()).getTime();
-    state.freeblocks[key] = { Block: '', priorityBlock: '' };
+    state.freeblocks[key] = { Block: '', priorityBlock: '', semester: '' };
     this.setState(state);
   }
   removecourse = (key) => {
@@ -198,15 +186,10 @@ export default class Courses extends React.Component {
       this.state.window.localStorage.setItem('courses', JSON.stringify(this.state.courses));
       this.state.window.localStorage.setItem('freeblocks', JSON.stringify(this.state.freeblocks));
     }
-  }
+  };
 
   /**A function to add a Course object to this component's state.courses*/
   addcourse = (e) => {
-    if (Object.keys(this.state.courses).length >= 9
-    || Object.keys(this.state.freeblocks).length + Object.keys(this.state.courses).length >= 9) {
-      alert('Hey! That\'s not a legal schedule!');
-      return;
-    }
     e.preventDefault();
     var state = this.state;
     var key = (new Date()).getTime();

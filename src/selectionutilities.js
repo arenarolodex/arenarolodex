@@ -15,8 +15,11 @@ export default class SelectionUtilities {
     };
     // this.xhttp.onreadystatechange.bind(this);
     //Define which URL to get info from here
-    this.coursesURL = process.env.GATSBY_COURSES_API
-      || 'https://raw.githubusercontent.com/WhizardXD/arenarolodex/master/courseserver/newannouncer.json';
+    this.coursesURL =
+      // process.env.GATSBY_COURSES_API
+      // ||
+      'https://raw.githubusercontent.com/WhizardXD/arenarolodex/fullyear-scheduling/courseserver/2020_2021announcer.json'
+      // || 'https://raw.githubusercontent.com/WhizardXD/arenarolodex/master/courseserver/newannouncer.json';
     this.xhttp.open('GET', this.coursesURL, true);
     this.xhttp.send();
   }
@@ -38,8 +41,11 @@ export default class SelectionUtilities {
       this.xhttp.onreadystatechange = onReady;
       // this.xhttp.onreadystatechange.bind(this);
       //Define which URL to get info from here
-      this.coursesURL = process.env.GATSBY_COURSES_API
-        || 'https://raw.githubusercontent.com/WhizardXD/arenarolodex/master/courseserver/newannouncer.json';
+      this.coursesURL =
+        // process.env.GATSBY_COURSES_API
+        // ||
+        'https://raw.githubusercontent.com/WhizardXD/arenarolodex/fullyear-scheduling/courseserver/2020_2021announcer.json'
+        // || 'https://raw.githubusercontent.com/WhizardXD/arenarolodex/master/courseserver/newannouncer.json';
       this.xhttp.open('GET', this.coursesURL, true);
       this.xhttp.send();
     });
@@ -58,62 +64,63 @@ export default class SelectionUtilities {
 
     var recursiveScheduleMaker = function(courses, schedule) {
       //Which class are we on?
-      const index = schedule.schedule.length;
+      courses = courses.slice();
+      const index = schedule.classes.length;
       const currentClass = courses[index];
 
-      var coursesLooping = [];
+      let possibleClasses = [];
 
       //Some loops to push all courses we need to look at to coursesLooping
-      Object.keys(announcer[currentClass.Subject][currentClass.Class]).forEach((key) => {
-        var teacher = key;
-        announcer[currentClass.Subject][currentClass.Class][key].forEach((teach) => {
-          teach.push(teacher);
-          teach.push(currentClass.Class);
-          coursesLooping.push(teach);
+      Object.keys(announcer[currentClass.Subject][currentClass.Class]).forEach(teacher => {
+        announcer[currentClass.Subject][currentClass.Class][teacher].forEach(possibleClass => {
+          possibleClass.push(teacher);
+          possibleClass.push(currentClass.Class);
+          possibleClasses.push(possibleClass);
         });
       });
 
       //Loop through coursesLooping, only continue if it doesn't intersect
-      coursesLooping.forEach((newCourse) => {
-        //Look for block intersection - use flag blockIntersect
-        var blockIntersect = false;
-        schedule.schedule.forEach((existingCourse) => {
-          if (existingCourse[0] === newCourse[0]) { //Do the blocks intersect?
-            blockIntersect = true;
-            return;
-          }
-        });
+      possibleClasses.forEach(possibleClass => {
+        //Look for block intersection
+        // discards if either of the two classes share the same block are full year or if they share the same semester
+        for (let existingClass of schedule.classes) {
+          if (existingClass[0] === possibleClass[0] &&
+              (existingClass[1] === 'Both' || possibleClass[1] === 'Both' || existingClass[1] === possibleClass[1])
+          ) return;
+        }
 
-        //After we checked, let's continue adding courses if there wasn't any
-        //intersection
-        if (blockIntersect) return;
-        if (currentClass.TeacherRequired && newCourse[3] !== currentClass.Teacher) return;
+        //After we checked, let's continue adding courses if there wasn't any intersection
+        if (currentClass.TeacherRequired && possibleClass[3] !== currentClass.Teacher && currentClass.Teacher !== '') return;
 
-        var points = schedule.points;
-        var sched = schedule.schedule.slice(0);
-        var impossible = schedule.impossible ? true
-          : parseInt(newCourse[2]) < 1;
-        // console.log(parseInt(newCourse[2]));
-        var newSchedule = {
-          schedule: sched,
+        const points = schedule.points;
+        const newClasses = schedule.classes.slice();
+        const impossible = schedule.impossible || parseInt(possibleClass[2]) < 1;
+
+        const newSchedule = {
+          classes: newClasses,
           points: points,
           impossible: impossible
         };
-        newSchedule.schedule.push(newCourse); //Add the new course to the schedule
-        if (newCourse[3] === currentClass.Teacher) { //Is this the user's preferred teacher?
+
+        newSchedule.classes.push(possibleClass); //Add the new course to the schedule
+        if (possibleClass[3] === currentClass.Teacher) { //Is this the user's preferred teacher?
           newSchedule.points += currentClass.priorityTeach;
-          if (newCourse[0] === currentClass.Block) //Is this the user's preferred teacher AND block?
+          if (possibleClass[0] === currentClass.Block) {//Is this the user's preferred teacher AND block?
             newSchedule.points += currentClass.priorityBlock;
+          }
         }
 
-        if (newSchedule.schedule.length === courses.length) { //Is the schedule already done?
+        if (newSchedule.classes.length === courses.length) { //Is the schedule already done?
+          // translates semester ids to names
+          const semesterKey = {'1': 'Fall', '2': 'Spring'};
           //Let's check if this one has the free blocks the user wanted:
-          freeblocks.forEach((block) => {
-            if (!newSchedule.schedule.find((course) => block.Block === course[0]))
+          freeblocks.forEach(block => {
+            if (!newSchedule.classes.find(course => block.Block === course[0] &&
+                (block.semester === 'Both' || course[1] === 'Both' || block.semester === semesterKey[course[1]]))) {
               newSchedule.points += block.priorityBlock; //Add preference points
+            }
           });
           schedules.push(newSchedule); //Push this schedule to schedules[]
-          return; //Continue to the next newCourse
         } else {
           recursiveScheduleMaker(courses, newSchedule); //If we weren't done, go to next course
         }
@@ -122,8 +129,9 @@ export default class SelectionUtilities {
 
     //Use recursive function to make schedules!
     recursiveScheduleMaker(courses, {
-      schedule: [],
-      points: 0
+      classes: [],
+      points: 0,
+      impossible: false
     });
 
     //Sort schedules by points
