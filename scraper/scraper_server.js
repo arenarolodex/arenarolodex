@@ -31,7 +31,7 @@ var options = {
 };
 
 let announcer = JSON.parse(fs.readFileSync(path.join(__dirname, "newannouncer.json")));
-const switchables = ['Library Training 2A', 'Technical Theater 1A', 'Student Aide A (fall semester)', 'English 2B: Points of View', 'Student Aide B (spring semester)', 'American Democracy', 'Library Training 1B', 'Economics', 'College/Career', 'Library Training 1A', 'Technical Theater 1B', 'AP Human Geography', 'Health', 'English 2A The Adolescent in Literature', 'Library Training 2B'];
+const switchables = ['Library Training 2A', 'Technical Theater 1A', 'Student Aide A (fall semester)', 'English 2B: Points of View', 'Student Aide B (spring semester)', 'American Democracy', 'Library Training 1B', 'Economics', 'College/Career', 'Library Training 1A', 'Technical Theater 1B', 'AP Human Geography', 'Health', 'English 2A Adolescent in Literature', 'Library Training 2B'];
 
 function updateAnnouncer() {
     rp(options)
