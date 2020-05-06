@@ -33,7 +33,9 @@ export default class IndexPage extends React.Component {
         text="Loading..."
       >
         <Layout>
-          <button onClick={this.hide}>Messages</button>
+          <button onClick={this.hide}>
+            {this.state.visible ? <span>Hide Messages</span> : <span>Show Messages</span>}
+          </button>
           {this.state.visible && <EmbeddedGist visible={this.state.visible} gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"></EmbeddedGist>}
           <Courses displaySchedules={this.schedules.bind(this)} loadedCallback={this.loadingCallback} />
           <Schedules schedules={this.state.schedules} />
