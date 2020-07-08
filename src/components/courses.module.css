@@ -1,3 +1,78 @@
-.removeall {
-  float: right;
+.deleteBut {
+	margin: 0 0 0 auto;
+	/* TODO: get it to align better */
+}
+
+.course {
+	background-color: #e7cb54;
+}
+
+.freeblock {
+	background-color: #78f1ea;
+}
+
+.freeblock,
+.course {
+	width: 60%;
+	margin: auto;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	padding: 0.8rem 0.8rem 0.4rem;
+	border-radius: .5rem;
+}
+
+.freeblock>label,
+.course>label {
+	padding: 0.2rem 0;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.freeblock>label>div,
+.course>label>div,
+.course>.classes>label>div {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	margin-left: auto;
+}
+
+.freeblock input {
+	width: 2rem;
+}
+
+@media (max-width:800px) {
+	.freeblock>label,
+	.course>label,
+	.course>.classes>label {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		font-size: 1.8vh;
+	}
+	.course,
+	.freeblock {
+		width: 90%;
+	}
+	.course select,
+	.course option {
+		overflow-x: hidden;
+		max-width: 100%;
+		font-size: 2vh;
+	}
+	.classes div {
+		width: 100%;
+		margin-right: 0;
+		padding-right: 0;
+		text-align: right;
+	}
+	.classes select {
+		width: 80%;
+		max-width: 100%;
+		overflow-wrap: normal;
+	}
+	button {
+		font-size: 1.5vh !important;
+	}
 }

@@ -5,10 +5,10 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-tsconfig-paths`,
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-tsconfig-paths',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-default',
         short_name: 'starter',
@@ -25,4 +25,4 @@ module.exports = {
       }
     }
   ],
-}
+};

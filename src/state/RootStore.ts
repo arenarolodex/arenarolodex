@@ -3,17 +3,23 @@ import { createContext, useContext } from 'react';
 import CourseStore, { CourseStoreHTTPTransport } from '@/state/CourseStore';
 import ScheduleStore from '@/state/ScheduleStore';
 
-export const ApplicationContext = createContext({} as RootStore); 
+import { observable } from 'mobx';
+
+import packageJSON from '../../package.json';
+
+export const ApplicationContext = createContext({} as RootStore);
 export function useApplicationContext() {
-    return useContext(ApplicationContext);
+  return useContext(ApplicationContext);
 }
 
 export default class RootStore {
-    courseStore: CourseStore;
-    scheduleStore: ScheduleStore;
+  APP_VERSION = packageJSON.version;
 
-    constructor() {
-        this.courseStore = new CourseStore(this, new CourseStoreHTTPTransport());
-        this.scheduleStore = new ScheduleStore(this);
-    }
+  courseStore: CourseStore;
+  scheduleStore: ScheduleStore;
+
+  constructor() {
+    this.courseStore = new CourseStore(this, new CourseStoreHTTPTransport());
+    this.scheduleStore = new ScheduleStore(this);
+  }
 }
