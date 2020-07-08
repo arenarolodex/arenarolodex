@@ -1,3 +1,5 @@
+import { computed, observable } from 'mobx';
+
 import CourseStore, { CourseInstance } from '@/state/CourseStore';
 
 import * as _ from 'lodash';
@@ -27,37 +29,44 @@ type Schedule = {
     impossible: boolean;
 }
 
-class ScheduleMaker {
+export default class ScheduleMaker {
     PREFERRED_TEACHER_WEIGHT = 1;
     PREFERRED_BLOCK_WEIGHT = 1;
 
     courseStore: CourseStore;
 
+    @observable requestedCourses: RequestedCourse[] = [];
+    @observable requestedFreeBlocks: RequestedFreeBlock[] = [];
+
     constructor(courseStore: CourseStore) {
         this.courseStore = courseStore;
     }
 
-    generateSchedules(
-        requestedCourses: RequestedCourse[],
-        requestedFreeBlocks: RequestedFreeBlock[]
-    ): Schedule[] {
-        const schedules: Schedule[] = [];
-
+    @computed
+    get generatedSchedules(): Schedule[] {
+        if (this.requestedCourses.length == 0) return [];
+        const schedules: Schedule[] = []
+        this.findSchedulesRecursively({
+            courseInstances: [],
+            score: 0,
+            impossible: false
+        }, schedules);
         return schedules;
     }
 
     findSchedulesRecursively(
-        requestedCourses: RequestedCourse[],
-        requestedFreeBlocks: RequestedFreeBlock[],
         currentSchedule: Schedule,
         allSchedules: Schedule[]
     ) {
-        const currentRequestedCourse = requestedCourses[currentSchedule.courseInstances.length];
+        // Look at the next requested course
+        const currentRequestedCourse = this.requestedCourses[currentSchedule.courseInstances.length];
+        // Locate all matching offers
         const possibleCourseInstances = this.courseStore.announcer
             [currentRequestedCourse.department]
             [currentRequestedCourse.courseName];
 
         for (let possibleCourseInstance of possibleCourseInstances) {
+            // Discard course instances that overlap with ones already in the schedule
             if (ScheduleMaker.checkScheduleIntersect(currentSchedule, possibleCourseInstance)) {
                 continue;
             }
@@ -81,15 +90,15 @@ class ScheduleMaker {
                 newSchedule.score += this.PREFERRED_BLOCK_WEIGHT;
             }
 
-            if (newSchedule.courseInstances.length == requestedCourses.length) {
-                for (let requestedFreeBlock of requestedFreeBlocks) {
+            if (newSchedule.courseInstances.length == this.requestedCourses.length) {
+                for (let requestedFreeBlock of this.requestedFreeBlocks) {
                     if (!ScheduleMaker.checkScheduleIntersect(newSchedule, requestedFreeBlock)) {
                         newSchedule.score += requestedFreeBlock.priority;
                     }
                 }
                 allSchedules.push(newSchedule);
             } else {
-                this.findSchedulesRecursively(requestedCourses, requestedFreeBlocks, newSchedule, allSchedules);
+                this.findSchedulesRecursively(newSchedule, allSchedules);
             }
         }
     }

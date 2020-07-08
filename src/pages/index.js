@@ -7,6 +7,7 @@ import Courses from '../components/courses';
 import Schedules from '../components/schedules';
 
 import CourseStore, { CourseStoreHTTPTransport } from '@/state/CourseStore';
+import ScheduleMaker from '@/state/ScheduleMaker';
 
 import './index.css';
 
@@ -14,6 +15,7 @@ export default class IndexPage extends React.Component {
   constructor() {
     super();
     this.store = new CourseStore(new CourseStoreHTTPTransport());
+    window.scheduleMaker = new ScheduleMaker(this.store);
     this.state = {schedules: [], loading: true, visible: true};
   }
   schedules(scheds) {
