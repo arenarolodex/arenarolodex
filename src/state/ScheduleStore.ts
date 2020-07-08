@@ -1,6 +1,7 @@
 import { computed, observable } from 'mobx';
 
-import CourseStore, { CourseInstance } from '@/state/CourseStore';
+import RootStore from '@/state/RootStore';
+import { CourseInstance } from '@/state/CourseStore';
 
 import * as _ from 'lodash';
 
@@ -29,17 +30,17 @@ type Schedule = {
     impossible: boolean;
 }
 
-export default class ScheduleMaker {
+export default class ScheduleStore {
+    rootStore: RootStore;
+
     PREFERRED_TEACHER_WEIGHT = 1;
     PREFERRED_BLOCK_WEIGHT = 1;
-
-    courseStore: CourseStore;
 
     @observable requestedCourses: RequestedCourse[] = [];
     @observable requestedFreeBlocks: RequestedFreeBlock[] = [];
 
-    constructor(courseStore: CourseStore) {
-        this.courseStore = courseStore;
+    constructor(rootStore: RootStore) {
+        this.rootStore = rootStore;
     }
 
     @computed
@@ -61,13 +62,13 @@ export default class ScheduleMaker {
         // Look at the next requested course
         const currentRequestedCourse = this.requestedCourses[currentSchedule.courseInstances.length];
         // Locate all matching offers
-        const possibleCourseInstances = this.courseStore.announcer
+        const possibleCourseInstances = this.rootStore.courseStore.announcer
             [currentRequestedCourse.department]
             [currentRequestedCourse.courseName];
 
         for (let possibleCourseInstance of possibleCourseInstances) {
             // Discard course instances that overlap with ones already in the schedule
-            if (ScheduleMaker.checkScheduleIntersect(currentSchedule, possibleCourseInstance)) {
+            if (ScheduleStore.checkScheduleIntersect(currentSchedule, possibleCourseInstance)) {
                 continue;
             }
             // Some courses may require you to keep the same teacher across semesters
@@ -92,7 +93,7 @@ export default class ScheduleMaker {
 
             if (newSchedule.courseInstances.length == this.requestedCourses.length) {
                 for (let requestedFreeBlock of this.requestedFreeBlocks) {
-                    if (!ScheduleMaker.checkScheduleIntersect(newSchedule, requestedFreeBlock)) {
+                    if (!ScheduleStore.checkScheduleIntersect(newSchedule, requestedFreeBlock)) {
                         newSchedule.score += requestedFreeBlock.priority;
                     }
                 }

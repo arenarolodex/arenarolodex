@@ -1,5 +1,7 @@
 import { action, observable } from 'mobx';
 
+import RootStore from '@/state/RootStore';
+
 type JSONAnnouncer = {
     [department: string]: {
         [course: string]: {
@@ -41,12 +43,14 @@ enum Status {
 }
 
 export default class CourseStore {
+    rootStore: RootStore;
+    transportLayer: ICourseStoreTransportLayer;
+
     @observable status: Status = Status.PENDING
     @observable announcer: Announcer = {};
 
-    transportLayer: ICourseStoreTransportLayer;
-
-    constructor(transportLayer: ICourseStoreTransportLayer) {
+    constructor(rootStore: RootStore, transportLayer: ICourseStoreTransportLayer) {
+        this.rootStore = rootStore;
         this.transportLayer = transportLayer;
 
         this.transportLayer.fetchAnnouncer()
@@ -55,7 +59,6 @@ export default class CourseStore {
                 this.announcer = this.transformAnnouncer(jsonAnnouncer);
             }))
             .catch(action('fetchAnnouncerError', err => {
-                console.error(err);
                 this.status = Status.ERROR;
             }));
     }
