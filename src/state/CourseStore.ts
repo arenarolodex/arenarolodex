@@ -36,7 +36,7 @@ export class CourseStoreHTTPTransport implements ICourseStoreTransportLayer {
     }
 }
 
-enum Status {
+export enum Status {
     PENDING,
     SUCCESS,
     ERROR

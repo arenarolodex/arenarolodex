@@ -1,9 +1,14 @@
 import React from 'react';
+
 import { Link } from 'gatsby';
 
 import styles from './header.module.css';
 
-const Header = ({ siteTitle }) => (
+type HeaderProps = {
+  siteTitle: string
+}
+
+const Header: React.FunctionComponent<HeaderProps> = ({ siteTitle }) => (
   <div
     style={{
       background: '#da6060',
