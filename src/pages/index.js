@@ -6,11 +6,14 @@ import EmbeddedGist from '../components/embeddedgist';
 import Courses from '../components/courses';
 import Schedules from '../components/schedules';
 
+import CourseStore, { CourseStoreHTTPTransport } from '@/state/CourseStore';
+
 import './index.css';
 
 export default class IndexPage extends React.Component {
   constructor() {
     super();
+    this.store = new CourseStore(new CourseStoreHTTPTransport());
     this.state = {schedules: [], loading: true, visible: true};
   }
   schedules(scheds) {

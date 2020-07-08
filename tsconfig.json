@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "sourceMap": true,
+      "noEmit": true,
+      "module": "commonjs",
+      "target": "esnext",
+      "lib": [
+        "dom",
+        "esnext"
+      ],
+      "jsx": "react",
+      "experimentalDecorators": true,
+      "baseUrl": "src",
+      "paths": {
+        "@/state/*": [
+          "state/*"
+        ]
+      }
+    },
+    "include": [
+      "src"
+    ]
+  }
