@@ -1,7 +1,5 @@
 import { action, observable } from 'mobx';
 
-import * as _ from 'lodash';
-
 type JSONAnnouncer = {
     [department: string]: {
         [course: string]: {
@@ -10,15 +8,16 @@ type JSONAnnouncer = {
     }
 }
 
-type Announcer = {
+export type CourseInstance = {
+    block: number
+    semester: '1'|'2'|'Both'
+    seats: number
+    teacher: string
+}
+
+export type Announcer = {
     [department: string]: {
-        [course: string]: {
-            [teacher: string]: {
-                block: number
-                room: string
-                seats: number
-            }[]
-        }
+        [course: string]: CourseInstance[]
     }
 }
 
@@ -43,7 +42,7 @@ enum Status {
 
 export default class CourseStore {
     @observable status: Status = Status.PENDING
-    @observable announcer: Announcer;
+    @observable announcer: Announcer = {};
 
     transportLayer: ICourseStoreTransportLayer;
 
@@ -66,16 +65,15 @@ export default class CourseStore {
         for (let department of Object.keys(jsonAnnouncer)) {
             announcer[department] = {};
             for (let course of Object.keys(jsonAnnouncer[department])) {
-                announcer[department][course] = {};
+                announcer[department][course] = [];
                 for (let teacher of Object.keys(jsonAnnouncer[department][course])) {
-                    announcer[department][course][teacher] = [];
-                    for (let i in jsonAnnouncer[department][course][teacher]) {
-                        const jsonCourseInstance = jsonAnnouncer[department][course][teacher][i];
-                        announcer[department][course][teacher][i] = {
+                    for (let jsonCourseInstance of jsonAnnouncer[department][course][teacher]) {
+                        announcer[department][course].push({
                             block: parseInt(jsonCourseInstance[0]),
-                            room: jsonCourseInstance[1],
-                            seats: parseInt(jsonCourseInstance[2])
-                        };
+                            semester: jsonCourseInstance[1],
+                            seats: parseInt(jsonCourseInstance[2]),
+                            teacher
+                        });
                     }
                 }
             }
