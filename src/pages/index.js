@@ -6,7 +6,7 @@ import EmbeddedGist from '../components/embeddedgist';
 import Courses from '../components/courses';
 import Schedules from '../components/schedules';
 
-import '../pages/index.css';
+import './index.css';
 
 export default class IndexPage extends React.Component {
   constructor() {

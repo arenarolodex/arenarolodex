@@ -15,9 +15,7 @@ const Layout = ({ children }) => (
         content: `Lowell arena helper. A tool to generate schedules
           for Lowell High School students.`
       }]}
-    >
-      <html lang="en" />
-    </Helmet>
+    />
     <Header siteTitle="arenarolodex" />
     <div
       style={{

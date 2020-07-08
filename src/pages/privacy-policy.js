@@ -1,8 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../components/layout";
-
-import "../pages/courses.css";
+import Layout from '../components/layout';
 
 class Privacy extends React.Component {
   render() {
