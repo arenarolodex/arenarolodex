@@ -24,7 +24,7 @@ export type RequestedFreeBlock = {
   semester: string;
 }
 
-type Schedule = {
+export type Schedule = {
   courseInstances: CourseInstance[];
   score: number;
   impossible: boolean;
@@ -98,9 +98,11 @@ export default class ScheduleStore {
     // Look at the next requested course
     const currentRequestedCourse = this.validRequestedCourses[currentSchedule.courseInstances.length];
     // Locate all matching offers
-    const possibleCourseInstances = this.rootStore.courseStore.announcer
-    [currentRequestedCourse.department]
-    [currentRequestedCourse.courseName];
+    const possibleCourseInstances = Object.values(
+      this.rootStore.courseStore.announcer
+      [currentRequestedCourse.department]
+      [currentRequestedCourse.courseName]
+    ).reduce((acc, cur) => acc.concat(cur));
 
     for (let possibleCourseInstance of possibleCourseInstances) {
       // Discard course instances that overlap with ones already in the schedule

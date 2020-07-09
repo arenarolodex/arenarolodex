@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import LoadingOverlay from 'react-loading-overlay/src/LoadingOverlay';
 import { ReactGithubGist } from 'react-github-gist';
 
-import Layout from '../components/layout';
-import CourseContainer from '../components/CourseContainer';
+import Layout from '@/components/layout';
+import CourseContainer from '@/components/CourseContainer';
+import ScheduleContainer from '@/components/ScheduleContainer';
 
 import { Status } from '@/state/CourseStore';
 import { useApplicationContext } from '@/state/RootStore';
@@ -35,7 +36,10 @@ const IndexPage: React.FunctionComponent = observer(() => {
             <ReactGithubGist gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"/> :
             null
         }
-        { courseStore.status == Status.SUCCESS ? <CourseContainer/> : null }
+        { courseStore.status == Status.SUCCESS ? <>
+          <CourseContainer/>
+          <ScheduleContainer/>
+        </> : null }
       </Layout>
     </LoadingOverlay>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import CourseWidget from './CourseWidget';
-import FreeBlockWidget from './FreeBlockWidget';
+import CourseWidget from '@/components/CourseWidget';
+import FreeBlockWidget from '@/components/FreeBlockWidget';
 
 import { useApplicationContext } from '@/state/RootStore';
 

@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet';
 
-import Header from './header';
-import Footer from './footer';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 import './layout.css';
 

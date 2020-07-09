@@ -3,8 +3,6 @@ import { createContext, useContext } from 'react';
 import CourseStore, { CourseStoreHTTPTransport } from '@/state/CourseStore';
 import ScheduleStore from '@/state/ScheduleStore';
 
-import { observable } from 'mobx';
-
 import packageJSON from '../../package.json';
 
 export const ApplicationContext = createContext({} as RootStore);

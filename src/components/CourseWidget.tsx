@@ -36,15 +36,6 @@ const CourseWidget: React.FunctionComponent<CourseWidgetProps> = observer(({ cou
     }
   }));
 
-  const validTeachers = useMemo(() => computed(() => {
-    if (!shouldBeInteractive('preferredTeacher')) {
-      return [];
-    }
-    return Array.from(
-      new Set(courseStore.announcer[course.department][course.courseName].map(courseInstance => courseInstance.teacher))
-    );
-  }), [course.courseName]);
-
   return (
     <div className={styles.course}>
       <button
@@ -89,9 +80,11 @@ const CourseWidget: React.FunctionComponent<CourseWidgetProps> = observer(({ cou
         >
           <option value="">Choose a teacher</option>
           {
-            validTeachers.get().map((teacher, idx) =>
-              <option key={idx} value={teacher}>{teacher}</option>
-            )
+            shouldBeInteractive('preferredTeacher') ?
+              Object.keys(courseStore.announcer[course.department][course.courseName]).map((teacher, idx) =>
+                <option key={idx} value={teacher}>{teacher}</option>
+              )
+              : null
           }
         </select>
       </label>
@@ -104,8 +97,7 @@ const CourseWidget: React.FunctionComponent<CourseWidgetProps> = observer(({ cou
           <option value="">Choose a block</option>
           {
             shouldBeInteractive('preferredBlock') ?
-              courseStore.announcer[course.department][course.courseName]
-                .filter(courseInstance => courseInstance.teacher == course.preferredTeacher)
+              courseStore.announcer[course.department][course.courseName][course.preferredTeacher]
                 .map((courseInstance, idx) =>
                   <option key={idx} value={courseInstance.block}>
                     Block {courseInstance.block}, {courseInstance.seats} seats left

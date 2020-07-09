@@ -12,6 +12,7 @@ type JSONAnnouncer = {
 
 export type CourseInstance = {
   block: number
+  course: string
   semester: '1' | '2' | 'Both'
   seats: number
   teacher: string
@@ -19,7 +20,9 @@ export type CourseInstance = {
 
 export type Announcer = {
   [department: string]: {
-    [course: string]: CourseInstance[]
+    [course: string]: {
+      [teacher: string]: CourseInstance[]
+    }
   }
 }
 
@@ -68,14 +71,16 @@ export default class CourseStore {
     for (let department of Object.keys(jsonAnnouncer)) {
       announcer[department] = {};
       for (let course of Object.keys(jsonAnnouncer[department])) {
-        announcer[department][course] = [];
+        announcer[department][course] = {};
         for (let teacher of Object.keys(jsonAnnouncer[department][course])) {
+          announcer[department][course][teacher] = [];
           for (let jsonCourseInstance of jsonAnnouncer[department][course][teacher]) {
-            announcer[department][course].push({
+            announcer[department][course][teacher].push({
               block: parseInt(jsonCourseInstance[0]),
               semester: jsonCourseInstance[1] as ('1' | '2' | 'Both'),
               seats: parseInt(jsonCourseInstance[2]),
-              teacher
+              teacher,
+              course
             });
           }
         }
