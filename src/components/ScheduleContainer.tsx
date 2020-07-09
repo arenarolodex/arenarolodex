@@ -22,14 +22,14 @@ const ScheduleWidget: React.FunctionComponent<ScheduleWidgetProps> = observer(({
         .sort((a, b) => a.block - b.block)
         .map((courseInstance, idx) => (
           <div key={idx} className={styles.class}>
-            {showingCondensedBlockFormat.get() ?
+            <b>{showingCondensedBlockFormat.get() ?
               `Block ${courseInstance.semester == 'Both' ? '' : courseInstance.semester}${courseInstance.block}` :
               `Block ${courseInstance.block}, ${
                 courseInstance.semester == 'Both' ? 'Both Semesters' : `${{'1': 'Fall', '2': 'Spring'}[courseInstance.semester]
               } Semester`}`
-            }
+            }: <i>{courseInstance.course}</i></b>
             <br />
-            <b>{courseInstance.course}</b> <i>({courseInstance.seats} seats left)</i>
+            <b>{courseInstance.teacher}</b> <i>({courseInstance.seats} seats left)</i>
           </div>
       ))}
     </div>

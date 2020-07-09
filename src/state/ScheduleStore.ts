@@ -81,14 +81,14 @@ export default class ScheduleStore {
 
   @computed
   get generatedSchedules(): Schedule[] {
-    if (this.requestedCourses.length == 0) return [];
+    if (this.validRequestedCourses.length == 0) return [];
     const schedules: Schedule[] = [];
     this.findSchedulesRecursively({
       courseInstances: [],
       score: 0,
       impossible: false
     }, schedules);
-    return schedules;
+    return schedules.sort((a, b) => b.score - a.score);
   }
 
   findSchedulesRecursively(
