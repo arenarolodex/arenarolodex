@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Course from './course';
-import FreeBlock from './freeblock';
+import CourseWidget from './CourseWidget';
+import FreeBlockWidget from './FreeBlockWidget';
 
 import { useApplicationContext } from '@/state/RootStore';
 
@@ -25,10 +25,10 @@ const CourseContainer: React.FunctionComponent = observer(() => {
       </button>
       <div>
         {scheduleStore.requestedFreeBlocks.map((requestedFreeBlock, idx) =>
-          <FreeBlock key={idx} freeBlock={requestedFreeBlock}/>
+          <FreeBlockWidget key={idx} freeBlock={requestedFreeBlock}/>
         )}
         {scheduleStore.requestedCourses.map((requestedCourse, idx) =>
-          <Course key={idx} course={requestedCourse}/>
+          <CourseWidget key={idx} course={requestedCourse}/>
         )}
       </div>
     </div>

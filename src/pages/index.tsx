@@ -4,7 +4,7 @@ import LoadingOverlay from 'react-loading-overlay/src/LoadingOverlay';
 import { ReactGithubGist } from 'react-github-gist';
 
 import Layout from '../components/layout';
-import CourseContainer from '../components/courses';
+import CourseContainer from '../components/CourseContainer';
 
 import { Status } from '@/state/CourseStore';
 import { useApplicationContext } from '@/state/RootStore';
@@ -16,12 +16,13 @@ import './index.css';
 
 const IndexPage: React.FunctionComponent = observer(() => {
   const rootStore = useApplicationContext();
+  const courseStore = rootStore.courseStore;
 
   const [visible] = useState(() => observable.box(true));
 
   return (
     <LoadingOverlay
-      active={rootStore.courseStore.status != Status.SUCCESS}
+      active={courseStore.status != Status.SUCCESS}
       spinner
       text="Loading..."
     >
@@ -34,7 +35,7 @@ const IndexPage: React.FunctionComponent = observer(() => {
             <ReactGithubGist gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"/> :
             null
         }
-        <CourseContainer/>
+        { courseStore.status == Status.SUCCESS ? <CourseContainer/> : null }
       </Layout>
     </LoadingOverlay>
   );
