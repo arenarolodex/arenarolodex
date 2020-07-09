@@ -27,20 +27,22 @@ const CourseWidget: React.FunctionComponent<CourseWidgetProps> = observer(({ cou
     return filterScopes.slice(0, filterScopes.indexOf(key)).every(scope => !!course[scope as RequestedCourseKeys]);
   }
 
-  const setValueAndResetLowerScopes = (key: RequestedCourseKeys) => (action((e: React.ChangeEvent<HTMLSelectElement>) => {
-    course[key] = e.target.value as never;
-    if (key == 'preferredTeacher') console.log(e.target.value);
-    for (let i = filterScopes.indexOf(key) + 1; i < filterScopes.length; i++) {
-      course[filterScopes[i] as RequestedCourseKeys] =
-        (typeof course[filterScopes[i] as RequestedCourseKeys] == 'string' ? '' : 0) as never;
+  const setValueAndResetLowerScopes = (key: RequestedCourseKeys) => (action(
+    `set${key.charAt(0).toUpperCase() + key.slice(1)}AndResetLowerScopes`, (e: React.ChangeEvent<HTMLSelectElement>) => {
+      course[key] = e.target.value as never;
+      if (key == 'preferredTeacher') console.log(e.target.value);
+      for (let i = filterScopes.indexOf(key) + 1; i < filterScopes.length; i++) {
+        course[filterScopes[i] as RequestedCourseKeys] =
+          (typeof course[filterScopes[i] as RequestedCourseKeys] == 'string' ? '' : 0) as never;
+      }
     }
-  }));
+  ));
 
   return (
     <div className={styles.course}>
       <button
         className={styles.deleteBut}
-        onClick={action(() => scheduleStore.removeCourse(course))}
+        onClick={() => scheduleStore.removeCourse(course)}
       >
         Remove
       </button>

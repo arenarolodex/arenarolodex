@@ -24,7 +24,7 @@ const FreeBlockWidget: React.FunctionComponent<FreeBlockWidgetProps> = observer(
       <label>
         Preferred free block
         <select
-          onChange={action(e => (freeBlock.block = parseInt(e.target.value)))}
+          onChange={action('setFreeBlockBlock', e => (freeBlock.block = parseInt(e.target.value)))}
           value={freeBlock.block}
         >
           <option value="0">Choose block</option>
@@ -41,7 +41,7 @@ const FreeBlockWidget: React.FunctionComponent<FreeBlockWidgetProps> = observer(
       <label>
         Free block priority
         <select
-          onChange={action(e => (freeBlock.priority = parseInt(e.target.value)))}
+          onChange={action('setFreeBlockPriority', e => (freeBlock.priority = parseInt(e.target.value)))}
           value={freeBlock.priority}
         >
           <option value="1">Low</option>
@@ -52,7 +52,7 @@ const FreeBlockWidget: React.FunctionComponent<FreeBlockWidgetProps> = observer(
       <label>
         Free block semester
         <select
-          onChange={action(e => (freeBlock.semester = e.target.value))}
+          onChange={action('setFreeBlockSemester', e => (freeBlock.semester = e.target.value))}
           value={freeBlock.semester}
         >
           <option value="">Choose a semester</option>
