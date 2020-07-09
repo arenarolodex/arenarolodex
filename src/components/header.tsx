@@ -1,9 +1,14 @@
 import React from 'react';
+
 import { Link } from 'gatsby';
 
 import styles from './header.module.css';
 
-const Header = ({ siteTitle }) => (
+type HeaderProps = {
+  siteTitle: string
+}
+
+const Header: React.FunctionComponent<HeaderProps> = ({ siteTitle }) => (
   <div
     style={{
       background: '#da6060',
@@ -30,7 +35,7 @@ const Header = ({ siteTitle }) => (
       </h1>
       <nav className={styles.nav}>
         <Link to="/" activeClassName={styles.current}>Home</Link>
-        <Link to="/courses" activeClassName={styles.current}>How Arena Works</Link>
+        <Link to="/how-arena-works" activeClassName={styles.current}>How Arena Works</Link>
         <a href="https://forms.gle/JgrnajzCEfNxYCqz8" target="_blank">Feedback form</a>
       </nav>
     </div>

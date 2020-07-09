@@ -1,8 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../components/layout";
-
-import "../pages/courses.css";
+import Layout from '../components/layout';
 
 class Privacy extends React.Component {
   render() {
@@ -11,7 +9,6 @@ class Privacy extends React.Component {
         Privacy policy to be written
         <br />
         tldr we don't really care about your data we just want to know how many people have used the site so we can boost our egos. 
-
       </Layout>
     );
   }

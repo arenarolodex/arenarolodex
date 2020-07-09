@@ -1,14 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../components/layout";
-
-import "../pages/courses.css";
+import Layout from '../components/layout';
 
 class Courses extends React.Component {
   render() {
     return (
       <Layout>
-        <div style={{ lineHeight: "30px" }}>
+        <div style={{ lineHeight: '30px' }}>
           Hello, Sam Lim here! You have found the other tab on this website! I
           don’t know anything about coding (kudos to Chris, Alex, and Kai), but
           here, I will attempt to explain how arena works.

@@ -1,23 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 
-import Header from './header';
-import Footer from './footer';
+import { Helmet } from 'react-helmet';
+
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+
 import './layout.css';
 
-const Layout = ({ children }) => (
+const Layout: React.FunctionComponent = ({ children }) => (
   <div style={{minHeight:'100vh', position:'relative'}}>
     <Helmet
       title="arenarolodex"
       meta={[{
         name: 'description',
-        content: `Lowell arena helper. A tool to generate schedules
-          for Lowell High School students.`
+        content: `Lowell arena helper. A tool to generate schedules for Lowell High School students.`
       }]}
-    >
-      <html lang="en" />
-    </Helmet>
+    />
     <Header siteTitle="arenarolodex" />
     <div
       style={{
@@ -32,9 +30,5 @@ const Layout = ({ children }) => (
     <Footer />
   </div>
 );
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default Layout;

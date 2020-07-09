@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from 'gatsby';
 
 const Footer = () => (
@@ -19,7 +20,7 @@ const Footer = () => (
       <br />
         View source code: <a style={{color: 'red'}} href="https://github.com/WhizardXD/arenarolodex" target="_blank">https://github.com/WhizardXD/arenarolodex</a>
       <br />
-        <Link style={{color: 'red', textAlign: 'right'}} to="/privpolicy">Privacy Policy</Link>
+        <Link style={{color: 'red', textAlign: 'right'}} to="/privacy-policy">Privacy Policy</Link>
         {/* <a style={{color: 'red', textAlign: 'right'}} href="/privpolicy" target="_blank">Privacy Policy</a> */}
     </small>
   </div>
