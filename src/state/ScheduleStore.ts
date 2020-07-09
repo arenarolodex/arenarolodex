@@ -112,6 +112,7 @@ export default class ScheduleStore {
       // Some courses may require you to keep the same teacher across semesters
       // Not applicable for 2020 - 2021 because yearlong classes are already blocked out
       if (
+        currentRequestedCourse.teacherRequired &&
         currentRequestedCourse.preferredTeacher != '' &&
         possibleCourseInstance.teacher != currentRequestedCourse.preferredTeacher
       ) {

@@ -24,7 +24,9 @@ const ScheduleWidget: React.FunctionComponent<ScheduleWidgetProps> = observer(({
           <div key={idx} className={styles.class}>
             {showingCondensedBlockFormat.get() ?
               `Block ${courseInstance.semester == 'Both' ? '' : courseInstance.semester}${courseInstance.block}` :
-              `Block ${courseInstance.block}, ${courseInstance.semester == 'Both' ? 'Both Semesters' : `${{'1': 'Fall', '2': 'Spring'}} Semester`}`
+              `Block ${courseInstance.block}, ${
+                courseInstance.semester == 'Both' ? 'Both Semesters' : `${{'1': 'Fall', '2': 'Spring'}[courseInstance.semester]
+              } Semester`}`
             }
             <br />
             <b>{courseInstance.course}</b> <i>({courseInstance.seats} seats left)</i>
@@ -68,10 +70,9 @@ const ScheduleContainer: React.FunctionComponent = observer(() => {
       <p>
         Page {currentPage.get()} of {numPages}
         <br />
-        Showing
-        {schedulesPerPage * (currentPage.get() - 1) + 1} through
-        {currentPage.get() * 20 > schedules.length ? schedules.length : currentPage.get() * 20}
-        out of {schedules.length}
+        Showing {schedulesPerPage * (currentPage.get() - 1) + 1} through{' '}
+        {currentPage.get() * 20 > schedules.length ? schedules.length : currentPage.get() * 20}{' '}
+        schedules out of {schedules.length}
       </p>
       <p>
         {navigatorButtons}
