@@ -1,7 +1,7 @@
 {
   "name": "arenarolodex",
   "description": "A web application that creates schedule combinations for Lowell students.",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "authors": [
     "Alexander Ruiz <ruiz.alex0302@gmail.com",
     "Chris Yuan",
