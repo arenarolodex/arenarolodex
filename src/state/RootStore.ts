@@ -17,7 +17,10 @@ export default class RootStore {
   scheduleStore: ScheduleStore;
 
   constructor() {
-    this.courseStore = new CourseStore(this, new CourseStoreHTTPTransport());
+    this.courseStore = new CourseStore(this,
+      typeof window == 'undefined' ? {fetchAnnouncer: () => new Promise(resolve => resolve({}))}
+      : new CourseStoreHTTPTransport()
+    );
     this.scheduleStore = new ScheduleStore(this);
   }
 }

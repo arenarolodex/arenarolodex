@@ -32,7 +32,7 @@ const IndexPage: React.FunctionComponent = observer(() => {
           {visible.get() ? <span>Hide Messages</span> : <span>Show Messages</span>}
         </button>
         {
-          visible.get() ?
+          visible.get() && typeof window != 'undefined' ?
             <ReactGithubGist gist="WhizardXD/8c14af1a803eb9228ddaff23da385cfe" file="changelog.md"/> :
             null
         }

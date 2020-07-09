@@ -49,12 +49,12 @@ export default class ScheduleStore {
         this.requestedFreeBlocks.replace(JSON.parse(localStorage.getItem('requestedFreeBlocks') || '[]'));
       }
       localStorage.setItem('appVersion', this.rootStore.APP_VERSION);
-    }
 
-    autorun(() => {
-      localStorage.setItem('requestedCourses', JSON.stringify(this.requestedCourses));
-      localStorage.setItem('requestedFreeBlocks', JSON.stringify(this.requestedFreeBlocks));
-    });
+      autorun(() => {
+        localStorage.setItem('requestedCourses', JSON.stringify(this.requestedCourses));
+        localStorage.setItem('requestedFreeBlocks', JSON.stringify(this.requestedFreeBlocks));
+      });
+    }
   }
 
   @computed
