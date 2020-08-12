@@ -67,6 +67,12 @@ const ScheduleContainer: React.FunctionComponent = observer(() => {
 
   return (
     <div>
+      <button
+        onClick={scheduleStore.generateSchedules}
+        disabled={scheduleStore.validRequestedCourses.length < 1}
+      >
+        Generate schedules
+      </button>
       <p>
         Page {currentPage.get()} of {numPages}
         <br />

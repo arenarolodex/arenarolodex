@@ -38,6 +38,7 @@ export default class ScheduleStore {
 
   requestedCourses: IObservableArray<RequestedCourse> = observable([]);
   requestedFreeBlocks: IObservableArray<RequestedFreeBlock> = observable([]);
+  generatedSchedules: IObservableArray<Schedule> = observable([]);
 
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore;
@@ -79,8 +80,8 @@ export default class ScheduleStore {
     return this.requestedCourses.length + this.requestedFreeBlocks.length >= 16;
   }
 
-  @computed
-  get generatedSchedules(): Schedule[] {
+  @action.bound
+  generateSchedules() {
     if (this.validRequestedCourses.length == 0) return [];
     const schedules: Schedule[] = [];
     this.findSchedulesRecursively({
@@ -88,7 +89,7 @@ export default class ScheduleStore {
       score: 0,
       impossible: false
     }, schedules);
-    return schedules.sort((a, b) => b.score - a.score);
+    this.generatedSchedules.replace(schedules.sort((a, b) => b.score - a.score));
   }
 
   findSchedulesRecursively(
