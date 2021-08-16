@@ -1,6 +1,13 @@
 # Lowell Arena Helper
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a951bb55-d68b-4edb-85d5-632c12391f46/deploy-status)](https://app.netlify.com/sites/arenarolodex/deploys)
 
+As of 2021, this project is archived because the Arena system is not being used for the 2021-2022 school year.
+
+Made by:
+Chris Yuan '20
+Alex Ruiz '20
+Kai Chang '21
+
 This is the source code for arenarolodex, a web app that creates combinations of
 schedules for Lowell High School students.
 
